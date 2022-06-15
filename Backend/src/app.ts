@@ -14,7 +14,7 @@ import errorsHandler from './02-middleware/errors-handler'
 import ErrorModel from './03-models/error-model'
 import logRequests from './02-middleware/log-requests'
 import sanitize from './02-middleware/sanitize'
-import controller from './06-controllers/controllers'
+import productsController from './06-controllers/products-controllers'
 
 
 const server = express()
@@ -30,7 +30,7 @@ server.use(expressFileUpload())
 server.use(logRequests)
 server.use(sanitize)
 
-server.use('/api', controller)
+server.use('/api', productsController)
 
 server.use('*', (request: Request, response: Response, next: NextFunction) => {
     next(new ErrorModel(404, `Route not found`))

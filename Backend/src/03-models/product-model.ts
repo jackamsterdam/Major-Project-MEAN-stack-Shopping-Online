@@ -4,10 +4,9 @@ import { CategoryModel } from "./category-model";
 //1. Model interface describing the data in the model:
 export interface IProductModel extends Document {
     name: string
-    description: string
     price: number
-    stock: number
-    date: Date
+    imageName: string 
+    image: object
     categoryId: Schema.Types.ObjectId
 }
 
@@ -16,19 +15,10 @@ const ProductSchema = new Schema<IProductModel>({
     name: {
         type: String,
         required: [true, "Missing name"],
-        minlength: [3, "Name too short"],
+        minlength: [2, "Name too short"],
         maxlength: [100, "Name too long"],
-        // match: [/^[A-Z].+$/, "Name must start with a capital letter"],
         trim: true,
         unique: true
-
-    },
-    description: {
-        type: String,
-        required: [true, "Missing description"],
-        minlength: [3, "Description too short"],
-        maxlength: [100, "Description too long"],
-        trim: true,
 
     },
     price: {
@@ -38,16 +28,13 @@ const ProductSchema = new Schema<IProductModel>({
         max: [1000, "Price can't exceed 1000"]
 
     },
-    stock: {
-        type: Number,
-        required: [true, "Missing stock"],
-        min: [0, "Stock can't be negative"],
-        max: [10000, "Stock can't exceed 10000"]
-
+    imageName: {
+        type: String,
+        required: [true, "Missing image"]
     },
-    date: {
-        type: Date,
-        required: [true, "Missing date"],
+    image: {
+        type: Object,
+        required: [true, "Missing image"]
     },
     categoryId: Schema.Types.ObjectId
 
