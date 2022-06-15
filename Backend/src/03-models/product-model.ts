@@ -1,3 +1,4 @@
+import { UploadedFile } from "express-fileupload";
 import { Document, model, Schema } from "mongoose";
 import { CategoryModel } from "./category-model";
 
@@ -6,7 +7,7 @@ export interface IProductModel extends Document {
     name: string
     price: number
     imageName: string 
-    image: object
+    image: UploadedFile
     categoryId: Schema.Types.ObjectId
 }
 
@@ -30,7 +31,7 @@ const ProductSchema = new Schema<IProductModel>({
     },
     imageName: {
         type: String,
-        required: [true, "Missing image"]
+        // required: [true, "Missing image"]
     },
     image: {
         type: Object,

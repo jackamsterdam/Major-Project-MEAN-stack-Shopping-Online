@@ -1,0 +1,65 @@
+info	2022:06:15 12:05:04	GET Request to /shopping/images/2025c68f-5f20-49bb-b578-cc700764dcfb.jpg
+info	2022:06:15 12:05:25	GET Request to /shopping/images/68610c7a-1813-4e25-86a5-14f54979bb32.webp
+info	2022:06:15 12:05:35	GET Request to /api/products
+info	2022:06:15 12:06:11	PUT Request to /api/products/62a99fb624d51d9301a30545
+info	2022:06:15 12:06:24	GET Request to /api/products
+info	2022:06:15 12:06:53	GET Request to /api/categories
+info	2022:06:15 12:07:54	POST Request to /api/products
+info	2022:06:15 12:08:01	GET Request to /api/products
+info	2022:06:15 12:08:14	GET Request to /api/products-by-category/62a97908ddbeefec2408acfe
+info	2022:06:15 12:08:36	GET Request to /shopping/images/3b0f2655-3b0e-4eac-8665-bec00dfb9b8c.jpg
+info	2022:06:15 12:09:23	PUT Request to /api/products/62a99fb624d51d9301a30545
+error	2022:06:15 12:09:23	Cannot read properties of null (reading 'imageName')
+info	2022:06:15 02:03:24	PUT Request to /api/products/62a99fb624d51d9301a30545
+error	2022:06:15 02:03:24	Cannot read properties of null (reading 'imageName')
+info	2022:06:15 02:04:23	PUT Request to /api/products/62a99fb624d51d9301a30545
+error	2022:06:15 02:04:23	Cannot read properties of null (reading 'imageName')
+info	2022:06:15 02:04:50	PUT Request to /api/products/62a99fb624d51d9301a30545
+error	2022:06:15 02:04:50	Cannot read properties of null (reading 'imageName')
+info	2022:06:15 02:04:53	PUT Request to /api/products/62a99fb624d51d9301a30545
+error	2022:06:15 02:04:53	Cannot read properties of null (reading 'imageName')
+info	2022:06:15 02:04:54	PUT Request to /api/products/62a99fb624d51d9301a30545
+error	2022:06:15 02:04:54	Cannot read properties of null (reading 'imageName')
+info	2022:06:15 02:05:15	PUT Request to /api/products/62a99fb624d51d9301a30545
+error	2022:06:15 02:05:15	Cannot read properties of null (reading 'imageName')
+info	2022:06:15 02:05:35	PUT Request to /api/products/62a99fb624d51d9301a30545
+error	2022:06:15 02:05:35	Cannot read properties of null (reading 'imageName')
+info	2022:06:15 02:06:36	GET Request to /api/products/62a9a16a61eb14a09eee0d55
+info	2022:06:15 02:06:53	GET Request to /api/products/62a9a16a61eb14a09eee0d55
+info	2022:06:15 02:07:07	PUT Request to /api/products/62a9a16a61eb14a09eee0d55
+info	2022:06:15 02:07:16	PUT Request to /api/products/62a9a16a61eb14a09eee0d53
+error	2022:06:15 02:07:16	Cannot read properties of null (reading 'imageName')
+info	2022:06:15 02:07:24	PUT Request to /api/products/62a9a16a61eb14a09eee0d55
+info	2022:06:15 02:07:36	GET Request to /api/products
+info	2022:06:15 02:07:54	DELETE Request to /api/products/62a9a16a61eb14a09eee0d55
+info	2022:06:15 02:08:01	POST Request to /api/products
+info	2022:06:15 02:08:21	GET Request to /shopping/images/d3c71445-5a89-4305-9839-b4d025fc450a.jpg
+info	2022:06:15 02:08:25	GET Request to /api/products
+info	2022:06:15 02:08:41	GET Request to /api/products/62a9bd91371e85e72d297c2e
+info	2022:06:15 02:08:51	PUT Request to /api/products/62a9bd91371e85e72d297c2e
+info	2022:06:15 02:09:04	GET Request to /shopping/images/d3c71445-5a89-4305-9839-b4d025fc450a.jpg
+error	2022:06:15 02:09:04	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\d3c71445-5a89-4305-9839-b4d025fc450a.jpg'
+info	2022:06:15 02:09:19	GET Request to /shopping/images/737b1f26-0e0a-4b5e-9435-b14c3b7c24cd.jpg
+info	2022:06:15 02:09:37	DELETE Request to /api/products/62a9bd91371e85e72d297c2e
+info	2022:06:15 02:10:03	GET Request to /api/products/62a9bd91371e85e72d298c2e
+info	2022:06:15 02:10:15	GET Request to /api/products/62a9bd91372e85e72d298c2e
+info	2022:06:15 02:11:05	GET Request to /api/products/1
+error	2022:06:15 02:11:05	Cast to ObjectId failed for value "1" (type string) at path "_id" for model "ProductModel"
+info	2022:06:15 02:11:14	GET Request to /api/products/62a9bd91372e85e72d298c2f
+info	2022:06:15 02:11:36	GET Request to /api/products/62a9bd91372e85e72d298c2e
+info	2022:06:15 02:19:49	GET Request to /api/products/62a9bd91372e85e72d298c2e
+info	2022:06:15 02:19:49	Resource with _id 62a9bd91372e85e72d298c2e not found.
+info	2022:06:15 02:20:26	POST Request to /api/products
+info	2022:06:15 02:20:26	ProductModel validation failed: price: Cast to Number failed for value "dfgdfgd" (type string) at path "price"
+info	2022:06:15 02:20:43	POST Request to /api/products
+info	2022:06:15 02:20:50	PUT Request to /api/products/62a9bd91371e85e72d297c2f
+info	2022:06:15 02:20:50	Resource with _id 62a9bd91371e85e72d297c2f not found.
+info	2022:06:15 02:21:00	PUT Request to /api/products/62a9bd91371e85e72d297c2e
+info	2022:06:15 02:21:00	ProductModel validation failed: price: Cast to Number failed for value "dfddf" (type string) at path "price"
+info	2022:06:15 02:21:06	PUT Request to /api/products/62a9bd91371e85e72d297c2e
+info	2022:06:15 02:21:06	Resource with _id 62a9bd91371e85e72d297c2e not found.
+info	2022:06:15 02:21:14	GET Request to /api/products
+info	2022:06:15 02:21:26	PUT Request to /api/products/62a9c08b2db12f986bbb7593
+info	2022:06:15 02:21:37	DELETE Request to /api/products/62a9bd91371e85e72d297c2e
+info	2022:06:15 02:21:37	Resource with _id 62a9bd91371e85e72d297c2e not found.
+info	2022:06:15 02:21:43	DELETE Request to /api/products/62a9c08b2db12f986bbb7593

@@ -24,6 +24,17 @@ router.get('/products', async (request: Request, response: Response, next: NextF
     }
 })
 
+router.get("/products/:_id", async (request: Request, response: Response, next: NextFunction) => {
+    try {
+        const _id = request.params._id;
+        const product = await productsLogic.getOneProduct(_id);
+        response.json(product);
+    }
+    catch (err: any) {
+        next(err);
+    }
+});
+
 //http://localhost:3001/api/products-by-category/62969ee1c05d55310aba99b2
 router.get('/products-by-category/:categoryId', async (request: Request, response: Response, next: NextFunction) => {
     try {
@@ -39,6 +50,7 @@ router.get('/products-by-category/:categoryId', async (request: Request, respons
 //http://localhost:3001/api/products/
 router.post('/products', async (request: Request, response: Response, next: NextFunction) => {
     try {
+        request.body.image = request.files?.image
         const product = new ProductModel(request.body)
         const addedProduct = await productsLogic.addProduct(product)
         response.status(201).json(addedProduct)
@@ -49,8 +61,9 @@ router.post('/products', async (request: Request, response: Response, next: Next
 })
 
 //http://localhost:3001/api/products/62969ee1c05d55310aba99b2
-router.put('/products', async (request: Request, response: Response, next: NextFunction) => {
+router.put('/products/:_id', async (request: Request, response: Response, next: NextFunction) => {
     try {
+        request.body.image = request.files?.image
         const _id = request.params._id
         request.body._id = _id
         const product = new ProductModel(request.body)
