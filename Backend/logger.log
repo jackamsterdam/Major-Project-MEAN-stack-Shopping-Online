@@ -105,3 +105,127 @@ info	2022:06:15 05:05:42	DELETE Request to /api/carts/62a9c08b2db12f986bbb7593
 info	2022:06:15 05:05:42	Resource with _id 62a9c08b2db12f986bbb7593 not found
 info	2022:06:16 07:58:09	GET Request to /api/items-by-cart-with-names/62a97908ddbeefec2408acfe/7908ddbeefec2408
 error	2022:06:16 07:58:09	Cast to ObjectId failed for value "7908ddbeefec2408" (type string) at path "productId" for model "ItemModel"
+info	2022:06:16 12:49:08	POST Request to /api/auth/register
+info	2022:06:16 12:49:08	UserModel validation failed: city: Missing city, street: Missing street
+info	2022:06:16 01:00:57	POST Request to /api/auth/register
+info	2022:06:16 01:00:57	UserModel validation failed: city: Missing city, street: Missing street
+info	2022:06:16 01:01:45	POST Request to /api/auth/register
+error	2022:06:16 01:01:45	UserModel validation failed: password: Password too long
+info	2022:06:16 01:14:25	POST Request to /api/auth/register
+info	2022:06:16 01:14:52	POST Request to /api/auth/register
+error	2022:06:16 01:14:52	E11000 duplicate key error collection: ShoppingOnlineDB.users index: username_1 dup key: { username: "kermit@gmail.com" }
+info	2022:06:16 01:15:59	POST Request to /api/auth/register
+info	2022:06:16 01:15:59	UserModel validation failed: role: Missing role
+info	2022:06:16 01:17:19	POST Request to /api/auth/register
+error	2022:06:16 01:17:20	E11000 duplicate key error collection: ShoppingOnlineDB.users index: username_1 dup key: { username: "kermit@gmail.com" }
+info	2022:06:16 01:17:32	POST Request to /api/auth/register
+error	2022:06:16 01:17:32	E11000 duplicate key error collection: ShoppingOnlineDB.users index: username_1 dup key: { username: "kermit@gmail.com" }
+info	2022:06:16 01:17:36	POST Request to /api/auth/register
+info	2022:06:16 01:17:36	UserModel validation failed: username: You have entered an invalid email address
+info	2022:06:16 01:17:45	POST Request to /api/auth/register
+info	2022:06:16 01:18:23	POST Request to /api/auth/register
+error	2022:06:16 01:18:23	E11000 duplicate key error collection: ShoppingOnlineDB.users index: username_1 dup key: { username: "jackamsterdam@gmail.com" }
+info	2022:06:16 01:18:39	POST Request to /api/auth/register
+info	2022:06:16 01:20:51	POST Request to /api/auth/register
+info	2022:06:16 01:22:33	POST Request to /api/auth/register
+info	2022:06:16 01:24:26	POST Request to /api/auth/register
+info	2022:06:16 01:28:03	POST Request to /api/auth/register
+info	2022:06:16 01:30:23	POST Request to /api/auth/register
+info	2022:06:16 01:31:38	POST Request to /api/auth/register
+info	2022:06:16 01:32:06	POST Request to /api/auth/register
+info	2022:06:16 01:32:46	POST Request to /api/auth/register
+info	2022:06:16 01:33:57	POST Request to /api/auth/register
+info	2022:06:16 01:34:29	POST Request to /api/auth/register
+info	2022:06:16 01:34:29	UserModel validation failed: username: You have entered an invalid email address
+info	2022:06:16 01:34:49	POST Request to /api/auth/register
+info	2022:06:16 01:34:49	UserModel validation failed: firstName: First name too short
+info	2022:06:16 01:34:59	POST Request to /api/auth/register
+info	2022:06:16 01:34:59	UserModel validation failed: firstName: First name too short, username: You have entered an invalid email address
+info	2022:06:16 01:35:07	POST Request to /api/auth/register
+error	2022:06:16 01:35:07	E11000 duplicate key error collection: ShoppingOnlineDB.users index: username_1 dup key: { username: "kermit@gmail.com" }
+info	2022:06:16 01:36:01	POST Request to /api/auth/register
+info	2022:06:16 01:36:01	Username kermit@gmail.com is already taken. Please choose a differeent username
+info	2022:06:16 01:36:24	POST Request to /api/auth/register
+info	2022:06:16 01:36:24	Username kermit@gmail.com is already taken. Please choose a different username
+info	2022:06:16 01:36:26	POST Request to /api/auth/register
+info	2022:06:16 01:36:26	Username kermit@gmail.com is already taken. Please choose a different username
+info	2022:06:16 01:45:28	POST Request to /api/auth/login
+info	2022:06:16 01:45:28	CredentialsModel validation failed: username: You have entered an invalid email address
+info	2022:06:16 01:57:48	POST Request to /api/auth/register
+info	2022:06:16 01:57:48	UserModel validation failed: firstName: First name too short, username: You have entered an invalid email address
+info	2022:06:16 01:58:07	POST Request to /api/auth/register
+info	2022:06:16 01:58:07	UserModel validation failed: username: You have entered an invalid email address
+info	2022:06:16 01:58:17	POST Request to /api/auth/register
+info	2022:06:16 01:58:17	Username bart@gmail.com is already taken. Please choose a different username
+info	2022:06:16 02:00:21	POST Request to /api/auth/login
+info	2022:06:16 02:01:01	POST Request to /api/auth/login
+info	2022:06:16 02:01:01	Incorrect username or password
+info	2022:06:16 02:01:07	POST Request to /api/auth/login
+info	2022:06:16 02:01:07	Incorrect username or password
+info	2022:06:16 02:01:11	POST Request to /api/auth/login
+info	2022:06:16 02:02:48	POST Request to /api/auth/login
+info	2022:06:16 02:03:41	POST Request to /api/auth/login
+info	2022:06:16 02:04:17	POST Request to /api/auth/login
+info	2022:06:16 02:04:55	POST Request to /api/auth/login
+info	2022:06:16 02:04:55	Incorrect username or password
+info	2022:06:16 02:05:00	POST Request to /api/auth/login
+info	2022:06:16 02:06:02	POST Request to /api/auth/login
+info	2022:06:16 02:07:15	POST Request to /api/auth/login
+info	2022:06:16 02:07:43	POST Request to /api/auth/login
+info	2022:06:16 02:09:23	POST Request to /api/auth/login
+info	2022:06:16 02:10:03	POST Request to /api/auth/login
+info	2022:06:16 02:11:20	POST Request to /api/auth/login
+info	2022:06:16 02:13:14	POST Request to /api/auth/login
+info	2022:06:16 02:21:52	POST Request to /api/auth/login
+info	2022:06:16 02:24:57	POST Request to /api/auth/login
+info	2022:06:16 02:25:35	POST Request to /api/auth/login
+info	2022:06:16 02:25:54	POST Request to /api/auth/login
+info	2022:06:16 02:28:01	POST Request to /api/auth/login
+info	2022:06:16 02:28:37	POST Request to /api/auth/login
+info	2022:06:16 02:37:58	POST Request to /api/auth/login
+info	2022:06:16 02:38:39	POST Request to /api/auth/login
+info	2022:06:16 02:39:45	POST Request to /api/auth/login
+info	2022:06:16 02:40:15	POST Request to /api/auth/login
+info	2022:06:16 02:40:15	Incorrect username or password
+info	2022:06:16 02:40:21	POST Request to /api/auth/login
+info	2022:06:16 02:40:21	Incorrect username or password
+info	2022:06:16 02:40:24	POST Request to /api/auth/login
+info	2022:06:16 03:25:13	POST Request to /api/auth/login
+info	2022:06:16 03:25:50	POST Request to /api/auth/login
+info	2022:06:16 03:31:41	POST Request to /api/auth/login
+info	2022:06:16 03:33:04	POST Request to /api/auth/login
+info	2022:06:16 03:36:05	POST Request to /api/auth/login
+error	2022:06:16 03:36:05	user.toObject is not a function
+info	2022:06:16 03:36:30	POST Request to /api/auth/login
+info	2022:06:16 03:43:54	POST Request to /api/auth/login
+info	2022:06:16 03:44:09	POST Request to /api/auth/login
+info	2022:06:16 03:44:26	POST Request to /api/auth/login
+info	2022:06:16 03:45:33	POST Request to /api/auth/login
+info	2022:06:16 03:45:33	Incorrect username or password
+info	2022:06:16 03:45:46	POST Request to /api/auth/login
+info	2022:06:16 03:45:46	CredentialsModel validation failed: username: You have entered an invalid email address
+info	2022:06:16 03:46:33	POST Request to /api/auth/login
+info	2022:06:16 03:46:33	CredentialsModel validation failed: username: You have entered an invalid email address
+info	2022:06:16 03:46:36	POST Request to /api/auth/login
+info	2022:06:16 03:46:36	CredentialsModel validation failed: username: You have entered an invalid email address
+info	2022:06:16 03:46:47	POST Request to /api/auth/login
+info	2022:06:16 03:46:47	Incorrect username or password
+info	2022:06:16 03:46:52	POST Request to /api/auth/login
+info	2022:06:16 04:09:17	GET Request to /api/categories
+info	2022:06:16 04:09:55	GET Request to /api/categories
+info	2022:06:16 04:09:55	You are not logged in
+info	2022:06:16 04:10:35	GET Request to /api/categories
+info	2022:06:16 04:10:35	You are not logged in
+info	2022:06:16 04:10:37	GET Request to /api/categories
+info	2022:06:16 04:10:37	You are not logged in
+info	2022:06:16 04:10:46	POST Request to /api/auth/login
+info	2022:06:16 04:11:03	GET Request to /api/categories
+info	2022:06:16 04:11:09	POST Request to /api/products
+info	2022:06:16 04:11:09	Forbidden: You are not authorized
+info	2022:06:16 04:11:38	POST Request to /api/products
+info	2022:06:16 04:11:38	Forbidden: You are not authorized
+info	2022:06:16 04:11:40	POST Request to /api/products
+info	2022:06:16 04:11:40	Forbidden: You are not authorized
+info	2022:06:16 04:11:48	POST Request to /api/auth/login
+info	2022:06:16 04:12:07	GET Request to /api/categories
+info	2022:06:16 04:12:47	POST Request to /api/products

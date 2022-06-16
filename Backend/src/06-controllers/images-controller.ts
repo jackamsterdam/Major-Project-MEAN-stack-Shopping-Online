@@ -1,6 +1,6 @@
 import express, { NextFunction, Request, Response } from "express";
 import path from 'path'
-
+//!Add verify logged in and verify admin
 const router = express.Router() 
 
 //http://localhost:3001/shopping/images/2025c68f-5f20-49bb-b578-cc700764dcfb.jpg

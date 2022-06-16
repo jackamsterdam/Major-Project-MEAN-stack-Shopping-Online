@@ -1,9 +1,11 @@
 import express, { NextFunction, Request, Response } from 'express'
+import verifyAdmin from '../02-middleware/verify-admin'
+import verifyLoggedIn from '../02-middleware/verify-logged-in'
 import { ProductModel } from '../03-models/product-model'
 import productsLogic from '../05-logic/products-logic'
 
 const router = express.Router()
-
+//!Add verify logged in and verify admin
 
 //http://localhost:3001/api/categories/
 router.get('/categories', async (request: Request, response: Response, next: NextFunction) => {

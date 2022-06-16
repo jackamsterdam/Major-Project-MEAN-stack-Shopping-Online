@@ -1,7 +1,7 @@
 import express, { NextFunction, Request, Response } from 'express'
 import { OrderModel } from '../03-models/order-model'
 import ordersLogic from '../05-logic/orders-logic'
-
+//!Add verify logged in and verify admin
 const router = express.Router()
 
 //http://localhost:3001/api/orders/

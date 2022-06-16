@@ -19,6 +19,7 @@ import imagesController from './06-controllers/images-controller'
 import cartsController from './06-controllers/carts-controller'
 import itemsController from './06-controllers/items-controller'
 import ordersController from './06-controllers/orders-controller'
+import authController from './06-controllers/auth-controller'
 
 
 const server = express()
@@ -39,6 +40,7 @@ server.use('/', imagesController)
 server.use('/api', cartsController)
 server.use('/api', itemsController)
 server.use('/api', ordersController)
+server.use('/api/auth', authController)
 
 server.use('*', (request: Request, response: Response, next: NextFunction) => {
     next(new ErrorModel(404, `Route not found`))
