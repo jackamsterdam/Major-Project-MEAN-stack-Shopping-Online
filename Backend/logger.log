@@ -63,3 +63,45 @@ info	2022:06:15 02:21:26	PUT Request to /api/products/62a9c08b2db12f986bbb7593
 info	2022:06:15 02:21:37	DELETE Request to /api/products/62a9bd91371e85e72d297c2e
 info	2022:06:15 02:21:37	Resource with _id 62a9bd91371e85e72d297c2e not found.
 info	2022:06:15 02:21:43	DELETE Request to /api/products/62a9c08b2db12f986bbb7593
+info	2022:06:15 03:15:23	GET Request to /api/carts
+info	2022:06:15 03:15:23	Route not found
+info	2022:06:15 03:16:27	GET Request to /api/carts
+info	2022:06:15 03:16:27	Route not found
+info	2022:06:15 03:16:29	GET Request to /api/carts
+info	2022:06:15 03:16:29	Route not found
+info	2022:06:15 03:17:34	GET Request to /api/carts
+info	2022:06:15 03:21:27	POST Request to /api/products
+info	2022:06:15 03:21:27	ProductModel validation failed: name: Missing name, image: Missing image
+info	2022:06:15 03:21:34	POST Request to /api/carts
+info	2022:06:15 03:22:26	POST Request to /api/carts
+info	2022:06:15 03:22:26	CartModel validation failed: userId: Cast to ObjectId failed for value "nouserrightnowjusttestg" (type string) at path "userId" because of "BSONTypeError"
+info	2022:06:15 03:22:51	POST Request to /api/carts
+info	2022:06:15 03:22:51	CartModel validation failed: userId: Cast to ObjectId failed for value "62db12f986bbb7593" (type string) at path "userId" because of "BSONTypeError"
+info	2022:06:15 03:22:57	POST Request to /api/carts
+info	2022:06:15 03:23:36	POST Request to /api/carts
+info	2022:06:15 03:25:42	POST Request to /api/carts
+info	2022:06:15 03:26:39	POST Request to /api/carts
+info	2022:06:15 03:26:54	POST Request to /api/carts
+info	2022:06:15 04:13:12	POST Request to /api/carts
+info	2022:06:15 04:13:32	GET Request to /api/carts
+info	2022:06:15 04:15:55	POST Request to /api/carts
+info	2022:06:15 04:16:10	POST Request to /api/carts
+info	2022:06:15 04:16:59	POST Request to /api/carts
+info	2022:06:15 04:17:13	POST Request to /api/carts
+info	2022:06:15 04:17:32	POST Request to /api/carts
+info	2022:06:15 05:01:21	POST Request to /api/carts
+info	2022:06:15 05:01:21	Route not found
+info	2022:06:15 05:01:55	GET Request to /api/carts
+info	2022:06:15 05:01:55	Route not found
+info	2022:06:15 05:01:57	GET Request to /api/carts
+info	2022:06:15 05:01:57	Route not found
+info	2022:06:15 05:02:32	GET Request to /api/carts
+info	2022:06:15 05:02:32	Route not found
+info	2022:06:15 05:04:04	GET Request to /api/carts
+info	2022:06:15 05:04:24	POST Request to /api/carts
+info	2022:06:15 05:05:01	GET Request to /api/cart-by-user/62969ee1c05d55310aba99b2
+info	2022:06:15 05:05:15	GET Request to /api/cart-by-user/62a9c08b2db12f986bbb7593
+info	2022:06:15 05:05:42	DELETE Request to /api/carts/62a9c08b2db12f986bbb7593
+info	2022:06:15 05:05:42	Resource with _id 62a9c08b2db12f986bbb7593 not found
+info	2022:06:16 07:58:09	GET Request to /api/items-by-cart-with-names/62a97908ddbeefec2408acfe/7908ddbeefec2408
+error	2022:06:16 07:58:09	Cast to ObjectId failed for value "7908ddbeefec2408" (type string) at path "productId" for model "ItemModel"

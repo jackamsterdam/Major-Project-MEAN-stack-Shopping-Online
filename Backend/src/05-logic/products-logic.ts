@@ -6,6 +6,7 @@ import path from "path"
 import safeDelete from "../01-utils/safe-delete"
 //!erase functions you wont use 
 
+
 //Get all Categories
 async function getAllProducts(): Promise<IProductModel[]> {
     return ProductModel.find().populate('category').exec()
@@ -92,5 +93,4 @@ export default {
     addProduct,
     updateProduct,
     deleteProduct
-
 }

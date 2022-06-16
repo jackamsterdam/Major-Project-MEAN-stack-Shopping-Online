@@ -4,6 +4,7 @@ import productsLogic from '../05-logic/products-logic'
 
 const router = express.Router()
 
+
 //http://localhost:3001/api/categories/
 router.get('/categories', async (request: Request, response: Response, next: NextFunction) => {
     try {
@@ -24,6 +25,7 @@ router.get('/products', async (request: Request, response: Response, next: NextF
     }
 })
 
+//http://localhost:3001/api/products/234343232432
 router.get("/products/:_id", async (request: Request, response: Response, next: NextFunction) => {
     try {
         const _id = request.params._id;
