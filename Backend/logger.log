@@ -229,3 +229,118 @@ info	2022:06:16 04:11:40	Forbidden: You are not authorized
 info	2022:06:16 04:11:48	POST Request to /api/auth/login
 info	2022:06:16 04:12:07	GET Request to /api/categories
 info	2022:06:16 04:12:47	POST Request to /api/products
+info	2022:06:18 05:21:30	GET Request to /api/products
+info	2022:06:18 06:02:20	POST Request to /api/items/
+info	2022:06:18 06:02:20	CartItemModel validation failed: productId: Cast to ObjectId failed for value "62a97908dsdfsdfsd2408acfssddf" (type string) at path "productId" because of "BSONTypeError"
+info	2022:06:18 06:03:42	POST Request to /api/items/
+error	2022:06:18 06:03:42	Parameter "obj" to Document() must be an object, got 62ab04da04e42a63f933a30b
+info	2022:06:18 06:04:32	POST Request to /api/items/
+error	2022:06:18 06:04:32	Parameter "obj" to Document() must be an object, got 62ab04da04e42a63f933a30b
+info	2022:06:18 06:05:06	POST Request to /api/items/
+error	2022:06:18 06:05:06	Parameter "obj" to Document() must be an object, got 62ab04da04e42a63f933a30b
+info	2022:06:18 06:06:13	POST Request to /api/items/
+error	2022:06:18 06:06:13	Parameter "obj" to Document() must be an object, got 62ab04da04e42a63f933a30b
+info	2022:06:18 06:14:17	POST Request to /api/items/62ab04da04e42a63f933a30b
+info	2022:06:18 06:17:31	POST Request to /api/items/62ab04da04e42a63f933a30b
+info	2022:06:18 06:17:31	CartItemModel validation failed: total: Missing total, quantity: Missing quantity
+info	2022:06:18 06:18:24	POST Request to /api/items/62ab04da04e42a63f933a30b
+info	2022:06:18 06:19:56	POST Request to /api/products
+info	2022:06:18 06:20:29	POST Request to /api/items/62ab04da04e42a63f933a30b
+info	2022:06:18 06:21:59	POST Request to /api/items/62ab04da04e42a63f933a30b
+info	2022:06:18 06:24:00	POST Request to /api/items/62ab04da04e42a63f933a30b
+info	2022:06:18 06:25:36	POST Request to /api/items/62ab04da04e42a63f933a30b
+info	2022:06:18 06:27:20	POST Request to /api/items/62ab04da04e42a63f933a30b
+error	2022:06:18 06:27:21	Parameter "obj" to Document() must be an object, got 62ab04da04e42a63f933a30b
+info	2022:06:18 06:28:20	POST Request to /api/items/62ab04da04e42a63f933a30b
+error	2022:06:18 06:28:20	Parameter "obj" to Document() must be an object, got 62ab04da04e42a63f933a30b
+info	2022:06:18 06:35:33	POST Request to /api/items/62ab04da04e42a63f933a30b
+info	2022:06:18 06:37:58	POST Request to /api/items/62ab04da04e42a63f933a30b
+info	2022:06:18 06:38:40	POST Request to /api/items/62ab04da04e42a63f933a30b
+info	2022:06:18 06:39:47	POST Request to /api/items/62ab04da04e42a63f933a30b
+info	2022:06:18 06:39:54	POST Request to /api/items/62ab04da04e42a63f933a30b
+info	2022:06:18 06:41:10	POST Request to /api/items/62ab04da04e42a63f933a30b
+info	2022:06:18 06:43:40	POST Request to /api/items/62ab04da04e42a63f933a30b
+info	2022:06:18 06:45:17	POST Request to /api/items/62ab04da04e42a63f933a30b
+info	2022:06:18 06:51:10	POST Request to /api/items/62ab04da04e42a63f933a30b
+info	2022:06:18 06:52:51	POST Request to /api/items/62ab04da04e42a63f933a30b
+info	2022:06:18 06:53:25	POST Request to /api/items/62ab04da04e42a63f933a30b
+info	2022:06:18 06:56:40	POST Request to /api/orders/
+info	2022:06:18 07:01:08	GET Request to /api/orders
+info	2022:06:18 07:11:15	GET Request to /api/receipts/62adf5b8128550ecfd48905b
+info	2022:06:18 07:11:15	Route not found
+info	2022:06:18 07:11:37	GET Request to /api/receipts/62adf5b8128550ecfd48905b
+error	2022:06:18 07:11:37	Cast to ObjectId failed for value "{ orderId: '62adf5b8128550ecfd48905b' }" (type Object) at path "_id" for model "OrderModel"
+info	2022:06:18 07:14:21	GET Request to /api/receipts/62adf5b8128550ecfd48905b
+info	2022:06:18 07:20:52	GET Request to /api/receipts/62adf5b8128550ecfd48905b
+info	2022:06:18 07:30:41	GET Request to /api/items-by-cart-with-names/62adf46e128550ecfd489051
+info	2022:06:18 07:43:09	GET Request to /api/receipts/62adf5b8128550ecfd48905b
+info	2022:06:18 07:43:09	Route not found
+info	2022:06:18 07:43:58	GET Request to /api/receipts/62adf5b8128550ecfd48905b
+info	2022:06:18 07:43:58	Route not found
+info	2022:06:18 07:44:22	GET Request to /api/receipts/62adf5b8128550ecfd48905b
+info	2022:06:18 07:44:22	Route not found
+info	2022:06:18 07:44:55	GET Request to /api/receipts/62adf5b8128550ecfd48905b
+info	2022:06:18 07:44:55	Route not found
+info	2022:06:18 07:45:14	GET Request to /api/receipts/62adf5b8128550ecfd48905b
+info	2022:06:18 07:45:14	Route not found
+info	2022:06:18 07:46:38	GET Request to /api/receipts/62adf5b8128550ecfd48905b
+info	2022:06:18 07:48:02	GET Request to /api/receipts/62adf5b8128550ecfd48905b
+info	2022:06:19 05:39:43	GET Request to /api/products
+info	2022:06:19 05:40:24	GET Request to /api/products/62a9bd91372e85e72d298c2e
+info	2022:06:19 05:40:24	Resource with _id 62a9bd91372e85e72d298c2e not found.
+info	2022:06:19 05:41:03	POST Request to /api/products
+info	2022:06:19 05:41:19	GET Request to /api/products/62af357f0b900364560d18cf
+info	2022:06:19 05:41:40	GET Request to /api/categories
+info	2022:06:19 05:41:50	GET Request to /api/products-by-category/62a97908ddbeefec2408acfe
+info	2022:06:19 05:42:44	GET Request to /api/products
+info	2022:06:19 05:44:04	PUT Request to /api/products/62af357f0b900364560d18cf
+info	2022:06:19 05:44:08	GET Request to /api/products
+info	2022:06:19 05:44:34	DELETE Request to /api/products/62af357f0b900364560d18cf
+info	2022:06:19 05:44:38	GET Request to /api/products
+info	2022:06:19 05:44:49	POST Request to /api/products
+info	2022:06:19 05:46:53	POST Request to /api/auth/register
+info	2022:06:19 05:47:38	POST Request to /api/auth/login
+info	2022:06:19 05:48:28	GET Request to /shopping/images/5169bf7f-e9ef-4913-bf97-87da84e82bca.jpg
+info	2022:06:19 05:48:38	GET Request to /api/cart-by-user/62a97908ddbeefec2408acfe
+info	2022:06:19 05:50:38	POST Request to /api/carts
+info	2022:06:19 06:32:47	POST Request to /api/items/62ab04da04e42a63f933a30b
+info	2022:06:19 06:33:52	POST Request to /api/items/62ab04da04e42a63f933a30b
+info	2022:06:19 06:36:52	POST Request to /api/items/62ab04da04e42a63f933a30b
+info	2022:06:19 06:37:42	POST Request to /api/items/62ab04da04e42a63f933a30b
+info	2022:06:19 06:46:13	POST Request to /api/products
+info	2022:06:19 06:46:13	ProductModel validation failed: image: Missing image
+info	2022:06:19 06:46:45	POST Request to /api/items/62ab04da04e42a63f933a30b
+info	2022:06:19 06:46:45	CartItemModel validation failed: total: Missing total, quantity: Missing quantity
+info	2022:06:19 06:47:51	POST Request to /api/products
+info	2022:06:19 06:48:13	POST Request to /api/items/62ab04da04e42a63f933a30b
+info	2022:06:19 06:48:38	DELETE Request to /api/items/62af453da134da97988da29c
+info	2022:06:19 06:48:47	DELETE Request to /api/items/62af453da134da97988da29c
+info	2022:06:19 06:50:49	DELETE Request to /api/items/62af453da134da97988da29c/62af419f3063ab6478ac51e2
+info	2022:06:19 06:52:40	DELETE Request to /api/items/62af453da134da97988da29c/62af419f3063ab6478ac51e2
+info	2022:06:19 06:52:54	DELETE Request to /api/items/62af453da134da97988da29c/62af419f3063ab6478ac51e2
+info	2022:06:19 06:53:21	DELETE Request to /api/items/62af453da134da97988da29c/62af419f3063ab6478ac51e2
+info	2022:06:19 06:55:45	DELETE Request to /api/items/62af453da134da97988da29c/62af453da134da97988da29d
+info	2022:06:19 06:55:54	POST Request to /api/items/62ab04da04e42a63f933a30b
+info	2022:06:19 06:56:46	DELETE Request to /api/items/62af4527a134da97988da29a/62af470af581717c72d39a57
+info	2022:06:19 06:58:15	DELETE Request to /api/carts/62af419f3063ab6478ac51e2
+info	2022:06:19 06:58:15	Route not found
+info	2022:06:19 07:00:00	DELETE Request to /api/items/62af419f3063ab6478ac51e2
+info	2022:06:19 07:00:17	DELETE Request to /api/items/62af470af581717c72d39a57
+info	2022:06:19 07:00:31	POST Request to /api/items/62ab04da04e42a63f933a30b
+info	2022:06:19 07:01:00	POST Request to /api/items/62ab04da04e42a63f933a30b
+info	2022:06:19 07:01:19	POST Request to /api/items/62ab04da04e42a63f933a30b
+info	2022:06:19 07:02:01	GET Request to /api/items-by-cart-with-names/62af481f60f958e8084a01d2
+info	2022:06:19 07:06:36	GET Request to /api/items-by-cart/62af481f60f958e8084a01d2
+info	2022:06:19 07:06:54	POST Request to /api/items/62ab04da04e42a63f933a30b
+info	2022:06:19 07:07:11	GET Request to /api/items-by-cart/62af499e9794894f0aa2a982
+info	2022:06:19 07:08:05	POST Request to /api/carts
+info	2022:06:19 07:09:34	GET Request to /api/cart-by-user/62ab04da04e42a63f933a30b
+info	2022:06:19 07:17:26	GET Request to /api/cart-by-user/62ab04da04e42a63f933a30b
+info	2022:06:19 07:18:20	GET Request to /api/orders
+info	2022:06:19 07:19:27	POST Request to /api/orders/
+info	2022:06:19 07:21:31	POST Request to /api/items/62ab04da04e42a63f933a30b
+info	2022:06:19 07:21:44	POST Request to /api/items/62ab04da04e42a63f933a30b
+info	2022:06:19 07:22:06	POST Request to /api/orders/
+info	2022:06:19 07:24:08	GET Request to /api/orders
+info	2022:06:19 07:26:30	GET Request to /api/receipts/62af4d2e92600958451c20a6
+info	2022:06:19 07:26:33	GET Request to /api/receipts/62af4d2e92600958451c20a6

@@ -17,7 +17,7 @@ import sanitize from './02-middleware/sanitize'
 import productsController from './06-controllers/products-controller'
 import imagesController from './06-controllers/images-controller'
 import cartsController from './06-controllers/carts-controller'
-import itemsController from './06-controllers/items-controller'
+import cartItemsController from './06-controllers/cart-items-controller'
 import ordersController from './06-controllers/orders-controller'
 import authController from './06-controllers/auth-controller'
 
@@ -38,7 +38,7 @@ server.use(sanitize)
 server.use('/api', productsController)
 server.use('/', imagesController)
 server.use('/api', cartsController)
-server.use('/api', itemsController)
+server.use('/api', cartItemsController)
 server.use('/api', ordersController)
 server.use('/api/auth', authController)
 

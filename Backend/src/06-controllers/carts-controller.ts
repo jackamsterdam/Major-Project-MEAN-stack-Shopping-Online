@@ -5,6 +5,8 @@ import { CartModel } from '../03-models/cart-model'
 
 const router = express.Router()
 
+
+//!delte this as well no need to get all carts 
 //http://localhost:3001/api/carts/
 router.get('/carts', async (request: Request, response: Response, next: NextFunction) => {
     try {
@@ -16,6 +18,7 @@ router.get('/carts', async (request: Request, response: Response, next: NextFunc
     }
 })
 
+//!NO NEED FOR THIS we adding cart only through added item !!
 //http://localhost:3001/api/carts/
 router.post('/carts', async (request: Request, response: Response, next: NextFunction) => {
     try {
@@ -30,10 +33,11 @@ router.post('/carts', async (request: Request, response: Response, next: NextFun
 })
 
 //http://localhost:3001/api/cart-by-user/62969ee1c05d55310aba99b2
-router.get('/cart-by-user/:userId', async (request: Request, response: Response, next: NextFunction) => {
+router.get('/cart-by-user/:userId/', async (request: Request, response: Response, next: NextFunction) => {
     try {
         const userId = request.params.userId
-        const cart = await cartsLogic.getCartByUser(userId)
+        //W want the cart that is open (isclosed===false)
+        const cart = await cartsLogic.getCartByUser(userId, false)
         response.json(cart)
 
     } catch (err: any) {
@@ -41,16 +45,17 @@ router.get('/cart-by-user/:userId', async (request: Request, response: Response,
     }
 })
 
-//http://localhost:3001/api/carts/:_id
-router.delete('/carts/:_id', async (request: Request, response: Response, next: NextFunction) => {
-    try {
-        const _id = request.params._id
-        await cartsLogic.deleteCart(_id)
-        response.sendStatus(204)
+// no delete 
+// //http://localhost:3001/api/carts/:_id
+// router.delete('/carts/:_id', async (request: Request, response: Response, next: NextFunction) => {
+//     try {
+//         const _id = request.params._id
+//         await cartsLogic.deleteCart(_id)
+//         response.sendStatus(204)
 
-    } catch (err: any) {
-        next(err)
-    }
-})
+//     } catch (err: any) {
+//         next(err)
+//     }
+// })
 
 export default router 

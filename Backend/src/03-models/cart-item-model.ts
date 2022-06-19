@@ -3,7 +3,7 @@ import { CartModel } from "./cart-model";
 import { ProductModel } from "./product-model";
 
 //1. Model interface describing the data in the model:
-export interface IItemModel extends Document {
+export interface ICartItemModel extends Document {
     quantity: number
     total: number  //! do i need total here ?////???????? I dont need price right?? cause price i get form product   and i dont need name cause name i get from proeduct 
     productId: Schema.Types.ObjectId
@@ -11,7 +11,7 @@ export interface IItemModel extends Document {
 }
 
 //2. Model Schema describing validation, constraints and more:
-const ItemSchema = new Schema<IItemModel>({
+const CartItemSchema = new Schema<ICartItemModel>({
     quantity: {
         type: Number,
         required: [true, "Missing quantity"],
@@ -35,7 +35,7 @@ const ItemSchema = new Schema<IItemModel>({
 })
 
 //Virtual Fields: 
-ItemSchema.virtual('product', {
+CartItemSchema.virtual('product', {
     ref: ProductModel,
     localField: 'productId',
     foreignField: '_id',
@@ -43,7 +43,7 @@ ItemSchema.virtual('product', {
 })
 
 //Virtual Fields: 
-ItemSchema.virtual('cart', {
+CartItemSchema.virtual('cart', {
     ref: CartModel,
     localField: 'cartId',
     foreignField: '_id',
@@ -52,5 +52,5 @@ ItemSchema.virtual('cart', {
 })
 
 //3. Model Class - this is the final model class:
-export const ItemModel = model<IItemModel>('ItemModel', ItemSchema, 'items')
+export const CartItemModel = model<ICartItemModel>('CartItemModel',CartItemSchema, 'items')
 

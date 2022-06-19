@@ -5,6 +5,7 @@ import { UserModel } from "./user-model";
 export interface ICartModel extends Document {
     // createdAt: Date
     userId: Schema.Types.ObjectId
+    isClosed: boolean
 }
 
 //2. Model Schema describing validation, constraints and more:
@@ -16,7 +17,15 @@ const CartSchema = new Schema<ICartModel>({
     //     // default: Date.now
     //      default: new Date()
     // },
-    userId: Schema.Types.ObjectId
+    userId: Schema.Types.ObjectId,
+    isClosed: {
+        type: Boolean,
+        // required: [true, "Missing price"],
+        // min: [0, "Price can't be negative"],
+        // max: [1000, "Price can't exceed 1000"]
+        default: false
+
+    }
 
 }, {
     versionKey: false,

@@ -50,7 +50,7 @@ router.get('/products-by-category/:categoryId', async (request: Request, respons
         next(err)
     }
 })
-
+//add verifyAdmin here !!
 //http://localhost:3001/api/products/
 router.post('/products', async (request: Request, response: Response, next: NextFunction) => {
     try {
@@ -63,6 +63,7 @@ router.post('/products', async (request: Request, response: Response, next: Next
         next(err)
     }
 })
+//add verifyAdmin here !!
 
 //http://localhost:3001/api/products/62969ee1c05d55310aba99b2
 router.put('/products/:_id', async (request: Request, response: Response, next: NextFunction) => {
@@ -78,6 +79,7 @@ router.put('/products/:_id', async (request: Request, response: Response, next: 
         next(err)
     }
 })
+//add verifyAdmin here !!
 
 //http://localhost:3001/api/products/:_id
 router.delete('/products/:_id', async (request: Request, response: Response, next: NextFunction) => {
