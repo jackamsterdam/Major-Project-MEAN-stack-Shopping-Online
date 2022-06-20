@@ -344,3 +344,6 @@ info	2022:06:19 07:22:06	POST Request to /api/orders/
 info	2022:06:19 07:24:08	GET Request to /api/orders
 info	2022:06:19 07:26:30	GET Request to /api/receipts/62af4d2e92600958451c20a6
 info	2022:06:19 07:26:33	GET Request to /api/receipts/62af4d2e92600958451c20a6
+info	2022:06:20 06:51:21	GET Request to /api/cart-by-user/62a97908ddbeefec2408acfe
+info	2022:06:20 06:52:04	GET Request to /api/cart-by-user/62ab04da04e42a63f933a30b
+info	2022:06:20 06:52:22	GET Request to /api/cart-by-user/62ab04da04e42a63f933a30b

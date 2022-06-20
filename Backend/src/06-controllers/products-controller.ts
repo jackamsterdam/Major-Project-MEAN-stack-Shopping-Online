@@ -50,7 +50,7 @@ router.get('/products-by-category/:categoryId', async (request: Request, respons
         next(err)
     }
 })
-//add verifyAdmin here !!
+//!add verifyAdmin here !!
 //http://localhost:3001/api/products/
 router.post('/products', async (request: Request, response: Response, next: NextFunction) => {
     try {

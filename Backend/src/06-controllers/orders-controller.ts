@@ -31,6 +31,7 @@ router.get('/orders', async (request: Request, response: Response, next: NextFun
 })
 
 //For final receipt:
+//http://localhost:3001/api/receipts/2352423342
 router.get('/receipts/:_id', async (request: Request, response: Response, next: NextFunction) => {
     try {
         const orderId = request.params._id

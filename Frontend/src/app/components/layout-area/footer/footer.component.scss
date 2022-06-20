@@ -1,8 +1,8 @@
+@import '../../../styles/placeholders/placeholders.scss';
+
 div {
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %center-flex;
 }
 
 a {

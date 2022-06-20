@@ -23,7 +23,7 @@ async function addCart(cart: ICartModel): Promise<ICartModel> {
     return cart.save()
 }
 
-//Close the cart when making an order - orders logic uses this function to close the specific cart
+//Close the cart when making an order - orders logic uses this function to close the specific cart (no route to surf to)
 async function closeCart(cartId: string):Promise<ICartModel> {
 
   // await CartModel.findByIdAndUpdate({cartId}).exec()

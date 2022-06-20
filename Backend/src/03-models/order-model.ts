@@ -9,9 +9,9 @@ export interface IOrderModel extends Document {
     shipCity: CityEnum
     shipStreet: string
     shipDate: Date
-    //orderDate is by createdAt with timestamp below
+    //orderDate is the createdAt field I did with timestamp below
     creditCard: number
-    //! I only have function add order why i need this i dont use populate
+    //! I only have function add order why i need this i dont use populate  - i populate in receipt
     userId: Schema.Types.ObjectId  //! what is this for if i dont use it?? or do i in the receopt???
     cartId: Schema.Types.ObjectId  //! what is this for if i dont use it??  and cart has the user anyways so why need both car and user ?????????
 }

@@ -11,8 +11,13 @@ import { MenuComponent } from './components/layout-area/menu/menu.component';
 import { HomeComponent } from './components/home-area/home/home.component';
 import { PageNotFoundComponent } from './components/layout-area/page-not-found/page-not-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LogoComponent } from './components/layout-area/logo/logo.component';
+import { JwtInterceptor } from './services/jwt.interceptor';
+import { RegisterComponent } from './components/auth-area/register/register.component';
+import { LoginComponent } from './components/auth-area/login/login.component';
+import { LogoutComponent } from './components/auth-area/logout/logout.component';
+import { AuthMenuComponent } from './components/auth-area/auth-menu/auth-menu.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +27,11 @@ import { LogoComponent } from './components/layout-area/logo/logo.component';
     MenuComponent,
     HomeComponent,
     PageNotFoundComponent,
-    LogoComponent
+    LogoComponent,
+    RegisterComponent,
+    LoginComponent,
+    LogoutComponent,
+    AuthMenuComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +42,12 @@ import { LogoComponent } from './components/layout-area/logo/logo.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  // Causes Angular to invoke that interceptor on each request:
+  providers: [{
+    useClass: JwtInterceptor,
+    provide: HTTP_INTERCEPTORS,
+    multi: true
+  }],
   bootstrap: [LayoutComponent]
 })
 export class AppModule { }

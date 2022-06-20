@@ -18,9 +18,8 @@ const router = express.Router()
 
 
 
-
+//When user re-logs in his cart items are displayed
 //http://localhost:3001/api/items-by-cart/62969ee1c05d55310aba99b2/289749832389h892
-
 router.get('/items-by-cart/:cartId', async (request: Request, response: Response, next: NextFunction) => {
     try {
         const cartId = request.params.cartId

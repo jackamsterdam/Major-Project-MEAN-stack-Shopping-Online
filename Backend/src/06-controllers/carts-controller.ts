@@ -32,6 +32,7 @@ router.post('/carts', async (request: Request, response: Response, next: NextFun
     }
 })
 
+//Gets only cart by user that is open!
 //http://localhost:3001/api/cart-by-user/62969ee1c05d55310aba99b2
 router.get('/cart-by-user/:userId/', async (request: Request, response: Response, next: NextFunction) => {
     try {

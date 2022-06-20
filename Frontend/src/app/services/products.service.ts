@@ -2,6 +2,11 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { CategoryModel } from '../models/category.model';
+import { ProductModel } from '../models/product.model';
+import { fetchCategoriesAction } from '../redux/categories-state';
+import { addProductAction, deleteProductAction, fetchProductsAction, updateProductAction } from '../redux/products-state';
+import store from '../redux/store';
 
 @Injectable({
   providedIn: 'root'
@@ -10,22 +15,70 @@ export class ProductsService {
 
   constructor(private http:HttpClient) { }
 
-  // async getAllCategories():Promise<CategoryModel[]> {
-  //   const categories = await firstValueFrom(this.http.get<CategoryModel[]>(environment.categoriesUrl))
-  //   return categories
-  // }
+  async getAllProducts():Promise<ProductModel[]> {
+    if (store.getState().productsState.products.length === 0) {
 
-  // async getProductsByCategory(categoryId: string):Promise<ProductModel[]> {
-  //  const products = await firstValueFrom(this.http.get<ProductModel[]>(environment.productsByCategoryUrl + categoryId))
-  //  return products 
-  // }
+      const products = await firstValueFrom(this.http.get<ProductModel[]>(environment.productsUrl))
+      store.dispatch(fetchProductsAction(products))
+    }
+    return store.getState().productsState.products
+  } 
 
-  // async addproduct(product: ProductModel):Promise<ProductModel> {
-  //   const addedProduct = await firstValueFrom(this.http.post<ProductModel>(environment.productsUrl, product))
-  //   return addedProduct
-  // }
+  //!not sure this function is in use if not delete it !! 
+  async getOneProduct(_id: string): Promise<ProductModel> {
+    let product = store.getState().productsState.products.find(p => p._id === _id)
+    if (!product) {
+      product = await firstValueFrom(this.http.get<ProductModel>(environment.productsUrl + _id))
+    }
+   
+    return product 
+  }
 
-  // async deleteProduct(_id: string):Promise<void> {
-  //   await firstValueFrom(this.http.delete(environment.productsUrl + _id))
-  // }
+  async getAllCategories():Promise<CategoryModel[]> {
+    if (store.getState().categoriesState.categories.length === 0) {
+
+      const categories = await firstValueFrom(this.http.get<CategoryModel[]>(environment.categoriesUrl))
+      store.dispatch(fetchCategoriesAction(categories))
+    }
+    return store.getState().categoriesState.categories
+  }
+
+  //!do i need redux for this?? how to do redux for this
+  async getProductsByCategory(categoryId: string):Promise<ProductModel[]> {
+   const products = await firstValueFrom(this.http.get<ProductModel[]>(environment.productsByCategoryUrl + categoryId))
+   return products 
+  }
+
+  async addProduct(product: ProductModel):Promise<ProductModel> {
+
+    const formData = new FormData()
+    formData.append('name', product.name)
+    formData.append('price', product.price.toString())
+    formData.append('image', product.image)
+
+    //! Do we need to apppend category ? 
+
+    const addedProduct = await firstValueFrom(this.http.post<ProductModel>(environment.productsUrl, formData))
+    store.dispatch(addProductAction(addedProduct))
+    return addedProduct
+  }
+
+  async updateProduct(product: ProductModel):Promise<ProductModel> {
+
+    const formData = new FormData()
+    formData.append('_id', product._id)
+    formData.append('name', product.name)
+    formData.append('price', product.price.toString())
+    formData.append('image', product.image)
+
+
+    const updatedProduct = await firstValueFrom(this.http.put<ProductModel>(environment.productsUrl + product._id, formData))
+    store.dispatch(updateProductAction(updatedProduct))
+    return updatedProduct
+  }
+
+  async deleteProduct(_id: string):Promise<void> {
+    await firstValueFrom(this.http.delete(environment.productsUrl + _id))
+    store.dispatch(deleteProductAction(_id))
+  }
 }

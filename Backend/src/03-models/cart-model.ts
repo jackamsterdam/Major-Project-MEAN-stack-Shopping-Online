@@ -3,7 +3,7 @@ import { UserModel } from "./user-model";
 
 //1. Model interface describing the data in the model:
 export interface ICartModel extends Document {
-    // createdAt: Date
+    // createdAt: Date   //did timestamp instead 
     userId: Schema.Types.ObjectId
     isClosed: boolean
 }
