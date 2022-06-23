@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { CityEnum } from 'src/app/models/city.enum';
 import { UserModel } from 'src/app/models/user.model';
@@ -78,10 +78,16 @@ public CityEnum = CityEnum
  cancelAreUnique() {
   this.isCompleted = false
  }
-
- 
+//******************************************************* */
+    // Bind to the <input type= ... > 
+    @ViewChild("ssnBox")
+    public ssnBoxRef: ElementRef<HTMLInputElement>;
+//******************************************************* */
 
  makeDashes(e: Event) {
+
+  this.ssnBoxRef.nativeElement    
+  console.log("this.ssnBoxRef.nativeElement", this.ssnBoxRef.nativeElement);
   const inputElement = (e.target as HTMLInputElement);
 // console.log('key', e.key)
 // console.log('target', e.target)
@@ -95,10 +101,26 @@ console.log('inputElement',inputElement.value)
 
  }
 
- makeDashes2(theValue: any) {
-  console.log("theValue", theValue);
+//  makeDashes2(theValue: any) {
+//   console.log("theValue", theValue);
 
- }
+//  }
+
+//! tried to do this: 
+// const phone = document.getElementById('phone');
+
+// phone.addEventListener("keydown", (e) => {
+//     if(e.key === "Backspace" || e.key === "Delete") return;
+//     if(e.target.value.length === 4) {
+//         phone.value = phone.value + "-";
+//     }
+//     if(e.target.value.length === 9) 
+//         phone.value = phone.value + "-";
+//     }
+//     if(e.target.value.length === 14) {
+//         phone.value = phone.value + "-";
+//     }
+// })
 
 
 

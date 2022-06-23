@@ -25,14 +25,16 @@ async function addCart(cart: ICartModel): Promise<ICartModel> {
 }
 
 //Close the cart when making an order - orders logic uses this function to close the specific cart (no route to surf to)
-async function closeCart(cartId: string):Promise<ICartModel> {
+async function closeCart(_id: string):Promise<ICartModel> {
 
   // await CartModel.findByIdAndUpdate({cartId}).exec()
     // const updatedCart = await CartModel.findByIdAndUpdate(cartId, product, { returnOriginal: false }).exec();
 
-     await CartModel.updateOne({ cartId }, { $set: { isClosed: true } }).exec()
+    await CartModel.updateOne({ _id }, { $set: { isClosed: true } }).exec()
+    // await CartModel.updateOne({ cartId }, { $set: { isClosed: true } }).exec() //!wrong be careful!! you dont have cartId in CartModel its _id!!
+  
 
-    const cart = await CartModel.findOne({ cartId: cartId}).exec()
+    const cart = await CartModel.findOne({ _id}).exec()
         console.log("cart", cart);
     return cart;
 }

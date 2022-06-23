@@ -1918,3 +1918,58 @@ info	2022:06:23 05:20:44	GET Request to /api/products-count/
 info	2022:06:23 05:20:44	GET Request to /api/orders-count/
 info	2022:06:23 05:22:48	GET Request to /api/products-count/
 info	2022:06:23 05:22:48	GET Request to /api/orders-count/
+info	2022:06:23 09:54:26	GET Request to /api/products-count/
+info	2022:06:23 09:54:27	GET Request to /api/orders-count/
+info	2022:06:23 09:54:33	GET Request to /api/products-count/
+info	2022:06:23 09:54:34	GET Request to /api/orders-count/
+info	2022:06:23 09:55:57	GET Request to /api/products-count/
+info	2022:06:23 09:55:58	GET Request to /api/orders-count/
+info	2022:06:23 09:56:36	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 09:56:38	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 10:04:22	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 10:04:24	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 10:06:24	POST Request to /api/auth/register
+info	2022:06:23 10:06:24	UserModel validation failed: city: Missing city, street: Missing street
+info	2022:06:23 10:06:32	POST Request to /api/auth/register
+info	2022:06:23 10:06:32	Username jack@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 10:06:51	POST Request to /api/auth/register
+info	2022:06:23 10:07:27	POST Request to /api/auth/register
+info	2022:06:23 10:07:27	Username jack@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 10:14:56	POST Request to /api/auth/register
+info	2022:06:23 10:14:56	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 10:15:22	POST Request to /api/auth/register
+info	2022:06:23 10:16:20	POST Request to /api/auth/register
+info	2022:06:23 10:17:21	POST Request to /api/auth/register
+info	2022:06:23 10:17:21	Username henry@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 10:17:32	POST Request to /api/auth/register
+info	2022:06:23 10:18:24	POST Request to /api/auth/register
+info	2022:06:23 10:18:24	Social Security Number you have entered already exists. Please make sure that you are not registered already or please try again
+info	2022:06:23 10:18:53	POST Request to /api/auth/register
+info	2022:06:23 10:19:47	POST Request to /api/auth/register
+info	2022:06:23 10:20:42	POST Request to /api/auth/register
+info	2022:06:23 10:21:42	POST Request to /api/auth/register
+info	2022:06:23 10:23:26	POST Request to /api/items/62b4bbca53a94730e6939d32
+info	2022:06:23 10:23:51	GET Request to /api/products-count/
+info	2022:06:23 10:23:53	GET Request to /api/orders-count/
+info	2022:06:23 10:24:28	POST Request to /api/items/62b4bc0453a94730e6939d36
+info	2022:06:23 10:25:10	POST Request to /api/orders/
+info	2022:06:23 10:25:20	GET Request to /api/orders
+info	2022:06:23 10:25:45	POST Request to /api/orders/
+info	2022:06:23 10:25:51	GET Request to /api/orders
+info	2022:06:23 10:29:50	POST Request to /api/items/62b4bc0453a94730e6939d36
+info	2022:06:23 10:30:31	POST Request to /api/orders/
+info	2022:06:23 10:30:36	GET Request to /api/orders
+info	2022:06:23 10:31:19	POST Request to /api/items/62b4bbca53a94730e6939d32
+info	2022:06:23 10:31:47	POST Request to /api/items/62b4bc0453a94730e6939d36
+info	2022:06:23 10:32:14	POST Request to /api/orders/
+info	2022:06:23 10:32:29	GET Request to /api/orders
+info	2022:06:23 10:33:32	POST Request to /api/orders/
+info	2022:06:23 10:33:37	GET Request to /api/orders
+info	2022:06:23 10:37:11	POST Request to /api/items/62b4bbca53a94730e6939d32
+info	2022:06:23 10:37:34	POST Request to /api/items/62b4bc0453a94730e6939d36
+info	2022:06:23 10:37:58	POST Request to /api/orders/
+info	2022:06:23 10:38:37	GET Request to /api/orders
+info	2022:06:23 10:50:27	POST Request to /api/items/62b4bbca53a94730e6939d32
+info	2022:06:23 10:50:43	POST Request to /api/items/62b4bc0453a94730e6939d36
+info	2022:06:23 10:50:58	POST Request to /api/orders/
+info	2022:06:23 10:51:02	GET Request to /api/orders

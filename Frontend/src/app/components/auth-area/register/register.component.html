@@ -13,7 +13,8 @@
                 <!--! input type text or number??? and how to make xxx-xx-xxxx these - lines between? or send data with lines between???  -->
                 <!--! min and max length without - - - will be 9 not 11 btw !!  -->
                 <!-- must do front end validation to social only with 9 digits cause in back i dont know how cause i hash it !!  -->
-                <input (keydown)="makeDashes($event)" makeDashes2(ssnBox.value)  autofocus type="text" name="ssn" [(ngModel)]="user.socialSecurityNumber" placeholder="###-##-####"
+                <!-- makeDashes2(ssnBox.value) why cant i send the value of the ssnBox??? -->
+                <input (keydown)="makeDashes($event)"  autofocus type="text" name="ssn" [(ngModel)]="user.socialSecurityNumber" placeholder="###-##-####"
                     #ssnBox="ngModel" required minlength="11" maxlength="11">
                 <!-- pattern="/^\d{3}-\d{2}-\d{4}$/" -->
                 <span *ngIf="ssnBox.touched && ssnBox.errors?.['required']">Missing SSN</span>
