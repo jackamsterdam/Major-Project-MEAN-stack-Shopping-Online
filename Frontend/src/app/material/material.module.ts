@@ -6,6 +6,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
+import {MatStepperModule} from '@angular/material/stepper';
 
 const materialComponents = [
   MatIconModule,
@@ -15,6 +16,7 @@ const materialComponents = [
   MatFormFieldModule,
   MatInputModule,
   MatSelectModule,
+  MatStepperModule
   
 ]
 

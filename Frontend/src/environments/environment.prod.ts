@@ -12,6 +12,7 @@ export const environment = {
     productsUrl: 'http://localhost:3001/api/products/',
     productsByCategoryUrl: 'http://localhost:3001/api/products-by-category/',
     productsImageUrl: 'http://localhost:3001/shopping/images/',
+    productsCountUrl: 'http://localhost:3001/api/products-count/',
   
     //carts
     //! no need for this cart is by cartItem cartsUrl: 'http://localhost:3001/api/carts/'
@@ -26,6 +27,7 @@ export const environment = {
     //  orders: 
     ordersUrl: 'http://localhost:3001/api/orders/',
     // for receipt: 
-    receiptUrl: 'http://localhost:3001/api/receipts/'
-  
+    receiptUrl: 'http://localhost:3001/api/receipts/',
+    ordersCountUrl:'http://localhost:3001/api/orders-count/',
+    recentOrderByUserUrl: 'http://localhost:3001/api/recent-order-by-user/'
 };

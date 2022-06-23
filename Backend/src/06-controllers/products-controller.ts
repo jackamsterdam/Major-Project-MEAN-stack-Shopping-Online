@@ -27,6 +27,17 @@ router.get('/products', async (request: Request, response: Response, next: NextF
     }
 })
 
+// Count: 
+//http://localhost:3001/api/products-count/
+router.get('/products-count', async (request: Request, response: Response, next: NextFunction) => {
+    try {
+        const count = await productsLogic.countProducts()
+        response.json(count)
+    } catch (err: any) {
+        next(err)
+    }
+})
+
 //http://localhost:3001/api/products/234343232432
 router.get("/products/:_id", async (request: Request, response: Response, next: NextFunction) => {
     try {

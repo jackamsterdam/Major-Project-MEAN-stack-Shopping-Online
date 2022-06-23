@@ -21,3 +21,12 @@ https://hub.docker.com/u/jackamsterdam
 https://wakatime.com/@jackamsterdam
 
 https://www.npmjs.com/~jackamsterdam
+
+
+Bonus- take notice of following features:
+
+Correct use of Enums to populate select option fields instead of hard coding strings
+
+Reusable components: products component cateogries component cart componennts and just passing Output to parents 
+
+use of custom directives custom pipes

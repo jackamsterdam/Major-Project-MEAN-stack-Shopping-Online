@@ -4,7 +4,7 @@ export class CategoriesState {
     categories: CategoryModel[] = []
 }
 
-//Categories State - categories data neeed in the application level: 
+//Categories State - categories data needed in the application level: 
 export enum CategoriesActionType { 
     FetchCategories = 'FetchCategories'
 }
@@ -18,6 +18,7 @@ export interface CategoriesAction {
 
 
 //Categories Action Creators - function for creating CategoriesAction objects. Each function creates an Action object:  
+//Admin and user both fetch all categories
 export function fetchCategoriesAction(categories: CategoryModel[]):CategoriesAction {
     return {type: CategoriesActionType.FetchCategories, payload: categories}
 }

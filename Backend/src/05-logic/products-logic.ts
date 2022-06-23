@@ -12,6 +12,11 @@ async function getAllProducts(): Promise<IProductModel[]> {
     return ProductModel.find().populate('category').exec()
 }
 
+//Count products
+async function countProducts():Promise<number> {
+    return ProductModel.find().count().exec()
+}
+
 //This function will be used later to get old imageName for updating product 
 async function getOneProduct(_id: string): Promise<IProductModel> {
     const product = await ProductModel.findById(_id).populate('category').exec()
@@ -85,8 +90,11 @@ async function deleteProduct(_id: string): Promise<void> {
 }
 
 
+
+
 export default {
     getAllProducts,
+    countProducts,
     getOneProduct,
     getAllCategories,
     getProductsByCategory,

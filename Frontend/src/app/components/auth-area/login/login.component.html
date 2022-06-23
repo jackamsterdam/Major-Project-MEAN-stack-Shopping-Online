@@ -1,1 +1,33 @@
-<p>login works!</p>
+<div class="box" *ngIf="!user">
+    <form (ngSubmit)="submit()" #formBox="ngForm">
+        <h2>Login</h2>
+
+        <p>Registered?</p>
+
+        <label>Email: </label>
+        <input type="email" name="username" [(ngModel)]="credentials.username" placeholder="email" #usernameBox="ngModel" required minlength="2" maxlength="100" >
+        <!-- pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/" -->
+        <span *ngIf="usernameBox.touched && usernameBox.errors?.['required']">Missing email</span>
+        <span *ngIf="usernameBox.touched && usernameBox.errors?.['minlength']">Email is too short</span>
+        <span *ngIf="usernameBox.touched && usernameBox.errors?.['maxlength']">Email is too long</span>
+        <!-- <span *ngIf="usernameBox.touched && usernameBox.errors?.['required']">Emailis invalid </span> -->
+        <!--! Enter pattern regex of email validation add pattern and add span  -->
+        <!-- check if email is unique!! in backend  and see if trim works lol  -->
+
+        <label>Password: </label>
+        <input type="password" name="password" [(ngModel)]="credentials.password" placeholder="password" #passwordBox="ngModel" required minlength="2" maxlength="128"  >
+        <span *ngIf="passwordBox.touched && passwordBox.errors?.['required']">Missing password</span>
+        <span *ngIf="passwordBox.touched && passwordBox.errors?.['minlength']">Password is too short</span>
+        <span *ngIf="passwordBox.touched && passwordBox.errors?.['maxlength']">Password is too long</span>
+
+  <button [disabled]="formBox.invalid">Login</button>
+ 
+</form>
+<p>Don't have an account? <button [routerLink]="'/register'">Sign up</button></p>
+</div>
+
+
+<div *ngIf="user">
+    <button>Start Shopping</button>
+    <button>Resume Shopping</button>
+</div>

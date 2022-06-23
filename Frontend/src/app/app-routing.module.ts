@@ -9,7 +9,7 @@ import { PageNotFoundComponent } from './components/layout-area/page-not-found/p
 const routes: Routes = [
 
   {path: 'register', component: RegisterComponent},
-  {path: 'login', component: LoginComponent},
+  // {path: 'login', component: LoginComponent}, //We dont need this casue its our home page
   {path: 'logout', component: LogoutComponent},
 
   //! add admin adn auth guards to the routes!!!!!!!!!

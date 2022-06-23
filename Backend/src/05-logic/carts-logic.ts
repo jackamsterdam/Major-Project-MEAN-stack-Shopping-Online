@@ -11,8 +11,9 @@ async function getAllCarts(): Promise<ICartModel[]> {
 
 //Get ONE OPEN! Cart by ONE USER ...and  will have a createdAt which I can notify  you have open cart from [date]
 //!you can find the user by checking userredux and then find the cart by the user then we dispaly when he opened his cart!! 
-async function getCartByUser(userId: string, isClosed: boolean): Promise<ICartModel[]> {
-    return CartModel.find({userId, isClosed }).populate('user').exec()
+async function getCartByUser(userId: string, isClosed: boolean): Promise<ICartModel> {
+    const carts =  await CartModel.find({userId, isClosed }).populate('user').exec()
+    return carts[0]
 }
     
 //! Add cart - when user first adds an item to the cart the cart will be created I think  

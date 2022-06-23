@@ -24,6 +24,13 @@ export class ProductsService {
     return store.getState().productsState.products
   } 
 
+  async countProducts():Promise<number> {
+   //?maybe redux save count
+      const count = await firstValueFrom(this.http.get<number>(environment.productsCountUrl))
+      
+    return count
+  } 
+
   //!not sure this function is in use if not delete it !! 
   async getOneProduct(_id: string): Promise<ProductModel> {
     let product = store.getState().productsState.products.find(p => p._id === _id)

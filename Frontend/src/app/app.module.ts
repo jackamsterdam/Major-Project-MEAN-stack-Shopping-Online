@@ -18,6 +18,11 @@ import { RegisterComponent } from './components/auth-area/register/register.comp
 import { LoginComponent } from './components/auth-area/login/login.component';
 import { LogoutComponent } from './components/auth-area/logout/logout.component';
 import { AuthMenuComponent } from './components/auth-area/auth-menu/auth-menu.component';
+import { ProductsListComponent } from './components/shared-area/products-list/products-list.component';
+import { AboutComponent } from './components/home-area/about/about.component';
+import { StoreInfoComponent } from './components/home-area/store-info/store-info.component';
+
+import { ValidateEqualModule } from 'ng-validate-equal';
 
 @NgModule({
   declarations: [
@@ -31,7 +36,10 @@ import { AuthMenuComponent } from './components/auth-area/auth-menu/auth-menu.co
     RegisterComponent,
     LoginComponent,
     LogoutComponent,
-    AuthMenuComponent
+    AuthMenuComponent,
+    ProductsListComponent,
+    AboutComponent,
+    StoreInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +48,9 @@ import { AuthMenuComponent } from './components/auth-area/auth-menu/auth-menu.co
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+
+    ValidateEqualModule
   ],
   // Causes Angular to invoke that interceptor on each request:
   providers: [{

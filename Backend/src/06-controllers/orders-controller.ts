@@ -30,6 +30,19 @@ router.get('/orders', async (request: Request, response: Response, next: NextFun
     }
 })
 
+//We need for opening page to get the users last order 
+//!pay attention user can have many orders in past we need the most recent one!!! 
+//http://localhost:3001/api/recent-order-by-user/62ab04da04e42a63f933a30b
+router.get('/recent-order-by-user/:userId', async (request: Request, response: Response, next: NextFunction) => {
+    try {
+        const userId = request.params.userId
+        const order = await ordersLogic.getMostRecentOrder(userId)
+        response.json(order)
+    } catch (err: any) {
+        next(err)
+    }
+})
+
 //For final receipt:
 //http://localhost:3001/api/receipts/2352423342
 router.get('/receipts/:_id', async (request: Request, response: Response, next: NextFunction) => {
@@ -42,6 +55,17 @@ router.get('/receipts/:_id', async (request: Request, response: Response, next: 
             items
         }
         response.json(reciept)
+    } catch (err: any) {
+        next(err)
+    }
+})
+
+// Count: 
+//http://localhost:3001/api/orders-count/
+router.get('/orders-count', async (request: Request, response: Response, next: NextFunction) => {
+    try {
+        const count = await ordersLogic.countOrders()
+        response.json(count)
     } catch (err: any) {
         next(err)
     }

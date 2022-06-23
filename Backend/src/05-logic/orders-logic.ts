@@ -25,8 +25,22 @@ async function getOrders(): Promise<IOrderModel[]> {
     return OrderModel.find().populate('cart').populate('user').exec()
 }
 
+//Count orders
+async function countOrders():Promise<number> {
+    return OrderModel.find().count().exec()
+}
+
+//Get most recent order to display on opening page (among users many closed orders gets the most recent only)
+//weird that it works findOne with sort but works - gives me most recent 
+async function getMostRecentOrder(userId: string):Promise<IOrderModel> {
+    return OrderModel.findOne({userId}).sort({createdAt: -1}).exec()
+    //!somehow get most recent createdAT only!!!!!! 
+}
+
 export default {
     addOrder,
     getOrders,
-    getReceiptById
+    getReceiptById,
+    countOrders,
+    getMostRecentOrder
 }

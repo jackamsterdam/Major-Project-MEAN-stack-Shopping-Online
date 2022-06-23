@@ -4,7 +4,7 @@ export class ProductsState {
     products: ProductModel[] = []
 }
 
-//Products State - products data neeed in the application level: 
+//Products State - products data needed in the application level: 
 export enum ProductsActionType { 
     FetchProducts = 'FetchProducts',
     AddProduct = 'AddProduct',
@@ -20,6 +20,7 @@ export interface ProductsAction {
 
 
 //Products Action Creators - function for creating ProdctsAction objects. Each function creates an Action object: 
+//Admin and user both fetch all products
 export function fetchProductsAction(products: ProductModel[]):ProductsAction {
     return {type: ProductsActionType.FetchProducts, payload: products}
 }
