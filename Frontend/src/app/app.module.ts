@@ -23,6 +23,10 @@ import { AboutComponent } from './components/home-area/about/about.component';
 import { StoreInfoComponent } from './components/home-area/store-info/store-info.component';
 
 import { ValidateEqualModule } from 'ng-validate-equal';
+import { CategoriesListComponent } from './components/shared-area/categories-list/categories-list.component';
+import { ShoppingComponent } from './components/shopping-area/shopping/shopping.component';
+import { CartListComponent } from './components/shared-area/cart-list/cart-list.component';
+import { AutoFocusDirective } from './directives/auto-focus.directive';
 
 @NgModule({
   declarations: [
@@ -39,7 +43,11 @@ import { ValidateEqualModule } from 'ng-validate-equal';
     AuthMenuComponent,
     ProductsListComponent,
     AboutComponent,
-    StoreInfoComponent
+    StoreInfoComponent,
+    CategoriesListComponent,
+    ShoppingComponent,
+    CartListComponent,
+    AutoFocusDirective
   ],
   imports: [
     BrowserModule,

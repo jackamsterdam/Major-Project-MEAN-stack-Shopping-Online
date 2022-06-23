@@ -2,6 +2,7 @@ export const environment = {
   production: true,
 
     // auth: 
+    emailAndSSNUniqueUrl: 'http://localhost:3001/api/auth/ssn-email-unique/',
     registerUrl: 'http://localhost:3001/api/register/',
     loginUrl: 'http://localhost:3001/api/login/',
     

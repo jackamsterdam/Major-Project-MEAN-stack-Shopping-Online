@@ -14,6 +14,12 @@ export class RegisterComponent {
   // using property binding when first step is completed only then isCompleted wiill change to true 
   isCompleted: boolean = false
 
+   //Solely for the purpose of changing autofocus
+  // doesnt work cant put focus on second part 
+
+  // initialFocus: boolean = true
+  // switchFocus: boolean = false 
+
 public CityEnum = CityEnum
 
 
@@ -28,12 +34,32 @@ public CityEnum = CityEnum
   // cities: typeof CityEnum = CityEnum
 
   constructor(private authService: AuthService, private router: Router, private notify: NotifyService) { }
+ 
+
+
+
 
  async submitStep1() {
 //  console.log(this.cities)
     //chage completed to true
-    this.isCompleted = true 
-    console.log('user', this.user)
+
+    try {
+      const areUnique = await this.authService.checkValidEmailAndSSN(this.user)
+      
+      // doesnt work cant put focus on second part 
+      // this.initialFocus = false
+      // this.switchFocus = true
+      
+      this.isCompleted = areUnique  //returns true if unique if not 400 bad request error gets caught and displays error to user. 
+      // this.isCompleted = true 
+      console.log('user', this.user)
+
+   
+
+    } catch (err: any) {
+      this.notify.error(err)
+    }
+  
  }
 
  async submitStep2() {
@@ -41,11 +67,37 @@ public CityEnum = CityEnum
     console.log('user part2', this.user)
     await this.authService.register(this.user)
     this.notify.success('You have been registered')
-    this.router.navigateByUrl('/home') //!Change this to producgts page!!!
+    this.router.navigateByUrl('/shopping') //!Change this to producgts page!!!
     
   } catch (err: any) {
     this.notify.error(err)
   }
+ }
+
+ //If user goes back we stop him from coming back to second page without proper backend validation:
+ cancelAreUnique() {
+  this.isCompleted = false
+ }
+
+ 
+
+ makeDashes(e: Event) {
+  const inputElement = (e.target as HTMLInputElement);
+// console.log('key', e.key)
+// console.log('target', e.target)
+// console.log('target', e.target.event)
+console.log('inputElement',inputElement.value)
+  // if(e.key === "Backspace" || e.key === "Delete") return;
+
+  if (inputElement.value.length === 4) {
+    //  ssnBox.value = phone.value + "-";
+}
+
+ }
+
+ makeDashes2(theValue: any) {
+  console.log("theValue", theValue);
+
  }
 
 

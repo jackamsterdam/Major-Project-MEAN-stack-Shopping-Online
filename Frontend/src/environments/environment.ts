@@ -6,6 +6,7 @@ export const environment = {
   production: false,
 
   // auth: 
+  emailAndSSNUniqueUrl: 'http://localhost:3001/api/auth/ssn-email-unique/',
   registerUrl: 'http://localhost:3001/api/auth/register/',
   loginUrl: 'http://localhost:3001/api/auth/login/',
 

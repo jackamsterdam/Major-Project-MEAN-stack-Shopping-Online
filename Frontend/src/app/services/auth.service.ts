@@ -14,6 +14,11 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
+  async checkValidEmailAndSSN(user: UserModel):Promise<boolean> {
+    const areUnique = await firstValueFrom(this.http.post<boolean>(environment.emailAndSSNUniqueUrl, user))
+    return areUnique
+  }
+
   async register(user: UserModel): Promise<void> {
     const token = await firstValueFrom(this.http.post<string>(environment.registerUrl, user))
     store.dispatch(registerAuthAction(token))

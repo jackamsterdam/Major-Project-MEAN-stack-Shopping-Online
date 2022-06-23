@@ -8,6 +8,7 @@ export interface IUserModel extends Document {
     lastName: string
     username: string
     password: string
+    socialSecurityNumber: string
     street: string
     city: CityEnum  // City Enum 10 most popular cities
     role: RoleEnum  // 1 = User , 2 = Admin  Admin does not have street and city btw but uses same model.
@@ -46,6 +47,16 @@ const UserSchema = new Schema<IUserModel>({
         minlength: [2, "Password too short"],
         maxlength: [128, "Password too long"], //! //מיותר בגלל שהססמא תמיד תהיה האשד ???
         trim: true,
+    },
+    socialSecurityNumber: {
+        type: String,
+        required: [true, "Missing SSN"],
+        minlength: [11, "SSN too short"],
+        maxlength: [128, "SSN too long"],  //because SSN is hashed -but frontend should enter a 9 digit number
+        //   match: [/^\d{3}-\d{2}-\d{4}$/, "SSN must be in the following number format: xxx-xx-xxxx"],    //!There is no way for me to validate the id is a number casue i hash it !! 
+        // i wanted to check this: UserModel validation failed: socialSecurityNumber: SSN must be in the following number format: xxx-xx-xxxx  BUT I cant cause it hashed!! 
+          trim: true,
+          unique: true
     },
     street: {
         type: String,

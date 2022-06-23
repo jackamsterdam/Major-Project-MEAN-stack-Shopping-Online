@@ -1606,3 +1606,315 @@ info	2022:06:22 09:58:13	GET Request to /api/products-count/
 info	2022:06:22 09:58:13	GET Request to /api/orders-count/
 info	2022:06:22 09:58:13	GET Request to /api/cart-by-user/62b366455f608bcfdef7e4ca
 info	2022:06:22 09:58:13	GET Request to /api/recent-order-by-user/62b366455f608bcfdef7e4ca
+info	2022:06:23 12:53:04	GET Request to /api/products-count/
+info	2022:06:23 12:53:04	GET Request to /api/orders-count/
+info	2022:06:23 12:53:05	GET Request to /api/cart-by-user/62b366455f608bcfdef7e4ca
+info	2022:06:23 12:53:05	GET Request to /api/recent-order-by-user/62b366455f608bcfdef7e4ca
+info	2022:06:23 12:53:36	GET Request to /api/products-count/
+info	2022:06:23 12:53:36	GET Request to /api/orders-count/
+info	2022:06:23 12:53:37	GET Request to /api/cart-by-user/62b366455f608bcfdef7e4ca
+info	2022:06:23 12:53:38	GET Request to /api/recent-order-by-user/62b366455f608bcfdef7e4ca
+info	2022:06:23 12:55:11	GET Request to /api/products-count/
+info	2022:06:23 12:55:12	GET Request to /api/orders-count/
+info	2022:06:23 12:55:13	GET Request to /api/cart-by-user/62b366455f608bcfdef7e4ca
+info	2022:06:23 12:55:13	GET Request to /api/recent-order-by-user/62b366455f608bcfdef7e4ca
+info	2022:06:23 12:55:37	GET Request to /api/products-count/
+info	2022:06:23 12:55:37	GET Request to /api/orders-count/
+info	2022:06:23 12:55:38	GET Request to /api/cart-by-user/62b366455f608bcfdef7e4ca
+info	2022:06:23 12:55:38	GET Request to /api/recent-order-by-user/62b366455f608bcfdef7e4ca
+info	2022:06:23 12:55:43	GET Request to /api/products-count/
+info	2022:06:23 12:55:43	GET Request to /api/orders-count/
+info	2022:06:23 12:55:43	GET Request to /api/cart-by-user/62b366455f608bcfdef7e4ca
+info	2022:06:23 12:55:44	GET Request to /api/recent-order-by-user/62b366455f608bcfdef7e4ca
+info	2022:06:23 12:55:49	GET Request to /api/products-count/
+info	2022:06:23 12:55:49	GET Request to /api/orders-count/
+info	2022:06:23 12:55:50	GET Request to /api/cart-by-user/62b366455f608bcfdef7e4ca
+info	2022:06:23 12:55:50	GET Request to /api/recent-order-by-user/62b366455f608bcfdef7e4ca
+info	2022:06:23 12:55:55	GET Request to /api/products-count/
+info	2022:06:23 12:55:55	GET Request to /api/orders-count/
+info	2022:06:23 12:55:55	GET Request to /api/cart-by-user/62b366455f608bcfdef7e4ca
+info	2022:06:23 12:55:56	GET Request to /api/recent-order-by-user/62b366455f608bcfdef7e4ca
+info	2022:06:23 12:56:35	GET Request to /api/products-count/
+info	2022:06:23 12:56:35	GET Request to /api/orders-count/
+info	2022:06:23 12:56:35	GET Request to /api/cart-by-user/62b366455f608bcfdef7e4ca
+info	2022:06:23 12:56:35	GET Request to /api/recent-order-by-user/62b366455f608bcfdef7e4ca
+info	2022:06:23 12:56:47	GET Request to /api/products-count/
+info	2022:06:23 12:56:47	GET Request to /api/orders-count/
+info	2022:06:23 12:56:48	GET Request to /api/cart-by-user/62b366455f608bcfdef7e4ca
+info	2022:06:23 12:56:48	GET Request to /api/recent-order-by-user/62b366455f608bcfdef7e4ca
+info	2022:06:23 12:57:41	GET Request to /api/products-count/
+info	2022:06:23 12:57:41	GET Request to /api/orders-count/
+info	2022:06:23 12:57:41	GET Request to /api/cart-by-user/62b366455f608bcfdef7e4ca
+info	2022:06:23 12:57:42	GET Request to /api/recent-order-by-user/62b366455f608bcfdef7e4ca
+info	2022:06:23 12:57:54	GET Request to /api/products-count/
+info	2022:06:23 12:57:54	GET Request to /api/orders-count/
+info	2022:06:23 12:57:55	GET Request to /api/cart-by-user/62b366455f608bcfdef7e4ca
+info	2022:06:23 12:57:55	GET Request to /api/recent-order-by-user/62b366455f608bcfdef7e4ca
+info	2022:06:23 12:58:28	GET Request to /api/products-count/
+info	2022:06:23 12:58:28	GET Request to /api/orders-count/
+info	2022:06:23 12:58:47	POST Request to /api/auth/register/
+info	2022:06:23 01:36:03	GET Request to /api/products-count/
+info	2022:06:23 01:36:03	GET Request to /api/orders-count/
+info	2022:06:23 02:08:32	POST Request to /api/auth/register
+info	2022:06:23 02:08:32	UserModel validation failed: socialSecurityNumber: SSN too long, city: `Los Angelesz` is not a valid enum value for path `city`.
+info	2022:06:23 02:08:42	POST Request to /api/auth/register
+info	2022:06:23 02:08:42	UserModel validation failed: socialSecurityNumber: SSN too long
+info	2022:06:23 02:08:47	POST Request to /api/auth/register
+info	2022:06:23 02:08:47	UserModel validation failed: socialSecurityNumber: SSN too long
+info	2022:06:23 02:10:53	POST Request to /api/auth/register
+info	2022:06:23 02:10:53	UserModel validation failed: socialSecurityNumber: SSN must be in the following number format: xxx-xx-xxxx
+info	2022:06:23 02:11:08	POST Request to /api/auth/register
+info	2022:06:23 02:11:08	UserModel validation failed: socialSecurityNumber: SSN too short
+info	2022:06:23 02:11:24	POST Request to /api/auth/register
+info	2022:06:23 02:19:42	POST Request to /api/auth/login
+info	2022:06:23 02:20:12	POST Request to /api/auth/login
+info	2022:06:23 02:36:54	POST Request to /api/auth/register/
+info	2022:06:23 02:36:54	UserModel validation failed: socialSecurityNumber: Missing SSN
+info	2022:06:23 02:37:02	POST Request to /api/auth/register/
+info	2022:06:23 02:37:02	UserModel validation failed: socialSecurityNumber: Missing SSN
+error	2022:06:23 02:38:24	Unexpected string in JSON at position 125
+error	2022:06:23 02:38:37	Unexpected token } in JSON at position 168
+info	2022:06:23 02:38:42	POST Request to /api/auth/register
+info	2022:06:23 02:38:42	UserModel validation failed: city: Missing city, street: Missing street
+info	2022:06:23 02:38:56	POST Request to /api/auth/register
+info	2022:06:23 02:38:56	Username kermit@gmail.com is already taken. Please choose a different username
+info	2022:06:23 02:39:06	POST Request to /api/auth/register
+info	2022:06:23 02:39:06	Social Security Number 123-03-1238 already exists. Please make sure that you are not registered already or try again
+info	2022:06:23 02:40:18	POST Request to /api/auth/register
+info	2022:06:23 02:40:18	UserModel validation failed: socialSecurityNumber: Missing SSN
+info	2022:06:23 02:40:36	POST Request to /api/auth/register
+info	2022:06:23 02:40:36	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 02:40:43	POST Request to /api/auth/register
+error	2022:06:23 02:40:43	UserModel validation failed: socialSecurityNumber: SSN too long
+info	2022:06:23 02:41:18	POST Request to /api/auth/register
+error	2022:06:23 02:41:18	UserModel validation failed: socialSecurityNumber: SSN too long
+info	2022:06:23 02:44:30	POST Request to /api/auth/register
+info	2022:06:23 02:44:30	UserModel validation failed: socialSecurityNumber: SSN too short
+info	2022:06:23 02:44:37	POST Request to /api/auth/register
+info	2022:06:23 02:44:37	UserModel validation failed: socialSecurityNumber: SSN too long
+info	2022:06:23 02:44:41	POST Request to /api/auth/register
+error	2022:06:23 02:44:41	UserModel validation failed: socialSecurityNumber: SSN too long
+info	2022:06:23 02:44:53	POST Request to /api/auth/register
+error	2022:06:23 02:44:53	UserModel validation failed: socialSecurityNumber: SSN too long
+info	2022:06:23 02:45:31	POST Request to /api/auth/register
+error	2022:06:23 02:45:31	UserModel validation failed: socialSecurityNumber: SSN too long
+info	2022:06:23 02:45:44	POST Request to /api/auth/register
+error	2022:06:23 02:45:44	UserModel validation failed: socialSecurityNumber: SSN too long
+info	2022:06:23 02:46:29	POST Request to /api/auth/register
+error	2022:06:23 02:46:29	UserModel validation failed: socialSecurityNumber: SSN too long
+info	2022:06:23 02:46:31	POST Request to /api/auth/register
+error	2022:06:23 02:46:31	UserModel validation failed: socialSecurityNumber: SSN too long
+info	2022:06:23 02:59:24	POST Request to /api/auth/register
+error	2022:06:23 02:59:24	UserModel validation failed: socialSecurityNumber: SSN too long
+info	2022:06:23 03:01:19	POST Request to /api/auth/register
+error	2022:06:23 03:01:19	UserModel validation failed: socialSecurityNumber: SSN must be in the following number format: xxx-xx-xxxx
+info	2022:06:23 03:11:19	POST Request to /api/auth/register
+info	2022:06:23 03:13:35	POST Request to /api/auth/register
+info	2022:06:23 03:13:36	UserModel validation failed: username: You have entered an invalid email address
+info	2022:06:23 03:13:43	POST Request to /api/auth/register
+info	2022:06:23 03:14:11	POST Request to /api/auth/register
+info	2022:06:23 03:14:41	POST Request to /api/auth/register
+info	2022:06:23 03:14:54	POST Request to /api/auth/register
+info	2022:06:23 03:15:31	POST Request to /api/auth/register
+info	2022:06:23 03:19:39	POST Request to /api/auth/register
+info	2022:06:23 03:20:14	POST Request to /api/auth/register
+info	2022:06:23 03:20:14	Social Security Number 123-93-1238 already exists. Please make sure that you are not registered already or please try again
+info	2022:06:23 03:22:51	POST Request to /api/auth/register
+info	2022:06:23 03:22:52	Social Security Number you have entered already exists. Please make sure that you are not registered already or please try again
+info	2022:06:23 03:22:56	POST Request to /api/auth/register
+info	2022:06:23 03:22:56	Social Security Number you have entered already exists. Please make sure that you are not registered already or please try again
+info	2022:06:23 03:23:00	POST Request to /api/auth/register
+info	2022:06:23 03:23:54	POST Request to /api/auth/register
+info	2022:06:23 03:23:54	Username zdadsdxszkermictz@gmail.coz is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 03:24:01	POST Request to /api/auth/register
+info	2022:06:23 03:39:04	POST Request to /api/auth/register
+info	2022:06:23 03:39:04	Username zdadsddxszkermictz@gmail.coz is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 03:39:10	POST Request to /api/auth/register
+info	2022:06:23 03:39:10	Social Security Number you have entered already exists. Please make sure that you are not registered already or please try again
+info	2022:06:23 03:39:17	POST Request to /api/auth/register
+info	2022:06:23 03:40:52	POST Request to /api/auth/register
+info	2022:06:23 03:40:52	Social Security Number you have entered already exists. Please make sure that you are not registered already or please try again
+info	2022:06:23 03:41:01	POST Request to /api/auth/register
+info	2022:06:23 03:41:01	Social Security Number you have entered already exists. Please make sure that you are not registered already or please try again
+info	2022:06:23 03:41:07	POST Request to /api/auth/register
+info	2022:06:23 03:41:30	POST Request to /api/auth/register
+info	2022:06:23 03:41:30	UserModel validation failed: firstName: First name too short, username: You have entered an invalid email address
+info	2022:06:23 03:41:39	POST Request to /api/auth/register
+info	2022:06:23 03:41:41	POST Request to /api/auth/register
+info	2022:06:23 03:41:41	Username zkermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 03:41:50	POST Request to /api/auth/register
+info	2022:06:23 03:41:50	Username zkermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 03:41:57	POST Request to /api/auth/register
+info	2022:06:23 03:41:57	Social Security Number you have entered already exists. Please make sure that you are not registered already or please try again
+info	2022:06:23 03:42:09	POST Request to /api/auth/login
+info	2022:06:23 03:42:23	POST Request to /api/auth/login
+info	2022:06:23 03:42:23	Incorrect username or password
+info	2022:06:23 03:42:26	POST Request to /api/auth/login
+info	2022:06:23 03:42:44	POST Request to /api/auth/login
+info	2022:06:23 03:42:44	Incorrect username or password
+info	2022:06:23 03:42:47	POST Request to /api/auth/login
+info	2022:06:23 03:42:47	CredentialsModel validation failed: username: You have entered an invalid email address
+info	2022:06:23 03:43:29	POST Request to /api/auth/register/
+info	2022:06:23 03:43:29	UserModel validation failed: username: Missing username
+info	2022:06:23 03:45:30	POST Request to /api/auth/register/
+info	2022:06:23 03:45:30	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 03:45:36	POST Request to /api/auth/register/
+info	2022:06:23 03:45:36	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:21:50	POST Request to /api/auth/ssn-email-unique
+info	2022:06:23 04:21:50	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:22:15	POST Request to /api/auth/ssn-email-unique
+info	2022:06:23 04:22:15	Social Security Number you have entered already exists. Please make sure that you are not registered already or please try again
+info	2022:06:23 04:22:41	POST Request to /api/auth/ssn-email-unique
+info	2022:06:23 04:22:41	Social Security Number you have entered already exists. Please make sure that you are not registered already or please try again
+info	2022:06:23 04:22:49	POST Request to /api/auth/ssn-email-unique
+info	2022:06:23 04:22:54	POST Request to /api/auth/ssn-email-unique
+info	2022:06:23 04:22:59	POST Request to /api/auth/ssn-email-unique
+error	2022:06:23 04:23:14	Unexpected token } in JSON at position 121
+info	2022:06:23 04:23:18	POST Request to /api/auth/ssn-email-unique
+info	2022:06:23 04:23:36	POST Request to /api/auth/ssn-email-unique
+info	2022:06:23 04:23:36	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:30:08	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:30:08	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:30:16	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:30:16	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:30:17	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:30:17	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:30:40	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:30:40	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:31:08	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:31:17	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:31:42	POST Request to /api/auth/ssn-email-unique
+info	2022:06:23 04:31:59	POST Request to /api/auth/ssn-email-unique
+info	2022:06:23 04:31:59	Social Security Number you have entered already exists. Please make sure that you are not registered already or please try again
+info	2022:06:23 04:32:02	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:32:02	Social Security Number you have entered already exists. Please make sure that you are not registered already or please try again
+info	2022:06:23 04:32:17	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:32:17	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:32:20	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:32:20	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:32:20	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:32:20	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:32:20	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:32:20	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:32:26	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:32:26	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:32:28	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:32:28	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:32:28	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:32:28	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:32:28	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:32:28	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:32:32	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:32:32	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:32:39	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:32:39	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:32:46	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:32:46	Username kermitz@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:32:51	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:32:54	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:33:35	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:33:35	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:33:37	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:33:37	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:33:37	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:33:37	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:34:27	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:34:27	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:34:30	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:34:30	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:34:30	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:34:30	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:34:36	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:34:43	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:34:45	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:34:53	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:34:53	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:36:47	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:36:47	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:36:55	POST Request to /api/auth/register/
+error	2022:06:23 04:36:55	E11000 duplicate key error collection: ShoppingOnlineDB.users index: username_1 dup key: { username: "kermit@gmail.com" }
+info	2022:06:23 04:40:17	POST Request to /api/auth/register/
+info	2022:06:23 04:40:17	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:42:32	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:42:32	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:42:35	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:42:37	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:42:43	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:42:43	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:42:47	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:42:47	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:42:49	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:42:50	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:43:23	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:43:23	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:43:25	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:43:29	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:43:36	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:43:36	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:45:10	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:45:11	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:45:14	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:55:24	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:55:24	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:55:24	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:55:24	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:55:29	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:55:29	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:56:18	GET Request to /api/products-count/
+info	2022:06:23 04:56:19	GET Request to /api/orders-count/
+info	2022:06:23 04:57:25	GET Request to /api/products-count/
+info	2022:06:23 04:57:25	GET Request to /api/orders-count/
+info	2022:06:23 04:57:31	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:57:31	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:57:31	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:57:31	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:57:34	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:57:35	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:58:30	GET Request to /api/products-count/
+info	2022:06:23 04:58:31	GET Request to /api/orders-count/
+info	2022:06:23 04:58:46	GET Request to /api/products-count/
+info	2022:06:23 04:58:47	GET Request to /api/orders-count/
+info	2022:06:23 04:58:54	GET Request to /api/products-count/
+info	2022:06:23 04:58:54	GET Request to /api/orders-count/
+info	2022:06:23 04:59:08	GET Request to /api/products-count/
+info	2022:06:23 04:59:08	GET Request to /api/orders-count/
+info	2022:06:23 04:59:22	GET Request to /api/products-count/
+info	2022:06:23 04:59:22	GET Request to /api/orders-count/
+info	2022:06:23 04:59:54	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:59:54	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 04:59:56	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 04:59:57	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 05:00:52	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 05:00:53	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 05:01:41	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 05:01:42	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 05:02:03	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 05:02:03	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 05:02:12	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 05:02:13	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 05:02:50	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 05:02:51	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 05:04:21	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 05:04:22	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 05:05:03	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 05:05:03	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 05:05:04	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 05:05:04	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 05:05:06	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 05:05:08	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 05:05:24	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 05:05:24	Username kermit@gmail.com is already taken. Please make sure that you are not registered already or please choose a different username
+info	2022:06:23 05:05:26	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 05:05:27	POST Request to /api/auth/ssn-email-unique/
+info	2022:06:23 05:07:01	GET Request to /api/products-count/
+info	2022:06:23 05:07:02	GET Request to /api/orders-count/
+info	2022:06:23 05:07:12	GET Request to /api/products-count/
+info	2022:06:23 05:07:13	GET Request to /api/orders-count/
+info	2022:06:23 05:08:10	GET Request to /api/products-count/
+info	2022:06:23 05:08:10	GET Request to /api/orders-count/
+info	2022:06:23 05:08:44	GET Request to /api/products-count/
+info	2022:06:23 05:08:44	GET Request to /api/orders-count/
+info	2022:06:23 05:20:44	GET Request to /api/products-count/
+info	2022:06:23 05:20:44	GET Request to /api/orders-count/
+info	2022:06:23 05:22:48	GET Request to /api/products-count/
+info	2022:06:23 05:22:48	GET Request to /api/orders-count/
