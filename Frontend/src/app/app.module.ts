@@ -18,15 +18,18 @@ import { RegisterComponent } from './components/auth-area/register/register.comp
 import { LoginComponent } from './components/auth-area/login/login.component';
 import { LogoutComponent } from './components/auth-area/logout/logout.component';
 import { AuthMenuComponent } from './components/auth-area/auth-menu/auth-menu.component';
-import { ProductsListComponent } from './components/shared-area/products-list/products-list.component';
 import { AboutComponent } from './components/home-area/about/about.component';
-import { StoreInfoComponent } from './components/home-area/store-info/store-info.component';
+import { ShoppingInfoComponent } from './components/home-area/shopping-info/shopping-info.component';
 
 import { ValidateEqualModule } from 'ng-validate-equal';
-import { CategoriesListComponent } from './components/shared-area/categories-list/categories-list.component';
 import { ShoppingComponent } from './components/shopping-area/shopping/shopping.component';
 import { CartListComponent } from './components/shared-area/cart-list/cart-list.component';
 import { AutoFocusDirective } from './directives/auto-focus.directive';
+import { ProductCardComponent } from './components/products-area/product-card/product-card.component';
+import { ProductListComponent } from './components/products-area/product-list/product-list.component';
+import { CategoryListComponent } from './components/products-area/category-list/category-list.component';
+import { SidenavDetailsComponent } from './components/shared-area/sidenav-details/sidenav-details.component';
+import { OrderComponent } from './components/orders-area/order/order.component';
 
 @NgModule({
   declarations: [
@@ -41,13 +44,16 @@ import { AutoFocusDirective } from './directives/auto-focus.directive';
     LoginComponent,
     LogoutComponent,
     AuthMenuComponent,
-    ProductsListComponent,
     AboutComponent,
-    StoreInfoComponent,
-    CategoriesListComponent,
+    ShoppingInfoComponent,
     ShoppingComponent,
     CartListComponent,
-    AutoFocusDirective
+    AutoFocusDirective,
+    ProductCardComponent,
+    ProductListComponent,
+    CategoryListComponent,
+    SidenavDetailsComponent,
+    OrderComponent,
   ],
   imports: [
     BrowserModule,

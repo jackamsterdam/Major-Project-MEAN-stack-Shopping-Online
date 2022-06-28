@@ -13,6 +13,7 @@ async function getAllCarts(): Promise<ICartModel[]> {
 //!you can find the user by checking userredux and then find the cart by the user then we dispaly when he opened his cart!! 
 async function getCartByUser(userId: string, isClosed: boolean): Promise<ICartModel> {
     const carts =  await CartModel.find({userId, isClosed }).populate('user').exec()
+   if (carts.length === 0) throw new ErrorModel(400, 'User has no open cart')
     return carts[0]
 }
     

@@ -50,7 +50,7 @@ export class ProductsService {
     return store.getState().categoriesState.categories
   }
 
-  //!do i need redux for this?? how to do redux for this
+  //!do i need redux for this?? how to do redux for this if i had pagaination i would have to do this but now i can ust filter caeogires fro, the store 
   async getProductsByCategory(categoryId: string):Promise<ProductModel[]> {
    const products = await firstValueFrom(this.http.get<ProductModel[]>(environment.productsByCategoryUrl + categoryId))
    return products 

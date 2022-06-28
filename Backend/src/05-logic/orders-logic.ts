@@ -21,7 +21,7 @@ async function addOrder(order: IOrderModel): Promise<IOrderModel> {
 
 
 //!Dont need this just for testing
-async function getOrders(): Promise<IOrderModel[]> {
+async function getAllOrders(): Promise<IOrderModel[]> {
     return OrderModel.find().populate('cart').populate('user').exec()
 }
 
@@ -39,7 +39,7 @@ async function getMostRecentOrder(userId: string):Promise<IOrderModel> {
 
 export default {
     addOrder,
-    getOrders,
+    getAllOrders,
     getReceiptById,
     countOrders,
     getMostRecentOrder

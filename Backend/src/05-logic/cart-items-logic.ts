@@ -55,11 +55,13 @@ async function addItem(item: ICartItemModel, userId: string): Promise<ICartItemM
 
 //Delete item - when user presses x on item on the cart :
 // if you delete the item then that means the productID and the cartId gets deleted with it  
-async function deleteItem(_id: string, cartId: string): Promise<void> {
+async function deleteItem(productId: string, cartId: string): Promise<void> {
 
+    // const deletedItembefore = await CartItemModel.findOne({ cartId, productId })
+    // console.log("deletedItembefore", deletedItembefore);
 
-
-    const deletedItem = await CartItemModel.deleteOne({_id, cartId}).exec()
+    const deletedItem = await CartItemModel.deleteOne({productId, cartId}).exec()
+    console.log("deletedItem", deletedItem);
     // const deletedItem = await CartItemModel.findByIdAndDelete(_id).exec()
 
     // deprecated: 
@@ -69,8 +71,16 @@ async function deleteItem(_id: string, cartId: string): Promise<void> {
     // })
     //     .remove()
     //     .exec();
-    console.log('deleted')
-    if (!deletedItem) throw new ErrorModel(404, `Resource with _id ${_id} not found`)
+
+    // const deletedItemq = await CartItemModel.findOne({
+      
+    //    productId: productId,
+    //     cartId: cartId
+    // })
+    // console.log("deletedItemq", deletedItemq);
+
+
+    if (!deletedItem) throw new ErrorModel(404, `Resource with productId ${productId} or cartId ${cartId} not found`)
 }
 
 // delete collection 

@@ -8,6 +8,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatTabsModule} from '@angular/material/tabs';
 
 const materialComponents = [
   MatIconModule,
@@ -18,7 +19,8 @@ const materialComponents = [
   MatInputModule,
   MatSelectModule,
   MatStepperModule,
-  MatSidenavModule
+  MatSidenavModule,
+  MatTabsModule
   
 ]
 

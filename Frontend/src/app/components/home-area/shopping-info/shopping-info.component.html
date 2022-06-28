@@ -1,5 +1,7 @@
 <div>
     <p class="mat-display-1">We have {{numberOfProducts}} available products in our store!</p>
+    <p class="mat-display-1">We have {{products?.length}} available products in our store!</p>
+    <p class="mat-display-1">We have {{orders?.length}} orders</p>
 
     <p class="mat-display-1" *ngIf="numberOfOrders > 1">So far our store has had a total of {{numberOfOrders}} orders!
     </p>
@@ -34,5 +36,4 @@
         <p class="mat-display-2">Welcome to your first purchase {{user.firstName | titlecase}}</p>
 
     </ng-container>
-
 </div>

@@ -1,0 +1,18 @@
+<div class="box">
+    <button class="delete" (click)="deleteThisItem(item.product._id, item.cartId )">❌</button>
+    <div>
+        Name: {{item.product.name}}
+        <br />
+        Price: {{item.product.price}}
+        <br />
+        Quantity: {{item.quantity}}
+        <br />
+        Item's total: {{item.quantity * item.product.price | currency:"USD"}}
+        <!-- <br />
+       test: {{total}}  doesnt work from ts only in html -->
+    </div>
+    <div>
+        <img [src]="productsImageUrl + item.product.imageName" />
+    </div>
+  
+</div>  

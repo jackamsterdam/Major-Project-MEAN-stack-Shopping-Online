@@ -19,11 +19,11 @@ router.post('/orders', async (request: Request, response: Response, next: NextFu
     }
 })
 
-//! Delete this - for testing purposes only: 
+//! Delete this - for testing purposes only:  actually need it for first page
 //http://localhost:3001/api/orders/
 router.get('/orders', async (request: Request, response: Response, next: NextFunction) => {
     try {
-        const orders = await ordersLogic.getOrders()
+        const orders = await ordersLogic.getAllOrders()
         response.json(orders)
     } catch (err: any) {
         next(err)

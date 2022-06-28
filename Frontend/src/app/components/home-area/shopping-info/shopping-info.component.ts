@@ -1,4 +1,4 @@
-import { ProductsService } from './../../../services/products.service';
+import { ProductsService } from '../../../services/products.service';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NotifyService } from 'src/app/services/notify.service';
 import { OrdersService } from 'src/app/services/orders.service';
@@ -8,13 +8,14 @@ import store from 'src/app/redux/store';
 import { CartsService } from 'src/app/services/carts.service';
 import { CartModel } from 'src/app/models/cart.model';
 import { OrderModel } from 'src/app/models/order.model';
+import { ProductModel } from 'src/app/models/product.model';
 
 @Component({
-  selector: 'app-store-info',
-  templateUrl: './store-info.component.html',
-  styleUrls: ['./store-info.component.scss']
+  selector: 'app-shopping-info',
+  templateUrl: './shopping-info.component.html',
+  styleUrls: ['./shopping-info.component.scss']
 })
-export class StoreInfoComponent implements OnInit, OnDestroy {
+export class ShoppingInfoComponent implements OnInit, OnDestroy {
   numberOfProducts: number
   numberOfOrders: number
   user: UserModel
@@ -24,12 +25,51 @@ export class StoreInfoComponent implements OnInit, OnDestroy {
   orderByUser: OrderModel
   dateOfMostRecentOrder: Date
 
+  
+
+  products: ProductModel[]
+  orders: OrderModel[]
+
+  //***********************Regina said do this */
+    // numberOfProducts: number
+    // numberOfOrders: number
+    // user: UserModel
+    // lastOrder: OrderModel;
+    // currentCart:OrderModel;
+  //************ */
+
+
 
 
   constructor(private productsService: ProductsService, private ordersService: OrdersService, private cartsService: CartsService, private notify: NotifyService) { }
 
   async ngOnInit() {
+    // subsccribe to all 3 stores regina!!
+    
     try {
+
+
+
+
+     //.. ..***************************************************************
+//!סיבה יחידה לעשות סובסקרייב נכון ?????
+      //if user happens to go back to login page the whole component is subscribed to changes in products, orders and carts
+
+   this.unsubscribe = store.subscribe(() => {
+    // debugger
+    this.user = store.getState().authState.user
+    this.products =store.getState().productsState.products
+    this.orders = store.getState().ordersState.orders
+   })
+
+
+
+     //.. ..***************************************************************
+
+
+
+
+
       this.numberOfProducts = await this.productsService.countProducts()
       this.numberOfOrders = await this.ordersService.countOrders()
 

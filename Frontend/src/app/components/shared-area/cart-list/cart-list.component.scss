@@ -1,7 +1,45 @@
 mat-sidenav-container {
     height: 100%;
+    position: relative;
+}
+
+mat-sidenav, mat-sidenav-content {
+    padding: 1rem;
 }
 
 mat-sidenav {
-    padding: 1rem;
+    background-color: lightcoral;
+    width: 400px;
+    // position: relative;
+
+    // optional: 
+    height: 400px;
+    margin: auto;
+    border-radius: 0px 8px 8px 0;
 }
+
+app-sidenav-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-all {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    // font-size: small;
+    margin: 5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+// .toggle-button {
+//     // position: absolute;
+//     // right: 0;
+//     // transform: translate(3rem, 3rem);
+
+// }
+

@@ -37,9 +37,7 @@ router.post('/items/:userId', async (request: Request, response: Response, next:
   
     try {
         const userId = request.params.userId
-        console.log("userId", userId);
         const item = new CartItemModel(request.body)
-        console.log("item", item);
 
         const addedItem = await cartItemsLogic.addItem(item, userId)
         response.status(201).json(addedItem)

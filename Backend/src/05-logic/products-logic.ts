@@ -52,7 +52,6 @@ async function addProduct(product: IProductModel): Promise<IProductModel> {
 
 //Update product
 async function updateProduct(product: IProductModel): Promise<IProductModel> {
-    console.log('enter')
     const errors = product.validateSync()
     if (errors) throw new ErrorModel(400, errors.message)
 

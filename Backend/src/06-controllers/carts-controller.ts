@@ -10,7 +10,6 @@ const router = express.Router()
 //http://localhost:3001/api/carts/
 router.get('/carts', async (request: Request, response: Response, next: NextFunction) => {
     try {
-        console.log('hi')
         const carts = await cartsLogic.getAllCarts()
         response.json(carts)
     } catch (err: any) {

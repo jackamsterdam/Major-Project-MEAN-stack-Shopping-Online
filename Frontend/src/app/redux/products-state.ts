@@ -1,10 +1,11 @@
 import { ProductModel } from "../models/product.model";
 
+//Products State - products data needed in the application level: 
 export class ProductsState {
     products: ProductModel[] = []
 }
 
-//Products State - products data needed in the application level: 
+//Products Action Type -any action which can be done on the above prouducts state
 export enum ProductsActionType { 
     FetchProducts = 'FetchProducts',
     AddProduct = 'AddProduct',

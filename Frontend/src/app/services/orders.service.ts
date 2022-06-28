@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { OrderModel } from '../models/order.model';
+import { fetchOrdersAction } from '../redux/orders-state';
+import store from '../redux/store';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +13,15 @@ export class OrdersService {
 
   constructor(private http: HttpClient) { }
 
+  //For login page to dislay number of orders:
+  async getAllOrders():Promise<OrderModel[]> {
+    if (store.getState().ordersState.orders.length === 0) {
+
+      const orders = await firstValueFrom(this.http.get<OrderModel[]>(environment.ordersUrl))
+      store.dispatch(fetchOrdersAction(orders))
+    }
+    return store.getState().ordersState.orders
+  } 
 
 
   async addOrder(order: OrderModel): Promise<OrderModel> {
