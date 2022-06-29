@@ -1,4 +1,5 @@
-<div class="box">
+<div class="box" *ngIf="item.product">
+    <!--! without above line when i add to dialog it crashes!!  -->
     <button class="delete" (click)="deleteThisItem(item.product._id, item.cartId )">❌</button>
     <div>
         Name: {{item.product.name}}

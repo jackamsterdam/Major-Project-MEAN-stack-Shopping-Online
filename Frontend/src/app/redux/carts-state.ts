@@ -7,6 +7,8 @@ export class CartsState {
     //! totalAmount ?????? 
 }
 
+//!in dialog i should create a cartId if not exist but not create it and use it if cartId exists !!!  this logic needs to be added here 
+
 //Carts Action Type -any action which can be done on the above carts state
 export enum CartsActionType { 
     FetchCartItems = 'FetchCartItems',
@@ -58,6 +60,11 @@ export function cartsReducer(currentState = new CartsState(), action: CartsActio
         case CartsActionType.AddItemToCart:
             newState.cartItems.push(action.payload)
             // מה אני צריך להוסיף לקארט ??????? חדש בקארט מודל או לא כי בבק אנד הוספנו קארט חדש
+
+            //! you need to set opened = true; for the cartlist component so after the model adds item to cart the sidenav will open !! 
+
+            //!I need to make a new cart or what ??? with a new cartID for next time but tahts the case wherre i add an item to cart that doesnt exist but if does exist??
+            //! I dont even have a cart store to make carts? do i need?
 
         break;
         case CartsActionType.UpdateItemInCart:

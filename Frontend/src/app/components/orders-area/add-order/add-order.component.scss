@@ -1,0 +1,34 @@
+
+form {
+	width: 250px;  //!450px
+    margin: 20px;
+    padding: 20px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+}
+
+// mat-input, mat-select {
+input, select {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 0 20px 0; 
+}
+
+button {
+    width: 100%;
+    margin: 10px 0 20px 0;
+}
+
+span {
+    color: red;
+    margin: 0 60px;  //!60px
+    position: absolute;
+}
+
+.ng-touched.ng-invalid:not(form) {
+    border: 2px solid red;
+    background-color: pink;
+}

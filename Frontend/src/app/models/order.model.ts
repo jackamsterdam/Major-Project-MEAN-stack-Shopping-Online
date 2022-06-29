@@ -9,6 +9,7 @@ export class OrderModel {
     shipCity: CityEnum
     shipStreet: string
     shipDate: Date 
+    creditCard: number
  
     createdAt: Date  //createdAt is actually the orderDate //! נכון צריך להוסיף???? 
 

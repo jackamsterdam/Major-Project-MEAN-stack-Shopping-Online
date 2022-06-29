@@ -1,4 +1,4 @@
-<div class="box">
+<!-- <div class="box">
     <div>
         {{product.name}}
         <br />
@@ -7,8 +7,36 @@
         Stock: {{product.name}}
     </div>
     <div>
-        <!-- <a routerLink="/products/details/{{product.id}}"> -->
+        <a routerLink="/products/details/{{product.id}}">
             <img [src]="productsImageUrl + product.imageName" />
-        <!-- </a> -->
+        </a>
     </div>
-</div>
+</div> -->
+
+
+
+<div class="box">
+
+<mat-card class="item-card" (click)="openDialog()">
+    <mat-card-header>
+      <mat-card-title>{{product.name}}</mat-card-title>
+      <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+    </mat-card-header>
+    <img mat-card-image [src]="productsImageUrl + product.imageName" alt="item-image">
+    <mat-card-content>
+      <p>
+        Price: {{product.price}}
+      </p>
+    
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-raised-button color="warn">Buy more??</button>
+
+      <!-- <button mat-raised-button color="primary" (click)="openDialog()">Open diaollog</button> -->
+    </mat-card-actions>
+  </mat-card>
+  </div>
+
+
+
+

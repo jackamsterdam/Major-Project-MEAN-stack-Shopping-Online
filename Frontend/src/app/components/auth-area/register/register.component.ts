@@ -20,7 +20,7 @@ export class RegisterComponent {
   // initialFocus: boolean = true
   // switchFocus: boolean = false 
 
-public CityEnum = CityEnum
+ CityEnum = CityEnum
 
 
   // cities:CityEnum = ['LosAngeles']  type string[] is not assignable to type cityEnum than how do i do a type????? How do i use this cityEnum????

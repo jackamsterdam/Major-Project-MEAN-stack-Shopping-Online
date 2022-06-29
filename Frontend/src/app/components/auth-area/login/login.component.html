@@ -6,6 +6,8 @@
 
         <label>Email: </label>
         <input autofocus type="email" name="username" [(ngModel)]="credentials.username" placeholder="email" #usernameBox="ngModel" required minlength="2" maxlength="100" >
+        <!-- add after !!!  <mat-hint align="end">Must be a valid email</mat-hint> -->
+
         <!-- pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/" -->
         <span *ngIf="usernameBox.touched && usernameBox.errors?.['required']">Missing email</span>
         <span *ngIf="usernameBox.touched && usernameBox.errors?.['minlength']">Email is too short</span>

@@ -20,7 +20,7 @@ export interface IOrderModel extends Document {
 const OrderSchema = new Schema<IOrderModel>({
     finalPrice: {
         type: Number,
-        required: [true, "Missing final price"],
+        // required: [true, "Missing final price"], User doesnt enter finalPrice when making an order
         min: [0, "Final price can't be negative"],
         max: [100000, "Final price can't exceed 100,000"]
 

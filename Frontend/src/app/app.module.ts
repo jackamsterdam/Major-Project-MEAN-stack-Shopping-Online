@@ -30,6 +30,9 @@ import { ProductListComponent } from './components/products-area/product-list/pr
 import { CategoryListComponent } from './components/products-area/category-list/category-list.component';
 import { SidenavDetailsComponent } from './components/shared-area/sidenav-details/sidenav-details.component';
 import { OrderComponent } from './components/orders-area/order/order.component';
+import { AddOrderComponent } from './components/orders-area/add-order/add-order.component';
+import { ProductDialogComponent } from './components/products-area/product-dialog/product-dialog.component';
+import { OrderSuccessDialogComponent } from './components/orders-area/order-success-dialog/order-success-dialog.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +57,11 @@ import { OrderComponent } from './components/orders-area/order/order.component';
     CategoryListComponent,
     SidenavDetailsComponent,
     OrderComponent,
+    AddOrderComponent,
+    ProductDialogComponent,
+    OrderSuccessDialogComponent,
   ],
+  // entryComponents: [ProductDialogComponent]
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -9,6 +9,14 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatDialogModule} from '@angular/material/dialog';
+
+
+
+
+// import { FormsModule,   ReactiveFormsModule }   from '@angular/forms';
 
 const materialComponents = [
   MatIconModule,
@@ -20,7 +28,13 @@ const materialComponents = [
   MatSelectModule,
   MatStepperModule,
   MatSidenavModule,
-  MatTabsModule
+  MatTabsModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatDialogModule
+
+
+  
   
 ]
 

@@ -1,0 +1,73 @@
+<div class="box">
+
+    <h2>Order</h2>
+    <h3>Shopping Details:</h3>
+
+    <form (ngSubmit)="addOrder()" #formInfo="ngForm">
+        
+     <mat-form-field  floatLabel="always" appearance="fill">
+        <mat-label>Ship City: </mat-label>
+        <!--! can i do that user.city &&& order.shipcity cause i want to popluate with old and with new  -->
+        <mat-select (dblclick)="doubleClickToPopulate()" name="city" [(ngModel)]="user.city && order.shipCity" required #cityBox="ngModel">
+            <!--dont work with material: <option [ngValue]="undefined" disabled selected>Select city...</option> -->
+            <!--! problem now select city is not displayed !!!  -->
+            <mat-option  disabled selected>Select city...</mat-option>
+       
+            <mat-option *ngFor="let enum of CityEnum | keyvalue">{{enum.value}}</mat-option>
+         
+        </mat-select>
+        <span *ngIf="cityBox.errors?.['required'] && cityBox.touched">Missing city</span>
+    </mat-form-field>
+
+
+
+    <mat-form-field floatLabel="always" appearance="fill">
+        <mat-label>Ship Street: </mat-label>
+        <input matInput  (dblclick)="doubleClickToPopulate()" type="text"  name="street" [(ngModel)]="user.street && order.shipStreet" #streetBox="ngModel" required
+            minlength="2" maxlength="100">
+        <span *ngIf="streetBox.touched && streetBox.errors?.['required']">Missing street</span>
+        <span *ngIf="streetBox.touched && streetBox.errors?.['minlength']">Street is too short</span>
+        <span *ngIf="streetBox.touched && streetBox.errors?.['maxlength']">Street is too long</span>
+    </mat-form-field>
+
+        <!--!***************************************************************************  -->
+    
+    <mat-form-field floatLabel="always" appearance="fill" color="accent">
+        <mat-label>Shipping Date: </mat-label>
+        <!-- <input matInput [matDatepicker]="myDatePicker" type="datetime-local" name="date" [(ngModel)]="order.shipDate" required #dateBox="ngModel" /> -->
+        <!--! type="datetime-local" doesnt work!!!  -->
+
+        <input matInput [matDatepickerFilter]="dateFilter" [matDatepicker]="myDatePicker" [min]="minDate" [max]="maxDate" name="date"  [(ngModel)]="order.shipDate" required #dateBox="ngModel"/>
+        
+        <mat-datepicker-toggle [for]="myDatePicker" matSuffix></mat-datepicker-toggle>
+        <mat-datepicker #myDatePicker></mat-datepicker>
+        <span *ngIf="dateBox.errors?.['required'] && dateBox.touched">Missing shipping date</span>
+  </mat-form-field>
+
+        <!--!***************************************************************************  -->
+
+<!-- i mad eit type string so wont have number up and down sign -->
+        <mat-form-field  floatLabel="never" appearance="outline" color="warn">
+        <mat-label>Credit card: </mat-label>
+        <input matInput type="text" name="creditCard" [(ngModel)]="order.creditCard" required #creditCardBox="ngModel" minlength="14" maxlength="16">
+
+            <mat-hint align="end">Credit card number between 14-16 characters</mat-hint>
+             <span *ngIf="creditCardBox.errors?.['required'] && creditCardBox.touched">Missing credit card</span>
+             <span *ngIf="creditCardBox.touched && creditCardBox.errors?.['minlength']">Credit card is too short</span>
+             <span *ngIf="creditCardBox.touched && creditCardBox.errors?.['maxlength']">Credit card is too long</span>
+             <!-- add REGEX ofcouse!!!!!  -->
+         </mat-form-field>
+
+
+
+
+
+
+
+
+        <button [disabled]="formInfo.invalid" mat-raised-button color="primary">
+            <mat-icon color="warn">send</mat-icon>&nbsp;Add Order
+        </button>
+   
+    </form>
+</div>

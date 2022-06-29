@@ -16,12 +16,12 @@ const CartItemSchema = new Schema<ICartItemModel>({
         type: Number,
         required: [true, "Missing quantity"],
         min: [0, "Quantity can't be negative"],
-        max: [10000, "Price can't exceed 10000"]
+        max: [100, "Quantity can't exceed 100 items"]
 
     },
     total: {
         type: Number,
-        required: [true, "Missing total"],   //!yes this line or no ??
+        // required: [true, "Missing total"],   //!yes this line or no ?? I dont have this when i submit in dialog
         min: [0, "Total can't be negative"],
 
     },

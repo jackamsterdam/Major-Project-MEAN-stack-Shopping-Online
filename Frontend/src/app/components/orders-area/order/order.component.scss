@@ -1,15 +1,24 @@
-// div {
-//     height: 100%;
-//     border: 1px solid black;
-//     background: pink;
-//     display: flex;
-//     justify-content: space-around;
-//     align-items: center;
-//     box-sizing: border-box;
-   
-// }
+@import '../../../styles/placeholders/placeholders.scss';
 
-// app-login {
+
+
+
+
+
+
+div {
+    height: 100%;
+    border: 1px solid black;
+    background: pink;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+   
+}
+
+//! this multiplies times 4!! my soluution is to wrap in container so wont לשכפל 
+// app-sidenav-details {
 //     background: lightblue;
 //     border: 1px solid black;
 //     height: 80%;
@@ -18,10 +27,31 @@
 
 // }
 
-// app-about {
-//     @extend app-login;
-// }
+.side-nav-wrapper {
+    @extend %display-box;
 
-// app-store-info {
-//     @extend app-login;
-// }
+    position: relative;
+
+//!how to make it not look so ugly it doesnt work!!! 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+app-add-order {
+    @extend %display-box;
+}
+
+
+.back-to-shopping-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: small;
+    margin: 5px;
+    // background-color: transparent;
+    border: none;
+    cursor: pointer;
+}

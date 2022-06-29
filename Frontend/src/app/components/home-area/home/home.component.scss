@@ -1,3 +1,6 @@
+@import '../../../styles/placeholders/placeholders.scss';
+
+
 div {
     height: 100%;
     border: 1px solid black;
@@ -6,22 +9,25 @@ div {
     justify-content: space-around;
     align-items: center;
     box-sizing: border-box;
-   
+
 }
 
 app-login {
-    background: lightblue;
-    border: 1px solid black;
-    height: 80%;
-    width: 30%;
-    border-radius: 8px;
+    // change into placeholder file instead cause this repeats itself in order !! 
+    // background: lightblue;
+    // border: 1px solid black;
+    // height: 80%;
+    // width: 30%;
+    // border-radius: 8px;
+    // which is : 
+    @extend %display-box;
 
 }
 
 app-about {
-    @extend app-login;
+    @extend %display-box;
 }
 
-app-store-info {
-    @extend app-login;
+app-shopping-info {
+    @extend %display-box;
 }

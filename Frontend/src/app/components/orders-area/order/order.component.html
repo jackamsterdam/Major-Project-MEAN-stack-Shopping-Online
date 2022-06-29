@@ -1,6 +1,11 @@
 <div>
-    <!-- <app-login></app-login>
-    <app-about></app-about>
-    <app-shopping-info></app-shopping-info> -->
+    <!-- //! this multiplies times 4!! my soluution is to wrap in container so wont לשכפל -->
+    <!--! ng-container with a class doesnt !! work!!! why only with div ???  -->
+    <div class="side-nav-wrapper">
+        <h2>My Cart</h2> 
+        <button class="back-to-shopping-button" mat-raised-button color="primary" routerLink="/shopping">Back to shop</button>
     <app-sidenav-details *ngFor="let i of allItemsByCart" [item]="i"> </app-sidenav-details>
+    <p>Total: </p>
+</div>
+    <app-add-order></app-add-order>
 </div>
