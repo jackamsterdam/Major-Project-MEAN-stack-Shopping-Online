@@ -46,8 +46,27 @@ export class OrdersService {
   }
 
   //Get most recent order by user:
-  async  getMostRecentOrder(userId: string):Promise<OrderModel> {
-    const recentOrder = await firstValueFrom(this.http.get<OrderModel>(environment.recentOrderByUserUrl + userId))
-    return recentOrder
+   getMostRecentOrder():OrderModel {
+   let lastOrder: OrderModel;
+   const loggedInUser =  store.getState().authState.user
+
+    store.getState().ordersState.orders.forEach(o =>{
+      if (o.user._id !== loggedInUser._id) {
+        // if the order is not of the current user
+        return;
+      }
+
+      if (!lastOrder) {
+        lastOrder = o;
+        return;
+      }
+      if (o.createdAt > lastOrder.createdAt){
+           lastOrder = o;
+      }
+   })
+
+   return lastOrder;
+    // const recentOrder = await firstValueFrom(this.http.get<OrderModel>(environment.recentOrderByUserUrl + userId))
+    // return recentOrder
   }
 }

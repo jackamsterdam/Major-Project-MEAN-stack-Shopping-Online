@@ -4,7 +4,7 @@ import { firstValueFrom } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { CartItemModel } from '../models/cart-item.model';
 import { CartModel } from '../models/cart.model';
-import { addItemToCartAction, deleteAllFromCartAction, deleteItemFromCartAction, fetchCartItemsAction, updateItemToCartAction } from '../redux/carts-state';
+import { addItemToCartAction, deleteAllFromCartAction, deleteItemFromCartAction, fetchCartItemsAction, getActiveCartAction, updateItemToCartAction } from '../redux/carts-state';
 import store from '../redux/store';
 ///!add store!!! to evertying 
 @Injectable({
@@ -13,6 +13,7 @@ import store from '../redux/store';
 export class CartsService {
 
   constructor(private http:HttpClient) { }
+
 
 
   async getAllItemsByCart(cartId: string): Promise<CartItemModel[]> {
@@ -72,8 +73,20 @@ export class CartsService {
     //!only needed for some info on program start  (no redux) right??
     async getCartByUser(userId: string):Promise<CartModel> {
       const cartByUser = await firstValueFrom(this.http.get<CartModel>(environment.cartByUserUrl + userId))
-      
+      store.dispatch(getActiveCartAction(cartByUser))
       return cartByUser 
      }
+
+   getTotalCartAmount() {
+      // go over all the cart items, calculate the total amount of the cart
+      const cartItems = store.getState().cartsState.cartItems
+      const total = cartItems.reduce((accumulator, currVal) => {
+        
+        return accumulator + (currVal.quantity * currVal.product.price)
+
+      }, 0)
+    
+      return total;
+    }
      
 }

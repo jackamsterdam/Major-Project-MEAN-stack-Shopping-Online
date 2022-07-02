@@ -1,8 +1,9 @@
 import { CartItemModel } from "../models/cart-item.model";
+import { CartModel } from "../models/cart.model";
 
 //Carts State - carts data needed in the application level: 
 export class CartsState {
-    cartId: string = null
+    currentCart: CartModel;
     cartItems: CartItemModel[] = []
     //! totalAmount ?????? 
 }
@@ -15,7 +16,9 @@ export enum CartsActionType {
     AddItemToCart = 'AddItemToCart',
     UpdateItemInCart = 'UpdateItemInCart',   //! I put update in add 
     DeleteItemFromCart =  'DeleteItemFromCart',  //Delete one item 
-    DeleteAllFromCart =  'DeleteAllFromCart'    //Delete all in cart
+    DeleteAllFromCart =  'DeleteAllFromCart',    //Delete all in cart
+
+    GetActiveCart = "GetActiveCart"
 }
 
 //Carts Action - any single object sent to the store during 'dispatch':
@@ -45,6 +48,11 @@ export function deleteItemFromCartAction(productId: string): CartsAction {
 //delete all items
 export function deleteAllFromCartAction(): CartsAction {
     return {type: CartsActionType.DeleteAllFromCart}  //???cartId or no payload cuase delte everything 
+}
+
+
+export function getActiveCartAction(cart: CartModel):CartsAction {
+    return {type: CartsActionType.GetActiveCart, payload:cart  }
 }
 
 // Carts Reducer - the main function performing any action on carts state:
@@ -85,7 +93,10 @@ export function cartsReducer(currentState = new CartsState(), action: CartsActio
          newState.cartItems.length = 0  
         //but i need to find by cartId
         break;
-    }
+
+        case CartsActionType.GetActiveCart:
+            newState.currentCart = action.payload   
+         }
 
     return newState
 }

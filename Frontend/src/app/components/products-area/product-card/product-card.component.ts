@@ -42,7 +42,7 @@ export class ProductCardComponent implements OnInit {
 
     console.log('this.product',this.product)
     console.log('this.product.id which is productID going to be ',this.product._id)
-    console.log('cartid from store', store.getState().cartsState.cartId)
+    // console.log('cartid from store', store.getState().cartsState.cartId)
 
     //!problem if i dont add total then total will disapear
 
@@ -53,7 +53,7 @@ export class ProductCardComponent implements OnInit {
 
     //! is this ok to do cause i needed all these details but jus tthe qunatity fromt he dialog 
     //object oriented thinking: 
-    const itemToBeAddedToCart = new CartItemModel( result,  this.product._id, store.getState().cartsState.cartId, total )
+    const itemToBeAddedToCart = new CartItemModel( result,  this.product._id, store.getState().cartsState.currentCart._id, total )
     const addedCartItem = await this.cartsService.addItem(itemToBeAddedToCart, store.getState().authState.user._id) 
     this.notify.success('Item has been added to cart')
     // and have the dialog box close after ! 

@@ -1,39 +1,29 @@
 <div>
     <p class="mat-display-1">We have {{numberOfProducts}} available products in our store!</p>
-    <p class="mat-display-1">We have {{products?.length}} available products in our store!</p>
-    <p class="mat-display-1">We have {{orders?.length}} orders</p>
-
-    <p class="mat-display-1" *ngIf="numberOfOrders > 1">So far our store has had a total of {{numberOfOrders}} orders!
+    <!-- <p class="mat-display-1" *ngIf="numberOfOrders > 1">So far our store has had a total of {{numberOfOrders}} orders!
     </p>
     <p *ngIf="numberOfOrders === 1">Our store currently has one order.</p>
-    <p *ngIf="numberOfOrders === 0">Our store currently has no orders!</p>
+    <p *ngIf="numberOfOrders === 0">Our store currently has no orders!</p> -->
 
-
-
+    <p class="mat-display-1">{{getOrderText()}}</p>
 <ng-container *ngIf="user">
       <p class="mat-display-2">Notification:</p>
-</ng-container>
-  
-
-    <!-- option A :  -->
+       <!-- option A :  -->
     <!-- Add cart to this option  -->
-    <ng-container *ngIf="user && cartByUser">  
-    <!-- <ng-container *ngIf="user"> -->
+    <ng-container *ngIf="currentCart && currentCart._id && !currentCart.isClosed">      
+            <p class="mat-display-1">You have an open cart from {{currentCart.createdAt | date}} in our store with a total amount of {{totalAmount}}</p>
+        </ng-container>
+    
+        <!-- option B :  -->
+        <!-- Add user only to this option  -->
+        <ng-container *ngIf="!currentCart && lastOrder">
+            <p class="mat-display-1">Your last purchase was on {{lastOrder.createdAt | date}}</p>
+        </ng-container>
+    
+        <!-- option C:  -->
+        <ng-container *ngIf="!currentCart && !lastOrder">
+            <p class="mat-display-2">Welcome to your first purchase {{user.firstName | titlecase}}</p>
+        </ng-container>
+</ng-container>
 
-        <p *ngIf="dateOfOpenCart" class="mat-display-1">You have an open cart from {{dateOfOpenCart | date}} in our store</p>
-    </ng-container>
-
-    <!-- option B :  -->
-
-
-    <!-- Add user only to this option  -->
-    <ng-container *ngIf="user">
-        <p *ngIf="dateOfMostRecentOrder" class="mat-display-1">Your last purchase was on {{dateOfMostRecentOrder | date}}</p>
-    </ng-container>
-
-    <!-- option C:  -->
-    <ng-container *ngIf="user && !cartByUser && !dateOfMostRecentOrder">
-        <p class="mat-display-2">Welcome to your first purchase {{user.firstName | titlecase}}</p>
-
-    </ng-container>
 </div>
