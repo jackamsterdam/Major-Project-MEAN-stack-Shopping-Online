@@ -43,3 +43,26 @@ app-sidenav-details {
 
 // }
 
+.button-test {
+    height: 44px;
+    width: 43px;
+    border: 1px solid lightgray;
+    border-radius: 0px 8px 8px 0px;
+    top: 261px;
+    position: absolute;
+    z-index: 10000000;
+    background-color: white;
+    left: 0px;
+}
+
+.button-test:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.shopping-cart-icon {
+    top: 9px;
+    position: relative;
+}
+
+

@@ -30,11 +30,28 @@ async ngOnInit() {
  
 }
 
-async logChange(categoryId: any) {
+// async logChange(categoryId: any) {
+//   try {
+//     debugger
+//     console.log(categoryId)
+//     console.log(categoryId.tab.textLabel)
+//     this.products = await this.productsService.getProductsByCategory(categoryId.tab.textLabel) 
+//   } catch (err: any) {
+//     this.notify.error(err)
+//   }
+// }
+
+async selectCategory(event: any) {
   try {
-    console.log(categoryId)
-    console.log(categoryId.tab.textLabel)
-    this.products = await this.productsService.getProductsByCategory(categoryId.tab.textLabel) 
+    // debugger
+  
+   const ele =  event.target as HTMLDivElement
+
+   if (ele.id === 'all') {
+    this.productsService.setSelectedCategory('all') 
+   } else {
+     this.productsService.setSelectedCategory(ele.id) 
+   }
   } catch (err: any) {
     this.notify.error(err)
   }

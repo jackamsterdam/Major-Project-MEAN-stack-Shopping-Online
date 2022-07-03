@@ -19,10 +19,13 @@ export class CartsService {
   async getAllItemsByCart(cartId: string): Promise<CartItemModel[]> {
     // Do i want to get from redux vs getting from server ??????????????????????????????????????
     // if (store.getState().cartsState.cartItems.length === 0) {
-
+    if (cartId) {
       const itemsByCart = await firstValueFrom(this.http.get<CartItemModel[]>(environment.cartItemsByCartUrl + cartId))
-      store.dispatch(fetchCartItemsAction(itemsByCart))
-      return itemsByCart
+          store.dispatch(fetchCartItemsAction(itemsByCart))
+          return itemsByCart
+    }
+    return [];
+    
     }
     // return store.getState().productsState.products
   // } 
@@ -37,7 +40,8 @@ export class CartsService {
   //We need to add userId even though its post cause userId is additional information ......
   //!is there a way to send everything in the body even the userId as well ??????
     const addedItem = await firstValueFrom(this.http.post<CartItemModel>(environment.cartItemsUrl + userId, item))
-    store.dispatch(addItemToCartAction(addedItem))
+    // debugger
+ //   store.dispatch(addItemToCartAction(addedItem))
     return addedItem
   }
 
@@ -47,7 +51,7 @@ export class CartsService {
   //We need to add userId even though its post cause userId is additional information ......
   //!is there a way to send everything in the body even the userId as well ??????
     const updatedItem = await firstValueFrom(this.http.post<CartItemModel>(environment.cartItemsUrl + userId, item))
-    store.dispatch(updateItemToCartAction(updatedItem))
+    // store.dispatch(updateItemToCartAction(updatedItem))
     return updatedItem
   }
 
@@ -81,7 +85,7 @@ export class CartsService {
       // go over all the cart items, calculate the total amount of the cart
       const cartItems = store.getState().cartsState.cartItems
       const total = cartItems.reduce((accumulator, currVal) => {
-        
+        debugger
         return accumulator + (currVal.quantity * currVal.product.price)
 
       }, 0)

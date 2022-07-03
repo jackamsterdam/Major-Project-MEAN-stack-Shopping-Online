@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { MatStepper } from '@angular/material/stepper';
 import { Router } from '@angular/router';
 import { CityEnum } from 'src/app/models/city.enum';
 import { UserModel } from 'src/app/models/user.model';
@@ -35,7 +36,17 @@ export class RegisterComponent {
 
   constructor(private authService: AuthService, private router: Router, private notify: NotifyService) { }
  
-
+  async goForward(stepper: MatStepper) {
+// debugger
+    const areUnique = await this.authService.checkValidEmailAndSSN(this.user)
+    // debugger
+   // this.isCompleted = areUnique 
+   if (areUnique) {
+    stepper.next()
+   } else  {
+    
+   }
+  }
 
 
 
@@ -49,7 +60,7 @@ export class RegisterComponent {
       // doesnt work cant put focus on second part 
       // this.initialFocus = false
       // this.switchFocus = true
-      
+      // debugger
       this.isCompleted = areUnique  //returns true if unique if not 400 bad request error gets caught and displays error to user. 
       // this.isCompleted = true 
       console.log('user', this.user)
@@ -78,26 +89,29 @@ export class RegisterComponent {
  cancelAreUnique() {
   this.isCompleted = false
  }
-//******************************************************* */
-    // Bind to the <input type= ... > 
-    @ViewChild("ssnBox")
-    public ssnBoxRef: ElementRef<HTMLInputElement>;
-//******************************************************* */
+// //******************************************************* */
+//     // Bind to the <input type= ... > 
+//     @ViewChild("ssnBox")
+//     public ssnBoxRef: ElementRef<HTMLInputElement>;
+// // //******************************************************* */
 
  makeDashes(e: Event) {
-
-  this.ssnBoxRef.nativeElement    
-  console.log("this.ssnBoxRef.nativeElement", this.ssnBoxRef.nativeElement);
+// debugger
+//   this.ssnBoxRef.nativeElement    
+//   console.log("this.ssnBoxRef.nativeElement", this.ssnBoxRef.nativeElement);
   const inputElement = (e.target as HTMLInputElement);
 // console.log('key', e.key)
 // console.log('target', e.target)
 // console.log('target', e.target.event)
 console.log('inputElement',inputElement.value)
-  // if(e.key === "Backspace" || e.key === "Delete") return;
 
-  if (inputElement.value.length === 4) {
-    //  ssnBox.value = phone.value + "-";
-}
+  if (inputElement.value.length === 3) {
+    inputElement.value = inputElement.value + '-'
+  }
+
+  if (inputElement.value.length === 6) {
+    inputElement.value = inputElement.value + '-'
+  }
 
  }
 

@@ -7,7 +7,8 @@ import { IUserModel, UserModel } from './../03-models/user-model';
 async function checkValidEmailAndSSN(user: IUserModel):Promise<boolean> {
     //Prevent duplicate username with specific message instead of  using unique in mongoose with a less pleasant message: 
     const existsUsername = await UserModel.findOne({ username: user.username }).exec()
-    if (existsUsername) throw new ErrorModel(400, `Username ${user.username} is already taken. Please make sure that you are not registered already or please choose a different username`)
+    // if (existsUsername) throw new ErrorModel(400, `Username ${user.username} is already taken. Please make sure that you are not registered already or please choose a different username`)
+    if (existsUsername) return false
 
 
     // Hash and salt social security nubmer before comparing in query 
@@ -16,7 +17,8 @@ async function checkValidEmailAndSSN(user: IUserModel):Promise<boolean> {
 
     //Prevent duplicate social security number (American teudat zehut) with specific message instead of  using unique in mongoose with a less pleasant message: 
     const existsSocialSecurityNumber = await UserModel.findOne({socialSecurityNumber: hashedSocialtoCheck}).exec()
-    if (existsSocialSecurityNumber) throw new ErrorModel(400, `Social Security Number you have entered already exists. Please make sure that you are not registered already or please try again`)
+    // if (existsSocialSecurityNumber) throw new ErrorModel(400, `Social Security Number you have entered already exists. Please make sure that you are not registered already or please try again`)
+    if (existsSocialSecurityNumber) return false
     //Social Security Number 123-93-1238 already exists. Please make sure that you are not registered already or please try  - better not to return the social back to him with message for security purposes.
 
     //Return true if both social security number and email are unique

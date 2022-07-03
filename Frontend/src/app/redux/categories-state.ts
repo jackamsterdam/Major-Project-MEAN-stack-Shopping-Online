@@ -3,13 +3,13 @@ import { CategoryModel } from "../models/category.model";
 //Categories State - categories data needed in the application level: 
 export class CategoriesState {
     categories: CategoryModel[] = []
-    // selectedCategory: string
+    selectedCategory: string = 'all'
 }
 
 //Categories Action Type -any action which can be done on the above categories state
 export enum CategoriesActionType { 
-    FetchCategories = 'FetchCategories'
-    // SelectedCateogory = "SelectedCategory"
+    FetchCategories = 'FetchCategories',
+    SelectedCateogory = "SelectedCategory"
 }
 
 //Categories Action - any single object sent to the store during 'dispatch':
@@ -24,9 +24,9 @@ export interface CategoriesAction {
 export function fetchCategoriesAction(categories: CategoryModel[]):CategoriesAction {
     return {type: CategoriesActionType.FetchCategories, payload: categories}
 }
-// export function selectedCategoryAction(product: ProductModel):ProductsAction {
-//     return {type: ProductsActionType.AddProduct, payload: product}
-// }
+export function selectedCategoryAction(categoryId: string):CategoriesAction {
+    return {type: CategoriesActionType.SelectedCateogory, payload: categoryId}
+}
 
 // Categories Reducer - the main function performing any action on categories state:
 // the new CategoriesState() is a default value for the first time only 
@@ -38,6 +38,9 @@ export function categoriesReducer(currentState = new CategoriesState(), action: 
         case CategoriesActionType.FetchCategories:
             newState.categories = action.payload
         break;
+        case CategoriesActionType.SelectedCateogory:
+            newState.selectedCategory = action.payload
+            break;
        
     }
 

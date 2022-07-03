@@ -22,6 +22,7 @@ export class CartListComponent implements OnInit, OnDestroy {
 
   //! all this just becuase I need the cart id of the user so dumb I need to get first the cart by user and then i can get the cart 
   cartByUser: CartModel
+  totalAmount:number;
 
   unsubscribe: Unsubscribe
 
@@ -33,16 +34,20 @@ export class CartListComponent implements OnInit, OnDestroy {
 
 
         //! all this just becuase I need the cart id of the user so dumb I need to get first the cart by user and then i can get the cart  (btw gives me isClosed false only so I know its the right cart )
-      this.cartByUser = await this.cartsService.getCartByUser(store.getState().authState.user._id)
+      // this.cartByUser = await this.cartsService.getCartByUser(store.getState().authState.user._id)
   
-      console.log("store.getState().authState.user._id", store.getState().authState.user._id);
-      console.log("this.cartByUser", this.cartByUser);
-                                                                                            //!for this:
-       this.allItemsByCart = await this.cartsService.getAllItemsByCart(this.cartByUser._id) 
-       console.log(" this.allItemsByCart",  this.allItemsByCart);
-  
+      // console.log("store.getState().authState.user._id", store.getState().authState.user._id);
+      // console.log("this.cartByUser", this.cartByUser);
+      //                                                                                       //!for this:
+      //  this.allItemsByCart = await this.cartsService.getAllItemsByCart(this.cartByUser._id) 
+      //  console.log(" this.allItemsByCart",  this.allItemsByCart);
+      const cart = await this.cartsService.getCartByUser(store.getState().authState.user._id)
+      this.allItemsByCart =  await this.cartsService.getAllItemsByCart(cart?._id)
+      this.totalAmount = this.cartsService.getTotalCartAmount();
+
       this.unsubscribe = store.subscribe(() => {
-        this.allItemsByCart = store.getState().cartsState.cartItems
+        this.allItemsByCart = store.getState().cartsState.cartItems;
+        this.totalAmount = this.cartsService.getTotalCartAmount();
        })
     } catch (err: any) {
       this.notify.error(err)
@@ -105,3 +110,34 @@ calculateTotal() {
   }
 
 }
+
+
+// <mat-sidenav-container>
+//     <button  class="toggle-button" (click)="opened = !opened"><mat-icon>shopping_cart</mat-icon></button>
+
+//     <!-- mode: over (default) push side (shriknks width) Second way to open is with template reference variable   -->
+//     <mat-sidenav #sidenav mode="side" (opened)="log('open')" (closed)="log('closed')" [(opened)]="opened">
+//        <h2>My Cart</h2> 
+//         <br>
+//  <!-- <span *ngFor="let c of allItemsByCart">{{c.product.name }} | </span> -->
+//  <app-sidenav-details *ngFor="let i of allItemsByCart" [item]="i"  (deleteItem)="deleteThisCard($event)"> </app-sidenav-details>
+// <br>
+// <button mat-raised-button class="delete-all" (click)="deleteAllItems()">Empty Cart</button>
+//         Total: {{calculateTotal()}}
+//         <button  class="toggle-button" (click)="opened = !opened"><mat-icon>shopping_cart</mat-icon></button>
+//         <!-- yPosition="above" -->
+
+//        <a routerLink="/order"><mat-icon>shopping_cart_checkout</mat-icon></a> 
+//     </mat-sidenav>
+
+
+//     <mat-sidenav-content>
+//         <button (click)="opened = !opened">Toggle Opened</button>
+//         <button (click)="sidenav.open()">Open</button>
+//         <button (click)="sidenav.close()">Close</button>
+//         <button (click)="sidenav.toggle()">toggle</button>
+//         <app-category-list></app-category-list>
+//        <app-product-list></app-product-list>
+   
+//     </mat-sidenav-content>
+// </mat-sidenav-container>

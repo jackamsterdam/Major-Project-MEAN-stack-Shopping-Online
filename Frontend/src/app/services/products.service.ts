@@ -4,7 +4,7 @@ import { firstValueFrom } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { CategoryModel } from '../models/category.model';
 import { ProductModel } from '../models/product.model';
-import { fetchCategoriesAction } from '../redux/categories-state';
+import { fetchCategoriesAction, selectedCategoryAction } from '../redux/categories-state';
 import { addProductAction, deleteProductAction, fetchProductsAction, updateProductAction } from '../redux/products-state';
 import store from '../redux/store';
 
@@ -54,6 +54,10 @@ export class ProductsService {
   async getProductsByCategory(categoryId: string):Promise<ProductModel[]> {
    const products = await firstValueFrom(this.http.get<ProductModel[]>(environment.productsByCategoryUrl + categoryId))
    return products 
+  }
+
+  setSelectedCategory(categoryId: string) {
+    store.dispatch(selectedCategoryAction(categoryId))
   }
 
   async addProduct(product: ProductModel):Promise<ProductModel> {

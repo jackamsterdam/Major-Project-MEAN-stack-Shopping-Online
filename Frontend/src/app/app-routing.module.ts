@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home-area/home/home.component';
 import { PageNotFoundComponent } from './components/layout-area/page-not-found/page-not-found.component';
 import { OrderComponent } from './components/orders-area/order/order.component';
 import { ShoppingComponent } from './components/shopping-area/shopping/shopping.component';
+import { AuthGuard } from './services/auth.guard';
 
 const routes: Routes = [
 
@@ -20,9 +21,9 @@ const routes: Routes = [
 
   {path: 'home', component: HomeComponent},
 
-  {path: 'shopping', component: ShoppingComponent},
+  {path: 'shopping', component: ShoppingComponent, canActivate: [AuthGuard]},
 
-  {path: 'order', component: OrderComponent},
+  {path: 'order', component: OrderComponent, canActivate: [AuthGuard]},
 
 
 

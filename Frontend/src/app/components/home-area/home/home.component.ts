@@ -38,7 +38,7 @@ export class HomeComponent implements OnDestroy, OnInit {
           
               // צריך לשמור את הנתון הזה ברדוקס???
               const cart = await this.cartsService.getCartByUser(this.user._id)
-              await this.cartsService.getAllItemsByCart(cart._id)
+              await this.cartsService.getAllItemsByCart(cart?._id)
           
             }
           }

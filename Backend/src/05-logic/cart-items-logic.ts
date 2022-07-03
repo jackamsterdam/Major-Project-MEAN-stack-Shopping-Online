@@ -12,6 +12,12 @@ async function getAllItemsByCart(cartId: string): Promise<ICartItemModel[]> {
     return CartItemModel.find({ cartId }).populate('cart').populate('product').exec()
 }
 
+async function getOneItemFromACart(productId: string): Promise<ICartItemModel> {
+    const oneItem = await CartItemModel.findById({productId}).populate('product').exec()
+    // if (!oneItem) throw new ErrorModel(404, `Resource with _id ${productId} not found.`)
+    return oneItem
+}
+
 // but everytime a user clicks to add item to the cart we need add item with a connection to the cart (and connection to product) ...  // so how we do this do i send an id of the cartID and a productID in a select (like in angular i put two select boxes one for the product he chooses and other for which user he is ????????)
 // Add item to items 
 //User adds item to cart - new cart is created with added product
@@ -20,7 +26,7 @@ async function addItem(item: ICartItemModel, userId: string): Promise<ICartItemM
     //Validation
     const errors = item.validateSync()
     if (errors) throw new ErrorModel(400, errors.message)
-
+// debugger
     // Case where no cart exists
     if (!item.cartId) {
         // add new cart with userId
@@ -34,13 +40,17 @@ async function addItem(item: ICartItemModel, userId: string): Promise<ICartItemM
     if (item.cartId) {
         // find the item in the cart and update the item
         await CartItemModel.updateOne({ cartId: item.cartId, productId: item.productId }, { $set: { quantity: item.quantity, total: item.total } }).exec()
-
-        const found = await CartItemModel.findOne({ cartId: item.cartId, productId: item.productId }).exec()
+        let found = await CartItemModel.findOne({ cartId: item.cartId, productId: item.productId }).exec()
+        // console.log('***********************found ', found, item.cartId, item.productId)
 
         if (!found) {
             console.log('item  doesnt exist in cart: ' + item.cartId)
             // Add new item to the cart
+
             return item.save()
+            // found =  await getOneItemFromACart(item.productId.toString())
+
+            return found;
         } else {
             console.log('item exists already just updating it ')
            return found;

@@ -1,7 +1,9 @@
 <div>
-    <mat-horizontal-stepper linear>
-        <mat-step label="Register" [completed]="isCompleted">
-            <form (ngSubmit)="submitStep1()" #formInfo="ngForm">
+    <mat-horizontal-stepper linear #stepper>
+        <mat-step label="Register">
+        <!-- <mat-step label="Register" [completed]="isCompleted"> -->
+            <form  #formInfo="ngForm">
+            <!-- <form (ngSubmit)="submitStep1()" #formInfo="ngForm"> -->
                 <h2>Step 1</h2>
 
 
@@ -14,7 +16,7 @@
                 <!--! min and max length without - - - will be 9 not 11 btw !!  -->
                 <!-- must do front end validation to social only with 9 digits cause in back i dont know how cause i hash it !!  -->
                 <!-- makeDashes2(ssnBox.value) why cant i send the value of the ssnBox??? -->
-                <input (keydown)="makeDashes($event)"  autofocus type="text" name="ssn" [(ngModel)]="user.socialSecurityNumber" placeholder="###-##-####"
+                <input (keyup)="makeDashes($event)"  autofocus type="text" name="ssn" [(ngModel)]="user.socialSecurityNumber" placeholder="###-##-####"
                     #ssnBox="ngModel" required minlength="11" maxlength="11">
                 <!-- pattern="/^\d{3}-\d{2}-\d{4}$/" -->
                 <span *ngIf="ssnBox.touched && ssnBox.errors?.['required']">Missing SSN</span>
@@ -25,11 +27,12 @@
 
                 <label>Email: </label>
                 <input  type="email" name="username" [(ngModel)]="user.username" placeholder="email"
-                    #usernameBox="ngModel" required minlength="2" maxlength="100">
+                    #usernameBox="ngModel" required minlength="2" maxlength="100" uniqueEmail="jackkk">
                 <!-- pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/" -->
                 <span *ngIf="usernameBox.touched && usernameBox.errors?.['required']">Missing email</span>
                 <span *ngIf="usernameBox.touched && usernameBox.errors?.['minlength']">Email is too short</span>
                 <span *ngIf="usernameBox.touched && usernameBox.errors?.['maxlength']">Email is too long</span>
+                <span *ngIf="usernameBox.touched && usernameBox.errors?.['uniqueEmail']">Email already exists</span>
                 <!-- <span *ngIf="usernameBox.touched && usernameBox.errors?.['required']">Emailis invalid </span> -->
                 <!--! Enter pattern regex of email validation add pattern and add span  -->
 
@@ -58,7 +61,7 @@
                         <div *ngIf="confirmPassword.errors.mustMatch">Passwords must match</div> -->
 
 
-                <button [disabled]="formInfo.invalid" mat-raised-button color="primary" matStepperNext>
+                <button [disabled]="formInfo.invalid" mat-raised-button color="primary" (click)="goForward(stepper)">
                     <mat-icon color="warn">send</mat-icon>&nbsp;Next Step
                 </button>
 

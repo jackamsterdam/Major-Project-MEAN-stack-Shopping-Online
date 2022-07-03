@@ -1,27 +1,40 @@
+
 <mat-sidenav-container>
-    <!-- mode: over (default) push side (shriknks width) Second way to open is with template reference variable   -->
-    <mat-sidenav #sidenav mode="over" (opened)="log('open')" (closed)="log('closed')" [(opened)]="opened">
-       <h2>My Cart</h2> 
+  
+          <!-- mode: over (default) push side (shriknks width) Second way to open is with template reference variable   -->
+    <mat-sidenav #sidenav mode="side" (opened)="log('open')" (closed)="log('closed')" [(opened)]="opened">
+        <h2>My Cart</h2> 
         <br>
- <!-- <span *ngFor="let c of allItemsByCart">{{c.product.name }} | </span> -->
- <app-sidenav-details *ngFor="let i of allItemsByCart" [item]="i"  (deleteItem)="deleteThisCard($event)"> </app-sidenav-details>
-<br>
-<button mat-raised-button class="delete-all" (click)="deleteAllItems()">Empty Cart</button>
-        Total: {{calculateTotal()}}
+        <!-- <span *ngFor="let c of allItemsByCart">{{c.product.name }} | </span> -->
+        <app-sidenav-details *ngFor="let i of allItemsByCart" [item]="i"  (deleteItem)="deleteThisCard($event)"> </app-sidenav-details>
+        <br>
+        <button mat-raised-button class="delete-all" (click)="deleteAllItems()">Empty Cart</button>
+        Total: {{totalAmount}}
         <button  class="toggle-button" (click)="opened = !opened"><mat-icon>shopping_cart</mat-icon></button>
         <!-- yPosition="above" -->
 
-       <a routerLink="/order"><mat-icon>shopping_cart_checkout</mat-icon></a> 
-    </mat-sidenav>
+        <a routerLink="/order"><mat-icon>shopping_cart_checkout</mat-icon></a> 
+     </mat-sidenav>
 
+    <!-- mode: over (default) push side (shriknks width) Second way to open is with template reference variable   -->
+         <mat-sidenav-content>
+            <div class="button-test">
+                <div class="toggle-button" (click)="opened = !opened">
+                    <mat-icon class="shopping-cart-icon">shopping_cart</mat-icon>
+                </div>
+            </div>
+                 <!-- <button (click)="opened = !opened">Toggle Opened</button>
+                 <button (click)="sidenav.open()">Open</button>
+                 <button (click)="sidenav.close()">Close</button>
+                 <button (click)="sidenav.toggle()">toggle</button> -->
+                 <div style="display: flex">
+                    <app-category-list></app-category-list>
+                 </div>
+                 <div>
+                 <app-product-list></app-product-list>
+                 </div>
+           
+         </mat-sidenav-content>
 
-    <mat-sidenav-content>
-        <button (click)="opened = !opened">Toggle Opened</button>
-        <button (click)="sidenav.open()">Open</button>
-        <button (click)="sidenav.close()">Close</button>
-        <button (click)="sidenav.toggle()">toggle</button>
-        <app-category-list></app-category-list>
-       <app-product-list></app-product-list>
-   
-    </mat-sidenav-content>
 </mat-sidenav-container>
+

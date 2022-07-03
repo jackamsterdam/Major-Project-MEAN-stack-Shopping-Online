@@ -5,13 +5,22 @@
 <!-- //!Doesnt work  -->
 <!-- <mat-tab-group #tabRef  (selectedTabChange)="logChange(tabRef.selectedIndex)"> -->
 <!-- <mat-tab-group #tabRef  (selectedTabChange)="logChange(tabRef.selectedIndex)"> -->
-<mat-tab-group #tabRef  (selectedTabChange)="logChange($event)">
-    <mat-tab *ngFor="let c of categories; let i =index "  [label]="c._id">{{products}} </mat-tab>
+<!-- <mat-tab-group #tabRef  (selectedTabChange)="logChange($event)">
+    <mat-tab *ngFor="let c of categories; let i =index,"  [label]="c.name">{{products}} </mat-tab>
     <!-- <mat-tab  label="Angular">Angular content</mat-tab>
     <mat-tab label="React">React contnt </mat-tab>
     <mat-tab label="Vue">vue content </mat-tab> -->
   
-</mat-tab-group>
+<!-- </mat-tab-group> -->
+
+<div  class="tab-content">
+    <div class="tab-item" id="all"  (click)="selectCategory($event)">
+        All
+    </div>
+    <div class="tab-item" *ngFor="let c of categories;" id="{{c._id}}"  (click)="selectCategory($event)">
+        {{c.name}}
+    </div>
+</div>
 
 <!-- {{tabRef.selectedIndex}} casues error -->
 
