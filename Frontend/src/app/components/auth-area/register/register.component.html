@@ -2,70 +2,84 @@
     <mat-horizontal-stepper linear #stepper>
         <mat-step label="Register">
         <!-- <mat-step label="Register" [completed]="isCompleted"> -->
-            <form  #formInfo="ngForm">
+            <!--! do i need form conrtrol for this also??  -->
+            <form [formGroup]="initialInfo" >
             <!-- <form (ngSubmit)="submitStep1()" #formInfo="ngForm"> -->
                 <h2>Step 1</h2>
-
-
- <!-- enter social seciruty number !!  -->
-                <!-- AAA-GG-SSSS -->
-                <!-- placeholder="###-##-####" -->
 
                 <label>SSN: </label>
                 <!--! input type text or number??? and how to make xxx-xx-xxxx these - lines between? or send data with lines between???  -->
                 <!--! min and max length without - - - will be 9 not 11 btw !!  -->
                 <!-- must do front end validation to social only with 9 digits cause in back i dont know how cause i hash it !!  -->
                 <!-- makeDashes2(ssnBox.value) why cant i send the value of the ssnBox??? -->
-                <input (keyup)="makeDashes($event)"  autofocus type="text" name="ssn" [(ngModel)]="user.socialSecurityNumber" placeholder="###-##-####"
-                    #ssnBox="ngModel" required minlength="11" maxlength="11">
+                <input (keydown)="makeDashes($event)"  autofocus type="text" placeholder="###-##-####" [formControl]="ssnInput" minlength="11" maxlength="11">
                 <!-- pattern="/^\d{3}-\d{2}-\d{4}$/" -->
-                <span *ngIf="ssnBox.touched && ssnBox.errors?.['required']">Missing SSN</span>
-                <span *ngIf="ssnBox.touched && ssnBox.errors?.['minlength']">SSN is too short</span>
-                <span *ngIf="ssnBox.touched && ssnBox.errors?.['maxlength']">SSN is too long</span>
-                <!-- <span *ngIf="usernameBox.touched && usernameBox.errors?.['required']">Emailis invalid </span> -->
+                <span *ngIf="ssnInput.touched && ssnInput.errors?.['required']">Missing SSN</span>
+                <span *ngIf="ssnInput.touched && ssnInput.errors?.['minlength']">SSN is too short</span>
+                <span *ngIf="ssnInput.touched && ssnInput.errors?.['maxlength']">SSN is too long</span>
+                <!-- <span *ngIf="ssnInput.touched && ssnInput.errors?.['invalidRegex']">Emailis invalid </span> -->
                 <!--! Enter pattern regex of SSN validation add pattern and add span  -->
 
+                <span *ngIf="!ssnInput.errors?.['required'] && !ssnInput.errors?.['minlength'] && !ssnInput.errors?.['maxlength'] && ssnInput.invalid && ssnInput.errors?.['invalidRegex']">Social Security number must be in the format of xxx-xx-xxxx</span>
+
                 <label>Email: </label>
-                <input  type="email" name="username" [(ngModel)]="user.username" placeholder="email"
-                    #usernameBox="ngModel" required minlength="2" maxlength="100" uniqueEmail="jackkk">
-                <!-- pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/" -->
-                <span *ngIf="usernameBox.touched && usernameBox.errors?.['required']">Missing email</span>
-                <span *ngIf="usernameBox.touched && usernameBox.errors?.['minlength']">Email is too short</span>
-                <span *ngIf="usernameBox.touched && usernameBox.errors?.['maxlength']">Email is too long</span>
-                <span *ngIf="usernameBox.touched && usernameBox.errors?.['uniqueEmail']">Email already exists</span>
+                <input  type="email" placeholder="email" [formControl]="usernameInput" >
+                <!-- pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/"  uniqueEmail="jackkk"-->
+                <!-- form.error  -->
+                <span *ngIf="usernameInput.touched && usernameInput.errors?.['required']">Missing email</span>
+                <span *ngIf="usernameInput.touched && usernameInput.errors?.['minlength']">Email is too short</span>
+                <span *ngIf="usernameInput.touched && usernameInput.errors?.['maxlength']">Email is too long</span>
+                <!-- <span *ngIf="usernameInput.touched && usernameInput.errors?.['invalidEmail']">Email is invalid</span> -->
+                <!-- <span *ngIf="usernameInput.touched && usernameInput.errors?.['uniqueEmail']">Email already exists</span> -->
                 <!-- <span *ngIf="usernameBox.touched && usernameBox.errors?.['required']">Emailis invalid </span> -->
+                <!-- <span *ngIf="usernameInput.invalid && usernameInput.touched">Emailis invalid </span> -->
+                <!-- <span *ngIf="!usernameInput.errors?.['required'] && !usernameInput.errors?.['minlength'] && !usernameInput.errors?.['maxlength'] && usernameInput.invalid && usernameInput.errors?.['pattern']">Emailis invalid </span> -->
+                <span *ngIf="!usernameInput.errors?.['required'] && !usernameInput.errors?.['minlength'] && !usernameInput.errors?.['maxlength'] && usernameInput.invalid && usernameInput.errors?.['invalidRegex']">Email is invalid </span>
+
+
                 <!--! Enter pattern regex of email validation add pattern and add span  -->
 
                 <label>Password: </label>
-                <input type="password" name="password" [(ngModel)]="user.password" placeholder="password"
-                    #passwordBox="ngModel" required minlength="2" maxlength="100">
-                <span *ngIf="passwordBox.touched && passwordBox.errors?.['required']">Missing password</span>
-                <span *ngIf="passwordBox.touched && passwordBox.errors?.['minlength']">Password is too short</span>
-                <span *ngIf="passwordBox.touched && passwordBox.errors?.['maxlength']">Password is too long</span>
+                <input type="password" placeholder="password" [formControl]="passwordInput">
+                <span *ngIf="passwordInput.touched && passwordInput.errors?.['required']">Missing password</span>
+                <span *ngIf="passwordInput.touched && passwordInput.errors?.['minlength']">Password is too short</span>
+                <span *ngIf="passwordInput.touched && passwordInput.errors?.['maxlength']">Password is too long</span>
 
                 <label>Confirm Password: </label>
-                <input type="password" name="passwordConfirm" [(ngModel)]="user.password" placeholder="confirm password"
-                    #passwordConfirmBox="ngModel" required minlength="2" maxlength="100" ngValidateEqual="password">
-                <span *ngIf="passwordConfirmBox.touched && passwordConfirmBox.errors?.['required']">Missing
+                <!--! rehightlit this:  -->
+                ! <input type="password" placeholder="confirm password" [formControl]="passwordConfirmInput">
+                <span *ngIf="passwordConfirmInput.touched && passwordConfirmInput.errors?.['required']">Missing
                     password</span>
-                <span *ngIf="passwordConfirmBox.touched && passwordConfirmBox.errors?.['minlength']">Password is too
+                <span *ngIf="passwordConfirmInput.touched && passwordConfirmInput.errors?.['minlength']">Password is too
                     short</span>
-                <span *ngIf="passwordConfirmBox.touched && passwordConfirmBox.errors?.['maxlength']">Password is too
+                <span *ngIf="passwordConfirmInput.touched && passwordConfirmInput.errors?.['maxlength']">Password is too
                     long</span>
 
-                <p class="warning-text" *ngIf="passwordConfirmBox.hasError('notEqual') && passwordBox.valid">
+
+
+                <!-- <span *ngIf="passwordConfirmInput.touched && passwordConfirmInput.errors?.['passwordMismatch']">wowowo</span> -->
+                <span *ngIf="!passwordConfirmInput.errors?.['required'] && !passwordConfirmInput.errors?.['minlength'] && !passwordConfirmInput.errors?.['maxlength'] && passwordConfirmInput.invalid && passwordConfirmInput.errors?.['passwordMismatch']">Password's don't match </span>
+
+                <!-- <p class="warning-text" *ngIf="passwordConfirmInput.hasError('notEqual') && passwordConfirmInput.valid">
                     Passwords Don't Match
-                </p>
+                </p> -->
 
                 <!-- <div *ngIf="confirmPassword.errors.required">Confirm Password is required</div>
                         <div *ngIf="confirmPassword.errors.mustMatch">Passwords must match</div> -->
 
-
-                <button [disabled]="formInfo.invalid" mat-raised-button color="primary" (click)="goForward(stepper)">
+                 <button [disabled]="initialInfo.invalid" mat-raised-button color="primary" (click)="goForward(stepper)">
                     <mat-icon color="warn">send</mat-icon>&nbsp;Next Step
                 </button>
 
+                <!-- !HOw to do this???????????????????????? -->
+              <span *ngIf="usernameInput.touched && usernameInput.errors?.['ssnInvalidorEmailInvalid'] && passwordInput.touched && passwordInput.errors?.['ssnInvalidorEmailInvalid']">SSN or Email is already taken</span>
+  <span *ngIf="passwordInput.errors?.['ssnInvalidorEmailInvalid']"></span>
+
             </form>
+            <!-- <div>
+                {{authForm.valid}} 
+                {{authForm.controls}} 
+            </div> -->
 
 
 
@@ -101,22 +115,20 @@
 
 
         <mat-step label="Contact Information" completed="false">
-            <form (ngSubmit)="submitStep2()" #formInfo="ngForm">
+            <form (ngSubmit)="submitStep2()"[formGroup]="authForm">
                 <h2>Step 2</h2>
 
                 <label>First Name: </label>
-                <input type="text" placeholder="first name" name="firstName" [(ngModel)]="user.firstName"
-                    #firstNameBox="ngModel" required minlength="2" maxlength="100">
-                <span *ngIf="firstNameBox.touched && firstNameBox.errors?.['required']">Missing first name</span>
-                <span *ngIf="firstNameBox.touched && firstNameBox.errors?.['minlength']">First name is too short</span>
-                <span *ngIf="firstNameBox.touched && firstNameBox.errors?.['maxlength']">First name is too long</span>
+                <input type="text" placeholder="first name" [formControl]="firstNameInput">
+                <span *ngIf="firstNameInput.touched && firstNameInput.errors?.['required']">Missing first name</span>
+                <span *ngIf="firstNameInput.touched && firstNameInput.errors?.['minlength']">First name is too short</span>
+                <span *ngIf="firstNameInput.touched && firstNameInput.errors?.['maxlength']">First name is too long</span>
 
                 <label>Last Name: </label>
-                <input type="text" placeholder="last name" name="lastName" [(ngModel)]="user.lastName"
-                    #lastNameBox="ngModel" required minlength="2" maxlength="100">
-                <span *ngIf="lastNameBox.touched && lastNameBox.errors?.['required']">Missing last name</span>
-                <span *ngIf="lastNameBox.touched && lastNameBox.errors?.['minlength']">Last name is too short</span>
-                <span *ngIf="lastNameBox.touched && lastNameBox.errors?.['maxlength']">Last name is too long</span>
+                <input type="text" placeholder="last name" [formControl]="lastNameInput">
+                <span *ngIf="lastNameInput.touched && lastNameInput.errors?.['required']">Missing last name</span>
+                <span *ngIf="lastNameInput.touched && lastNameInput.errors?.['minlength']">Last name is too short</span>
+                <span *ngIf="lastNameInput.touched && lastNameInput.errors?.['maxlength']">Last name is too long</span>
 
               
 
@@ -125,34 +137,33 @@
                   </p> -->
 
     
-
+<!--! we dont see Select city.....  -->
                 <label>City</label>
-                <select name="city" [(ngModel)]="user.city" required #cityBox="ngModel">
+                <select [formControl]="cityInput">
                     <option [ngValue]="undefined" disabled selected>Select city...</option>
                     <!-- <option [selected]="true" [disabled]="true">Select city...</option>
                     <option selected disabled>Select city...</option> -->
                     <!--! works without :  [value]="enum.value" cauae value is the Los Angeles seperetaed dont unserstand the enum properties are LosAngeles not Los angeles so how does it work??? -->
-                    <option *ngFor="let enum of CityEnum | keyvalue">{{enum.value}}</option>
+                    <option *ngFor="let enum of CityEnum | keyvalue"   [value]="enum.value">{{enum.value}}</option>
                     <!-- <option value=cities.Enum></option> cant do this way? -->
                     <!-- <option *ngFor="let c of cities" [value]="c">{{cities[c]}}</option> -->
                     <!-- <option *ngFor="let enum of CityEnum | keyvalue">coty</option> -->
                     <!-- <option *ngFor="let t of targets" [value]="t._id">{{t.type}}</option> -->
                 </select>
-                <span *ngIf="cityBox.errors?.['required'] && cityBox.touched">Missing city</span>
+                <span *ngIf="cityInput.errors?.['required'] && cityInput.touched">Missing city</span>
 
 
 
 
 
                 <label>Street: </label>
-                <input type="text" placeholder="street" name="street" [(ngModel)]="user.street" #streetBox="ngModel"
-                    required minlength="2" maxlength="100">
-                <span *ngIf="streetBox.touched && streetBox.errors?.['required']">Missing street</span>
-                <span *ngIf="streetBox.touched && streetBox.errors?.['minlength']">Street is too short</span>
-                <span *ngIf="streetBox.touched && streetBox.errors?.['maxlength']">Street is too long</span>
+                <input type="text" placeholder="street" [formControl]="streetInput">
+                <span *ngIf="streetInput.touched && streetInput.errors?.['required']">Missing street</span>
+                <span *ngIf="streetInput.touched && streetInput.errors?.['minlength']">Street is too short</span>
+                <span *ngIf="streetInput.touched && streetInput.errors?.['maxlength']">Street is too long</span>
 
 
-                <button [disabled]="formInfo.invalid" mat-raised-button color="primary" matStepperNext>
+                <button [disabled]="authForm.invalid" mat-raised-button color="primary" matStepperNext>
                     <mat-icon color="warn">send</mat-icon>&nbsp;Submit
                 </button>
                 <button (click)="cancelAreUnique()" mat-button matStepperPrevious>Back</button>
@@ -162,3 +173,8 @@
 </div>
 
 <!-- (click)="stepper.reset()" -->
+
+
+
+
+

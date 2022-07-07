@@ -6,9 +6,12 @@ import cartsLogic from '../05-logic/carts-logic';
 
 // Add Order 
 async function addOrder(order: IOrderModel): Promise<IOrderModel> {
+    console.log("order", order);
     const errors = order.validateSync()
     if (errors) throw new ErrorModel(400, errors.message)
 
+    console.log("order.cartId", order.cartId);
+    console.log("order.cartId.tostring", order.cartId.toString());
     await cartsLogic.closeCart(order.cartId.toString())
    // add an order
    return order.save();

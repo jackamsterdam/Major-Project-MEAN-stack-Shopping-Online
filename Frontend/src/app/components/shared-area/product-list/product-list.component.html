@@ -1,0 +1,14 @@
+<!-- <app-product-card *ngFor="let p of products" [product]="p" [role]="'user'"></app-product-card> -->
+
+
+<!-- <app-product-card *ngFor="let p of products" [product]="p" [role]="userRole"></app-product-card>
+<app-product-card *ngFor="let p of products" [product]="p" [role]="adminRole"></app-product-card> -->
+
+
+<app-product-card *ngFor="let p of products" 
+                  [product]="p" 
+                  [role]="role"
+                  (edit)="editProduct($event)"
+                  (add)="addProduct($event)"></app-product-card>
+<!-- <p>{{role}}</p> -->
+<!-- <app-product-card *ngFor="let p of products" [product]="p" [role]="role"></app-product-card> -->

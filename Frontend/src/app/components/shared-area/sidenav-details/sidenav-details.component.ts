@@ -1,5 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { CartItemModel } from 'src/app/models/cart-item.model';
+import { CartsService } from 'src/app/services/carts.service';
+import { NotifyService } from 'src/app/services/notify.service';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -15,7 +18,7 @@ export class SidenavDetailsComponent implements OnInit {
   
   productsImageUrl = environment.productsImageUrl
   
-  constructor() { }
+  constructor(public dialog: MatDialog, private cartsService: CartsService, private notify: NotifyService) { }
   
   //!I cant do this!!!  total = this.item.quantity * this.item.product.price   for individual items but i can ישירות in the html
   ngOnInit(): void {

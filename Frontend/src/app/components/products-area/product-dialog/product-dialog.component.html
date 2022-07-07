@@ -1,15 +1,23 @@
-<h2 mat-dialog-title>Session timeout</h2>
+
+  <form  #formBox="ngForm">
+    <!-- //!had to do form for validation with negative ...but cant add required casue if you click out it  will give error / -->
+<h2 mat-dialog-title>Choose quantity</h2>
 <mat-dialog-content>
 
-    <!-- <form> -->
+  
         <label>Quantity</label>
-        <input #quantityBox type="number" step="1.00" min="0" max="100">
-    <!-- </form> -->
+        <!-- [(ngModel)]="credentials.username" -->
+        <input #quantityBox="ngModel" [(ngModel)]="quantity" name="quantity" type="number" step="1.00" min="1" max="100">
+        <!-- <span *ngIf="quantityBox.touched && quantityBox.errors?.['required']">Missing quantity </span> -->
+        <span *ngIf="quantityBox.touched && quantityBox.errors?.['min']">Quantity cannot be 0 or negative </span>
+        <span *ngIf="quantityBox.touched && quantityBox.errors?.['max']">Quantity cannot exceed 100 </span>
+   
 </mat-dialog-content>
 <mat-dialog-actions>
-    <button mat-raised-button color="primary" mat-dialog-close [mat-dialog-close]="quantityBox.value">Add</button>
-    <button mat-raised-button color="primary" mat-dialog-close [mat-dialog-close]="false">Close</button>
+    <button  [disabled]="formBox.invalid" mat-raised-button color="primary" mat-dialog-close [mat-dialog-close]="quantityBox.value">Add</button>
+    <button  mat-raised-button color="primary" mat-dialog-close [mat-dialog-close]="false">Close</button>
 </mat-dialog-actions>
+</form>
 
 
 <!--! put close dialog button in form but actually dont need a form right i just used template reerence variable !!  -->

@@ -4,7 +4,7 @@
     <h3>Shopping Details:</h3>
 
     <form (ngSubmit)="addOrder()" #formInfo="ngForm">
-        
+
      <mat-form-field  floatLabel="always" appearance="fill">
         <mat-label>Ship City: </mat-label>
         <!--! can i do that user.city &&& order.shipcity cause i want to popluate with old and with new  -->
@@ -13,7 +13,7 @@
             <!--! problem now select city is not displayed !!!  -->
             <mat-option  disabled selected>Select city...</mat-option>
        
-            <mat-option *ngFor="let enum of CityEnum | keyvalue">{{enum.value}}</mat-option>
+            <mat-option *ngFor="let enum of CityEnum | keyvalue"   [value]="enum.value">{{enum.value}}</mat-option>
          
         </mat-select>
         <span *ngIf="cityBox.errors?.['required'] && cityBox.touched">Missing city</span>

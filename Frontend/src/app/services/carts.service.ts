@@ -85,7 +85,7 @@ export class CartsService {
       // go over all the cart items, calculate the total amount of the cart
       const cartItems = store.getState().cartsState.cartItems
       const total = cartItems.reduce((accumulator, currVal) => {
-        debugger
+        // debugger
         return accumulator + (currVal.quantity * currVal.product.price)
 
       }, 0)

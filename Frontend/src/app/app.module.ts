@@ -25,14 +25,20 @@ import { ValidateEqualModule } from 'ng-validate-equal';
 import { ShoppingComponent } from './components/shopping-area/shopping/shopping.component';
 import { CartListComponent } from './components/shared-area/cart-list/cart-list.component';
 import { AutoFocusDirective } from './directives/auto-focus.directive';
-import { ProductCardComponent } from './components/products-area/product-card/product-card.component';
-import { ProductListComponent } from './components/products-area/product-list/product-list.component';
+// import { ProductCardComponent } from './components/products-area/product-card/product-card.component';
+// import { ProductListComponent } from './components/products-area/product-list/product-list.component';
 import { CategoryListComponent } from './components/products-area/category-list/category-list.component';
 import { SidenavDetailsComponent } from './components/shared-area/sidenav-details/sidenav-details.component';
 import { OrderComponent } from './components/orders-area/order/order.component';
 import { AddOrderComponent } from './components/orders-area/add-order/add-order.component';
 import { ProductDialogComponent } from './components/products-area/product-dialog/product-dialog.component';
 import { OrderSuccessDialogComponent } from './components/orders-area/order-success-dialog/order-success-dialog.component';
+import { ConfirmDeleteDialogComponent } from './components/shared-area/confirm-delete-dialog/confirm-delete-dialog.component';
+import { AddProductComponent } from './components/admins-area/add-product/add-product.component';
+import { UpdateProductComponent } from './components/admins-area/update-product/update-product.component';
+import { AdminHomeComponent } from './components/admins-area/admin-home/admin-home.component';
+import { ProductCardComponent } from './components/shared-area/product-card/product-card.component';
+import { ProductListComponent } from './components/shared-area/product-list/product-list.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +66,10 @@ import { OrderSuccessDialogComponent } from './components/orders-area/order-succ
     AddOrderComponent,
     ProductDialogComponent,
     OrderSuccessDialogComponent,
+    ConfirmDeleteDialogComponent,
+    AddProductComponent,
+    UpdateProductComponent,
+    AdminHomeComponent,
   ],
   // entryComponents: [ProductDialogComponent]
   imports: [

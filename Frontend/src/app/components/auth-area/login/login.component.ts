@@ -39,7 +39,9 @@ export class LoginComponent implements OnInit, OnDestroy {
 }
 
 ngOnDestroy(): void {
-  this.unsubscribe()
+  if (this.unsubscribe) {
+    this.unsubscribe()
+  }
 }
 
  async submit() {
@@ -50,7 +52,7 @@ ngOnDestroy(): void {
     
    //! delte this casue we staay on same page  this.router.navigateByUrl('/home') ///
    if (this.user.role === RoleEnum.Admin) {
-    this.router.navigateByUrl('/admin') //!change to real admin page  and also make sure admin cant just type in the url the user shopping page  make him redirect from there 
+    this.router.navigateByUrl('/admin-home') //!change to real admin page  and also make sure admin cant just type in the url the user shopping page  make him redirect from there 
    }
   } catch (err: any) {
     this.notify.error(err)

@@ -9,7 +9,7 @@
         <app-sidenav-details *ngFor="let i of allItemsByCart" [item]="i"  (deleteItem)="deleteThisCard($event)"> </app-sidenav-details>
         <br>
         <button mat-raised-button class="delete-all" (click)="deleteAllItems()">Empty Cart</button>
-        Total: {{totalAmount}}
+       <p *ngIf="totalAmount">Total: {{totalAmount}}</p> 
         <button  class="toggle-button" (click)="opened = !opened"><mat-icon>shopping_cart</mat-icon></button>
         <!-- yPosition="above" -->
 
@@ -27,11 +27,11 @@
                  <button (click)="sidenav.open()">Open</button>
                  <button (click)="sidenav.close()">Close</button>
                  <button (click)="sidenav.toggle()">toggle</button> -->
-                 <div style="display: flex">
+                 <div class="category-style">
                     <app-category-list></app-category-list>
                  </div>
                  <div>
-                 <app-product-list></app-product-list>
+                 <app-product-list (addProductEmit)="addProduct($event)"></app-product-list>
                  </div>
            
          </mat-sidenav-content>

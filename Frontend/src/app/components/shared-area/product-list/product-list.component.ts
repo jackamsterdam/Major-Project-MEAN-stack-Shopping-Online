@@ -1,9 +1,10 @@
 import { ProductsService } from 'src/app/services/products.service';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnDestroy, OnInit, Output } from '@angular/core';
 import { Unsubscribe } from 'redux';
 import { ProductModel } from 'src/app/models/product.model';
 import store from 'src/app/redux/store';
 import { NotifyService } from 'src/app/services/notify.service';
+import { RoleEnum } from 'src/app/models/role.enum';
 
 @Component({
   selector: 'app-product-list',
@@ -15,12 +16,26 @@ export class ProductListComponent implements OnInit {
   products: ProductModel[]
   unsubscribe: Unsubscribe
 
+  // userRole = RoleEnum.User
+  // adminRole = RoleEnum.Admin
+
+  role: RoleEnum
+
   constructor(private productsService: ProductsService, private notify: NotifyService) { }
 
  
   async ngOnInit() {
 
     try {
+//Becauase it is a shared component
+     this.role = store.getState().authState.user.role
+
+
+
+
+
+
+
       // debugger
       this.products = await this.productsService.getAllProducts()  //Since we usually get all the products in login this will go to service and service will get products stright from redux' store
   
@@ -43,6 +58,25 @@ export class ProductListComponent implements OnInit {
 
 
   ngOnDestroy(): void {
-    this.unsubscribe()
+    if (this.unsubscribe) {
+      this.unsubscribe()
+    }
   }
+//admin
+  @Output()
+  public editProductEmit = new EventEmitter<ProductModel>();
+
+  public editProduct(product: ProductModel) {
+      this.editProductEmit.emit(product);
+  }
+
+  //user
+  @Output()
+  public addProductEmit = new EventEmitter<ProductModel>();
+
+  public addProduct(product: ProductModel) {
+      this.addProductEmit.emit(product);
+  }
+
+  
 }

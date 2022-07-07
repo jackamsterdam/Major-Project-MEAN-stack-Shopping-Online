@@ -1,0 +1,42 @@
+<div class="box">
+
+<!-- <mat-card class="item-card" (click)="openDialog()"> -->
+<mat-card class="item-card">
+    <mat-card-header>
+      <mat-card-title>{{product.name}}</mat-card-title>
+      <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+    </mat-card-header>
+    <img mat-card-image [src]="productsImageUrl + product.imageName" alt="item-image">
+    <mat-card-content>
+      <p>
+        Price: {{product.price}}
+      </p>
+    
+    </mat-card-content>
+    <mat-card-actions align="end">
+ 
+      <!-- <button (click)="addProduct(product)" mat-raised-button color="primary" (click)="openDialog()"  *ngIf="role === userRole">Add Product</button> -->
+      <button (click)="addProduct(product)" mat-raised-button color="primary"  *ngIf="role === userRole">Add Product</button>
+      <button (click)="editProduct(product)" mat-raised-button color="primary" *ngIf="role === adminRole">Edit Product</button>
+    </mat-card-actions>
+  </mat-card>
+  </div>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- dont do routerlinke cause it takes you to different page !  -->
+  <!-- <button  routerLink="/admin/edit/{{product._id}}"  mat-raised-button color="primary" *ngIf="role === adminRole">Edit Product</button> -->

@@ -19,7 +19,7 @@ export class AdminGuard implements CanActivate {
         }
 
         this.notify.error("You are not an Admin!");
-        this.router.navigateByUrl("/login");  ///!make sure login in home 
+        this.router.navigateByUrl("/home");  ///!make sure login in home 
         return false;
 
     }

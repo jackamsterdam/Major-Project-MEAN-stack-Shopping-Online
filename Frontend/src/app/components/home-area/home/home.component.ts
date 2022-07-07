@@ -23,9 +23,9 @@ export class HomeComponent implements OnDestroy, OnInit {
   async ngOnInit() {
     try {
       this.unsubscribe = store.subscribe(async () => {
-        debugger
-        if (store.getState().authState.user != this.user) {
-          debugger
+        // debugger
+        if (store.getState().authState.user !== this.user) {
+          // debugger
           this.user = store.getState().authState.user
 
             if (this.user) {

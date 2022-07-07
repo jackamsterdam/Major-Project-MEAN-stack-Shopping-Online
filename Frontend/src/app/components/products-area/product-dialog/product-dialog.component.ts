@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-product-dialog',
@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-dialog.component.scss']
 })
 export class ProductDialogComponent implements OnInit {
-
+quantity: number
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  // @ViewChild("quantityBox")
+  //     public quantityBoxRef: ElementRef<HTMLInputElement>;
 
+  ngOnInit(): void {
+    this.quantity = 1
+  }
+// do() {
+//   console.log(this.quantityBoxRef.nativeElement.value)
+// }
 }

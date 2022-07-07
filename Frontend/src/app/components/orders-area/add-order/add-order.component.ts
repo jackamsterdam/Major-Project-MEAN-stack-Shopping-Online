@@ -8,6 +8,7 @@ import { NotifyService } from 'src/app/services/notify.service';
 import { OrdersService } from 'src/app/services/orders.service';
 import {MatDialog} from '@angular/material/dialog'
 import { OrderSuccessDialogComponent } from '../order-success-dialog/order-success-dialog.component';
+import { CartModel } from 'src/app/models/cart.model';
 
 @Component({
   selector: 'app-add-order',
@@ -20,6 +21,9 @@ export class AddOrderComponent implements OnInit {
   user: UserModel
 
   order =  new OrderModel()
+
+  //!we need to send wth each order a cartID and userId
+  cartId: string
 
   //for date: 
   // minDate = new Date()
@@ -70,7 +74,12 @@ dateFilter(date: any) {  //any????
   async addOrder() {
     try {
       // console.log("this.ssnBoxRef.nativeElement", this.streetBoxRef.nativeElement.value);//! why doesnt it have a vlue property???????????
-      console.log('this.order', this.order)
+      console.log('this.order before', this.order)
+      //!backend needs userID and cartId so this is the way to d it right???
+      this.cartId = store.getState().cartsState.currentCart._id
+      this.order.cartId = this.cartId
+      this.order.userId = this.user._id
+      console.log('this.order afterrrrr', this.order)
       const addedOrder = await this.ordersService.addOrder(this.order)
       this.notify.success("Order has been added")
       // this.router.navigateByUrl('/order-success')//!change this!!! do i want popup or componnet???i want popup:

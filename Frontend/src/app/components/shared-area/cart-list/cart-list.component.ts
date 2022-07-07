@@ -1,11 +1,15 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Unsubscribe } from 'redux';
 import { CartItemModel } from 'src/app/models/cart-item.model';
 import { CartModel } from 'src/app/models/cart.model';
+import { ProductModel } from 'src/app/models/product.model';
 import { UserModel } from 'src/app/models/user.model';
 import store from 'src/app/redux/store';
 import { CartsService } from 'src/app/services/carts.service';
 import { NotifyService } from 'src/app/services/notify.service';
+import { ProductDialogComponent } from '../../products-area/product-dialog/product-dialog.component';
+import { ConfirmDeleteDialogComponent } from '../confirm-delete-dialog/confirm-delete-dialog.component';
 
 @Component({
   selector: 'app-cart-list',
@@ -26,7 +30,7 @@ export class CartListComponent implements OnInit, OnDestroy {
 
   unsubscribe: Unsubscribe
 
-  constructor(private notify: NotifyService, private cartsService: CartsService) { }
+  constructor(private notify: NotifyService, private cartsService: CartsService, public dialog: MatDialog) { }
 
   async ngOnInit() {
     try {
@@ -43,7 +47,12 @@ export class CartListComponent implements OnInit, OnDestroy {
       //  console.log(" this.allItemsByCart",  this.allItemsByCart);
       const cart = await this.cartsService.getCartByUser(store.getState().authState.user._id)
       this.allItemsByCart =  await this.cartsService.getAllItemsByCart(cart?._id)
+
+    //!to fix total displaying after making order: my logic is good? it works though
+     if (cart?.isClosed){
+      console.log("cart?.isClosed", cart?.isClosed);
       this.totalAmount = this.cartsService.getTotalCartAmount();
+     }
 
       this.unsubscribe = store.subscribe(() => {
         this.allItemsByCart = store.getState().cartsState.cartItems;
@@ -64,15 +73,27 @@ export class CartListComponent implements OnInit, OnDestroy {
  async  deleteThisCard(arr: string[]) {
     console.log(arr)
     try {
-      const confirmDelete = await confirm(`Are you sure you want to delete this item?`)
-      if (!confirmDelete) return
-      await this.cartsService.deleteProduct(arr[0], arr[1])
-      this.notify.success('Item has been deleted')
+      //! how to pass props in ts to ConfirmDelteDalgoCOponent cause i want diffeerent messages 
+      let dialogRef = this.dialog.open(ConfirmDeleteDialogComponent, {
+        data: { action: 'remove'}
+      })
+      console.log("dialogRef", dialogRef);
+
+      // const confirmDelete = await confirm(`Are you sure you want to delete this item?`)
+      // if (!confirmDelete) return
+     dialogRef.afterClosed().subscribe(async (result) => {
+// debugger
+      console.log(`Dialog result: ${result}`)
+         if (result === false || result === undefined) return  
 
 
-      //!But the redux store should delete this ??? we are subscribed!!!  so why do i need these two lines:
+          //!But the redux store should delete this ??? we are subscribed!!!  so why do i need these two lines:
       // const index = this.allItemsByCart.findIndex(i => i._id === arr[0]);
       // this.allItemsByCart.splice(index, 1);
+         await this.cartsService.deleteProduct(arr[0], arr[1])
+         this.notify.success('Item has been deleted')
+
+     })
     } catch (err: any) {
       this.notify.error(err)
     }
@@ -81,12 +102,24 @@ export class CartListComponent implements OnInit, OnDestroy {
  async deleteAllItems() {
   try {
     if (this.allItemsByCart.length === 0) return
-    const confirmDelete = await confirm(`Are you sure you want to delete all items? This cannot be undone!`)
-    if (!confirmDelete) return
- //!I am accessing the first item in the cart and accessing the cartId instead of getting cartId straight from cart is that ok ??? or should i get the cartID from the cart ????
+
+
+    // const confirmDelete = await confirm(`Are you sure you want to delete all items? This cannot be undone!`)
+    // if (!confirmDelete) return
+    let dialogRef = this.dialog.open(ConfirmDeleteDialogComponent, {
+      data: { action: 'removeAll'}
+    })
+  
+
+    dialogRef.afterClosed().subscribe(async (result) => {
+         if (result === false || result === undefined) return  
+
+       //!I am accessing the first item in the cart and accessing the cartId instead of getting cartId straight from cart is that ok ??? or should i get the cartID from the cart ????
     await this.cartsService.deleteAllItemsByCart(this.allItemsByCart[0].cartId)
     this.notify.success('All items in your cart have been deleted!')
-    
+
+    })
+
   } catch (err: any) {
     this.notify.error(err)
   }
@@ -105,11 +138,95 @@ calculateTotal() {
 
 
   
-  ngOnDestroy(): void {
+ngOnDestroy(): void {
+  if (this.unsubscribe) {
     this.unsubscribe()
   }
+}
+
+async addProduct(product: ProductModel) {
+  let dialogRef = this.dialog.open(ProductDialogComponent)
+
+
+  //An action to do when closing dialog (like updating the cart!)
+  //!are we allowed to put try catch and async in a observable???
+  dialogRef.afterClosed().subscribe(async (quantity) => {
+
+    if (!quantity) return
+    try {
+
+      console.log('this.product', product)
+      console.log('this.product.id which is productID going to be ', product._id)
+      // console.log('cartid from store', store.getState().cartsState.cartId)
+
+      //!problem if i dont add total then total will disapear
+
+      // const itemToBeAddedToCart = new CartItemModel({quantity: result, productId: this.product._id, cartId:  store.getState().cartsState.cartId })
+      //  console.log(result * this.product.price) 
+      const total = quantity * product.price
+
+
+      //! is this ok to do cause i needed all these details but jus tthe qunatity fromt he dialog 
+      //object oriented thinking: 
+      const itemToBeAddedToCart = new CartItemModel(quantity, product._id, store.getState().cartsState.currentCart?._id, total)
+      const addedCartItem = await this.cartsService.addItem(itemToBeAddedToCart, store.getState().authState.user._id)
+      this.notify.success('Item has been added to cart')
+
+      const cart = await this.cartsService.getCartByUser(store.getState().authState.user._id)
+      //this updates the store fter you add with the new updated item 
+      await this.cartsService.getAllItemsByCart(cart?._id)
+      // and have the dialog box close after ! 
+    } catch (err: any) {
+      this.notify.error(err)
+    }
+
+
+
+
+
+
+
+    // console.log(`Dialog result: ${result}`)
+    // //!put here הוספה to cart!!
+
+    // if (result === 'true') {
+    //   console.log('yes yes correct!! log out if true or do wsomething ! only when you close the dialog  ')
+    // }  
+  })
+}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // <mat-sidenav-container>
