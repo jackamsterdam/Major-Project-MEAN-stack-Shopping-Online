@@ -13,6 +13,11 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+// * {
+//     font-family: 'Poppins', sans-serif!important;
+  
+//   }
+
 select, input {
     font-size: large;
 }
@@ -30,3 +35,53 @@ a {
     box-shadow: 5px 5px 10px;
     text-align: left;
 }
+
+// select,
+// input,
+// button {
+//   font-size: large;
+// }
+// * {
+//     // this messes up the cart icons!!! 
+//     font-family: 'Poppins', sans-serif!important;
+  
+//   }
+
+/* scroll bar styling */
+
+::-webkit-scrollbar {
+    width: 0.6rem;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: lightgrey;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgb(150, 145, 145);
+  }
+  
+  /* Handle on hover */
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(129, 123, 123);
+  }
+  
+  ::-webkit-scrollbar:horizontal {
+    height: 12px;
+    background-color: rgb(129, 123, 123);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:horizontal {
+    background: rgb(150, 145, 145);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:horizontal:hover {
+    background: rgb(129, 123, 123);
+  }
+  
+  

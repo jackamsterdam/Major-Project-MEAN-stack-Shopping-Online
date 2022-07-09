@@ -35,7 +35,7 @@ export class ProductCardComponent implements OnInit {
   productsImageUrl = environment.productsImageUrl
 
   ngOnInit(): void {
-    console.log('this.product',this.product)
+    // console.log('this.product',this.product)
     
   }
 

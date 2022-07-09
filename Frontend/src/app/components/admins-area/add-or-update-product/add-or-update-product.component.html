@@ -1,0 +1,9 @@
+<div>
+    <button  *ngIf="this.isButtonVisible" (click)="this.isButtonVisible = false">++</button> 
+
+    <app-add-product></app-add-product>
+    <!-- passing Input last part:  -->
+    <!-- btw with this *ngIf="!this.isButtonVisible" update gets populated!! but without it it wont -->
+    <!-- <app-update-product *ngIf="!this.isButtonVisible"  [productToEdit]="productToBeEdited"></app-update-product> -->
+    <app-update-product  [productToEdit]="productToBeEdited"></app-update-product>
+</div>

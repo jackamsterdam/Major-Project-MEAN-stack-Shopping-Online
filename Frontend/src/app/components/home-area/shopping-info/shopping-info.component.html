@@ -11,7 +11,7 @@
        <!-- option A :  -->
     <!-- Add cart to this option  -->
     <ng-container *ngIf="currentCart && currentCart._id && !currentCart.isClosed">      
-            <p class="mat-display-1">You have an open cart from {{currentCart.createdAt | date}} in our store with a total amount of {{totalAmount}}</p>
+            <p class="mat-display-1">You have an open cart from {{currentCart.createdAt | date}} in our store with a total amount of {{totalAmount | currency: "USD"}}</p>
         </ng-container>
     
         <!-- option B :  -->

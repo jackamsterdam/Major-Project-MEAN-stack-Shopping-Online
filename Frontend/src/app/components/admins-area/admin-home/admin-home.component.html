@@ -35,8 +35,10 @@
 
 
 <div class="admin-layout">
-    <app-add-product></app-add-product>
-    <app-update-product [productToEdit]="editedProduct"></app-update-product>
+    <!-- <app-add-product></app-add-product>
+    <app-update-product [productToEdit]="editedProduct"></app-update-product> -->
+    <!--! decided to put it in same component so passing props to props to props :  -->
+    <app-add-or-update-product [productToBeEdited]="editedProduct"></app-add-or-update-product>
 
     <div class="together">
         <app-category-list></app-category-list>

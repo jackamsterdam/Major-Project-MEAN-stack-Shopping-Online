@@ -39,6 +39,7 @@ import { UpdateProductComponent } from './components/admins-area/update-product/
 import { AdminHomeComponent } from './components/admins-area/admin-home/admin-home.component';
 import { ProductCardComponent } from './components/shared-area/product-card/product-card.component';
 import { ProductListComponent } from './components/shared-area/product-list/product-list.component';
+import { AddOrUpdateProductComponent } from './components/admins-area/add-or-update-product/add-or-update-product.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { ProductListComponent } from './components/shared-area/product-list/prod
     AddProductComponent,
     UpdateProductComponent,
     AdminHomeComponent,
+    AddOrUpdateProductComponent,
   ],
   // entryComponents: [ProductDialogComponent]
   imports: [

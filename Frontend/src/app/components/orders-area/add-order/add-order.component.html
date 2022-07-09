@@ -49,13 +49,15 @@
 <!-- i mad eit type string so wont have number up and down sign -->
         <mat-form-field  floatLabel="never" appearance="outline" color="warn">
         <mat-label>Credit card: </mat-label>
-        <input matInput type="text" name="creditCard" [(ngModel)]="order.creditCard" required #creditCardBox="ngModel" minlength="14" maxlength="16">
+        <input matInput type="text" name="creditCard" [(ngModel)]="order.creditCard" required #creditCardBox="ngModel" minlength="14" maxlength="16" pattern="^[0-9]{14,16}$">
 
             <mat-hint align="end">Credit card number between 14-16 characters</mat-hint>
              <span *ngIf="creditCardBox.errors?.['required'] && creditCardBox.touched">Missing credit card</span>
              <span *ngIf="creditCardBox.touched && creditCardBox.errors?.['minlength']">Credit card is too short</span>
              <span *ngIf="creditCardBox.touched && creditCardBox.errors?.['maxlength']">Credit card is too long</span>
+        
              <!-- add REGEX ofcouse!!!!!  -->
+              <span *ngIf="!creditCardBox.errors?.['required'] &&!creditCardBox.errors?.['minlength'] && !creditCardBox.errors?.['maxlength'] && creditCardBox.errors?.['pattern']">Invalid credit card </span>
          </mat-form-field>
 
 

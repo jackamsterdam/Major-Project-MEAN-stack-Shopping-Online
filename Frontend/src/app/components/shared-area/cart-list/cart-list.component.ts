@@ -19,7 +19,7 @@ import { ConfirmDeleteDialogComponent } from '../confirm-delete-dialog/confirm-d
 
 
 export class CartListComponent implements OnInit, OnDestroy {
-
+  isShoppingPage = true
   opened = true;  //!regina wanted todo this with redux???
 
   allItemsByCart: CartItemModel[]

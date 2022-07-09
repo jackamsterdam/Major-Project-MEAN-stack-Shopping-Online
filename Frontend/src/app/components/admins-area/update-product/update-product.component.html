@@ -1,5 +1,38 @@
-<button>update-product works!</button>
-{{productToEdit?.name}}
-<!-- {{productToEdit.quantity}} -->
-{{productToEdit?.price}}
+<!-- <button>update-product works!</button> -->
+<!-- {{productToEdit?.name}} -->
+<!--no: {{productToEdit.quantity}} -->
+<!-- {{productToEdit?.price}} -->
 <!-- dont use p      -->
+
+
+<div class="box" *ngIf="productToEdit">
+    <form (ngSubmit)="update()" [formGroup]="productForm">
+        <h2>Edit Product</h2>
+
+        <label>Name: </label>
+        <input type="text" [formControl]="nameInput" >
+        <span *ngIf="nameInput.touched && nameInput.errors?.['required']">Missing name</span>
+        <span *ngIf="nameInput.touched && nameInput.errors?.['minlength']">Length must be minimum 2 chars</span>
+        <span *ngIf="nameInput.touched && nameInput.errors?.['maxlength']">Length must be maximum 100 chars</span>
+
+        <label>Price: </label>
+        <input type="number" step="0.01" [formControl]="priceInput">
+        <span *ngIf="priceInput.touched && priceInput.errors?.['required']">Missing price</span>
+        <span *ngIf="priceInput.touched && priceInput.errors?.['min']">Price can't be negative</span>
+        <span *ngIf="priceInput.touched && priceInput.errors?.['max']">Price can't exceed 10000</span>
+
+        <label>Category: </label>
+        <select name="categoryId" [formControl]="categoryIdInput">
+            <option [ngValue]="undefined" disabled selected>Select category...</option>
+            <option *ngFor="let c of categories" [value]="c._id">{{c.name}}</option>
+        </select>
+        <span *ngIf="categoryIdInput.errors?.['required'] && categoryIdInput.touched">Missing category</span>
+
+
+        <label>Image: </label>
+        <input type="file" accept="image/*" #imageBox [formControl]="imageInput">
+
+
+        <button [disabled]="productForm.invalid">Update</button>
+    </form>
+</div>

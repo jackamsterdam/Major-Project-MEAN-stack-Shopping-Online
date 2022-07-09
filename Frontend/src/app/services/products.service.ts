@@ -42,6 +42,7 @@ export class ProductsService {
   }
 
   async getAllCategories():Promise<CategoryModel[]> {
+    console.log("store.getState().categoriesState.categories.length === 0", store.getState().categoriesState.categories.length === 0);
     if (store.getState().categoriesState.categories.length === 0) {
 
       const categories = await firstValueFrom(this.http.get<CategoryModel[]>(environment.categoriesUrl))
@@ -65,6 +66,7 @@ export class ProductsService {
     const formData = new FormData()
     formData.append('name', product.name)
     formData.append('price', product.price.toString())
+    formData.append('categoryId', product.categoryId)
     formData.append('image', product.image)
 
     //! Do we need to apppend category ? 
@@ -80,6 +82,7 @@ export class ProductsService {
     formData.append('_id', product._id)
     formData.append('name', product.name)
     formData.append('price', product.price.toString())
+    formData.append('categoryId', product.categoryId)
     formData.append('image', product.image)
 
 

@@ -12,6 +12,9 @@ import { environment } from 'src/environments/environment';
 })
 export class SidenavDetailsComponent implements OnInit {
 
+
+  @Input()
+  fromShopPage: boolean
   
   @Input()
   item: CartItemModel

@@ -1,10 +1,11 @@
 <div class="box" *ngIf="item.product">
     <!--! without above line when i add to dialog it crashes!!  -->
-    <button class="delete" (click)="deleteThisItem(item.product._id, item.cartId )">❌</button>
+    <button *ngIf="fromShopPage" class="delete" (click)="deleteThisItem(item.product._id, item.cartId )">❌</button>
     <div>
         Name: {{item.product.name}}
+        <!-- {{ fromShopPage ? 'true' : 'falseee'}} -->
         <br />
-        Price: {{item.product.price}}
+        Price: {{item.product.price | currency: "USD"}}
         <br />
         Quantity: {{item.quantity}}
         <br />
