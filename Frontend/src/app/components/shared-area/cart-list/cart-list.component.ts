@@ -47,8 +47,9 @@ export class CartListComponent implements OnInit, OnDestroy {
       //  console.log(" this.allItemsByCart",  this.allItemsByCart);
       const cart = await this.cartsService.getCartByUser(store.getState().authState.user._id)
       this.allItemsByCart =  await this.cartsService.getAllItemsByCart(cart?._id)
-
+      this.totalAmount = this.cartsService.getTotalCartAmount();
     //!to fix total displaying after making order: my logic is good? it works though
+    //! נראה לי מיותר:כי צריך על ההתחלה שיופי טוטאל 
      if (cart?.isClosed){
       console.log("cart?.isClosed", cart?.isClosed);
       this.totalAmount = this.cartsService.getTotalCartAmount();
@@ -56,6 +57,7 @@ export class CartListComponent implements OnInit, OnDestroy {
 
       this.unsubscribe = store.subscribe(() => {
         this.allItemsByCart = store.getState().cartsState.cartItems;
+        console.log("allItemsByCart", this.allItemsByCart);
         this.totalAmount = this.cartsService.getTotalCartAmount();
        })
     } catch (err: any) {
@@ -170,6 +172,7 @@ async addProduct(product: ProductModel) {
       //object oriented thinking: 
       const itemToBeAddedToCart = new CartItemModel(quantity, product._id, store.getState().cartsState.currentCart?._id, total)
       const addedCartItem = await this.cartsService.addItem(itemToBeAddedToCart, store.getState().authState.user._id)
+      //!if you ahve time check for case where user adds same item with same quantity you dont want to display this message: 
       this.notify.success('Item has been added to cart')
 
       const cart = await this.cartsService.getCartByUser(store.getState().authState.user._id)

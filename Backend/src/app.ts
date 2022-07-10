@@ -21,6 +21,11 @@ import cartItemsController from './06-controllers/cart-items-controller'
 import ordersController from './06-controllers/orders-controller'
 import authController from './06-controllers/auth-controller'
 
+//! delete: 
+// import nodemailer from "nodemailer";
+// import Mail from "nodemailer/lib/mailer";
+// import nodeMailerController from './06-controllers/node-mailer-controller'
+// server.use('/api', nodeMailerController)
 
 const server = express()
 
@@ -41,6 +46,8 @@ server.use('/api', cartsController)
 server.use('/api', cartItemsController)
 server.use('/api', ordersController)
 server.use('/api/auth', authController)
+
+
 
 server.use('*', (request: Request, response: Response, next: NextFunction) => {
     next(new ErrorModel(404, `Route not found`))

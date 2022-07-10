@@ -5,6 +5,7 @@
         <h2>My Cart</h2> 
         <button class="back-to-shopping-button" mat-raised-button color="primary" routerLink="/shopping">Back to shop</button>
     <app-sidenav-details *ngFor="let i of allItemsByCart" [item]="i"> </app-sidenav-details>
+   
     <p>Total: {{totalAmount | currency: "USD"}} </p>
 </div>
     <app-add-order></app-add-order>

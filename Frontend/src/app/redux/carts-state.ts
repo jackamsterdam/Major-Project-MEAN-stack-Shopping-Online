@@ -31,6 +31,8 @@ export interface CartsAction {
 export function fetchCartItemsAction(items: CartItemModel[]):CartsAction {
     return {type: CartsActionType.FetchCartItems, payload: items}
 }
+//!not being used gettting straight from backend
+// bonus: how can I make  blue border around chosen items without this info??? 
 export function addItemToCartAction(item: CartItemModel):CartsAction {
     return {type: CartsActionType.AddItemToCart, payload: item}  //!מותר לכתוב כך??
 }

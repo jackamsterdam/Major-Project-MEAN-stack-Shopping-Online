@@ -84,7 +84,12 @@ dateFilter(date: any) {  //any????
       this.notify.success("Order has been added")
       // this.router.navigateByUrl('/order-success')//!change this!!! do i want popup or componnet???i want popup:
       
-      this.dialog.open(OrderSuccessDialogComponent)
+      let dialogRef = this.dialog.open(OrderSuccessDialogComponent)
+      dialogRef.afterClosed().subscribe((result) => {
+       if (result === undefined) {
+        this.router.navigateByUrl('/shopping')
+       }
+      })
     } catch (err: any) {
       this.notify.error(err)
     }

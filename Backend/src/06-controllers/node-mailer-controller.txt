@@ -1,0 +1,61 @@
+import express, { NextFunction, Request, Response } from "express";
+import path from 'path'
+//!Add verify logged in and verify admin
+const router = express.Router() 
+
+
+
+import nodemailer from "nodemailer";
+import Mail from "nodemailer/lib/mailer";
+
+// create reusable transporter object using the default SMTP transport
+const transporter = nodemailer.createTransport({
+    port: 465,               // true for 465, false for other ports
+    host: "smtp.gmail.com",
+       auth: {
+            user: '',
+            pass: '',
+         },
+    secure: true,
+    });
+
+
+
+
+
+
+
+//http://localhost:3001/api/email-receipt/234343232432
+
+router.post('/email-receipt', async (request: Request, response: Response, next: NextFunction) => {
+    // try {
+
+   const {to, subject, text } = request.body
+
+   const mailData = {
+    from: 'jackamsterdam@gmail.com',
+    to: to, 
+    subject: subject,
+    text: text,
+    html: `<b>Hey there! <b><br> This is our first message  sent with nodemailer<br/>`
+   }
+// promisify this and move to logic :
+   transporter.sendMail(mailData, (err: any, info: any) => {
+   if (err) {
+    return console.log(err)
+   }
+   response.status(200).send({message: "Mail send", message_id: info.messageId})
+   })
+
+
+
+
+    //     const imageName = request.params.imageName 
+    //     const absolutePath = path.join(__dirname, '..', 'upload', 'images', imageName)
+    //     response.sendFile(absolutePath)
+    // } catch (err: any) {
+    //     next(err)
+    // }
+})
+
+export default router 

@@ -6,6 +6,8 @@ form {
     margin: auto;
 }
 
+@import '../../../styles/variables/variables.scss';
+
 h2 {
     text-align: center;
 }
@@ -15,6 +17,7 @@ input, select {
     width: 100%;
     box-sizing: border-box;
     margin: 0 0 20px 0; 
+    font-size: $input-font-size;
 }
 
 button {
@@ -32,3 +35,7 @@ button {
 //     border: 2px solid red;
 //     background-color: pink;
 // }
+
+mat-hint:not(.old-color) {
+    color: red;
+}
