@@ -1,0 +1,51 @@
+import { Component, OnInit } from '@angular/core';
+import { ProductModel } from 'src/app/models/product.model';
+import store from 'src/app/redux/store';
+import { NotifyService } from 'src/app/services/notify.service';
+import { ProductsService } from 'src/app/services/products.service';
+
+@Component({
+  selector: 'app-search',
+  templateUrl: './search.component.html',
+  styleUrls: ['./search.component.scss']
+})
+export class SearchComponent implements OnInit {
+search: string =''
+products: ProductModel[]
+  constructor(private productsService: ProductsService, private notify: NotifyService) { }
+// you can delete things thawt are highlighted here!! 
+  async ngOnInit() {
+    //btw calling productsSservice with getAllProducts is the same as getting all products from the store cause getAllProducts goes to store anyways
+    this.products = store.getState().productsState.products
+    //!so reg i technically got all the products already  but im getting them again casue maybe he didnt start on first page. right?
+    try {
+      //  דווקא כן יש צורך לא מראה לי משום מה למרות שאני כן מקבל את כל המוצרים למטה - אין צטורך!! אני מציג את החיפוש רק בעמוד של הפרודקס וכבר יש לי את כל המוצרים !! 
+    this.products = await this.productsService.getAllProducts() 
+    } catch (err: any) {
+      this.notify.error(err)
+    }
+    console.log(" this.products",  this.products);
+  }
+
+
+  searchProduct(event: Event) {
+    console.log("event", event);
+    const keyBoardEvent = (event as KeyboardEvent);
+
+    const inputElement = (event.target as HTMLInputElement).value;
+  // debugger
+    // if (keyBoardEvent.key === 'Backspace' || keyBoardEvent.key === 'Delete') return
+
+
+    if (inputElement === '') {
+      this.products = store.getState().productsState.products
+      console.log('empty', this.products)
+  } else {
+    const filteredResult = store.getState().productsState.products.filter(p => p.name.toLowerCase().startsWith(inputElement.toLowerCase()))
+    this.products = filteredResult
+    console.log('after filter', this.products)
+}
+    
+  }
+
+}

@@ -29,6 +29,13 @@ export class AddProductComponent implements OnInit {
   imageBoxRef: ElementRef<HTMLInputElement>
 
   constructor(private productsService: ProductsService, private notify: NotifyService) { }
+  selectedFile: any = null;
+  dynamicClass: string = ''
+  onFileSelected(event: Event): void {
+    const inputElement = (event.target as HTMLInputElement);
+    this.selectedFile = inputElement.files[0] ?? null;
+
+}
 
   async ngOnInit() {
     try {
@@ -67,6 +74,9 @@ export class AddProductComponent implements OnInit {
       console.log('after giving product all the values from form', this.product)
       await this.productsService.addProduct(this.product)
       this.notify.success('Product has been added')
+
+    this.dynamicClass ='hide-hint'
+
 
       //we need to clear form:
        this.productForm.reset()

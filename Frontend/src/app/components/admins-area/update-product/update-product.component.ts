@@ -12,6 +12,18 @@ import { NotifyService } from 'src/app/services/notify.service';
   styleUrls: ['./update-product.component.scss']
 })
 export class UpdateProductComponent implements OnInit {
+selectedFile: any = null;
+dynamicClass: string = ''
+
+// onFileSelected(event: any): void {
+//     this.selectedFile = event.target.files[0] ?? null;
+
+// }
+onFileSelected(event: Event): void {
+    const inputElement = (event.target as HTMLInputElement);
+    this.selectedFile = inputElement.files[0] ?? null;
+
+}
 
 
   @Input()
@@ -75,6 +87,8 @@ export class UpdateProductComponent implements OnInit {
     await this.productsService.updateProduct(this.productToEdit)
     this.notify.success('Product has been updated')
     // this.router.navigateByUrl('/products') //no need to navigate 
+
+    this.dynamicClass ='hide-hint'
 
     //we need to clear form:
     this.productForm.reset()

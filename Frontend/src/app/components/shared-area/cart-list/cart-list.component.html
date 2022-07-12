@@ -1,5 +1,5 @@
 
-<mat-sidenav-container>
+<mat-sidenav-container >
   
           <!-- mode: over (default) push side (shriknks width) Second way to open is with template reference variable   -->
     <mat-sidenav #sidenav mode="side" (opened)="log('open')" (closed)="log('closed')" [(opened)]="opened">
@@ -8,19 +8,26 @@
         <!-- <span *ngFor="let c of allItemsByCart">{{c.product.name }} | </span> -->
         <app-sidenav-details [fromShopPage]="isShoppingPage" *ngFor="let i of allItemsByCart" [item]="i"  (deleteItem)="deleteThisCard($event)"> </app-sidenav-details>
         <br>
-        <button mat-raised-button class="delete-all" (click)="deleteAllItems()">Empty Cart</button>
+        <button *ngIf="allItemsByCart?.length !== 0" mat-raised-button class="delete-all" (click)="deleteAllItems()">Empty Cart</button>
        <p *ngIf="totalAmount">Total: {{totalAmount | currency: "USD"}}</p> 
         <!-- <button  class="toggle-button" (click)="opened = !opened"><mat-icon>shopping_cart</mat-icon></button> -->
         <!-- yPosition="above" -->
 <!--! how to make this button to be at end of scroll?????? -->
-        <a routerLink="/order"><mat-icon>shopping_cart_checkout</mat-icon></a> 
+        <a *ngIf="allItemsByCart?.length !== 0" routerLink="/order"><mat-icon>shopping_cart_checkout</mat-icon></a> 
      </mat-sidenav>
 
     <!-- mode: over (default) push side (shriknks width) Second way to open is with template reference variable   -->
-         <mat-sidenav-content>
-            <div class="button-test">
-                <div class="toggle-button" (click)="opened = !opened">
-                    <mat-icon class="shopping-cart-icon">shopping_cart</mat-icon>
+         <!-- <mat-sidenav-content [ngStyle] = "{ 'position' : sidenav.opened ? 'fixed' : 'relative'}" > -->
+         <mat-sidenav-content >
+            <!-- <div *ngIf="allItemsByCart?.length !== 0" class="button-test"> -->
+            <!-- <div   class="button-test"   [ngStyle] = "{ 'position' : opened ? 'fixed' : 'relative', 'left' : opened ? '400px': 0, 'top': '440px'}"> -->
+            <!-- <div   class="button-test"   [ngStyle] = "{ 'backgroundColor' : opened ? 'blue' : 'yellow', 'color' : opened ? 'red' : 'pink', 'position': opened ? 'fixed' : 'fixed', 'left' : opened ? '400px': '-20px', 'top': opened ? '440px': '293px'}"> -->
+            <!-- <div   class="button-test"   [ngStyle] = "{ 'backgroundColor' : opened ? 'blue' : 'yellow', 'color' : opened ? 'red' : 'pink', 'position': opened ? 'fixed' : 'fixed', 'left' : opened ? '400px': '0px', 'top': opened ? '440px': '440px'}"> -->
+            <div   class="button-test"   [ngStyle] = "{ 'backgroundColor' : opened ? 'blue' : 'yellow', 'color' : opened ? 'red' : 'pink', 'position': 'fixed', 'left' : opened ? '400px': '0px', 'top': '440px'}">
+           <!-- doesnt work: from ts when open changes doesnt קולט the change  <div class="button-test" [ngStyle]="styleObject"> -->
+                <div  class="toggle-button" (click)="opened = !opened">
+                    <!-- {{opened}} -->
+                    <mat-icon  class="shopping-cart-icon">shopping_cart</mat-icon>
                 </div>
             </div>
                  <!-- <button (click)="opened = !opened">Toggle Opened</button>

@@ -19,7 +19,7 @@ export class ProductCardComponent implements OnInit {
 
   constructor() { }
 
-  cartItem: CartItemModel
+  // cartItem: CartItemModel
 
   @Input()
   product: ProductModel
@@ -36,10 +36,10 @@ export class ProductCardComponent implements OnInit {
 
   ngOnInit(): void {
     // console.log('this.product',this.product)
-    console.log('cartItem', this.cartItem)
-    // store.getState().cartsState.cartItems
-    console.log(" store.getState().cartsState.currentcart",  store.getState().cartsState.currentCart);
-    console.log(" store.getState().cartsState.cartitems",  store.getState().cartsState.cartItems);
+    // console.log('cartItem', this.cartItem)
+    // this will show current cart even though he emptied the cart he will stilhave a curentCart but cartItems will be empty:
+    // console.log(" store.getState().cartsState.currentcart",  store.getState().cartsState.currentCart);
+    // console.log(" store.getState().cartsState.cartitems",  store.getState().cartsState.cartItems);
   }
 
   // ---------------------------------------------this is for admin only: ----------------------------------------------

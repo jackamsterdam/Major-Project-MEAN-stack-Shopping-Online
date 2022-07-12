@@ -19,8 +19,21 @@ import { ConfirmDeleteDialogComponent } from '../confirm-delete-dialog/confirm-d
 
 
 export class CartListComponent implements OnInit, OnDestroy {
-  isShoppingPage = true
+  
   opened = true;  //!regina wanted todo this with redux???
+
+  //! when open changes to false it doesnt take the second value !!! : after but directly in html works!! 
+// styleObject = {
+//   // position: this.opened ? 'fixed' : 'relative',
+//   position: this.opened ? 'fixed' : 'fixed',
+
+//   left: this.opened ? '400px': '0px',
+//   top: this.opened ? '440px' : '440px',
+//   backgroundColor: this.opened ? 'green' : 'yellow'
+// }
+
+
+  isShoppingPage = true
 
   allItemsByCart: CartItemModel[]
 
@@ -34,6 +47,9 @@ export class CartListComponent implements OnInit, OnDestroy {
 
   async ngOnInit() {
     try {
+
+
+
       //!kores if user has no cart ( i thorwed an eror in backend  ( so only works if user has no cart !!!!!)!************************************************************************************************************************************************************************************************************************* */
 
 
@@ -48,10 +64,15 @@ export class CartListComponent implements OnInit, OnDestroy {
       const cart = await this.cartsService.getCartByUser(store.getState().authState.user._id)
       this.allItemsByCart =  await this.cartsService.getAllItemsByCart(cart?._id)
       this.totalAmount = this.cartsService.getTotalCartAmount();
+
+      if (store.getState().cartsState.cartItems.length === 0) {
+        // debugger
+        this.opened = false;
+      }
     //!to fix total displaying after making order: my logic is good? it works though
     //! נראה לי מיותר:כי צריך על ההתחלה שיופי טוטאל 
      if (cart?.isClosed){
-      console.log("cart?.isClosed", cart?.isClosed);
+      console.log("cart?.isClosed****************************************", cart?.isClosed);
       this.totalAmount = this.cartsService.getTotalCartAmount();
      }
 

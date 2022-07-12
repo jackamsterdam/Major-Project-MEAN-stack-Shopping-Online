@@ -33,8 +33,10 @@ export class ProductListComponent implements OnInit {
 
 
 
-
-
+///!OH NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+// we need to show the producgs (ללא סימון קטוגוריה גם -אפיון)
+//! problem i call search from header componnet not from here 
+// this.products = this.productsService.getSearchTextProducts('c')
 
       // debugger
       this.products = await this.productsService.getAllProducts()  //Since we usually get all the products in login this will go to service and service will get products stright from redux' store

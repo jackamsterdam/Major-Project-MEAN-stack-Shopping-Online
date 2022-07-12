@@ -40,6 +40,7 @@ import { AdminHomeComponent } from './components/admins-area/admin-home/admin-ho
 import { ProductCardComponent } from './components/shared-area/product-card/product-card.component';
 import { ProductListComponent } from './components/shared-area/product-list/product-list.component';
 import { AddOrUpdateProductComponent } from './components/admins-area/add-or-update-product/add-or-update-product.component';
+import { SearchComponent } from './components/shared-area/search/search.component';
 
 @NgModule({
   declarations: [
@@ -72,6 +73,7 @@ import { AddOrUpdateProductComponent } from './components/admins-area/add-or-upd
     UpdateProductComponent,
     AdminHomeComponent,
     AddOrUpdateProductComponent,
+    SearchComponent,
   ],
   // entryComponents: [ProductDialogComponent]
   imports: [

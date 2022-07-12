@@ -26,7 +26,7 @@ app-sidenav-details {
 }
 
 .delete-all {
-    position: absolute;
+    position: relative;
     bottom: 0;
     right: 0;
     // font-size: small;
@@ -42,17 +42,28 @@ app-sidenav-details {
 //     // transform: translate(3rem, 3rem);
 
 // }
-
+// $position: 'fixed';
 .button-test {
     height: 44px;
     width: 43px;
     border: 1px solid lightgray;
     border-radius: 0px 8px 8px 0px;
-    top: 261px;
-    position: absolute;
+    // top: 261px;
+    // position: absolute;
     z-index: 10000000;
     background-color: white;
-    left: 0px;
+    // left: 0px;
+// jack 
+// @if($position =='fixed') {
+//   top: 440px;
+//     left: 400px;
+//     background-color: pink;
+
+// } else {
+//     top: 100px;
+//     background-color: blue;
+// }
+  
 }
 
 .button-test:hover {

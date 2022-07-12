@@ -71,7 +71,7 @@ async function deleteItem(productId: string, cartId: string): Promise<void> {
     // console.log("deletedItembefore", deletedItembefore);
 
     const deletedItem = await CartItemModel.deleteOne({productId, cartId}).exec()
-    console.log("deletedItem", deletedItem);
+    // console.log("deletedItem", deletedItem);
     // const deletedItem = await CartItemModel.findByIdAndDelete(_id).exec()
 
     // deprecated: 

@@ -37,7 +37,7 @@ async function closeCart(_id: string):Promise<ICartModel> {
   
 
     const cart = await CartModel.findOne({ _id}).exec()
-        console.log("cart", cart);
+        // console.log("cart", cart);
     return cart;
 }
 

@@ -4,7 +4,7 @@
 
         <p>Registered?</p>
 
-        <mat-form-field floatLabel="never" appearance="outline">
+        <mat-form-field floatLabel="always" appearance="outline">
             <mat-label>Email: </mat-label>
             <input matInput autofocus type="email" name="username" [(ngModel)]="credentials.username" placeholder="email" #usernameBox="ngModel" required minlength="2" maxlength="100" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
             <mat-hint align="end" *ngIf="usernameBox.touched && usernameBox.errors?.['required']">Missing email</mat-hint>
@@ -13,7 +13,7 @@
             <mat-hint align="end" *ngIf="!usernameBox.errors?.['required'] &&!usernameBox.errors?.['minlength'] && !usernameBox.errors?.['maxlength'] && usernameBox.errors?.['pattern']">Email is invalid</mat-hint>
         </mat-form-field>
 
-        <mat-form-field floatLabel="never" appearance="outline">
+        <mat-form-field floatLabel="always" appearance="outline">
          <mat-label>Password: </mat-label>
           <input matInput type="password" name="password" [(ngModel)]="credentials.password" placeholder="password" #passwordBox="ngModel" required minlength="2" maxlength="128">
           <mat-hint align="end" *ngIf="passwordBox.touched && passwordBox.errors?.['required']">Missing password</mat-hint>

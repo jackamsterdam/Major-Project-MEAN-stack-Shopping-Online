@@ -13,7 +13,7 @@ async function checkValidEmailAndSSN(user: IUserModel):Promise<boolean> {
 
     // Hash and salt social security nubmer before comparing in query 
     const hashedSocialtoCheck = cyber.hash(user.socialSecurityNumber)
-    console.log("user.socialSecurityNumber after hash", hashedSocialtoCheck);
+    // console.log("user.socialSecurityNumber after hash", hashedSocialtoCheck);
 
     //Prevent duplicate social security number (American teudat zehut) with specific message instead of  using unique in mongoose with a less pleasant message: 
     const existsSocialSecurityNumber = await UserModel.findOne({socialSecurityNumber: hashedSocialtoCheck}).exec()
@@ -59,7 +59,7 @@ async function register(user: IUserModel): Promise<string> {
 
     //Get new token
     const token = cyber.getNewToken(user)
-    console.log("token", token);
+    // console.log("token", token);
     // const token = cyber.getNewToken({firstName: user.firstName, lastName: user.lastName, username: user.username,street:  user.street, city: user.city,role:  user.role, _id: user._id, socialSecurityNumber: undefined, password: undefined})
 
     return token

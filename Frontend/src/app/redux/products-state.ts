@@ -3,6 +3,7 @@ import { ProductModel } from "../models/product.model";
 //Products State - products data needed in the application level: 
 export class ProductsState {
     products: ProductModel[] = []
+    searchText: ProductModel[] = null //! ..???????
 }
 
 //Products Action Type -any action which can be done on the above prouducts state
@@ -10,7 +11,9 @@ export enum ProductsActionType {
     FetchProducts = 'FetchProducts',
     AddProduct = 'AddProduct',
     UpdateProduct = 'UpdateProduct',
-    DeleteProduct =  'DeleteProduct'
+    DeleteProduct =  'DeleteProduct',
+//! ..???????
+  SearchText = 'SearchText'
 }
 
 //Products Action - any single object sent to the store during 'dispatch':
@@ -33,9 +36,13 @@ export function updateProductAction(product: ProductModel):ProductsAction {
     return {type:ProductsActionType.UpdateProduct, payload: product}
 }
 
-// //!id: string???
+
 export function deleteProductAction(_id: string): ProductsAction {
     return {type: ProductsActionType.DeleteProduct, payload: _id}  
+}
+
+export function searchTextProductAction(text: string): ProductsAction {
+    return {type: ProductsActionType.SearchText, payload: text}
 }
 
 // Products Reducer - the main function performing any action on products state:
@@ -64,6 +71,17 @@ export function productsReducer(currentState = new ProductsState(), action: Prod
           if (indexToDelete >= 0) {
               newState.products.splice(indexToDelete, 1)
           }
+        break;
+        case ProductsActionType.SearchText:
+            if (action.payload.length === 0) {
+                newState.searchText = newState.products
+            } else {
+                newState.searchText = newState.products.filter(p => p.name.toLowerCase().startsWith(action.payload.toLowerCase())) 
+            }
+        
+
+        //  const filteredResult = store.getState().productsState.products.filter(p => p.name.toLowerCase().startsWith(inputElement.toLowerCase()))
+        //  this.products = filteredResult
         break;
     }
 

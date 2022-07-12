@@ -5,7 +5,7 @@ import { environment } from 'src/environments/environment';
 import { CategoryModel } from '../models/category.model';
 import { ProductModel } from '../models/product.model';
 import { fetchCategoriesAction, selectedCategoryAction } from '../redux/categories-state';
-import { addProductAction, deleteProductAction, fetchProductsAction, updateProductAction } from '../redux/products-state';
+import { addProductAction, deleteProductAction, fetchProductsAction, searchTextProductAction, updateProductAction } from '../redux/products-state';
 import store from '../redux/store';
 
 @Injectable({
@@ -23,6 +23,13 @@ export class ProductsService {
     }
     return store.getState().productsState.products
   } 
+
+///!OH NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+  getSearchTextProducts(text: string):ProductModel[] {
+    const filteredProducts = store.dispatch(searchTextProductAction(text))
+    // return filteredProducts
+    return [] //delete this 
+  }
 
   async countProducts():Promise<number> {
    //?maybe redux save count
@@ -42,7 +49,7 @@ export class ProductsService {
   }
 
   async getAllCategories():Promise<CategoryModel[]> {
-    console.log("store.getState().categoriesState.categories.length === 0", store.getState().categoriesState.categories.length === 0);
+    // console.log("store.getState().categoriesState.categories.length === 0", store.getState().categoriesState.categories.length === 0);
     if (store.getState().categoriesState.categories.length === 0) {
 
       const categories = await firstValueFrom(this.http.get<CategoryModel[]>(environment.categoriesUrl))
