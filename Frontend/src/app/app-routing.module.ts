@@ -11,6 +11,7 @@ import { OrderComponent } from './components/orders-area/order/order.component';
 import { ShoppingComponent } from './components/shopping-area/shopping/shopping.component';
 import { AdminGuard } from './services/admin.guard';
 import { AuthGuard } from './services/auth.guard';
+import { HomeGuard } from './services/home.guard';
 
 const routes: Routes = [
 
@@ -22,7 +23,7 @@ const routes: Routes = [
   //! { path: "products/new", component: AddProductComponent, canActivate: [AuthGuard, AdminGuard] },
 
 
-  {path: 'home', component: HomeComponent},
+  {path: 'home', component: HomeComponent, canActivate: [HomeGuard]},
 
   {path: 'shopping', component: ShoppingComponent, canActivate: [AuthGuard]},
 

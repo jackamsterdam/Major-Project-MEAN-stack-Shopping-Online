@@ -25,10 +25,9 @@ export class ProductsService {
   } 
 
 ///!OH NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
-  getSearchTextProducts(text: string):ProductModel[] {
+
+  setSearchText(text: string) {
     const filteredProducts = store.dispatch(searchTextProductAction(text))
-    // return filteredProducts
-    return [] //delete this 
   }
 
   async countProducts():Promise<number> {
@@ -84,7 +83,7 @@ export class ProductsService {
   }
 
   async updateProduct(product: ProductModel):Promise<ProductModel> {
-
+debugger
     const formData = new FormData()
     formData.append('_id', product._id)
     formData.append('name', product.name)

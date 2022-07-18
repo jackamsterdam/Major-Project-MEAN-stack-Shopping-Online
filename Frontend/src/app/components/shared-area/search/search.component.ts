@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProductModel } from 'src/app/models/product.model';
 import store from 'src/app/redux/store';
 import { NotifyService } from 'src/app/services/notify.service';
@@ -12,7 +13,7 @@ import { ProductsService } from 'src/app/services/products.service';
 export class SearchComponent implements OnInit {
 search: string =''
 products: ProductModel[]
-  constructor(private productsService: ProductsService, private notify: NotifyService) { }
+  constructor(private productsService: ProductsService, private notify: NotifyService, private router: Router) { }
 // you can delete things thawt are highlighted here!! 
   async ngOnInit() {
     //btw calling productsSservice with getAllProducts is the same as getting all products from the store cause getAllProducts goes to store anyways
@@ -36,15 +37,35 @@ products: ProductModel[]
   // debugger
     // if (keyBoardEvent.key === 'Backspace' || keyBoardEvent.key === 'Delete') return
 
+    if(this.router.url === '/shopping' ) {
+    
+    
 
-    if (inputElement === '') {
-      this.products = store.getState().productsState.products
-      console.log('empty', this.products)
-  } else {
-    const filteredResult = store.getState().productsState.products.filter(p => p.name.toLowerCase().startsWith(inputElement.toLowerCase()))
-    this.products = filteredResult
-    console.log('after filter', this.products)
-}
+    if (inputElement != '') {
+    // clear the category
+    this.productsService.setSelectedCategory('all') 
+    }
+
+
+    
+  }
+  //!Do i really need this????
+  // if(this.router.url === '/order') {
+    //update the searched text
+  // }    
+  //update the searched text
+
+    this.productsService.setSearchText(inputElement) 
+
+
+//     if (inputElement === '') {
+//       this.products = store.getState().productsState.products
+//       console.log('empty', this.products)
+//   } else {
+//     const filteredResult = store.getState().productsState.products.filter(p => p.name.toLowerCase().startsWith(inputElement.toLowerCase()))
+//     this.products = filteredResult
+//     console.log('after filter', this.products)
+// }
     
   }
 

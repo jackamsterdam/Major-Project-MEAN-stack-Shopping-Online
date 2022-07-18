@@ -55,6 +55,7 @@ export class AdminHomeComponent implements OnInit, OnDestroy {
   }
 
   productToEdit(product: ProductModel) {
+    debugger
     this.editedProduct = product;
   }
 

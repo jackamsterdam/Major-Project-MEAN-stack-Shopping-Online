@@ -43,11 +43,15 @@ export class ProductListComponent implements OnInit {
   
       this.unsubscribe = store.subscribe(() => {
        const selectedCategoryId =  store.getState().categoriesState.selectedCategory
+       console.log(store.getState().productsState.searchText);
+       
        // Filter products by selected category
        if (selectedCategoryId!='all') {
         this.products =store.getState().productsState.products.filter(p => p.categoryId === selectedCategoryId);
        } else {
-         this.products =store.getState().productsState.products
+        // this.products =store.getState().productsState.products
+// debugger
+         this.products =store.getState().productsState.products.filter(p => p.name.toLowerCase().startsWith(store.getState().productsState.searchText.toLowerCase()));
        }
        
 

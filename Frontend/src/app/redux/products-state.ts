@@ -3,7 +3,7 @@ import { ProductModel } from "../models/product.model";
 //Products State - products data needed in the application level: 
 export class ProductsState {
     products: ProductModel[] = []
-    searchText: ProductModel[] = null //! ..???????
+    searchText: string = '';
 }
 
 //Products Action Type -any action which can be done on the above prouducts state
@@ -73,11 +73,11 @@ export function productsReducer(currentState = new ProductsState(), action: Prod
           }
         break;
         case ProductsActionType.SearchText:
-            if (action.payload.length === 0) {
-                newState.searchText = newState.products
-            } else {
-                newState.searchText = newState.products.filter(p => p.name.toLowerCase().startsWith(action.payload.toLowerCase())) 
-            }
+            // if (action.payload.length === 0) {
+                 newState.searchText = action.payload
+            // } else {
+            //     newState.searchText = newState.products.filter(p => p.name.toLowerCase().startsWith(action.payload.toLowerCase())) 
+            // }
         
 
         //  const filteredResult = store.getState().productsState.products.filter(p => p.name.toLowerCase().startsWith(inputElement.toLowerCase()))

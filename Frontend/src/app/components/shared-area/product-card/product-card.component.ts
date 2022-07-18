@@ -47,6 +47,7 @@ export class ProductCardComponent implements OnInit {
   public edit = new EventEmitter<ProductModel>();
 
   public editProduct(product: ProductModel) {
+    debugger
       this.edit.emit(product);
   }
 

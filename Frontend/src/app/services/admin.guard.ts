@@ -13,10 +13,10 @@ export class AdminGuard implements CanActivate {
     public constructor(private notify: NotifyService, private router: Router) {}
 
     canActivate(): boolean {
-
-        if(store.getState().authState.user.role === RoleEnum.Admin) {
+        if(store.getState().authState.user?.role === RoleEnum.Admin) {
             return true;
         }
+     
 
         this.notify.error("You are not an Admin!");
         this.router.navigateByUrl("/home");  ///!make sure login in home 

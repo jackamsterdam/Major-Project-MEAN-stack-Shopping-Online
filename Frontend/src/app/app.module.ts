@@ -41,6 +41,7 @@ import { ProductCardComponent } from './components/shared-area/product-card/prod
 import { ProductListComponent } from './components/shared-area/product-list/product-list.component';
 import { AddOrUpdateProductComponent } from './components/admins-area/add-or-update-product/add-or-update-product.component';
 import { SearchComponent } from './components/shared-area/search/search.component';
+import { HighlightSearchPipe } from './pipes/highlight-search.pipe';
 
 @NgModule({
   declarations: [
@@ -74,6 +75,7 @@ import { SearchComponent } from './components/shared-area/search/search.componen
     AdminHomeComponent,
     AddOrUpdateProductComponent,
     SearchComponent,
+    HighlightSearchPipe,
   ],
   // entryComponents: [ProductDialogComponent]
   imports: [

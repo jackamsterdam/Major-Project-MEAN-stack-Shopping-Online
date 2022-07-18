@@ -2,7 +2,8 @@
 
 <!-- plus ➕ -->
 
-<button  *ngIf="this.isButtonVisible" (click)="this.isButtonVisible = false">+</button> 
+<button  *ngIf="this.isButtonVisible" (click)="this.isButtonVisible = false">➕</button> 
+<button  *ngIf="!this.isButtonVisible" (click)="this.isButtonVisible = true">❌</button> 
 
 
 <!-- <div class="box" *ngIf="product"> -->
