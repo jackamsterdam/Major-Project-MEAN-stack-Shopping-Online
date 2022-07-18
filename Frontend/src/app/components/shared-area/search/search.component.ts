@@ -13,7 +13,10 @@ import { ProductsService } from 'src/app/services/products.service';
 export class SearchComponent implements OnInit {
 search: string =''
 products: ProductModel[]
-  constructor(private productsService: ProductsService, private notify: NotifyService, private router: Router) { }
+  constructor(private productsService: ProductsService, private notify: NotifyService, private router: Router) {
+    //if navigating to different page then empty search box:
+     router.events.subscribe(() => this.search = '')
+   }
 // you can delete things thawt are highlighted here!! 
   async ngOnInit() {
     //btw calling productsSservice with getAllProducts is the same as getting all products from the store cause getAllProducts goes to store anyways
@@ -37,7 +40,7 @@ products: ProductModel[]
   // debugger
     // if (keyBoardEvent.key === 'Backspace' || keyBoardEvent.key === 'Delete') return
 
-    if(this.router.url === '/shopping' ) {
+    // if(this.router.url === '/shopping' ) {
     
     
 
@@ -48,7 +51,7 @@ products: ProductModel[]
 
 
     
-  }
+  // }
   //!Do i really need this????
   // if(this.router.url === '/order') {
     //update the searched text

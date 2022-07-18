@@ -17,6 +17,10 @@ import { ProductDialogComponent } from '../../products-area/product-dialog/produ
 })
 export class ProductCardComponent implements OnInit {
 
+
+
+
+
   constructor() { }
 
   // cartItem: CartItemModel

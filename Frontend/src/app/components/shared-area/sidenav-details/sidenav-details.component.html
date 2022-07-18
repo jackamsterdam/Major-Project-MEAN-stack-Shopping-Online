@@ -2,7 +2,16 @@
     <!--! without above line when i add to dialog it crashes!!  -->
     <button *ngIf="fromShopPage" class="delete" (click)="deleteThisItem(item.product._id, item.cartId )">❌</button>
     <div>
-        Name: {{item.product.name}}
+        <ng-container  *ngIf="router.url === '/order'">
+            Name:  <span [innerHTML]="item.product.name | highlightSearch: search"></span>
+        </ng-container>
+
+        <ng-container  *ngIf="router.url !== '/order'">
+            Name: {{item.product.name}}
+        </ng-container>
+       
+        <!-- Name: {{item.product.name | highlightSearch: search}} -->
+        <!-- Name: {{item.product.name}} -->
         <!-- {{ fromShopPage ? 'true' : 'falseee'}} -->
         <br />
         Price: {{item.product.price | currency: "USD"}}

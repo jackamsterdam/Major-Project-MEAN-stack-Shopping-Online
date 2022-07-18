@@ -5,6 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class HighlightSearchPipe implements PipeTransform {
   transform(value: any, args: any): any {
+    //!if you type period doesnt work.
     if (!args) {
       return value;
     }
