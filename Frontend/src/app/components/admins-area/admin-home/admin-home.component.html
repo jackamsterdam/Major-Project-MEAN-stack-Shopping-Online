@@ -40,8 +40,9 @@
     <!--! decided to put it in same component so passing props to props to props :  -->
     <app-add-or-update-product [productToBeEdited]="editedProduct"></app-add-or-update-product>
 
-    <div class="together">
+    <div class="product-and-category">
         <app-category-list></app-category-list>
         <app-product-list (editProductEmit)="productToEdit($event)"></app-product-list>
     </div>
 </div>
+

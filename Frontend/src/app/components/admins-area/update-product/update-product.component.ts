@@ -32,7 +32,7 @@ onFileSelected(event: Event): void {
   productToEdit: ProductModel;
 
   @Input('editProduct') set editProduct(product: ProductModel) {
-    debugger
+    // debugger
     if (product) {
       this.productToEdit = product;
       this.populateProductDetails();

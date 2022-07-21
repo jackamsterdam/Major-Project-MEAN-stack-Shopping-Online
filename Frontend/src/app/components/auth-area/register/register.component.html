@@ -154,9 +154,9 @@
                 <mat-form-field floatLabel="always" appearance="outline">
                     <!--! we dont see Select city.....  -->
                     <mat-label>City</mat-label>
-                    <mat-select [formControl]="cityInput">
+                    <mat-select [formControl]="cityInput"  placeholder="Select city...">
                         <!-- <mat-option [ngValue]="undefined" disabled selected>Select city...</mat-option> -->
-                        <mat-option  disabled selected>Select city...</mat-option>
+                        <!-- <mat-option  disabled selected>Select city...</mat-option> -->
                         <!-- <option [selected]="true" [disabled]="true">Select city...</option>
                     <option selected disabled>Select city...</option> -->
                         <!--! works without :  [value]="enum.value" cauae value is the Los Angeles seperetaed dont unserstand the enum properties are LosAngeles not Los angeles so how does it work??? -->

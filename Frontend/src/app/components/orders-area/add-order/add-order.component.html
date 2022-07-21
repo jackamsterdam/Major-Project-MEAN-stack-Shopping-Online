@@ -10,10 +10,10 @@
             <mat-label>Ship City: </mat-label>
             <!--! can i do that user.city &&& order.shipcity cause i want to popluate with old and with new  -->
             <mat-select (dblclick)="doubleClickToPopulate()" name="city" [(ngModel)]="user.city && order.shipCity"
-                required #cityBox="ngModel">
+                required #cityBox="ngModel"  placeholder="Select city...">
                 <!--dont work with material: <option [ngValue]="undefined" disabled selected>Select city...</option> -->
                 <!--! problem now select city is not displayed !!!  -->
-                <mat-option disabled selected>Select city...</mat-option>
+                <!-- <mat-option disabled selected>Select city...</mat-option> -->
 
                 <mat-option *ngFor="let enum of CityEnum | keyvalue" [value]="enum.value">{{enum.value}}</mat-option>
 
