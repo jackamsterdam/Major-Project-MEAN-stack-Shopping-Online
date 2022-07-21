@@ -12,6 +12,10 @@ import { NotifyService } from 'src/app/services/notify.service';
   styleUrls: ['./update-product.component.scss']
 })
 export class UpdateProductComponent implements OnInit {
+
+  @Input()
+  buttonPlusVisible: boolean
+
 selectedFile: any = null;
 selectedImageName: string;
 dynamicClass: string = ''
@@ -36,6 +40,8 @@ onFileSelected(event: Event): void {
     if (product) {
       this.productToEdit = product;
       this.populateProductDetails();
+
+      this.buttonPlusVisible = false
     }
 }
 
@@ -110,6 +116,7 @@ onFileSelected(event: Event): void {
   }
 
 populateProductDetails() {
+  debugger
   this.productForm.patchValue({
     nameBox: this.productToEdit.name,
     priceBox: this.productToEdit.price,

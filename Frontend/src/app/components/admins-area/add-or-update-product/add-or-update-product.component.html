@@ -8,6 +8,29 @@
     <!-- <app-update-product *ngIf="!this.isButtonVisible"  [productToEdit]="productToBeEdited"></app-update-product> -->
     <!-- <app-update-product *ngIf="!isAddAction" [editProduct]="productToBeEdited"></app-update-product> -->
 
-    <app-add-product></app-add-product>
+
+
+    <!--! original::::  -->
+    <!-- <app-add-product></app-add-product>
     <app-update-product  [editProduct]="product"></app-update-product>
+ -->
+
+ <!-- <button  *ngIf="!this.isButtonVisible" (click)="this.isButtonVisible = true" >➕</button> 
+ <button  *ngIf="this.isButtonVisible" (click)="this.isButtonVisible = false">❌</button>  -->
+ <!-- <button  *ngIf="!this.isButtonVisible" (click)="this.isButtonVisible = true" >➕</button>  -->
+ <!-- <button  *ngIf="this.isButtonVisible" (click)="this.isButtonVisible = false"  (click)="this.isAddAction = true">❌</button>  -->
+ 
+ <button *ngIf="editWasClicked && !isAddAction"  (click)="isAddAction = true" > <mat-icon>add</mat-icon></button> 
+ <!-- <button *ngIf="editWasClicked"  (click)="reOpenAdd()" >Edit was clicked + button display </button>  -->
+
+<!--! jack try:  -->
+    <!-- <app-add-product *ngIf="isAddAction" [buttonPlusVisible]="isButtonVisible"></app-add-product> -->
+    <app-add-product *ngIf="isAddAction" [addButtonClicked]="isAddAction"></app-add-product>
+    <!-- <app-update-product *ngIf="!hideEditPanel"  [editProduct]="product"  [buttonPlusVisible]="!isButtonVisible"></app-update-product> -->
+    <app-update-product   [ngStyle]="{ 'display' : isAddAction ? 'none' : 'block'}"  [editProduct]="product" ></app-update-product>
+    <!-- <app-update-product *ngIf="!hideEditPanel"  [editProduct]="product" ></app-update-product> -->
+    <!-- [ngClass]="displayEditAgain" -->
 </div>
+{{isAddAction}}
+{{'hideeditpanel:'}}
+{{hideEditPanel}}

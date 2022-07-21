@@ -23,7 +23,8 @@
             <!-- <div   class="button-test"   [ngStyle] = "{ 'position' : opened ? 'fixed' : 'relative', 'left' : opened ? '400px': 0, 'top': '440px'}"> -->
             <!-- <div   class="button-test"   [ngStyle] = "{ 'backgroundColor' : opened ? 'blue' : 'yellow', 'color' : opened ? 'red' : 'pink', 'position': opened ? 'fixed' : 'fixed', 'left' : opened ? '400px': '-20px', 'top': opened ? '440px': '293px'}"> -->
             <!-- <div   class="button-test"   [ngStyle] = "{ 'backgroundColor' : opened ? 'blue' : 'yellow', 'color' : opened ? 'red' : 'pink', 'position': opened ? 'fixed' : 'fixed', 'left' : opened ? '400px': '0px', 'top': opened ? '440px': '440px'}"> -->
-            <div   class="button-test"   [ngStyle] = "{ 'backgroundColor' : opened ? 'blue' : 'yellow', 'color' : opened ? 'red' : 'pink', 'position': 'fixed', 'left' : opened ? '400px': '0px', 'top': '440px'}">
+                <!--! how to put ngstyle object in ts instead??  -->
+            <div   class="checkout-button"   [ngStyle] = "{ 'backgroundColor' : opened ? 'blue' : 'yellow', 'color' : opened ? 'red' : 'pink', 'position': 'fixed', 'left' : opened ? '400px': '0px', 'top': '440px'}">
            <!-- doesnt work: from ts when open changes doesnt קולט the change  <div class="button-test" [ngStyle]="styleObject"> -->
                 <div  class="toggle-button" (click)="opened = !opened">
                     <!-- {{opened}} -->

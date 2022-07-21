@@ -2,12 +2,15 @@
 
 <!-- plus ➕ -->
 
-<button  *ngIf="this.isButtonVisible" (click)="this.isButtonVisible = false">➕</button> 
+<!-- <button  *ngIf="this.isButtonVisible" (click)="this.isButtonVisible = false">➕</button> 
 <button  *ngIf="!this.isButtonVisible" (click)="this.isButtonVisible = true">❌</button> 
-
+ -->
 
 <!-- <div class="box" *ngIf="product"> -->
-<div class="box" *ngIf="!isButtonVisible">
+<!-- <div class="box" *ngIf="!isButtonVisible"> -->
+<!-- <div class="box" *ngIf="buttonPlusVisible"> -->
+   
+<div class="box" *ngIf="addButtonClicked">
     <form (ngSubmit)="add()" [formGroup]="productForm">
         <h2>Add Product</h2>
 <!-- autofocus doesnt work here and in update admin  -->
@@ -55,7 +58,7 @@
     </form>
 </div>
 
-
+{{addButtonClicked}}
 
 <!-- Reactive form  -->
 <!-- <div class="box">

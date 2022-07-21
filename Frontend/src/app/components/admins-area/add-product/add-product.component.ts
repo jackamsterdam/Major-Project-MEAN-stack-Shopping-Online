@@ -1,5 +1,5 @@
 
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { CategoryModel } from 'src/app/models/category.model';
 import { ProductModel } from 'src/app/models/product.model';
@@ -12,7 +12,15 @@ import { ProductsService } from 'src/app/services/products.service';
   styleUrls: ['./add-product.component.scss']
 })
 export class AddProductComponent implements OnInit {
-  public isButtonVisible = true;
+
+  @Input()
+  // buttonPlusVisible: boolean
+  addButtonClicked: boolean
+
+
+
+  // public isButtonVisible = true;
+  // public isButtonVisible = false;
 
   // product: ProductModel;
   product = new ProductModel()

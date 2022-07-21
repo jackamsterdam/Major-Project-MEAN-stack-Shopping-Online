@@ -15,6 +15,7 @@ export class AdminHomeComponent implements OnInit, OnDestroy {
 //!Regina =  this is משוכפל from regular home component do i need to get all products again here ??
   user: UserModel
   unsubscribe: Unsubscribe
+  opened = false; 
 
   products: ProductModel[]
   categories: CategoryModel[]
@@ -57,6 +58,7 @@ export class AdminHomeComponent implements OnInit, OnDestroy {
   productToEdit(product: ProductModel) {
     debugger
     this.editedProduct = product;
+    this.opened = true
   }
 
 

@@ -7,12 +7,21 @@ import { ProductModel } from 'src/app/models/product.model';
   styleUrls: ['./add-or-update-product.component.scss']
 })
 export class AddOrUpdateProductComponent implements OnInit {
+  public isButtonVisible = true;
+  editWasClicked = false
+  hideEditPanel = true
+
+  displayEditAgain: string
 
   @Input('productToBeEdited') set productToBeEdited(product: ProductModel) {
     if (product) {
+      this.hideEditPanel = false
       this.product = product;
        this.isPanelOpned = true;
-       this.isAddAction = false;
+       this.isAddAction = false;   //now im using this to hide or show add.
+
+       this.editWasClicked = true
+       this.displayEditAgain = 'hideEditPanel'
     }
   }
 
@@ -33,4 +42,9 @@ export class AddOrUpdateProductComponent implements OnInit {
   closePanel() {
     this.isPanelOpned = false
   }
+
+  // reOpenAdd() {
+  //   debugger
+  //   this.isAddAction === true
+  // }
 }

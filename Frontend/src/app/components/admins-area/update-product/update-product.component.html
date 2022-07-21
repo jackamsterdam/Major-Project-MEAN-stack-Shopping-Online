@@ -5,7 +5,8 @@
 <!-- dont use p      -->
 
 
-<div class="box" *ngIf="productToEdit">
+<!-- <div class="box" *ngIf="productToEdit"> -->
+<div class="box" *ngIf="productToEdit && !buttonPlusVisible">
     <form (ngSubmit)="update()" [formGroup]="productForm">
         <h2>Edit Product</h2>
 

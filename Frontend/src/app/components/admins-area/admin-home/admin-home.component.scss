@@ -61,3 +61,45 @@ app-product-list {
     display: flex;
     flex-direction: column;
 }
+
+
+.action-button {
+    height: 44px;
+    width: 43px;
+    border: 1px solid lightgray;
+    border-radius: 0px 8px 8px 0px;
+    z-index: 10000000;
+    background-color: white; 
+}
+
+.action-button:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.tab-icon {
+    top: 9px;
+    position: relative;
+}
+
+// move this to top: (((((((((((((((((
+
+mat-sidenav-container {
+    height: 100%;
+    position: relative;
+}
+mat-sidenav, mat-sidenav-content {
+    padding: 1rem;
+}
+
+mat-sidenav {
+    background-color: lightcoral;
+    width: 400px;
+    // position: relative;
+
+    // optional: 
+    // height: 400px;
+    margin: auto;
+    border-radius: 0px 8px 8px 0;
+}
+//                 (((((((((((((((((
