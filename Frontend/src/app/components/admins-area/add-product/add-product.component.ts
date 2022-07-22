@@ -54,7 +54,7 @@ export class AddProductComponent implements OnInit {
       this.nameInput = new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(100)])
       this.priceInput = new FormControl('', [Validators.required, Validators.min(0), Validators.max(1000)])
       this.categoryIdInput = new FormControl('', [Validators.required])
-      this.imageInput = new FormControl()
+      this.imageInput = new FormControl('', [Validators.required])  //image is required!!
       
       this.productForm = new FormGroup({
         nameBox: this.nameInput,

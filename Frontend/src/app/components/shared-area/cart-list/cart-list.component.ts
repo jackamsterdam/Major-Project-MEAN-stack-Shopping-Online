@@ -80,6 +80,14 @@ export class CartListComponent implements OnInit, OnDestroy {
         this.allItemsByCart = store.getState().cartsState.cartItems;
         console.log("allItemsByCart", this.allItemsByCart);
         this.totalAmount = this.cartsService.getTotalCartAmount();
+
+        //!this wont work cause our update add item to store in redux doesnt really work cause im doing backend only. 
+        // if (store.getState().cartsState.cartItems.length === 0) {
+        //   // debugger
+        //   this.opened = false;
+        // } else {
+        //   this.opened = true 
+        // }
        })
     } catch (err: any) {
       this.notify.error(err)

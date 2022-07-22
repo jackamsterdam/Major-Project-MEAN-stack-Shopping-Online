@@ -5,11 +5,14 @@
 
     <form (ngSubmit)="addOrder()" #formInfo="ngForm">
 
-        <mat-form-field floatLabel="always" appearance="outline">
+        <br>
+        <mat-hint class="populate-info">*Double Click if shipping info is same as user info</mat-hint>
+<br>
+        <mat-form-field floatLabel="always" appearance="outline"  (dblclick)="doubleClickToPopulate()">
             <!-- <mat-form-field  floatLabel="always" appearance="fill"> -->
             <mat-label>Ship City: </mat-label>
             <!--! can i do that user.city &&& order.shipcity cause i want to popluate with old and with new  -->
-            <mat-select (dblclick)="doubleClickToPopulate()" name="city" [(ngModel)]="user.city && order.shipCity"
+            <mat-select name="city" [(ngModel)]="user.city && order.shipCity"
                 required #cityBox="ngModel"  placeholder="Select city...">
                 <!--dont work with material: <option [ngValue]="undefined" disabled selected>Select city...</option> -->
                 <!--! problem now select city is not displayed !!!  -->
@@ -22,9 +25,9 @@
         </mat-form-field>
 
 
-
         <mat-form-field floatLabel="always" appearance="outline">
             <mat-label>Ship Street: </mat-label>
+            <!--! user.street && -->
             <input matInput (dblclick)="doubleClickToPopulate()" type="text" name="street"
                 [(ngModel)]="user.street && order.shipStreet" #streetBox="ngModel" required minlength="2"
                 maxlength="100">

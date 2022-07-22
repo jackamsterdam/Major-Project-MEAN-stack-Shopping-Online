@@ -7,41 +7,42 @@ import { ProductModel } from 'src/app/models/product.model';
   styleUrls: ['./add-or-update-product.component.scss']
 })
 export class AddOrUpdateProductComponent implements OnInit {
-  public isButtonVisible = true;
+  // public isButtonVisible = true;
+    product: ProductModel;
+  // public isPanelOpned = false;
+  isAddAction = true;
   editWasClicked = false
-  hideEditPanel = true
+  // hideEditPanel = true
 
-  displayEditAgain: string
+  // displayEditAgain: string
 
   @Input('productToBeEdited') set productToBeEdited(product: ProductModel) {
     if (product) {
-      this.hideEditPanel = false
+      // this.hideEditPanel = false
       this.product = product;
-       this.isPanelOpned = true;
+      //  this.isPanelOpned = true;
        this.isAddAction = false;   //now im using this to hide or show add.
 
        this.editWasClicked = true
-       this.displayEditAgain = 'hideEditPanel'
+      //  this.displayEditAgain = 'hideEditPanel'
     }
   }
 
-  product: ProductModel;
-  public isPanelOpned = false;
-  public isAddAction = true;
+
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  addProduct() {
-    this.isPanelOpned = true;
-    this.isAddAction = true;
-  }
+  // addProduct() {
+  //   // this.isPanelOpned = true;
+  //   this.isAddAction = true;
+  // }
 
-  closePanel() {
-    this.isPanelOpned = false
-  }
+  // closePanel() {
+  //   this.isPanelOpned = false
+  // }
 
   // reOpenAdd() {
   //   debugger

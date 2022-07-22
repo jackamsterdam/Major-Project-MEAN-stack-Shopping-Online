@@ -36,6 +36,10 @@ button {
 //     background-color: pink;
 // }
 
-mat-hint:not(.old-color) {
+mat-hint:not(.old-color):not(.populate-info) {
     color: red;
+}
+
+.populate-info {
+    font-size: smaller;
 }

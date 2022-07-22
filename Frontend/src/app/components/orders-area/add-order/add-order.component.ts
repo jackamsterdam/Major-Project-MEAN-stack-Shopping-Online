@@ -42,11 +42,7 @@ public maxDate: Object =  new Date(this.currentYear, this.currentMonth+1, this.c
 
   constructor(private ordersService: OrdersService, private router: Router, private notify: NotifyService, public dialog: MatDialog) { }
 
-//!how to grab eleemnts from html like dovument.getlelement by isnt htis the way???? then why doesnt it work i want to set a value with couble click to opoulate !!! 
-  // @ViewChild("streetBox")
-  // public streetBoxRef: ElementRef<HTMLInputElement>;
 
-  
 
 
 //!*********************************************************************
@@ -96,10 +92,30 @@ dateFilter(date: any) {  //any????
 
   }
 
+
+
+
+  //!how to grab eleemnts from html like dovument.getlelement by isnt htis the way???? then why doesnt it work i want to set a value with couble click to opoulate !!! 
+  @ViewChild("streetBox")
+  public streetBoxRef: ElementRef<HTMLInputElement>;
+
+  
+
+
   doubleClickToPopulate() {
+    console.log("this.streetBoxRef.nativeElement", this.streetBoxRef?.nativeElement);
+    // debugger
     console.log('hi')
+    console.log('streetboxref', this.streetBoxRef)
     //!Problem!!!! fields get populated right away!!  I dont want to populate it right away with fromsmodule i want to double click and populate !! maybe only works with reactive forms 
     //! btw i put both order and both user and that made the form not poulate right away! can i do that ??
+    console.log('this user.street', this.user.street)
+    console.log('this.order.', this.order.shipCity);
+    // this.streetBoxRef.nativeElement.value = this.user.street
+    // this.streetBoxRef?.value = this.user.street
+    this.order.shipCity = this.user.city
+    this.order.shipStreet = this.user.street
+    
   }
 
 

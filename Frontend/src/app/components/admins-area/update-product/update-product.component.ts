@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 import { ProductModel } from 'src/app/models/product.model';
 import store from 'src/app/redux/store';
 import { CategoryModel } from 'src/app/models/category.model';
@@ -13,8 +13,8 @@ import { NotifyService } from 'src/app/services/notify.service';
 })
 export class UpdateProductComponent implements OnInit {
 
-  @Input()
-  buttonPlusVisible: boolean
+  // @Input()
+  // buttonPlusVisible: boolean
 
 selectedFile: any = null;
 selectedImageName: string;
@@ -26,7 +26,7 @@ dynamicClass: string = ''
 // }
 onFileSelected(event: Event): void {
     const inputElement = (event.target as HTMLInputElement);
-    debugger
+    // debugger
     this.selectedFile = inputElement.files[0] ?? null;
 //    this.selectedImageName =  this.selectedFile.name;
 
@@ -41,7 +41,7 @@ onFileSelected(event: Event): void {
       this.productToEdit = product;
       this.populateProductDetails();
 
-      this.buttonPlusVisible = false
+      // this.buttonPlusVisible = false
     }
 }
 
@@ -58,6 +58,9 @@ onFileSelected(event: Event): void {
   imageBoxRef: ElementRef<HTMLInputElement>
 
   constructor(private productsService: ProductsService, private notify: NotifyService) { }
+  // ngOnChanges(changes: SimpleChanges): void {
+  //  console.log(changes) I dont see a change when click same button
+  // }
 
   async ngOnInit() {
     // console.log(this.productToEdit.categoryId)
@@ -71,7 +74,7 @@ onFileSelected(event: Event): void {
       this.priceInput = new FormControl('', [Validators.required, Validators.min(0), Validators.max(1000)])
       //you can have problems with category cause i dont know if cateogry id or caategory name  caterogy._id ending up with catoegryid
       this.categoryIdInput = new FormControl('', [Validators.required])
-      this.imageInput = new FormControl()
+      this.imageInput = new FormControl('', [Validators.required])  //!Do you really want image required????
       this.productForm = new FormGroup({
         nameBox: this.nameInput,
         priceBox: this.priceInput,
@@ -116,7 +119,7 @@ onFileSelected(event: Event): void {
   }
 
 populateProductDetails() {
-  debugger
+  // debugger
   this.productForm.patchValue({
     nameBox: this.productToEdit.name,
     priceBox: this.productToEdit.price,

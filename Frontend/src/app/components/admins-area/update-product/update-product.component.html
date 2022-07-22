@@ -4,9 +4,9 @@
 <!-- {{productToEdit?.price}} -->
 <!-- dont use p      -->
 
-
-<!-- <div class="box" *ngIf="productToEdit"> -->
-<div class="box" *ngIf="productToEdit && !buttonPlusVisible">
+<!--! works without prdocuttoedit ngif btw  -->
+<div class="box" *ngIf="productToEdit">
+<!-- <div class="box" *ngIf="productToEdit && !buttonPlusVisible"> -->
     <form (ngSubmit)="update()" [formGroup]="productForm">
         <h2>Edit Product</h2>
 
@@ -48,6 +48,8 @@
         <input accept="image/*" #imageBox [formControl]="imageInput" hidden (change)="onFileSelected($event)" #fileInput
             type="file">
         <mat-hint align="end" class="file-name" [ngClass]="dynamicClass">{{selectedFile?.name}}</mat-hint>
+        <mat-hint align="end" *ngIf="imageInput.errors?.['required']">Missing
+            Image</mat-hint>
 
 
         <button mat-raised-button color="warn" [disabled]="productForm.invalid">Update</button>

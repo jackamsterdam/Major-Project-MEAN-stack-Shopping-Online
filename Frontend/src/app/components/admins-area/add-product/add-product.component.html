@@ -52,13 +52,16 @@
         <input accept="image/*" #imageBox [formControl]="imageInput" hidden (change)="onFileSelected($event)" #fileInput
             type="file">
         <mat-hint align="end" class="file-name" [ngClass]="dynamicClass">{{selectedFile?.name}}</mat-hint>
+        <!--! not good cause dont have touched property:  -->
+        <mat-hint align="end" *ngIf="imageInput.errors?.['required']">Missing
+            Image</mat-hint>
 
 
         <button mat-raised-button color="warn" [disabled]="productForm.invalid">Add</button>
     </form>
 </div>
 
-{{addButtonClicked}}
+<!-- {{addButtonClicked}} -->
 
 <!-- Reactive form  -->
 <!-- <div class="box">

@@ -9,7 +9,7 @@
         <app-sidenav-details [fromShopPage]="isShoppingPage" *ngFor="let i of allItemsByCart" [item]="i"  (deleteItem)="deleteThisCard($event)"> </app-sidenav-details>
         <br>
         <button *ngIf="allItemsByCart?.length !== 0" mat-raised-button class="delete-all" (click)="deleteAllItems()">Empty Cart</button>
-       <p *ngIf="totalAmount">Total: {{totalAmount | currency: "USD"}}</p> 
+       <p *ngIf="totalAmount && allItemsByCart?.length !== 0">Total: {{totalAmount | currency: "USD"}}</p> 
         <!-- <button  class="toggle-button" (click)="opened = !opened"><mat-icon>shopping_cart</mat-icon></button> -->
         <!-- yPosition="above" -->
 <!--! how to make this button to be at end of scroll?????? -->
