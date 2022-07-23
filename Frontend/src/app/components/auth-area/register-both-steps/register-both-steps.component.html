@@ -1,0 +1,17 @@
+<div>
+    <mat-horizontal-stepper linear #stepper >
+        <!-- <mat-step label="Register" [completed]="isCompleted"> -->
+        <mat-step label="Register">
+            <app-register-step-one (userStepOneDetails)="userInfoFromStepOne($event)" ></app-register-step-one>
+        </mat-step>
+        <mat-step label="Contact Information" completed="false">
+            <app-register-step-two (userStepTwoDetails)="userInfoFromStepTwo($event)"></app-register-step-two>
+        </mat-step>
+    </mat-horizontal-stepper>
+
+
+
+    <button mat-raised-button color="accent" routerLink="/home/">
+        <mat-icon color="primary">arrow_back</mat-icon>&nbsp;Return to login
+    </button>
+</div>

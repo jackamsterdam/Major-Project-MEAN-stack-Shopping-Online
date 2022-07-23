@@ -22,7 +22,7 @@ async ngOnInit() {
 
     this.categories = await this.productsService.getAllCategories()  
 
-     //no subscribe cause ther will be no changes in categories.
+     //no subscribe cause there will be no changes in categories.
 
   } catch (err: any) {
     this.notify.error(err)

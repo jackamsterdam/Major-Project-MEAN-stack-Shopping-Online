@@ -4,6 +4,7 @@ import { AdminHomeComponent } from './components/admins-area/admin-home/admin-ho
 import { UpdateProductComponent } from './components/admins-area/update-product/update-product.component';
 import { LoginComponent } from './components/auth-area/login/login.component';
 import { LogoutComponent } from './components/auth-area/logout/logout.component';
+import { RegisterBothStepsComponent } from './components/auth-area/register-both-steps/register-both-steps.component';
 import { RegisterComponent } from './components/auth-area/register/register.component';
 import { HomeComponent } from './components/home-area/home/home.component';
 import { PageNotFoundComponent } from './components/layout-area/page-not-found/page-not-found.component';
@@ -15,7 +16,12 @@ import { HomeGuard } from './services/home.guard';
 
 const routes: Routes = [
 
-  {path: 'register', component: RegisterComponent},
+  // {path: 'register', component: RegisterComponent},
+  //! use this when you fix tghe user issue: 
+  {path: 'register', component: RegisterBothStepsComponent},
+
+
+
   // {path: 'login', component: LoginComponent}, //We dont need this casue its our home page
   {path: 'logout', component: LogoutComponent},
 

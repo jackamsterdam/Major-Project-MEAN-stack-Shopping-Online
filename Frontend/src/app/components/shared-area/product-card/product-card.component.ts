@@ -17,18 +17,8 @@ import { ProductDialogComponent } from '../../products-area/product-dialog/produ
 })
 export class ProductCardComponent implements OnInit {
 
-
-
-
-
-  constructor() { }
-
-  // cartItem: CartItemModel
-
   @Input()
   product: ProductModel
-
-  // @Input() role: string;
 
   @Input()
   role: RoleEnum
@@ -37,6 +27,11 @@ export class ProductCardComponent implements OnInit {
   adminRole = RoleEnum.Admin
 
   productsImageUrl = environment.productsImageUrl
+
+  constructor() { }
+
+  // cartItem: CartItemModel
+  // @Input() role: string;
 
   ngOnInit(): void {
     // console.log('this.product',this.product)
@@ -55,13 +50,42 @@ export class ProductCardComponent implements OnInit {
       this.edit.emit(product);
   }
 
-//user:
+  // ---------------------------------------------this is for user only: ----------------------------------------------
+
   @Output()
   public add = new EventEmitter<ProductModel>();
 
   public addProduct(product: ProductModel) {
       this.add.emit(product);
   }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -119,4 +143,4 @@ export class ProductCardComponent implements OnInit {
   //     // }  
   //   })
   // }
-}
+// }

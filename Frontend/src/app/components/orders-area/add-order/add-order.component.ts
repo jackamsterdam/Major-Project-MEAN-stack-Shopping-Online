@@ -19,9 +19,7 @@ export class AddOrderComponent implements OnInit {
   CityEnum = CityEnum
   // user = new UserModel()
   user: UserModel
-
   order =  new OrderModel()
-
   //!we need to send wth each order a cartID and userId
   cartId: string
 
@@ -78,7 +76,7 @@ dateFilter(date: any) {  //any????
       console.log('this.order afterrrrr', this.order)
       const addedOrder = await this.ordersService.addOrder(this.order)
       this.notify.success("Order has been added")
-      // this.router.navigateByUrl('/order-success')//!change this!!! do i want popup or componnet???i want popup:
+    
       
       let dialogRef = this.dialog.open(OrderSuccessDialogComponent)
       dialogRef.afterClosed().subscribe((result) => {
@@ -92,14 +90,10 @@ dateFilter(date: any) {  //any????
 
   }
 
-
-
-
   //!how to grab eleemnts from html like dovument.getlelement by isnt htis the way???? then why doesnt it work i want to set a value with couble click to opoulate !!! 
+  //!so this didnt work but below did!! 
   @ViewChild("streetBox")
-  public streetBoxRef: ElementRef<HTMLInputElement>;
-
-  
+  public streetBoxRef: ElementRef<HTMLInputElement>;  //!didnt work no need for this!! 
 
 
   doubleClickToPopulate() {
@@ -117,8 +111,5 @@ dateFilter(date: any) {  //any????
     this.order.shipStreet = this.user.street
     
   }
-
-
-
 
 }

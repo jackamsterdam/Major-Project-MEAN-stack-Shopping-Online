@@ -23,11 +23,6 @@ export class SidenavDetailsComponent implements OnInit, OnDestroy {
   // public OnSearched(searchTerm: string) {
   //   this.Search = store.getState().productsState.searchText;
   // }
- 
-
-
-
-
 
   @Input()
   fromShopPage: boolean
@@ -41,23 +36,12 @@ export class SidenavDetailsComponent implements OnInit, OnDestroy {
     // router.events.subscribe((val) => console.log(val))
    }
 
-
-
-
-
   //!I cant do this!!!  total = this.item.quantity * this.item.product.price   for individual items but i can ישירות in the html
   ngOnInit(): void {
     this.unsubscribe = store.subscribe(() => {
       this.search = store.getState().productsState.searchText
     })
 
-   
-
-    // this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((event: NavigationEnd) => {
-    //   //Do something with the NavigationEnd event object.
-    // });
- 
-  
   }
 
   @Output() 
@@ -69,17 +53,45 @@ export class SidenavDetailsComponent implements OnInit, OnDestroy {
   }
 
 
-
-
-
   ngOnDestroy(): void {
     if (this.unsubscribe) {
       this.unsubscribe()
     }
   }
 
-
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+    // this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((event: NavigationEnd) => {
+    //   //Do something with the NavigationEnd event object.
+    // });
+ 
+  

@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   lastOrder: OrderModel;
  
   constructor(private authService: AuthService, private notify: NotifyService, private router: Router,private ordersService: OrdersService) { }
+
   ngOnInit(): void {
     this.user = store.getState().authState.user
 
@@ -50,9 +51,8 @@ ngOnDestroy(): void {
 
     this.notify.success("You have been logged in");
     
-   //! delte this casue we staay on same page  this.router.navigateByUrl('/home') ///
    if (this.user.role === RoleEnum.Admin) {
-    this.router.navigateByUrl('/admin-home') //!change to real admin page  and also make sure admin cant just type in the url the user shopping page  make him redirect from there 
+    this.router.navigateByUrl('/admin-home') 
    }
   } catch (err: any) {
     this.notify.error(err)
@@ -64,7 +64,6 @@ ngOnDestroy(): void {
     if (!this.currentCart && !this.lastOrder && this.user) {
       return 'Start Shopping'
     }
-
     return 'Resume Shopping'
  }
 

@@ -39,7 +39,8 @@ const UserSchema = new Schema<IUserModel>({
         minlength: [2, "Username too short"],
         maxlength: [100, "Username too long"],
         trim: true,
-        match: [ /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, "You have entered an invalid email address"],  //Btw frontend should prevent this message and have its own invalid email message. But if use enters email that already exists I handled that with a mice message in auth logic instaed of using unique here 
+        match: [ /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/, "You have entered an invalid email address"],  //Btw frontend should prevent this message and have its own invalid email message. But if use enters email that already exists I handled that with a mice message in auth logic instaed of using unique here 
+        // match: [ /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, "You have entered an invalid email address"],  //Btw frontend should prevent this message and have its own invalid email message. But if use enters email that already exists I handled that with a mice message in auth logic instaed of using unique here 
     },
     password: {
         type: String,

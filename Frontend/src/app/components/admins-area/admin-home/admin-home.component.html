@@ -1,3 +1,60 @@
+<mat-sidenav-container>
+    <mat-sidenav #sidenav mode="side" [(opened)]="opened">
+
+        <!-- <div class="admin-layout"> -->
+            <!-- <app-add-product></app-add-product>
+             <app-update-product [productToEdit]="editedProduct"></app-update-product> -->
+            <!--! decided to put it in same component so passing props to props to props :  -->
+            <app-add-or-update-product [productToBeEdited]="editedProduct"></app-add-or-update-product>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <div class="action-button"
+            [ngStyle]="{ 'backgroundColor' : opened ? 'blue' : 'yellow', 'color' : opened ? 'red' : 'pink', 'position': 'fixed', 'left' : opened ? '400px': '0px', 'top': '440px'}">
+
+            <div (click)="opened = !opened">
+                <mat-icon *ngIf="opened" class="tab-icon">backspace</mat-icon>
+                <mat-icon *ngIf="!opened" class="tab-icon">add_circle_outline</mat-icon>
+            </div>
+        </div>
+        <div class="product-and-category">
+            <app-category-list></app-category-list>
+            <app-product-list (editProductEmit)="productToEdit($event)"></app-product-list>
+        </div>
+    </mat-sidenav-content>
+    <!-- </div> -->
+</mat-sidenav-container>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- <app-categories-list></app-categories-list> -->
 <!-- <app-cart-list></app-cart-list> -->
 <!-- <app-products-list></app-products-list> -->
@@ -31,33 +88,3 @@
 
 
 <!-- </div> -->
-
-<mat-sidenav-container>
-    <mat-sidenav #sidenav mode="side" [(opened)]="opened">
-
-        <!-- <div class="admin-layout"> -->
-            <!-- <app-add-product></app-add-product>
-             <app-update-product [productToEdit]="editedProduct"></app-update-product> -->
-            <!--! decided to put it in same component so passing props to props to props :  -->
-            <app-add-or-update-product [productToBeEdited]="editedProduct"></app-add-or-update-product>
-    </mat-sidenav>
-
-    <mat-sidenav-content>
-        <div class="action-button"
-            [ngStyle]="{ 'backgroundColor' : opened ? 'blue' : 'yellow', 'color' : opened ? 'red' : 'pink', 'position': 'fixed', 'left' : opened ? '400px': '0px', 'top': '440px'}">
-
-            <div (click)="opened = !opened">
-                <mat-icon *ngIf="opened" class="tab-icon">backspace</mat-icon>
-                <mat-icon *ngIf="!opened" class="tab-icon">add_circle_outline</mat-icon>
-            </div>
-        </div>
-
-
-
-        <div class="product-and-category">
-            <app-category-list></app-category-list>
-            <app-product-list (editProductEmit)="productToEdit($event)"></app-product-list>
-        </div>
-    </mat-sidenav-content>
-    <!-- </div> -->
-</mat-sidenav-container>

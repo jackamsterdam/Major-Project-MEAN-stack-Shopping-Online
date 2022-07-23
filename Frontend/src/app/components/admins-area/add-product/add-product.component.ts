@@ -3,6 +3,7 @@ import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { CategoryModel } from 'src/app/models/category.model';
 import { ProductModel } from 'src/app/models/product.model';
+import store from 'src/app/redux/store';
 import { NotifyService } from 'src/app/services/notify.service';
 import { ProductsService } from 'src/app/services/products.service';
 
@@ -16,13 +17,10 @@ export class AddProductComponent implements OnInit {
   @Input()
   // buttonPlusVisible: boolean
   addButtonClicked: boolean
-
-
-
   // public isButtonVisible = true;
   // public isButtonVisible = false;
-
   // product: ProductModel;
+
   product = new ProductModel()
   categories: CategoryModel[]
 
@@ -65,6 +63,7 @@ export class AddProductComponent implements OnInit {
       
       //Must be after above because await doesnt let formControl get initialized
       this.categories = await this.productsService.getAllCategories()
+      // store.getState().categoriesState.categories
     } catch (err: any) {
       this.notify.error(err)
     }

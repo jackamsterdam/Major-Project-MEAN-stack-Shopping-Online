@@ -135,6 +135,22 @@ populateProductDetails() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   // async editThisCard(_id: string) {
   //   async editThisCard(_id: any) {
   //     try {

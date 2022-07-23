@@ -23,13 +23,10 @@ export class HomeComponent implements OnDestroy, OnInit {
   async ngOnInit() {
     try {
       this.unsubscribe = store.subscribe(async () => {
-        // debugger
         if (store.getState().authState.user !== this.user) {
-          // debugger
           this.user = store.getState().authState.user
 
             if (this.user) {
-              // debugger
               // When user arrives to home page after logging in, I am getting everything that I need from backend through my services and filling up my store with all the data I need for my child components () 
               //now i have all th maarechet fulled with all that i need for the rest of the baby components
               await this.productsService.getAllProducts()

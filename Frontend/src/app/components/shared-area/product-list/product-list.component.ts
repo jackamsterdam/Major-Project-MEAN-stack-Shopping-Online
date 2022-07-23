@@ -18,7 +18,6 @@ export class ProductListComponent implements OnInit {
 
   // userRole = RoleEnum.User
   // adminRole = RoleEnum.Admin
-
   role: RoleEnum
 
   constructor(private productsService: ProductsService, private notify: NotifyService) { }
@@ -27,18 +26,10 @@ export class ProductListComponent implements OnInit {
   async ngOnInit() {
 
     try {
-//Becauase it is a shared component
+     //Becauase it is a shared component
      this.role = store.getState().authState.user.role
 
 
-
-
-///!OH NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
-// we need to show the producgs (ללא סימון קטוגוריה גם -אפיון)
-//! problem i call search from header componnet not from here 
-// this.products = this.productsService.getSearchTextProducts('c')
-
-      // debugger
       this.products = await this.productsService.getAllProducts()  //Since we usually get all the products in login this will go to service and service will get products stright from redux' store
   
       this.unsubscribe = store.subscribe(() => {
@@ -49,8 +40,7 @@ export class ProductListComponent implements OnInit {
        if (selectedCategoryId!='all') {
         this.products =store.getState().productsState.products.filter(p => p.categoryId === selectedCategoryId);
        } else {
-        // this.products =store.getState().productsState.products
-// debugger
+  
          this.products =store.getState().productsState.products.filter(p => p.name.toLowerCase().startsWith(store.getState().productsState.searchText.toLowerCase()));
        }
        
@@ -68,7 +58,10 @@ export class ProductListComponent implements OnInit {
       this.unsubscribe()
     }
   }
-//admin
+
+
+  // ---------------------------------------------this is for admin only: ----------------------------------------------
+
   @Output()
   public editProductEmit = new EventEmitter<ProductModel>();
 
@@ -76,7 +69,8 @@ export class ProductListComponent implements OnInit {
       this.editProductEmit.emit(product);
   }
 
-  //user
+   // ---------------------------------------------this is for user only: ----------------------------------------------
+
   @Output()
   public addProductEmit = new EventEmitter<ProductModel>();
 

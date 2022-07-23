@@ -109,11 +109,7 @@ export class CartListComponent implements OnInit, OnDestroy {
         data: { action: 'remove'}
       })
       console.log("dialogRef", dialogRef);
-
-      // const confirmDelete = await confirm(`Are you sure you want to delete this item?`)
-      // if (!confirmDelete) return
      dialogRef.afterClosed().subscribe(async (result) => {
-// debugger
       console.log(`Dialog result: ${result}`)
          if (result === false || result === undefined) return  
 
@@ -134,9 +130,6 @@ export class CartListComponent implements OnInit, OnDestroy {
   try {
     if (this.allItemsByCart.length === 0) return
 
-
-    // const confirmDelete = await confirm(`Are you sure you want to delete all items? This cannot be undone!`)
-    // if (!confirmDelete) return
     let dialogRef = this.dialog.open(ConfirmDeleteDialogComponent, {
       data: { action: 'removeAll'}
     })

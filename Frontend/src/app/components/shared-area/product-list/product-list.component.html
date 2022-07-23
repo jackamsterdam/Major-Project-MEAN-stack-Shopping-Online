@@ -4,6 +4,7 @@
 <!-- <app-product-card *ngFor="let p of products" [product]="p" [role]="userRole"></app-product-card>
 <app-product-card *ngFor="let p of products" [product]="p" [role]="adminRole"></app-product-card> -->
 
+<img *ngIf="!products" src="/assets/images/shopping-loader.gif">
 
 <app-product-card *ngFor="let p of products" 
                   [product]="p" 

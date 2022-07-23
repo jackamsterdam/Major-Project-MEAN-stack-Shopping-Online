@@ -9,17 +9,10 @@
         <mat-hint class="populate-info">*Double Click if shipping info is same as user info</mat-hint>
 <br>
         <mat-form-field floatLabel="always" appearance="outline"  (dblclick)="doubleClickToPopulate()">
-            <!-- <mat-form-field  floatLabel="always" appearance="fill"> -->
             <mat-label>Ship City: </mat-label>
-            <!--! can i do that user.city &&& order.shipcity cause i want to popluate with old and with new  -->
-            <mat-select name="city" [(ngModel)]="user.city && order.shipCity"
+            <mat-select name="city" [(ngModel)]="order.shipCity"
                 required #cityBox="ngModel"  placeholder="Select city...">
-                <!--dont work with material: <option [ngValue]="undefined" disabled selected>Select city...</option> -->
-                <!--! problem now select city is not displayed !!!  -->
-                <!-- <mat-option disabled selected>Select city...</mat-option> -->
-
                 <mat-option *ngFor="let enum of CityEnum | keyvalue" [value]="enum.value">{{enum.value}}</mat-option>
-
             </mat-select>
             <mat-hint align="end" *ngIf="cityBox.errors?.['required'] && cityBox.touched">Missing city</mat-hint>
         </mat-form-field>
@@ -27,9 +20,8 @@
 
         <mat-form-field floatLabel="always" appearance="outline">
             <mat-label>Ship Street: </mat-label>
-            <!--! user.street && -->
             <input matInput (dblclick)="doubleClickToPopulate()" type="text" name="street"
-                [(ngModel)]="user.street && order.shipStreet" #streetBox="ngModel" required minlength="2"
+                [(ngModel)]="order.shipStreet" #streetBox="ngModel" required minlength="2"
                 maxlength="100">
             <mat-hint align="end" *ngIf="streetBox.touched && streetBox.errors?.['required']">Missing street</mat-hint>
             <mat-hint align="end" *ngIf="streetBox.touched && streetBox.errors?.['minlength']">Street is too short
@@ -40,15 +32,11 @@
 
         <!--!***************************************************************************  -->
 
-        <!-- <mat-form-field floatLabel="always" appearance="outlined" color="accent"> -->
         <mat-form-field floatLabel="always" appearance="outline">
             <mat-label>Shipping Date: </mat-label>
-            <!-- <input matInput [matDatepicker]="myDatePicker" type="datetime-local" name="date" [(ngModel)]="order.shipDate" required #dateBox="ngModel" /> -->
             <!--! type="datetime-local" doesnt work!!!  -->
-
             <input matInput [matDatepickerFilter]="dateFilter" [matDatepicker]="myDatePicker" [min]="minDate"
                 [max]="maxDate" name="date" [(ngModel)]="order.shipDate" required #dateBox="ngModel" />
-
             <mat-datepicker-toggle [for]="myDatePicker" matSuffix></mat-datepicker-toggle>
             <mat-datepicker #myDatePicker></mat-datepicker>
             <mat-hint align="end" *ngIf="dateBox.errors?.['required'] && dateBox.touched">Missing shipping date
@@ -57,13 +45,11 @@
 
         <!--!***************************************************************************  -->
 
-        <!-- i mad eit type string so wont have number up and down sign -->
-        <!-- <mat-form-field  floatLabel="never" appearance="outline" color="warn"> -->
+        <!-- i made it type string so wont have number up and down sign -->
         <mat-form-field floatLabel="always" appearance="outline">
             <mat-label>Credit card: </mat-label>
             <input matInput type="text" name="creditCard" [(ngModel)]="order.creditCard" required
                 #creditCardBox="ngModel" minlength="14" maxlength="16" pattern="^[0-9]{14,16}$">
-
             <mat-hint class="old-color" align="start">Credit card number between 14-16 characters</mat-hint>
             <mat-hint align="end" *ngIf="creditCardBox.errors?.['required'] && creditCardBox.touched">Missing credit
                 card</mat-hint>
@@ -71,8 +57,6 @@
                 too short</mat-hint>
             <mat-hint align="end" *ngIf="creditCardBox.touched && creditCardBox.errors?.['maxlength']">Credit card is
                 too long</mat-hint>
-
-            <!-- add REGEX ofcouse!!!!!  -->
             <mat-hint align="end"
                 *ngIf="!creditCardBox.errors?.['required'] &&!creditCardBox.errors?.['minlength'] && !creditCardBox.errors?.['maxlength'] && creditCardBox.errors?.['pattern']">
                 Invalid credit card </mat-hint>

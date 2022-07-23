@@ -44,10 +44,6 @@
         <mat-hint align="end" *ngIf="categoryIdInput.errors?.['required'] && categoryIdInput.touched">Missing category</mat-hint>
     </mat-form-field>
 
-
-        <!-- <label>Image: </label>
-        <input type="file" accept="image/*" #imageBox [formControl]="imageInput"> -->
-
         <button type="button" mat-raised-button (click)="fileInput.click()">Choose File</button>
         <input accept="image/*" #imageBox [formControl]="imageInput" hidden (change)="onFileSelected($event)" #fileInput
             type="file">
@@ -61,13 +57,3 @@
     </form>
 </div>
 
-<!-- {{addButtonClicked}} -->
-
-<!-- Reactive form  -->
-<!-- <div class="box">
-    <h2>הרשם</h2>
-    <form [formGroup]="productForm">
-<h1>hello</h1>
-
-    </form>
-</div> -->

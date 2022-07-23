@@ -44,6 +44,7 @@ import { SearchComponent } from './components/shared-area/search/search.componen
 import { HighlightSearchPipe } from './pipes/highlight-search.pipe';
 import { RegisterStepOneComponent } from './components/auth-area/register-step-one/register-step-one.component';
 import { RegisterStepTwoComponent } from './components/auth-area/register-step-two/register-step-two.component';
+import { RegisterBothStepsComponent } from './components/auth-area/register-both-steps/register-both-steps.component';
 
 @NgModule({
   declarations: [
@@ -80,6 +81,7 @@ import { RegisterStepTwoComponent } from './components/auth-area/register-step-t
     HighlightSearchPipe,
     RegisterStepOneComponent,
     RegisterStepTwoComponent,
+    RegisterBothStepsComponent,
   ],
   // entryComponents: [ProductDialogComponent]
   imports: [

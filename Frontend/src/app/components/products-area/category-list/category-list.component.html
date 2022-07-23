@@ -1,3 +1,57 @@
+
+<div  class="tab-content">
+    <div class="tab-item" id="all"  (click)="selectCategory($event)">
+        All
+    </div>
+    <div class="tab-item" *ngFor="let c of categories;" id="{{c._id}}"  (click)="selectCategory($event)">
+        {{c.name}}
+    </div>
+</div>
+
+<!-- {{tabRef.selectedIndex}} casues error -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- <span *ngFor="let c of categories">{{c.name }} | </span>
 
 
@@ -12,17 +66,6 @@
     <mat-tab label="Vue">vue content </mat-tab> -->
   
 <!-- </mat-tab-group> -->
-
-<div  class="tab-content">
-    <div class="tab-item" id="all"  (click)="selectCategory($event)">
-        All
-    </div>
-    <div class="tab-item" *ngFor="let c of categories;" id="{{c._id}}"  (click)="selectCategory($event)">
-        {{c.name}}
-    </div>
-</div>
-
-<!-- {{tabRef.selectedIndex}} casues error -->
 
 
 

@@ -42,8 +42,6 @@ products: ProductModel[]
 
     // if(this.router.url === '/shopping' ) {
     
-    
-
     if (inputElement != '') {
     // clear the category
     this.productsService.setSelectedCategory('all') 

@@ -45,7 +45,6 @@ export class RegisterComponent implements OnInit {
     this.ssnInput = new FormControl('', [Validators.required, Validators.minLength(11), Validators.maxLength(11), this.patternValidator('^\\d{3}-\\d{2}-\\d{4}$')])
    this.firstNameInput = new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(100)])
    this.lastNameInput = new FormControl('', [Validators.required, Validators.minLength(2),  Validators.maxLength(100)])
-  //!  add regex!!!! email validation!! 
 
 
   

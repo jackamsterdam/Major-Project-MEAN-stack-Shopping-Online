@@ -24,7 +24,6 @@ export class ProductsService {
     return store.getState().productsState.products
   } 
 
-///!OH NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
 
   setSearchText(text: string) {
     const filteredProducts = store.dispatch(searchTextProductAction(text))
