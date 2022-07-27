@@ -5,7 +5,7 @@
             <!-- <app-add-product></app-add-product>
              <app-update-product [productToEdit]="editedProduct"></app-update-product> -->
             <!--! decided to put it in same component so passing props to props to props :  -->
-            <app-add-or-update-product [productToBeEdited]="editedProduct"></app-add-or-update-product>
+            <app-add-or-update-product [productToBeEdited]="editedProduct" [isAddActionInput]="isAddAction"></app-add-or-update-product>
     </mat-sidenav>
 
     <mat-sidenav-content>

@@ -6,7 +6,7 @@ import { CredentialsModel } from 'src/app/models/credentials.model';
 import { OrderModel } from 'src/app/models/order.model';
 import { RoleEnum } from 'src/app/models/role.enum';
 import { UserModel } from 'src/app/models/user.model';
-import store from 'src/app/redux/store';
+import store, { storeAuth } from 'src/app/redux/store';
 import { AuthService } from 'src/app/services/auth.service';
 import { CartsService } from 'src/app/services/carts.service';
 import { NotifyService } from 'src/app/services/notify.service';
@@ -28,9 +28,11 @@ export class LoginComponent implements OnInit, OnDestroy {
   constructor(private authService: AuthService, private notify: NotifyService, private router: Router,private ordersService: OrdersService) { }
 
   ngOnInit(): void {
+  
     this.user = store.getState().authState.user
 
   this.unsubscribe = store.subscribe(() => {
+  // this.unsubscribe = storeAuth.subscribe(() => {
     
     this.user = store.getState().authState.user
     this.currentCart = store.getState().cartsState.currentCart;
@@ -46,6 +48,7 @@ ngOnDestroy(): void {
 }
 
  async submit() {
+  debugger
   try {
     await this.authService.login(this.credentials)
 

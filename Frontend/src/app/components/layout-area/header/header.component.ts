@@ -2,7 +2,8 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Unsubscribe } from 'redux';
 import { UserModel } from 'src/app/models/user.model';
-import store from 'src/app/redux/store';
+import store, { storeAuth } from 'src/app/redux/store';
+
 
 @Component({
   selector: 'app-header',
@@ -17,6 +18,7 @@ unsubscribe: Unsubscribe
   ngOnInit(): void {
     this.user = store.getState().authState.user // dont need this only need to subscribe when user comes or goes actually do need it casue if you start out at different page the user wont fill up
     this.unsubscribe = store.subscribe(() => {
+    // this.unsubscribe = storeAuth.subscribe(() => {
       this.user = store.getState().authState.user
     })
   }

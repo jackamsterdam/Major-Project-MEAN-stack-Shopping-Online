@@ -16,6 +16,11 @@ const reducers = combineReducers({
     cartsState: cartsReducer
 })
 
+const reducer = combineReducers({
+    authState: authReducer,
+})
+
 // const store = createStore(reducers)
 const store = createStore(reducers, composeWithDevTools())
+export const storeAuth = createStore(reducer)
 export default store 

@@ -4,6 +4,7 @@ import { ProductModel } from "../models/product.model";
 export class ProductsState {
     products: ProductModel[] = []
     searchText: string = '';
+    
 }
 
 //Products Action Type -any action which can be done on the above prouducts state
@@ -13,13 +14,15 @@ export enum ProductsActionType {
     UpdateProduct = 'UpdateProduct',
     DeleteProduct =  'DeleteProduct',
 //! ..???????
-  SearchText = 'SearchText'
+  SearchText = 'SearchText',
+//!   no need: 
+//   EmptySearchText = 'EmptySearchText'
 }
 
 //Products Action - any single object sent to the store during 'dispatch':
 export interface ProductsAction {
     type: ProductsActionType
-    payload: any
+    payload: any   //!if you dont keep emptySearchtext then delete the ?  k i deleted it 
 }
 
 
@@ -44,6 +47,11 @@ export function deleteProductAction(_id: string): ProductsAction {
 export function searchTextProductAction(text: string): ProductsAction {
     return {type: ProductsActionType.SearchText, payload: text}
 }
+
+// no need: 
+// export function emptySearchTextProductAction(): ProductsAction {
+//     return {type: ProductsActionType.SearchText}
+// }
 
 // Products Reducer - the main function performing any action on products state:
 // the new ProductsState() is a default value for the first time only 
@@ -83,6 +91,11 @@ export function productsReducer(currentState = new ProductsState(), action: Prod
         //  const filteredResult = store.getState().productsState.products.filter(p => p.name.toLowerCase().startsWith(inputElement.toLowerCase()))
         //  this.products = filteredResult
         break;
+
+        // no need: 
+        // case ProductsActionType.EmptySearchText: 
+        // newState.searchText = ''
+        // break;
     }
 
     return newState

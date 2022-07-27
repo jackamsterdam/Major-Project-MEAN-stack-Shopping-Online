@@ -29,6 +29,11 @@ export class ProductsService {
     const filteredProducts = store.dispatch(searchTextProductAction(text))
   }
 
+  // no need: 
+  // emptySearchText() {
+  //  store.dispatch(emptySearchTextProductAction())
+  // }
+
   async countProducts():Promise<number> {
    //?maybe redux save count
       const count = await firstValueFrom(this.http.get<number>(environment.productsCountUrl))

@@ -3,4 +3,13 @@
 div {
     height: 100%;
     @extend %center-flex;
+    position: relative;
 }
+
+app-search {
+    position: absolute;
+    top: 62px;
+    left: 176px;
+}
+
+//! question the div above doesnt effect teh div with classes as well??? 

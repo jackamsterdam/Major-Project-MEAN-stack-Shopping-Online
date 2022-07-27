@@ -67,14 +67,18 @@
         </mat-form-field>
 
         <!--! <button [disabled]="initialInfo.invalid" mat-raised-button color="primary" (click)="goForward(stepper)"> -->
-        <button [disabled]="initialInfo.invalid" mat-raised-button color="primary" (click)="goForward()">
+        <button [disabled]="test()" mat-raised-button color="primary" (click)="goForward()">
             <mat-icon color="warn">send</mat-icon>&nbsp;Next Step
         </button>
 
         <!-- !HOw to do this???????????????????????? -->
-        <span
+        <span *ngIf="errorNotifiction!=''">{{errorNotifiction}}</span>
+        <!-- <span
             *ngIf="usernameInput.touched && usernameInput.errors?.['ssnInvalidorEmailInvalid'] && passwordInput.touched && passwordInput.errors?.['ssnInvalidorEmailInvalid']">SSN
             or Email is already taken</span>
-        <span *ngIf="passwordInput.errors?.['ssnInvalidorEmailInvalid']"></span>
+        <span *ngIf="passwordInput.errors?.['ssnInvalidorEmailInvalid']"></span> -->
 
     </form>
+    <pre>
+        {{test2()}}
+    </pre>

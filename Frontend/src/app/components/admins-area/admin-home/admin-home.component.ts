@@ -20,6 +20,7 @@ export class AdminHomeComponent implements OnInit, OnDestroy {
   products: ProductModel[]
   categories: CategoryModel[]
   editedProduct: ProductModel;
+  isAddAction: boolean;
   constructor(private productsService: ProductsService, private notify: NotifyService) { }
 
   async ngOnInit() {
@@ -52,7 +53,7 @@ export class AdminHomeComponent implements OnInit, OnDestroy {
   }
 
   productToEdit(product: ProductModel) {
-    debugger
+    this.isAddAction = false;
     this.editedProduct = product;
     this.opened = true
   }

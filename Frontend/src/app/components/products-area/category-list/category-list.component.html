@@ -1,12 +1,20 @@
+<mat-tab-group animationDuration="0ms" (selectedIndexChange)="selectCategoryByIndex($event)">
+    <mat-tab [label]="'All'">{{products}}</mat-tab>
+    <mat-tab [disabled]="searchText !== ''" *ngFor="let c of categories; let i =index," [label]="c.name">{{products}}</mat-tab>
+  </mat-tab-group>
 
-<div  class="tab-content">
+  <!-- <mat-tab *ngFor="let c of categories; let i =index,"  [label]="c.name">{{products}} </mat-tab> -->
+
+
+
+<!-- <div  class="tab-content">
     <div class="tab-item" id="all"  (click)="selectCategory($event)">
         All
     </div>
     <div class="tab-item" *ngFor="let c of categories;" id="{{c._id}}"  (click)="selectCategory($event)">
         {{c.name}}
     </div>
-</div>
+</div> -->
 
 <!-- {{tabRef.selectedIndex}} casues error -->
 

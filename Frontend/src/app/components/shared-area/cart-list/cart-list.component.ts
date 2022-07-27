@@ -5,7 +5,9 @@ import { CartItemModel } from 'src/app/models/cart-item.model';
 import { CartModel } from 'src/app/models/cart.model';
 import { ProductModel } from 'src/app/models/product.model';
 import { UserModel } from 'src/app/models/user.model';
-import store from 'src/app/redux/store';
+import store, { storeAuth } from 'src/app/redux/store';
+
+
 import { CartsService } from 'src/app/services/carts.service';
 import { NotifyService } from 'src/app/services/notify.service';
 import { ProductDialogComponent } from '../../products-area/product-dialog/product-dialog.component';
@@ -77,6 +79,7 @@ export class CartListComponent implements OnInit, OnDestroy {
      }
 
       this.unsubscribe = store.subscribe(() => {
+      // this.unsubscribe = storeAuth.subscribe(() => {
         this.allItemsByCart = store.getState().cartsState.cartItems;
         console.log("allItemsByCart", this.allItemsByCart);
         this.totalAmount = this.cartsService.getTotalCartAmount();

@@ -4,7 +4,8 @@ import { NavigationEnd, Router } from '@angular/router';
 import { Unsubscribe } from 'redux';
 import { filter } from 'rxjs';
 import { CartItemModel } from 'src/app/models/cart-item.model';
-import store from 'src/app/redux/store';
+import store, { storeAuth } from 'src/app/redux/store';
+
 import { CartsService } from 'src/app/services/carts.service';
 import { NotifyService } from 'src/app/services/notify.service';
 import { environment } from 'src/environments/environment';
@@ -38,6 +39,7 @@ export class SidenavDetailsComponent implements OnInit, OnDestroy {
 
   //!I cant do this!!!  total = this.item.quantity * this.item.product.price   for individual items but i can ישירות in the html
   ngOnInit(): void {
+    // this.unsubscribe = storeAuth.subscribe(() => {
     this.unsubscribe = store.subscribe(() => {
       this.search = store.getState().productsState.searchText
     })

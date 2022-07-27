@@ -28,6 +28,13 @@ export class AddOrUpdateProductComponent implements OnInit {
     }
   }
 
+  @Input('isAddActionInput') set isAddActionInput(isAdd: boolean) {
+    // if (isAdd) {
+    //    this.isAddAction = isAdd;  
+    // }
+   
+  }
+
 
 
   constructor() { }

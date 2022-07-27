@@ -17,6 +17,7 @@ export class AddProductComponent implements OnInit {
   @Input()
   // buttonPlusVisible: boolean
   addButtonClicked: boolean
+  dispalyError = false;
   // public isButtonVisible = true;
   // public isButtonVisible = false;
   // product: ProductModel;

@@ -4,7 +4,7 @@ import { NotifyService } from 'src/app/services/notify.service';
 import { OrdersService } from 'src/app/services/orders.service';
 import { UserModel } from 'src/app/models/user.model';
 import { Unsubscribe } from 'redux';
-import store from 'src/app/redux/store';
+import store, { storeAuth } from 'src/app/redux/store';
 import { CartsService } from 'src/app/services/carts.service';
 import { CartModel } from 'src/app/models/cart.model';
 import { OrderModel } from 'src/app/models/order.model';
@@ -34,6 +34,7 @@ export class ShoppingInfoComponent implements OnInit, OnDestroy {
       this.numberOfOrders = await this.ordersService.countOrders()
 
       this.unsubscribe = store.subscribe(() => {
+      // this.unsubscribe = storeAuth.subscribe(() => {
         
         this.user = store.getState().authState.user
         this.currentCart = store.getState().cartsState.currentCart;

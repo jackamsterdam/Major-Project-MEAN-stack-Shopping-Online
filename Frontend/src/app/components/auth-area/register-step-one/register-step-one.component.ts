@@ -14,6 +14,7 @@ import { NotifyService } from 'src/app/services/notify.service';
 export class RegisterStepOneComponent implements OnInit {
   
   user = new UserModel()  //I need this right?
+  errorNotifiction = ''
 
   @Output()
   public userStepOneDetails = new EventEmitter<UserModel>();
@@ -34,7 +35,7 @@ export class RegisterStepOneComponent implements OnInit {
     this.ssnInput = new FormControl('', [Validators.required, Validators.minLength(11), Validators.maxLength(11), this.patternValidator('^\\d{3}-\\d{2}-\\d{4}$')])
     this.usernameInput = new FormControl('', [Validators.required, Validators.minLength(2),  Validators.maxLength(100), this.patternValidator('^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')] )
     // this.usernameInput = new FormControl('', [Validators.required, Validators.minLength(2),  Validators.maxLength(100), this.patternValidator('^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$')] )
-    this.passwordInput = new FormControl('', [Validators.required, Validators.minLength(2),  Validators.maxLength(100)])
+    this.passwordInput = new FormControl('', [Validators.required, Validators.minLength(2),  Validators.maxLength(100), this.confirmPasswordValidation()])
     this.passwordConfirmInput = new FormControl('', [Validators.required, Validators.minLength(2),  Validators.maxLength(100), this.MatchPassword()])
 
   //  first part: 
@@ -59,11 +60,13 @@ export class RegisterStepOneComponent implements OnInit {
     //  debugger
     this.userStepOneDetails.emit(this.user);
     //!  stepper.next()
-     return null   //All paths dont return a value either do this or do ternary. 
+    this.errorNotifiction = '';
+    //  return null   //All paths dont return a value either do this or do ternary. 
    } else  {
-    this.notify.error('Either ssn or the email is incorrect')
+    this.errorNotifiction = 'Either ssn or the email is incorrect';
+    // this.notify.error('Either ssn or the email is incorrect')
     // return { userNameNotAvailable: true }
-    return { ssnInvalidorEmailInvalid: true }  //!this code is not working in my html !! 
+    // return { ssnInvalidorEmailInvalid: true }  //!this code is not working in my html !! 
 
 
 
@@ -101,14 +104,15 @@ export class RegisterStepOneComponent implements OnInit {
       const valid = regex.test(control.value);  
       console.log("control.value", control.value);
       console.log("valid", valid);
+      this.errorNotifiction = '';
       return valid ? null : { invalidRegex: true };  
     };  
   }
 
 
-  MatchPassword(): ValidatorFn {  
+  MatchPassword(): ValidatorFn { 
     return (control: AbstractControl): { [key: string]: any } => {  
-    //  debugger
+      debugger
       const passwordControl = this.passwordInput  
       const confirmPasswordControl = this.passwordConfirmInput  
   
@@ -129,4 +133,32 @@ export class RegisterStepOneComponent implements OnInit {
     }  
     };
 
+    confirmPasswordValidation(): ValidatorFn { 
+      return (control: AbstractControl): { [key: string]: any } => {  
+        const passwordControl = this.passwordInput  
+        const confirmPasswordControl = this.passwordConfirmInput  
+    
+        if (!passwordControl || !confirmPasswordControl) {  
+          return null;  
+        }  
+    
+        if (passwordControl.value !== confirmPasswordControl.value) { 
+          this.passwordConfirmInput.setErrors({ passwordMismatch: true });  
+          return null;
+        } else {  
+         return null;
+        }  
+      }  
+      };
+
+    test() {
+      console.log("this.initialInfo.invalid", this.initialInfo.invalid);
+      debugger
+      let x = this.usernameInput.errors?.['ssnInvalidorEmailInvalid']
+      return this.initialInfo.invalid
+    }
+
+    test2() {
+      return JSON.stringify(this.initialInfo.value)
+    }
 }

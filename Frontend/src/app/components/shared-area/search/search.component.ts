@@ -16,6 +16,8 @@ products: ProductModel[]
   constructor(private productsService: ProductsService, private notify: NotifyService, private router: Router) {
     //if navigating to different page then empty search box:
      router.events.subscribe(() => this.search = '')
+     router.events.subscribe(() =>  this.productsService.setSearchText(''))
+    //!  router.events.subscribe(() => this.productsService.emptySearchText())  //!EMPTY serch text from store also ????/  above line works delete this! 
    }
 // you can delete things thawt are highlighted here!! 
   async ngOnInit() {
@@ -69,5 +71,12 @@ products: ProductModel[]
 // }
     
   }
+
+
+    
+  clearSearchField(){
+     this.search = '';
+     this.productsService.setSearchText('') 
+   }
 
 }
