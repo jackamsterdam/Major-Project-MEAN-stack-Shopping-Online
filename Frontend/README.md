@@ -4,7 +4,7 @@
 
 Please check out my info:
 
-www.linkedin.com/in/jack-amsterdam/
+https://www.linkedin.com/in/jack-amsterdam/
 
 https://github.com/jackamsterdam
 

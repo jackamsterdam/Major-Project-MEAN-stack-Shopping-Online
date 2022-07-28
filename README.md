@@ -12,7 +12,7 @@ password: 1234
 
 Please check out my info:
 
-www.linkedin.com/in/jack-amsterdam/
+https://www.linkedin.com/in/jack-amsterdam/
 
 https://github.com/jackamsterdam
 
@@ -31,6 +31,5 @@ Reusable components: products component cateogries component cart componennts an
 use of custom directives custom pipes
 
 added focus on register and login page on first input box
-
 
 object oriented thinking - using objects made out of classes instead of literal objects

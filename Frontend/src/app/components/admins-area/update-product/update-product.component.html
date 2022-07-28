@@ -4,7 +4,7 @@
 <!-- <div class="box" *ngIf="productToEdit && !buttonPlusVisible"> -->
     <form (ngSubmit)="update()" [formGroup]="productForm">
         <h2>Edit Product</h2>
-
+<!-- make disabled name??  -->
         <mat-form-field floatLabel="always" appearance="outline">
             <mat-label>Name: </mat-label>
             <input autofocus matInput type="text" [formControl]="nameInput">

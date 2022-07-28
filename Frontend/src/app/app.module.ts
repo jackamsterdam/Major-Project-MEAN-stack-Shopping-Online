@@ -45,6 +45,7 @@ import { HighlightSearchPipe } from './pipes/highlight-search.pipe';
 import { RegisterStepOneComponent } from './components/auth-area/register-step-one/register-step-one.component';
 import { RegisterStepTwoComponent } from './components/auth-area/register-step-two/register-step-two.component';
 import { RegisterBothStepsComponent } from './components/auth-area/register-both-steps/register-both-steps.component';
+import { PdfReceiptComponent } from './components/orders-area/pdf-receipt/pdf-receipt.component';
 
 @NgModule({
   declarations: [
@@ -82,6 +83,7 @@ import { RegisterBothStepsComponent } from './components/auth-area/register-both
     RegisterStepOneComponent,
     RegisterStepTwoComponent,
     RegisterBothStepsComponent,
+    PdfReceiptComponent,
   ],
   // entryComponents: [ProductDialogComponent]
   imports: [
