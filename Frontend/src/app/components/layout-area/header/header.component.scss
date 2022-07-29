@@ -1,9 +1,28 @@
 @import '../../../styles/placeholders/placeholders.scss';
+@import '../../../styles/variables/variables.scss';
 
 div {
     height: 100%;
-    @extend %center-flex;
+    // @extend %center-flex;
     position: relative;
+    color: $shopping-white;
+}
+
+// .header-container {
+// }
+
+.shopping-header-1 {
+    font-size: 36px;
+    padding-top: 30px;
+    left: 134px;
+    position: absolute;
+}
+
+.shopping-header-2 {
+    font-size: 13px;
+    padding-top: 36px;
+    left: 311px;
+    position: absolute;
 }
 
 app-search {

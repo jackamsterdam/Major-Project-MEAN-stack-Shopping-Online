@@ -1,15 +1,14 @@
 @import '../../../styles/placeholders/placeholders.scss';
+// https://www.sliderrevolution.com/resources/css-animated-background/
 
-
-div {
+.home-page-container {
     height: 100%;
-    border: 1px solid black;
-    background: pink;
+    // border: 1px solid black;
+    // background: pink;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    box-sizing: border-box;
-
+   // box-sizing: border-box;
 }
 
 app-login {
@@ -20,14 +19,109 @@ app-login {
     // width: 30%;
     // border-radius: 8px;
     // which is : 
-    @extend %display-box;
+  //  @extend %display-box;
+    z-index: 1;
 
 }
 
-app-about {
-    @extend %display-box;
-}
+// app-about {
+//   //  @extend %display-box;
+// }
 
-app-shopping-info {
-    @extend %display-box;
-}
+// app-shopping-info {
+//  //   @extend %display-box;
+// }
+
+    .cater3-movingBG {
+        height: 100%;
+    background-image: url(/assets/images/shopping-bags.jpg);
+    background-size: 125%;
+    background-repeat: repeat-x;
+    animation: animatedBackground 10s linear alternate infinite;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-attachment: fixed;
+    }
+    
+    @keyframes animatedBackground {
+        0% { background-position: 0 0; }
+        50% { background-position: 50% 0; }
+        100% { background-position: 0 0; }
+    }
+    
+    .flyinTxtCont {
+        // height: 100%;
+        // display: -webkit-box;
+        // display: -ms-flexbox;
+        // display: flex;
+        // -webkit-box-orient: vertical;
+        // -webkit-box-direction: normal;
+        // -ms-flex-direction: column;
+        // flex-direction: column;
+        // -webkit-box-align: start;
+        // -ms-flex-align: start;
+        // align-items: flex-start;
+        // -webkit-box-pack: end;
+        // -ms-flex-pack: end;
+        // justify-content: flex-end;
+        // padding-bottom: 10%;
+        //   margin-left: 2em;
+        margin-left: 13px;
+    }
+    .flyIn {
+        color:#fff;
+        font-family:'Raleway';
+    //    text-transform:uppercase;
+      //  line-height:1.2em;
+        position:relative;
+      text-shadow: 2px 2px 40px rgba(0,0,0,0.7);
+      width: 551px;
+
+      background: rgba(0,0,0,0.6);
+    padding-left: 19px;
+    padding-top: 19px;
+    }
+    .lineOne {
+      transition-delay:.6s; 
+      transition:.1s ease-out;
+      animation: txtFlyIn .6s linear;
+    }
+    .lineTwo {
+        transition-delay:.8s; 
+        transition:.6s ease in;
+        animation: txtFlyIn .6s linear;
+    }
+    .lineThree {
+        transition-delay:.10s; 
+        transition:.8s ease in;
+        animation: txtFlyIn .9s linear;
+    }
+    // .lineOne, .lineTwo, .lineThree {
+    //     font-size:110px;
+    //     font-weight: bold;
+    //     letter-spacing: 3px;
+    //   }
+    .lineFour {
+        transition-delay:2s; 
+        transition:2s ease in;
+        animation: fadeIn 2s linear;
+        width: 100%;
+        background-color:rgba(255,255,255,0.9);
+        display:inline-block;
+        color:#000;
+        box-sizing :border-box;
+        max-width:63%;
+        max-width: 22em;
+        font-size: 32px;
+        padding: .2em .5em;
+        margin-top: 30px;
+    }
+    @keyframes fadeIn{
+        0% { opacity:0;}
+        100% { opacity:1;}
+    }
+    @keyframes txtFlyIn{
+        0% { transform:translateX(-100%); }
+        100% { transform:translateX(0%); }
+    }

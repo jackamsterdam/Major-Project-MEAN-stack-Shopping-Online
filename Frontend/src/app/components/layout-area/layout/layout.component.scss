@@ -1,14 +1,17 @@
-div {
+.layout-container {
+    background-image: linear-gradient(to top, rgba(17, 45, 78, 0.1) 77%, rgba(17, 45, 78, 0.8) 90%);
+    background-color: rgb(63, 114, 175);
     display: grid;
     height: 100%;
     box-sizing: border-box;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 15% 80% 5%;
+    background-color: rgb(219, 226, 239);
 }
 
-div, div > * {
-    border: 1px solid black;
-}
+// div, div > * {
+//     // border: 1px solid black;
+// }
 
 header, footer {
     grid-column: span 6;
