@@ -1,11 +1,17 @@
 @import '../../../styles/variables/variables.scss';
 
 
+// form {
+// 	width: 250px;  //!450px
+//     margin: 20px;
+//     padding: 20px;
+//     margin: auto;
+// }
+
 form {
-	width: 250px;  //!450px
-    margin: 20px;
+    width: 295px;
+    margin: 3px;
     padding: 20px;
-    margin: auto;
 }
 
 h2 {
@@ -15,7 +21,7 @@ h2 {
 input, select {
     width: 100%;
     box-sizing: border-box;
-    margin: 0 0 20px 0; 
+  //  margin: 0 0 20px 0; 
     font-size: $input-font-size;
 
 }
@@ -39,4 +45,23 @@ button {
 mat-hint {
     color: red;
 
+}
+
+.mat-form-field {
+    display: block;
+    position: relative;
+    text-align: left;
+    width: 357px;
+}
+
+
+.go-forward-btn {
+    background-color: $shopping-dark-blue;
+    color: $shopping-white;
+    width: 360px;
+}
+
+.go-forward-btn:disabled {
+    background-color: rgba(17, 45, 78, 0.6);
+    color: $shopping-white;
 }

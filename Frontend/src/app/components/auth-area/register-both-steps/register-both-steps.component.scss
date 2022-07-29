@@ -1,6 +1,37 @@
 
+@import '../../../styles/variables/variables.scss';
+
 mat-horizontal-stepper {
     // height: 100%;
-    width: 50%;
+    width: 447px;
     margin: auto;
 }
+
+.mat-stepper-horizontal, .mat-stepper-vertical {
+    background-color: transparent!important;
+}
+
+.return-to-login-btn {
+    position: absolute;
+    top: 106px;
+    margin-left: 10px;
+}
+
+.go-to-login-link {
+    color: $shopping-dark-blue;
+    position: relative;
+    bottom: 7px;
+    text-decoration: auto;
+}
+
+.return-to-login-btn > mat-icon {
+    bottom: 9px;
+    color: $shopping-dark-blue;
+}
+
+.go-to-login-text {
+    display: inline-block;
+    position: relative;
+    bottom: 6px;
+}
+

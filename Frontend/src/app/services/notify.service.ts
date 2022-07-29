@@ -6,7 +6,20 @@ import {Notyf} from 'notyf'
 })
 export class NotifyService {
 
-  private notification = new Notyf({duration: 4000, position: {x: 'center', y: 'top'}})
+  private notification = new Notyf({duration: 4000, position: {x: 'center', y: 'top'},
+  types: [
+    {
+      type: 'success',
+      background:'#FFA500'
+    },
+    {
+      type: 'error',
+      background: '#fd6b52'
+    }
+  ]
+
+
+})
 
   success(message: string):void {
     this.notification.success(message)

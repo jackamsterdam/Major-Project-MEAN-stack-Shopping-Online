@@ -1,3 +1,4 @@
+@import '../../../styles/variables/variables.scss';
 // @use '@angular/material' as mat;
 
 // $my-custom-level: mat.define-typography-level(
@@ -8,7 +9,10 @@
 //   $letter-spacing: normal,
 // );
 
-
-ng-container {
-    background-color: yellow;
+.shopping-info {
+    font-size: 18px;
 }
+
+.yellow-font{
+    color: $shopping-orange;
+} 

@@ -47,21 +47,46 @@ mat-hint {
         border-radius: 8px;
         box-shadow: 5px 5px 10px;
         text-align: left;
-        background: rgba(0, 0, 0, 0.6);
-        color: white;
+        background: rgba(219, 226, 239,0.6);
 }
 
-.mat-focused .mat-form-field-label {
-    /*change color of label*/
-    color: white !important;
-   }
-  
-   .mat-form-field-underline {
-    /*change color of underline*/
-    background-color: white !important;
-  } 
-  
-  .mat-form-field-ripple {
-   /*change color of underline when focused*/
-   background-color: white !important;;
-  }
+.start-shopping-image {
+    height: 150px;
+}
+
+.start-btn {
+    background-color: rgba(17, 45, 78, 0.4);
+    color: $shopping-white;
+}
+
+.start-btn:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.login-btn {
+    background-color: $shopping-dark-blue;
+    color: $shopping-white;
+}
+
+.login-btn:disabled {
+    background-color: rgba(17, 45, 78, 0.6);
+    color: $shopping-white;
+
+}
+
+.mat-form-field {
+    display: block!important;
+}
+
+.sign-up-btn {
+    background-color: $shopping-orange;
+    color: $shopping-white;
+}
+
+.dont-have-an-account {
+    margin-right: 23px;
+    margin-left: 23px;
+}
+
+

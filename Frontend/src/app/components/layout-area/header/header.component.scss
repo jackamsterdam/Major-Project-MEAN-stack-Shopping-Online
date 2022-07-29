@@ -8,9 +8,6 @@ div {
     color: $shopping-white;
 }
 
-// .header-container {
-// }
-
 .shopping-header-1 {
     font-size: 36px;
     padding-top: 30px;
@@ -20,15 +17,24 @@ div {
 
 .shopping-header-2 {
     font-size: 13px;
-    padding-top: 36px;
-    left: 311px;
+    padding-top: 38px;
+    left: 408px;
     position: absolute;
 }
 
 app-search {
     position: absolute;
-    top: 62px;
-    left: 176px;
+    left: 544px;
+    top: 12px;
 }
+
+::ng-deep .header-container .mat-input-element::placeholder{
+    color: $shopping-white;
+}
+  
+//   ::ng-deep .mat-focused .mat-form-field-placeholder{
+  
+//     color:red;
+//   }
 
 //! question the div above doesnt effect teh div with classes as well??? 

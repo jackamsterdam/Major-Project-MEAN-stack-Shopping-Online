@@ -1,3 +1,5 @@
+@import '../../../styles/variables/variables.scss';
+
 .tab-item {
     margin: 3px;
     padding: 4px 11px 3px 4px;
@@ -11,6 +13,19 @@
    text-decoration: underline;
 }
 
-// .tab-content {
-//     position: fixed;
-// }
+::ng-deep .mat-tab-label, ::ng-deep .mat-tab-label-content {
+    min-width: 0px!important;
+    padding-left: 7px!important;
+    padding-right: 7px!important;
+    min-width: 112px!important;
+    white-space: break-spaces!important;
+    color: $shopping-dark-blue!important;
+}
+
+::ng-deep .mat-tab-label-active {
+    background-color: rgba(17, 45, 78, 0.2)!important;
+}
+
+::ng-deep .mat-ink-bar {
+    background-color: $shopping-dark-blue!important;
+}

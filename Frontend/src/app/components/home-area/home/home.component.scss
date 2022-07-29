@@ -71,16 +71,17 @@ app-login {
     }
     .flyIn {
         color:#fff;
-        font-family:'Raleway';
+        // font-family:'Raleway';
     //    text-transform:uppercase;
       //  line-height:1.2em;
         position:relative;
       text-shadow: 2px 2px 40px rgba(0,0,0,0.7);
-      width: 551px;
+      width: 708px;
 
       background: rgba(0,0,0,0.6);
     padding-left: 19px;
     padding-top: 19px;
+    border-radius: 3px;
     }
     .lineOne {
       transition-delay:.6s; 

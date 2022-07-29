@@ -151,7 +151,7 @@ export class RegisterStepOneComponent implements OnInit {
       }  
       };
 
-    test() {
+    isFormValid() {
       console.log("this.initialInfo.invalid", this.initialInfo.invalid);
       debugger
       let x = this.usernameInput.errors?.['ssnInvalidorEmailInvalid']

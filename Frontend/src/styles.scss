@@ -1,3 +1,4 @@
+
 // @use '@angular/material' as mat;
 // @include mat.core();
 
@@ -51,7 +52,8 @@ html,body {
 }
 
 body {
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+    // font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-family: 'Poppins', sans-serif!important;
 }
 
 // * {
