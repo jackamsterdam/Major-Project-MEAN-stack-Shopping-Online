@@ -112,7 +112,7 @@ export class RegisterStepOneComponent implements OnInit {
 
   MatchPassword(): ValidatorFn { 
     return (control: AbstractControl): { [key: string]: any } => {  
-      debugger
+      
       const passwordControl = this.passwordInput  
       const confirmPasswordControl = this.passwordConfirmInput  
   
@@ -153,7 +153,7 @@ export class RegisterStepOneComponent implements OnInit {
 
     isFormValid() {
       console.log("this.initialInfo.invalid", this.initialInfo.invalid);
-      debugger
+      
       let x = this.usernameInput.errors?.['ssnInvalidorEmailInvalid']
       return this.initialInfo.invalid
     }

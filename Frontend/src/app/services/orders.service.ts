@@ -25,7 +25,7 @@ export class OrdersService {
 
 
   async addOrder(order: OrderModel): Promise<OrderModel> {
-debugger
+
     const addedOrder = await firstValueFrom(this.http.post<OrderModel>(environment.ordersUrl, order))
     //!no store for orders
     store.dispatch(addOrderAction(addedOrder))

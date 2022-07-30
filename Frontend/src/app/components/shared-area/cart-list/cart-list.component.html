@@ -3,17 +3,33 @@
   
           <!-- mode: over (default) push side (shriknks width) Second way to open is with template reference variable   -->
     <mat-sidenav #sidenav mode="side" (opened)="log('open')" (closed)="log('closed')" [(opened)]="opened">
-        <h2>My Cart</h2> 
-        <br>
-        <!-- <span *ngFor="let c of allItemsByCart">{{c.product.name }} | </span> -->
-        <app-sidenav-details [fromShopPage]="isShoppingPage" *ngFor="let i of allItemsByCart" [item]="i"  (deleteItem)="deleteThisCard($event)"> </app-sidenav-details>
-        <br>
-        <button *ngIf="allItemsByCart?.length !== 0" mat-raised-button class="delete-all" (click)="deleteAllItems()">Empty Cart</button>
-       <p *ngIf="totalAmount && allItemsByCart?.length !== 0">Total: {{totalAmount | currency: "USD"}}</p> 
-        <!-- <button  class="toggle-button" (click)="opened = !opened"><mat-icon>shopping_cart</mat-icon></button> -->
-        <!-- yPosition="above" -->
-<!--! how to make this button to be at end of scroll?????? -->
-        <a *ngIf="allItemsByCart?.length !== 0" routerLink="/order"><mat-icon>shopping_cart_checkout</mat-icon></a> 
+        <div class="shopping-cart-container">
+            <div class="no-items" *ngIf="allItemsByCart?.length === 0">
+                No Items
+            </div>
+            <div class="shopping-cart-header">
+                <h2 class="cart-header">Shopping Cart ({{allItemsByCart.length}})</h2> 
+                <div *ngIf="allItemsByCart?.length !== 0" mat-raised-button class="delete-all empty-cart" (click)="deleteAllItems()">Empty Cart</div>
+            </div>
+            <div class="shopping-cart-content">
+                <app-sidenav-details [fromShopPage]="isShoppingPage" *ngFor="let i of allItemsByCart" [item]="i"  (deleteItem)="deleteThisCard($event)"> </app-sidenav-details>
+            </div>
+            <div class="shopping-cart-footer">
+                <div  *ngIf="totalAmount && allItemsByCart?.length !== 0">
+                    <div class="total-header">Total</div>
+                    <div class="total-amount">{{totalAmount | currency: "USD"}}</div>
+                </div>
+                   
+                <!-- <a *ngIf="allItemsByCart?.length !== 0" routerLink="/order"><mat-icon>shopping_cart_checkout</mat-icon></a>  -->
+
+                <div class="checkout-btn" *ngIf="allItemsByCart?.length !== 0" routerLink="/order">
+                    <!-- {{opened}} -->
+                    <mat-icon  class="shopping-cart-icon">shopping_cart</mat-icon>Checkout
+                </div>
+
+            </div>
+
+        </div>
      </mat-sidenav>
 
     <!-- mode: over (default) push side (shriknks width) Second way to open is with template reference variable   -->
@@ -24,11 +40,15 @@
             <!-- <div   class="button-test"   [ngStyle] = "{ 'backgroundColor' : opened ? 'blue' : 'yellow', 'color' : opened ? 'red' : 'pink', 'position': opened ? 'fixed' : 'fixed', 'left' : opened ? '400px': '-20px', 'top': opened ? '440px': '293px'}"> -->
             <!-- <div   class="button-test"   [ngStyle] = "{ 'backgroundColor' : opened ? 'blue' : 'yellow', 'color' : opened ? 'red' : 'pink', 'position': opened ? 'fixed' : 'fixed', 'left' : opened ? '400px': '0px', 'top': opened ? '440px': '440px'}"> -->
                 <!--! how to put ngstyle object in ts instead??  -->
-            <div   class="checkout-button"   [ngStyle] = "{ 'backgroundColor' : opened ? 'blue' : 'yellow', 'color' : opened ? 'red' : 'pink', 'position': 'fixed', 'left' : opened ? '400px': '0px', 'top': '440px'}">
-           <!-- doesnt work: from ts when open changes doesnt קולט the change  <div class="button-test" [ngStyle]="styleObject"> -->
-                <div  class="toggle-button" (click)="opened = !opened">
+            <!-- <div   class="checkout-button"   [ngStyle] = "{ 'backgroundColor' : opened ? 'blue' : 'yellow', 'color' : opened ? 'red' : 'pink', 'position': 'fixed', 'left' : opened ? '400px': '0px', 'top': '440px'}"> -->
+                <div class="side-bar-action-button" (click)="opened = !opened">              
+                    
+                    <!-- <div class="side-bar-action-button" (click)="opened = !opened" [ngStyle] = "{'left' : opened ? '400px': '0px', 'top': '273px'}"></div> -->
+           <!-- doesnt work: from ts when open  doesnt קולט the change  <div class="button-test" [ngStyle]="styleObject"> -->
+                <div  class="toggle-button">
                     <!-- {{opened}} -->
-                    <mat-icon  class="shopping-cart-icon">shopping_cart</mat-icon>
+                    <div class="cart-items-amount" *ngIf="allItemsByCart">{{allItemsByCart.length}}</div> 
+                    <img class="cart-side-image" src="/assets/images/logo2.png">
                 </div>
             </div>
                  <!-- <button (click)="opened = !opened">Toggle Opened</button>

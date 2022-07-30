@@ -1,3 +1,4 @@
+import { ProductsService } from 'src/app/services/products.service';
 import { RoleEnum } from './../../../models/role.enum';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ProductModel } from 'src/app/models/product.model';
@@ -28,7 +29,7 @@ export class ProductCardComponent implements OnInit {
 
   productsImageUrl = environment.productsImageUrl
 
-  constructor() { }
+  constructor(private productsService: ProductsService) { }
 
   // cartItem: CartItemModel
   // @Input() role: string;
@@ -46,7 +47,7 @@ export class ProductCardComponent implements OnInit {
   public edit = new EventEmitter<ProductModel>();
 
   public editProduct(product: ProductModel) {
-    debugger
+    this.productsService.isAddAction.emit(false);
       this.edit.emit(product);
   }
 

@@ -32,9 +32,7 @@ export class AdminHomeComponent implements OnInit, OnDestroy {
           //   if (this.user) {
               //now i have all th maarechet fulled with all that i need for the rest of the baby components
              this.products = await this.productsService.getAllProducts()
-             this.categories =  await this.productsService.getAllCategories()
-          
-         
+             this.categories =  await this.productsService.getAllCategories()  
           
             // }
           
@@ -54,6 +52,7 @@ export class AdminHomeComponent implements OnInit, OnDestroy {
 
   productToEdit(product: ProductModel) {
     this.isAddAction = false;
+    this.editedProduct = null;
     this.editedProduct = product;
     this.opened = true
   }

@@ -1,25 +1,7 @@
 @import '../../../styles/placeholders/placeholders.scss';
+@import '../../../styles/variables/variables.scss';
 
-div {
-    height: 100%;
-    border: 1px solid black;
-    background: pink;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    box-sizing: border-box;
-   
-}
 
-//! this multiplies times 4!! my soluution is to wrap in container so wont לשכפל 
-// app-sidenav-details {
-//     background: lightblue;
-//     border: 1px solid black;
-//     height: 80%;
-//     width: 30%;
-//     border-radius: 8px;
-
-// }
 
 .side-nav-wrapper {
     @extend %display-box;
@@ -34,19 +16,77 @@ div {
 
 }
 
-app-add-order {
-    @extend %display-box;
+.back-to-shopping-button {
+    color: $shopping-dark-blue;
+    position: relative;
+    text-decoration: auto;
+    float: right;
+    top: 6px;
 }
 
-
-.back-to-shopping-button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: small;
-    margin: 5px;
-    // background-color: transparent;
-    border: none;
+.back-to-shopping-button:hover {
     cursor: pointer;
+    color: $shopping-orange;
+    text-decoration: underline;
+}
+
+.order-cart-container {
+    display: grid;
+    height: 100%;
+    display: grid;
+    height: 100%;
+   grid-template-columns: 40% 60%;
+    padding: 2px 12px 4px 12px;
+    box-sizing: border-box;
+   background-color: rgba(219, 226, 239, 0.3);
+   padding-top: 16px;
+}
+
+.left-side-order {
+    display: grid;
+    display: grid;
+    height: 100%;
+    grid-template-rows: 10% 80% 10%;
+    padding: 2px 12px 4px 12px;
+    box-sizing: border-box;
+    background-color: rgba(219, 226, 239, 0.3);
+    height: 408px;
+}
+
+.order-cart-content {
+    overflow: auto;
+}
+
+.order-cart-footer {
+    font-size: 17px;
+    margin-top: 14px;
+}
+
+.left-side-order {
+    margin-right: 51px;
+}
+
+.right-side-order {
+    margin-left: 81px;
+    width: 464px;
+}
+
+.total-header {
+    display: inline-block;
+    font-weight: bold;
+    top: -2px;
+    position: relative;
+}
+
+.total-amount {
+    float: right;
+    font-weight: bold;
+    top: -2px;
+    position: relative;
+    right: 8px;
+}
+
+.order-cart-header {
+    display: inline-block;
 }
 

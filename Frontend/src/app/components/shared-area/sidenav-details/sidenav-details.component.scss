@@ -1,19 +1,8 @@
-div.box {
-	width: 300px;
-    padding-right: 0;
-    display: inline-flex;
-    align-items: center;
-    background-image: linear-gradient(45deg, lightgreen, white);
-    position: relative;
-}
 
 img {
-    width: 60px;
-    height: 60px;
-    margin: 5px;
-    border-radius: 10px;
-    border: 1px solid black;
-    vertical-align: middle;
+    width: 112px;
+    height: 81px;
+    border-radius: 3px;
 }
 
 div > div:last-child {
@@ -21,12 +10,35 @@ div > div:last-child {
 }
 
 .delete {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: small;
-    margin: 5px;
-    background-color: transparent;
-    border: none;
     cursor: pointer;
+    height: 21px;
+    width: 21px;
+}
+
+.item-cart {
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgb(230, 221, 221);
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+
+.item-image {
+    display: inline-block;
+}
+
+.item-desc {
+    display: inline-block;
+    margin-left: 8px;
+}
+
+.item-actions {
+    float: right;
+    margin: 6px;
+}
+
+.item-name {
+    font-size: 20px;
+    // font-weight: 600;
 }

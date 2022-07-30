@@ -20,7 +20,12 @@
  <!-- <button  *ngIf="!this.isButtonVisible" (click)="this.isButtonVisible = true" >➕</button>  -->
  <!-- <button  *ngIf="this.isButtonVisible" (click)="this.isButtonVisible = false"  (click)="this.isAddAction = true">❌</button>  -->
  
- <button *ngIf="editWasClicked && !isAddAction"  (click)="isAddAction = true; product = null" > <mat-icon>add</mat-icon></button> 
+ <!-- <button *ngIf="editWasClicked && !isAddAction"  (click)="isAddAction = true; product = null" > <mat-icon>add</mat-icon></button>  -->
+ 
+ <button mat-raised-button *ngIf="editWasClicked && !isAddAction" (click)="addProduct()" class="go-to-add-product">
+    <mat-icon>add</mat-icon>&nbsp;Add Product</button>
+
+
  <!-- <button *ngIf="editWasClicked"  (click)="reOpenAdd()" >Edit was clicked + button display </button>  -->
 
 <!--! jack try:  -->

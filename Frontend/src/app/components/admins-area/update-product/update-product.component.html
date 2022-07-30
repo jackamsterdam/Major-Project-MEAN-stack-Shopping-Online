@@ -1,11 +1,10 @@
 
 <!--! works without prdocuttoedit ngif btw  -->
-<div class="box" *ngIf="productToEdit">
-<!-- <div class="box" *ngIf="productToEdit && !buttonPlusVisible"> -->
-    <form (ngSubmit)="update()" [formGroup]="productForm">
-        <h2>Edit Product</h2>
-<!-- make disabled name??  -->
-        <mat-form-field floatLabel="always" appearance="outline">
+<div class="edit-product-container" *ngIf="productToEdit">
+    <h2>Edit Product</h2>
+        <form (ngSubmit)="update()" [formGroup]="productForm">
+
+            <mat-form-field floatLabel="always" appearance="fill">
             <mat-label>Name: </mat-label>
             <input autofocus matInput type="text" [formControl]="nameInput">
             <mat-hint align="end" *ngIf="nameInput.touched && nameInput.errors?.['required']">Missing name</mat-hint>
@@ -13,9 +12,16 @@
                 chars</mat-hint>
             <mat-hint align="end" *ngIf="nameInput.touched && nameInput.errors?.['maxlength']">Length must be maximum
                 100 chars</mat-hint>
+            <mat-hint align="end"
+                *ngIf="!nameInput.errors?.['required'] && !nameInput.errors?.['minlength'] && nameInput.errors?.['maxlength'] && nameInput.errors?.['uniqeName']">
+                Name is taken by a diiret product</mat-hint>
+
+                <!-- <mat-hint align="end"
+                *ngIf="nameInput.errors?.['uniqueName']">
+                Name is taken by a diiret product</mat-hint> -->
         </mat-form-field>
 
-        <mat-form-field floatLabel="always" appearance="outline">
+        <mat-form-field floatLabel="always" appearance="fill">
             <mat-label>Price: </mat-label>
             <input matInput type="number" step="0.01" [formControl]="priceInput">
             <mat-hint align="end" *ngIf="priceInput.touched && priceInput.errors?.['required']">Missing price</mat-hint>
@@ -25,7 +31,7 @@
             </mat-hint>
         </mat-form-field>
 
-        <mat-form-field floatLabel="always" appearance="outline">
+        <mat-form-field floatLabel="always" appearance="fill">
             <mat-label>Category: </mat-label>
             <mat-select name="categoryId" [formControl]="categoryIdInput" placeholder="Select category...">
                 <!-- <mat-option disabled selected>Select category...</mat-option> -->
@@ -39,14 +45,14 @@
         <input type="file" accept="image/*" #imageBox [formControl]="imageInput"> -->
 
         <!-- stack overflow display nicer file input:  -->
-        <button type="button" mat-raised-button (click)="fileInput.click()">Choose File</button>
-        <input accept="image/*" #imageBox [formControl]="imageInput" hidden (change)="onFileSelected($event)" #fileInput
+        <button class="choose-file-btn" type="button" mat-raised-button (click)="fileInput.click()">Choose File</button>
+        <input accept="image/*" #imageBox [formControl]="imageInput" hidden (change)="onFileSelected($event)" (click)="dispalyError=true" #fileInput
             type="file">
         <mat-hint align="end" class="file-name" [ngClass]="dynamicClass">{{selectedFile?.name}}</mat-hint>
-        <mat-hint align="end" *ngIf="imageInput.errors?.['required']">Missing
+        <mat-hint align="end" *ngIf="dispalyError && imageInput.errors?.['required']">Missing
             Image</mat-hint>
 
 
-        <button mat-raised-button color="warn" [disabled]="productForm.invalid">Update</button>
+        <button mat-raised-button class="edit-order-btn" [disabled]="productForm.invalid">Update</button>
     </form>
 </div>

@@ -178,7 +178,6 @@ let theLastOrder: OrderModel = store.getState().ordersState.theLastOrder
     // const cart = await this.cartsService.getCartByUser(user._id)
     const cartItems =  await this.cartsService.getAllItemsByCart(theLastOrder?.cartId)
 
-debugger
     // this.cartItems = store.getState().cartsState.cartItems
     // console.log("this.cartItems", this.cartItems);
    

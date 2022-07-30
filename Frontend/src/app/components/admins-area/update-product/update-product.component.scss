@@ -1,38 +1,21 @@
 @import '../../../styles/variables/variables.scss';
-
 form {
-	width: 240px;  //!450px  now 240
-    margin: 20px;
-    padding: 20px;
+    padding: 0px 20px 0px 20px;
 }
 
 h2 {
-    text-align: center;
+    margin-left: 20px;
 }
 
 input {
     width: 100%;
     box-sizing: border-box;
-    margin: 0 0 20px 0; 
     font-size: $input-font-size;
-
 }
 
 button {
     width: 100%;
-    margin: 10px 0 20px 0;
 }
-
-// span {
-//     color: red;
-//     margin: 0 60px;  //!60px
-//     position: absolute;
-// }
-
-// .ng-touched.ng-invalid:not(form) {
-//     border: 2px solid red;
-//     background-color: pink;
-// }
 
 mat-hint {
     color: red;
@@ -46,4 +29,24 @@ mat-hint {
 
 .hide-hint {
     display: none;
+}
+
+.edit-order-btn {
+    background-color: $shopping-orange;
+    color: $shopping-white;
+    width: 100%;
+    margin-top: 19px;
+}
+
+.edit-order-btn:hover {
+    cursor: pointer;
+}
+
+.mat-form-field {
+    display: block!important;
+}
+
+.choose-file-btn {
+    background-color: transparent;
+    border: 1px solid;
 }

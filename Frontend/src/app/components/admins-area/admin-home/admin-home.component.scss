@@ -26,22 +26,23 @@ app-update-product {
 }
 
 .action-button {
-    height: 44px;
-    width: 43px;
+    height: 51px;
+    width: 55px;
     border: 1px solid lightgray;
     border-radius: 0px 8px 8px 0px;
     z-index: 10000000;
-    background-color: white; 
+    background-color: rgba(255,165,0, 0.5);
+    
 }
 
 .action-button:hover {
-    background-color: lightgray;
     cursor: pointer;
 }
 
 .tab-icon {
-    top: 9px;
+    top: 15px;
     position: relative;
+    left: 14px;
 }
 
 // move this to top: (((((((((((((((((
@@ -52,7 +53,7 @@ mat-sidenav-container {
 }
 
 mat-sidenav {
-    background-color: lightcoral;
+    background-color: rgba(219, 226, 239, 0.3);;
     width: 400px;
     margin: auto;
     border-radius: 0px 8px 8px 0;

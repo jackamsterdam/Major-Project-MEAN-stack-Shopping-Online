@@ -17,13 +17,13 @@
       </p>
     
     </mat-card-content>
-    <mat-card-actions>
+    <mat-card-actions align="end">
  
       <!-- <button (click)="addProduct(product)" mat-raised-button color="primary" (click)="openDialog()"  *ngIf="role === userRole">Add Product</button> -->
       <button (click)="addProduct(product)" mat-raised-button class="add-btn" *ngIf="role === userRole">
         <mat-icon>add</mat-icon>
       </button>
-      <button (click)="editProduct(product)" mat-raised-button class="edit-btn">
+      <button (click)="editProduct(product)" mat-raised-button class="edit-btn" *ngIf="role === adminRole">
         <mat-icon>edit</mat-icon>
       </button>
     </mat-card-actions>

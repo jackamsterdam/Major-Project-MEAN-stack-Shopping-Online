@@ -1,29 +1,32 @@
-<div class="box" *ngIf="item.product">
+<div class="item-cart" *ngIf="item.product">
     <!--! without above line when i add to dialog it crashes!!  -->
-    <button *ngIf="fromShopPage" class="delete" (click)="deleteThisItem(item.product._id, item.cartId )">❌</button>
-    <div>
-        <ng-container  *ngIf="router.url === '/order'">
-            Name:  <span [innerHTML]="item.product.name | highlightSearch: search"></span>
+    <div class="item-image">
+        <img [src]="productsImageUrl + item.product.imageName" />
+    </div>
+    <div class="item-desc">
+        <ng-container *ngIf="router.url === '/order'">
+           <span class="item-name" [innerHTML]="item.product.name | highlightSearch: search"></span>
         </ng-container>
 
         <ng-container  *ngIf="router.url !== '/order'">
-            Name: {{item.product.name}}
+            <span class="item-name">{{item.product.name}}</span>
         </ng-container>
        
         <!-- Name: {{item.product.name | highlightSearch: search}} -->
         <!-- Name: {{item.product.name}} -->
         <!-- {{ fromShopPage ? 'true' : 'falseee'}} -->
         <br />
-        Price: {{item.product.price | currency: "USD"}}
+        {{item.product.price | currency: "USD"}}
         <br />
         Quantity: {{item.quantity}}
         <br />
-        Item's total: {{item.quantity * item.product.price | currency:"USD"}}
+        Item's total: <b>{{item.quantity * item.product.price | currency:"USD"}}</b>
         <!-- <br />
        test: {{total}}  doesnt work from ts only in html -->
     </div>
-    <div>
-        <img [src]="productsImageUrl + item.product.imageName" />
+    <div class="item-actions">
+        <img class="delete" src="/assets/images/delete.jpg" *ngIf="fromShopPage" (click)="deleteThisItem(item.product._id, item.cartId )"/>
+           <!-- <mat-icon class="delete" *ngIf="fromShopPage" (click)="deleteThisItem(item.product._id, item.cartId )">delete</mat-icon>&nbsp; -->
+        <!-- <button *ngIf="fromShopPage" class="delete" (click)="deleteThisItem(item.product._id, item.cartId )">❌</button> -->
     </div>
-  
 </div>  

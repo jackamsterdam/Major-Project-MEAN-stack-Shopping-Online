@@ -10,11 +10,13 @@
 
     <mat-sidenav-content>
         <div class="action-button"
-            [ngStyle]="{ 'backgroundColor' : opened ? 'blue' : 'yellow', 'color' : opened ? 'red' : 'pink', 'position': 'fixed', 'left' : opened ? '400px': '0px', 'top': '440px'}">
+        (click)="opened = !opened"
+            [ngStyle]="{'position': 'fixed', 'left' : opened ? '400px': '0px', 'top': '440px'}">
+            <!-- [ngStyle]="{ 'backgroundColor' : opened ? 'blue' : 'yellow', 'color' : opened ? 'red' : 'pink', 'position': 'fixed', 'left' : opened ? '400px': '0px', 'top': '440px'}"> -->
 
-            <div (click)="opened = !opened">
+            <div>
                 <mat-icon *ngIf="opened" class="tab-icon">backspace</mat-icon>
-                <mat-icon *ngIf="!opened" class="tab-icon">add_circle_outline</mat-icon>
+                <mat-icon *ngIf="!opened" class="tab-icon" >add_circle_outline</mat-icon>
             </div>
         </div>
         <div class="product-and-category">

@@ -39,7 +39,6 @@ products: ProductModel[]
     const keyBoardEvent = (event as KeyboardEvent);
 
     const inputElement = (event.target as HTMLInputElement).value;
-  // debugger
     // if (keyBoardEvent.key === 'Backspace' || keyBoardEvent.key === 'Delete') return
 
     // if(this.router.url === '/shopping' ) {

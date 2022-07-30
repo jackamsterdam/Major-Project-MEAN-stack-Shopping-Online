@@ -1,25 +1,17 @@
-<div class="box">
-
-    <h2>Order</h2>
-    <h3>Shopping Details:</h3>
-
+<div class="place-your-order-container">
+    <h2>Place Your Order</h2>
     <form (ngSubmit)="addOrder()" #formInfo="ngForm">
-
-        <br>
         <mat-hint class="populate-info">*Double Click if shipping info is same as user info</mat-hint>
-<br>
-        <mat-form-field floatLabel="always" appearance="outline"  (dblclick)="doubleClickToPopulate()">
-            <mat-label>Ship City: </mat-label>
+        <mat-form-field floatLabel="always" appearance="fill"  (dblclick)="doubleClickToPopulate()">
+            <mat-label>Shipping City: </mat-label>
             <mat-select name="city" [(ngModel)]="order.shipCity"
                 required #cityBox="ngModel"  placeholder="Select city...">
                 <mat-option *ngFor="let enum of CityEnum | keyvalue" [value]="enum.value">{{enum.value}}</mat-option>
             </mat-select>
             <mat-hint align="end" *ngIf="cityBox.errors?.['required'] && cityBox.touched">Missing city</mat-hint>
         </mat-form-field>
-
-
-        <mat-form-field floatLabel="always" appearance="outline">
-            <mat-label>Ship Street: </mat-label>
+        <mat-form-field floatLabel="always" appearance="fill">
+            <mat-label>Shipping Street: </mat-label>
             <input matInput (dblclick)="doubleClickToPopulate()" type="text" name="street"
                 [(ngModel)]="order.shipStreet" #streetBox="ngModel" required minlength="2"
                 maxlength="100">
@@ -32,7 +24,7 @@
 
         <!--!***************************************************************************  -->
 
-        <mat-form-field floatLabel="always" appearance="outline">
+        <mat-form-field floatLabel="always" appearance="fill">
             <mat-label>Shipping Date: </mat-label>
             <!--! type="datetime-local" doesnt work!!!  -->
             <input matInput [matDatepickerFilter]="dateFilter" [matDatepicker]="myDatePicker" [min]="minDate"
@@ -46,7 +38,7 @@
         <!--!***************************************************************************  -->
 
         <!-- i made it type string so wont have number up and down sign -->
-        <mat-form-field floatLabel="always" appearance="outline">
+        <mat-form-field floatLabel="always" appearance="fill">
             <mat-label>Credit card: </mat-label>
             <input matInput type="text" name="creditCard" [(ngModel)]="order.creditCard" required
                 #creditCardBox="ngModel" minlength="14" maxlength="16" pattern="^[0-9]{14,16}$">
@@ -61,11 +53,9 @@
                 *ngIf="!creditCardBox.errors?.['required'] &&!creditCardBox.errors?.['minlength'] && !creditCardBox.errors?.['maxlength'] && creditCardBox.errors?.['pattern']">
                 Invalid credit card </mat-hint>
         </mat-form-field>
-        <br>
-        <br>
 
-        <button [disabled]="formInfo.invalid" mat-raised-button color="primary">
-            <mat-icon color="warn">send</mat-icon>&nbsp;Add Order
+        <button [disabled]="formInfo.invalid" mat-raised-button class="add-order-btn">
+            <mat-icon>send</mat-icon>&nbsp;Pay Now
         </button>
 
     </form>

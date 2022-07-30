@@ -40,7 +40,6 @@ export class CartsService {
   //We need to add userId even though its post cause userId is additional information ......
   //!is there a way to send everything in the body even the userId as well ??????
     const addedItem = await firstValueFrom(this.http.post<CartItemModel>(environment.cartItemsUrl + userId, item))
-  //   debugger
   //  store.dispatch(addItemToCartAction(addedItem))
     return addedItem
   }
@@ -76,7 +75,7 @@ export class CartsService {
 //----------------------------------------------------------------------
     //!only needed for some info on program start  (no redux) right??
     async getCartByUser(userId: string):Promise<CartModel> {
-      debugger
+      
       const cartByUser = await firstValueFrom(this.http.get<CartModel>(environment.cartByUserUrl + userId))
       store.dispatch(getActiveCartAction(cartByUser))
       return cartByUser 
@@ -86,7 +85,6 @@ export class CartsService {
       // go over all the cart items, calculate the total amount of the cart
       const cartItems = store.getState().cartsState.cartItems
       const total = cartItems.reduce((accumulator, currVal) => {
-        // debugger
         return accumulator + (currVal.quantity * currVal.product.price)
 
       }, 0)

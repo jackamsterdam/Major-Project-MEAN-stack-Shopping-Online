@@ -19,7 +19,8 @@ export class UpdateProductComponent implements OnInit {
 selectedFile: any = null;
 selectedImageName: string;
 dynamicClass: string = ''
-
+products: ProductModel[]
+dispalyError = false;
 // onFileSelected(event: any): void {
 //     this.selectedFile = event.target.files[0] ?? null;
 
@@ -36,7 +37,7 @@ onFileSelected(event: Event): void {
   productToEdit: ProductModel;
 
   @Input('editProduct') set editProduct(product: ProductModel) {
-    // debugger
+     debugger
     if (product) {
       this.productToEdit = product;
       this.populateProductDetails();
@@ -71,6 +72,8 @@ onFileSelected(event: Event): void {
       // console.log(" this.categories",  this.categories);
       
       this.nameInput = new FormControl('', [Validators.required, Validators.minLength(2),Validators.maxLength(100)])
+
+      
       this.priceInput = new FormControl('', [Validators.required, Validators.min(0), Validators.max(1000)])
       //you can have problems with category cause i dont know if cateogry id or caategory name  caterogy._id ending up with catoegryid
       this.categoryIdInput = new FormControl('', [Validators.required])
@@ -82,6 +85,7 @@ onFileSelected(event: Event): void {
         imageBox: this.imageInput
       })
       this.categories = await this.productsService.getAllCategories()
+      this.products = store.getState().productsState.products;
 
     } catch (err: any) {
       console.log('here?')
@@ -96,10 +100,18 @@ onFileSelected(event: Event): void {
     this.productToEdit.price = this.priceInput.value 
     this.productToEdit.categoryId = this.categoryIdInput.value 
     console.log(" this.categoryIdInput.value ",  this.categoryIdInput.value );
-    debugger
+    
     this.productToEdit.image = this.imageBoxRef.nativeElement.files[0]
 
     console.log('after',this.productToEdit)
+
+
+    //TODO put in new function validation
+   const nameTaken = this.products.filter(p => (p.name === this.nameInput.value && p._id != this.productToEdit._id))
+   if (nameTaken.length > 0) 
+    {
+      this.nameInput.setErrors({ uniqueName: false });  
+    }
 
     await this.productsService.updateProduct(this.productToEdit)
     this.notify.success('Product has been updated')
@@ -108,9 +120,7 @@ onFileSelected(event: Event): void {
     this.dynamicClass ='hide-hint'
 
     //we need to clear form:
-    this.productForm.reset()
-
-    
+  //  this.productForm.reset()
 
     } catch (err: any) {
       this.notify.error(err)
@@ -119,11 +129,11 @@ onFileSelected(event: Event): void {
   }
 
 populateProductDetails() {
-  // debugger
   this.productForm.patchValue({
     nameBox: this.productToEdit.name,
     priceBox: this.productToEdit.price,
-     categoryIdBox:this.productToEdit.category._id
+    categoryIdBox:this.productToEdit.categoryId,
+    imageBox: null
   })
 }
 

@@ -1,4 +1,4 @@
-
+@import '../../../styles/variables/variables.scss';
 mat-sidenav-container {
     height: 100%;
     position: relative;
@@ -10,21 +10,25 @@ mat-sidenav-container {
 // }
 
 mat-sidenav {
-    background-color: lightcoral;
     width: 400px;
     // position: relative;
 
     // optional: 
     height: 400px;
     margin: auto;
-    border-radius: 0px 8px 8px 0;
+    border-radius: 0px 3px 3px 0;
+        overflow: hidden;
 }
 
-app-sidenav-details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+// app-sidenav-details {
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
+// }
+
+::ng-deep .mat-drawer-inner-container {
+    overflow: hidden!important;
 }
 
 .delete-all {
@@ -47,7 +51,7 @@ app-sidenav-details {
 // $position: 'fixed';
 .checkout-button {
     height: 44px;
-    width: 43px;
+    width: 53px;
     border: 1px solid lightgray;
     border-radius: 0px 8px 8px 0px;
     // top: 261px;
@@ -82,4 +86,113 @@ app-sidenav-details {
 .cateogory-style {
     display: flex;
 }
+
+.empty-cart {
+    color: $shopping-dark-blue;
+    position: relative;
+    bottom: 7px;
+    text-decoration: auto;
+    float: right;
+    margin-top: 12px;
+    margin-right: 16px;
+}
+
+.empty-cart:hover {
+    color: $shopping-orange;
+    text-decoration: underline;
+}
+
+.shopping-cart-container {
+    display: grid;
+    height: 100%;
+    display: grid;
+    height: 100%;
+    grid-template-rows: 13% 70% 17%;
+    padding: 2px 12px 4px 12px;
+    box-sizing: border-box;
+   background-color: rgba(219, 226, 239, 0.3);
+}
+
+.shopping-cart-content {
+    overflow: auto;
+}
+
+.shopping-cart-footer {
+    font-size: 17px;
+}
+
+.cart-header {
+    display: inline;
+}
+
+.checkout-btn {
+    background-color: $shopping-orange;
+    color: $shopping-white;
+    height: 38px;
+    border-radius: 24px;
+    text-align: center;
+}
+
+.checkout-btn:hover {
+    cursor: pointer;
+}
+
+.total-header {
+    display: inline-block;
+    font-weight: bold;
+    top: -2px;
+    position: relative;
+}
+
+.total-amount {
+    float: right;
+    font-weight: bold;
+    top: -2px;
+    position: relative;
+    right: 8px;
+}
+
+.no-items {
+    position: relative;
+    top: 200px;
+    left: 150px;
+    color: rgb(230, 221, 221)
+}
+
+.cart-items-amount {
+    height: 13px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    border-radius: 17px;
+    line-height: 14px;
+    position: absolute;
+    display: inline-block;
+    top: 4px;
+    left: 32px;
+    padding: 3px;
+}
+
+.side-bar-action-button {
+    height: 51px;
+    width: 55px;
+    border: 1px solid lightgray;
+    border-radius: 0px 8px 8px 0px;
+    z-index: 10000000;
+    background-color: rgba(255,165,0, 0.5);
+    top: 266px;
+    position: fixed;
+}
+
+.side-bar-action-button:hover {
+    cursor: pointer;
+}
+
+.cart-side-image {
+    height: 38px;
+    right: 12px;
+    margin-left: 2px;
+    margin-top: 6px;
+}
+
 

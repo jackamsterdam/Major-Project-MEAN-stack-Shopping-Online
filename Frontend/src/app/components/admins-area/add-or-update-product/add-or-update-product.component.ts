@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ProductModel } from 'src/app/models/product.model';
+import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
   selector: 'app-add-or-update-product',
@@ -37,22 +38,19 @@ export class AddOrUpdateProductComponent implements OnInit {
 
 
 
-  constructor() { }
+  constructor(private productsService: ProductsService) { }
 
   ngOnInit(): void {
+
+    this.productsService.isAddAction.subscribe((isOpen => {
+      this.isAddAction = isOpen;
+   }));
+    //here
   }
 
-  // addProduct() {
-  //   // this.isPanelOpned = true;
-  //   this.isAddAction = true;
-  // }
-
-  // closePanel() {
-  //   this.isPanelOpned = false
-  // }
-
-  // reOpenAdd() {
-  //   debugger
-  //   this.isAddAction === true
-  // }
+  addProduct() {
+    this.isAddAction = true; 
+    this.product = null;
+    this.productsService.isAddAction.emit(true);
+  }
 }

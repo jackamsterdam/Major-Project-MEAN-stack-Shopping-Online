@@ -36,7 +36,7 @@ async ngOnInit() {
     //  this.unsubscribe = storeAuth.subscribe(() => {
      this.unsubscribe = store.subscribe(() => {
       this.searchText =  store.getState().productsState.searchText;
-      debugger
+      
       if (this.searchText !== '') {
 
         // select all category
@@ -86,7 +86,7 @@ async selectCategoryByIndex(index: number) {
    if (index === 0) {
     this.productsService.setSelectedCategory('all') 
    } else {
-    debugger
+    
     this.productsService.setSelectedCategory(this.categories[index - 1]._id) 
   }
   } catch (err: any) {
@@ -95,7 +95,6 @@ async selectCategoryByIndex(index: number) {
 }
 
 test(event: any) {
-  debugger
 }
 
 ngOnDestroy(): void {

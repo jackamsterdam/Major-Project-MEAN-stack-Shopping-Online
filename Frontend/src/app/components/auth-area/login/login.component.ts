@@ -48,7 +48,6 @@ ngOnDestroy(): void {
 }
 
  async submit() {
-  debugger
   try {
     await this.authService.login(this.credentials)
 
