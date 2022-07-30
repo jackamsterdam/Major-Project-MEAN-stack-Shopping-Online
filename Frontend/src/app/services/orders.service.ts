@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { OrderModel } from '../models/order.model';
-import { fetchOrdersAction } from '../redux/orders-state';
+import { addOrderAction, fetchOrdersAction } from '../redux/orders-state';
 import store from '../redux/store';
 
 @Injectable({
@@ -25,9 +25,10 @@ export class OrdersService {
 
 
   async addOrder(order: OrderModel): Promise<OrderModel> {
-
+debugger
     const addedOrder = await firstValueFrom(this.http.post<OrderModel>(environment.ordersUrl, order))
     //!no store for orders
+    store.dispatch(addOrderAction(addedOrder))
     return addedOrder
   }
 

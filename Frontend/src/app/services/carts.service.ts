@@ -76,6 +76,7 @@ export class CartsService {
 //----------------------------------------------------------------------
     //!only needed for some info on program start  (no redux) right??
     async getCartByUser(userId: string):Promise<CartModel> {
+      debugger
       const cartByUser = await firstValueFrom(this.http.get<CartModel>(environment.cartByUserUrl + userId))
       store.dispatch(getActiveCartAction(cartByUser))
       return cartByUser 

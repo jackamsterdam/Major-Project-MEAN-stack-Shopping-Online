@@ -42,29 +42,50 @@ import store from 'src/app/redux/store';
   styleUrls: ['./pdf-receipt.component.scss']
 })
 export class PdfReceiptComponent implements OnInit {
-  runningNumber: any = 1 //!- to have an order count  you need type any or error!
-  cartItems: CartItemModel[] 
-  user: UserModel
-  totalAmount: number = 0;
-  orders: OrderModel[]
+ // runningNumber: any = 1 //!- to have an order count  you need type any or error!
+  // cartItems: CartItemModel[] 
+  // user: UserModel
+ // totalAmount: number = 0;
+  //orders: OrderModel[]
+  //sortedOrders: OrderModel[];
   constructor(private cartsService: CartsService) {}
 
   async ngOnInit() {
-    this.user = store.getState().authState.user
-    const cart = await this.cartsService.getCartByUser(this.user._id)
-    this.cartItems =  await this.cartsService.getAllItemsByCart(cart?._id)
+    // this.user = store.getState().authState.user
+    // const cart = await this.cartsService.getCartByUser(this.user._id)
+    // this.cartItems =  await this.cartsService.getAllItemsByCart(cart?._id)
 
-    // this.cartItems = store.getState().cartsState.cartItems
-    // console.log("this.cartItems", this.cartItems);
+    // // this.cartItems = store.getState().cartsState.cartItems
+    // // console.log("this.cartItems", this.cartItems);
    
-    this.totalAmount = this.cartsService.getTotalCartAmount();
-    console.log(" this.totalAmount",  this.totalAmount);
-    this.orders = store.getState().ordersState.orders
-    console.log("this.orders", this.orders);
+    // this.totalAmount = this.cartsService.getTotalCartAmount();
+    // console.log(" this.totalAmount",  this.totalAmount);
+    // this.orders = store.getState().ordersState.orders
+    // console.log("this.orders", this.orders);
 
     //!how to sort with 2 parameters user and recent order?
-      //  this.orders.sort((orderA,orderB) => orderA.createdAt - orderB.createdAt)
-      // const SortedOrders =  this.orders.sort(function(a, b){return a.createdAt - b.createdAt})
+      // let theLastUserOrder: OrderModel;
+      // let orderDate: number;
+      // let theLastDate: number;
+      // this.orders.forEach((order) => {
+      //   if (order.userId === this.user._id) {
+      //     // check if this is the last order
+      //     if (!theLastUserOrder) {
+      //       debugger
+      //       theLastUserOrder = order;
+      //       orderDate = new Date( order.createdAt).getMilliseconds();
+      //       theLastDate = new Date( theLastUserOrder.createdAt).getMilliseconds()
+      //     } else if( orderDate > theLastDate){
+      //       theLastUserOrder = order;
+      //     }
+      //   }
+      // })
+      // console.log(theLastUserOrder._id + '' +theLastUserOrder.createdAt)
+      // debugger
+      //  this.sortedOrders =  currentUserOrders.sort((a, b) => {
+      //   debugger
+      //   return a.createdAt - b.createdAt;
+      // })
   }
 
   // generatePDF() {  
@@ -150,7 +171,21 @@ export class PdfReceiptComponent implements OnInit {
 // invoice = new Invoice(); 
   
 // generatePDF(action = 'open') {
-generatePDF() {
+async generatePDF() {
+let theLastOrder: OrderModel = store.getState().ordersState.theLastOrder
+
+    const user = store.getState().authState.user;
+    // const cart = await this.cartsService.getCartByUser(user._id)
+    const cartItems =  await this.cartsService.getAllItemsByCart(theLastOrder?.cartId)
+
+debugger
+    // this.cartItems = store.getState().cartsState.cartItems
+    // console.log("this.cartItems", this.cartItems);
+   
+    const totalAmount = this.cartsService.getTotalCartAmount();
+
+if (!theLastOrder) return;
+  // this.runningNumber++;
   let docDefinition = {
     content: [
       {
@@ -175,27 +210,27 @@ generatePDF() {
         columns: [
           [
             {
-              text: this.user.firstName + ' ' + this.user.lastName,
+              text: user.firstName + ' ' + user.lastName,
               // text: this.invoice.customerName,
               bold:true
             },
-            { text: this.user.username},
-            { text: this.user.street },
-            { text: this.user.city}
+            { text: user.username},
+            { text: user.street },
+            { text: user.city}
           ],
           [
             {
-              text: `Date: ${new Date().toLocaleString()}`,
+              text: `Date: ${new Date().toLocaleDateString()}`,
               alignment: 'right'
             },
             {
-              text: `Order Date: ${new Date().toLocaleString()}`,
+              text: `Order Date: ${new Date(theLastOrder.createdAt).toLocaleDateString()}`,
               alignment: 'right'
             },
             { 
               // text: `Bill No : ${((Math.random() *1000).toFixed(0))}`,
               //!Will this actually work if number is linke global and it will go up each time??
-              text: 'Bill No :' + this.runningNumber++,
+              text: 'Bill No :' + theLastOrder._id,
               alignment: 'right'
             }
           ]
@@ -211,9 +246,9 @@ generatePDF() {
           widths: ['*', 'auto', 'auto', 'auto'],
           body: [
             [{ text: 'Product', bold: true, fillColor: 'beige'}, { text: 'Price', bold: true, fillColor: 'beige'}, { text: 'Quantity', bold: true, fillColor: 'beige'}, { text: 'Amount', bold: true, fillColor: 'beige'}],
-            ...this.cartItems.map(c => ([c.product.name, '$' + c.product.price,c.quantity, '$' + (c.product.price*c.quantity).toFixed(2)])),
+            ...cartItems.map(c => ([c.product.name, '$' + c.product.price,c.quantity, '$' + (c.product.price*c.quantity).toFixed(2)])),
             // [{text: 'Total Amount', colSpan: 3}, {}, {}, this.cartItems.reduce((sum, p)=> sum + (p.quantity * p.quantity), 0).toFixed(2)]
-            [{ text: 'Total Amount', bold: true, fillColor: 'pink' },{text: '', fillColor: 'pink'},{text: '', fillColor: 'pink'}, {text: '$' + this.totalAmount, bold: true, fillColor: 'pink'}],  //!how to show this??
+            [{ text: 'Total Amount', bold: true, fillColor: 'pink' },{text: '', fillColor: 'pink'},{text: '', fillColor: 'pink'}, {text: '$' + totalAmount, bold: true, fillColor: 'pink'}],  //!how to show this??
             // [this.totalAmount,this.totalAmount,this.totalAmount,this.totalAmount ],  //!how to show this??
           ]
         }

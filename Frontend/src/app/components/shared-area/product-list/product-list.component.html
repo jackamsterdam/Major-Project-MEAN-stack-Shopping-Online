@@ -3,13 +3,15 @@
 
 <!-- <app-product-card *ngFor="let p of products" [product]="p" [role]="userRole"></app-product-card>
 <app-product-card *ngFor="let p of products" [product]="p" [role]="adminRole"></app-product-card> -->
+<div class="product-list-container">
+    <img *ngIf="!products" class="loading" src="/assets/images/shopping-loader.gif">
 
-<img *ngIf="!products" src="/assets/images/shopping-loader.gif">
+    <app-product-card *ngFor="let p of products" 
+                    [product]="p" 
+                    [role]="role"
+                    (edit)="editProduct($event)"
+                    (add)="addProduct($event)"></app-product-card>
+</div>
 
-<app-product-card *ngFor="let p of products" 
-                  [product]="p" 
-                  [role]="role"
-                  (edit)="editProduct($event)"
-                  (add)="addProduct($event)"></app-product-card>
 <!-- <p>{{role}}</p> -->
 <!-- <app-product-card *ngFor="let p of products" [product]="p" [role]="role"></app-product-card> -->

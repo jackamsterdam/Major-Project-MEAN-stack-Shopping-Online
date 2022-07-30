@@ -39,7 +39,7 @@ export class ProductListComponent implements OnInit {
        console.log(store.getState().productsState.searchText);
        
        // Filter products by selected category
-       debugger
+       
        if (selectedCategoryId!='all') {
         this.products =store.getState().productsState.products.filter(p => p.categoryId === selectedCategoryId);
        } else {

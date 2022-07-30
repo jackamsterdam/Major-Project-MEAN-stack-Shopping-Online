@@ -26,6 +26,14 @@
     background-color: rgba(17, 45, 78, 0.2)!important;
 }
 
+::ng-deep .mat-tab-disabled {
+    background-color:  rgba(0,0,0,.2)!important;
+}
+
+::ng-deep .mat-tab-disabled .mat-tab-label-content{
+    color: #676464!important;
+}
+
 ::ng-deep .mat-ink-bar {
     background-color: $shopping-dark-blue!important;
 }

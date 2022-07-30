@@ -1,67 +1,29 @@
 @import '../../../styles/placeholders/placeholders.scss';
 
-
 .admin-layout {
     height: 100%;
     border: 1px solid black;
-    background: pink;
     display: flex;
     justify-content: space-around;
-    // align-items: center;
     box-sizing: border-box;
     overflow: auto;
-
 }
 
 .add-and-update{
-    // change into placeholder file instead cause this repeats itself in order !! 
-    // background: lightblue;
-    // border: 1px solid black;
-    // height: 80%;
-    // width: 30%;
-    // border-radius: 8px;
-    // which is : 
     @extend %display-box;
-
 }
 
-// .category-style {
-//     @extend %display-box;
-// }
-
-// .product-list {
-//     @extend %display-box;
-// }
-
 app-add-product {
-    background-color: green;
     @extend %display-box;
 }
 app-update-product {
-    background-color: purple;
     @extend %display-box;
-}
-app-category-list {
-    // @extend %display-box;
-    background-color: brown;
-    border: 10px solid lightgreen;
-}
-
-app-product-list {
-    // @extend %display-box;
-    background-color: grey;
-    border: 10px solid lightblue;
-
 }
 
 .product-and-category {
-    // flex-grow: 3;
-    // @extend %display-box;
-    background-color: yellow;
     display: flex;
     flex-direction: column;
 }
-
 
 .action-button {
     height: 44px;
@@ -88,18 +50,14 @@ mat-sidenav-container {
     height: 100%;
     position: relative;
 }
-mat-sidenav, mat-sidenav-content {
-    padding: 1rem;
-}
 
 mat-sidenav {
     background-color: lightcoral;
     width: 400px;
-    // position: relative;
-
-    // optional: 
-    // height: 400px;
     margin: auto;
     border-radius: 0px 8px 8px 0;
 }
-//                 (((((((((((((((((
+
+.mat-drawer-container {
+    background-color: transparent;
+}

@@ -70,13 +70,16 @@ a {
 }
 
 .box {
-    display: inline-block;
-    margin: 10px;
-    padding: 0 10px;
-    border: 1px solid black;
-    border-radius: 8px;
-    box-shadow: 5px 5px 10px;
-    text-align: left;
+  display: inline-block;
+  margin: 10px;
+  border-radius: 3px;
+  text-align: center;
+  width: 195px;
+}
+
+.box:hover {
+  box-shadow: 2px 4px 3px grey;
+  cursor: pointer;
 }
 
 // select,
