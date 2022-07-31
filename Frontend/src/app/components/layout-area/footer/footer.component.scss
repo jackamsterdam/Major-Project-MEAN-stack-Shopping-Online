@@ -3,6 +3,7 @@
 div {
     height: 100%;
     @extend %center-flex;
+    margin-top: 6px;
 }
 
 a {

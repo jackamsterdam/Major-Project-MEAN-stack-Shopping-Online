@@ -52,7 +52,7 @@
 
 // //Update product
 // async function updateProduct(product: IProductModel): Promise<IProductModel> {
-//     // debugger
+
 //     const errors = product.validateSync()
 //     console.log("errors", errors);
 //     if (errors) throw new ErrorModel(400, errors.message)

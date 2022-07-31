@@ -55,7 +55,6 @@ mat-hint {
 
 .start-btn {
     background-color: rgba(17, 45, 78, 0.4);
-    color: $shopping-white;
 }
 
 .start-btn:hover {
@@ -98,4 +97,10 @@ mat-hint {
     margin-left: 23px;
 }
 
-
+.start-shopping-header {
+    font-size: 17px;
+    display: inline-block;
+    right: 20px;
+    position: relative;
+    font-weight: bold;
+}

@@ -26,7 +26,6 @@ async function addItem(item: ICartItemModel, userId: string): Promise<ICartItemM
     //Validation
     const errors = item.validateSync()
     if (errors) throw new ErrorModel(400, errors.message)
-// debugger
     // Case where no cart exists
     if (!item.cartId) {
         // add new cart with userId

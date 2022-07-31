@@ -32,7 +32,7 @@
 <div *ngIf="user">
     <button mat-raised-button routerLink="/shopping" class="start-btn">
         <img class="start-shopping-image" src="/assets/images/start.svg"/>
-        {{getLoggedInState()}}
+        <div class="start-shopping-header"> {{getLoggedInState()}}</div>
     </button>
     <!-- <img class="start-shopping-image" src="/assets/images/start.svg"/>{{getLoggedInState()}} -->
     <!-- 

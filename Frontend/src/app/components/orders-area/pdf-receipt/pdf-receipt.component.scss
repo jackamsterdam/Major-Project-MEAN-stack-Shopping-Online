@@ -1,0 +1,19 @@
+@import '../../../styles/variables/variables.scss';
+
+.receipt {
+    display: inline-block;
+    color: $shopping-dark-blue;
+    // position: relative;
+    // bottom: 7px;
+    // text-decoration: auto;
+    // float: right;
+    // margin-top: 12px;
+    // margin-right: 16px;
+}
+.receipt:hover {
+    color: $shopping-orange;
+    // text-decoration: underline;
+    cursor: pointer;
+}
+
+

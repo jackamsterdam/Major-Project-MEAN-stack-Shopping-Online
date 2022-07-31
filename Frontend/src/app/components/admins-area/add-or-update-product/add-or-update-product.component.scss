@@ -12,15 +12,12 @@
     float: right;
     margin-top: 12px;
     margin-right: 21px;
+    background-color: $shopping-dark-blue;
+    color: $shopping-white;
 }
 
 .go-to-add-product:hover {
     background-color: rgba(17, 45, 77, 0.6);
-    text-: underline;
+    text-decoration: underline;
     cursor: pointer;
-}
-
-.go-to-add-product {
-    background-color: $shopping-dark-blue;
-    color: $shopping-white;
 }

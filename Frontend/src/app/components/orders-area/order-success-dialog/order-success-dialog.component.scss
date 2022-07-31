@@ -1,0 +1,13 @@
+@import '../../../styles/variables/variables.scss';
+.confirm-order-btn {
+    color: $shopping-dark-blue;
+    // position: relative;
+    background-color: $shopping-dark-blue;
+    color: $shopping-white;
+}
+
+.confirm-order-btn:hover {
+    background-color: rgba(17, 45, 77, 0.6);
+    cursor: pointer;
+}
+

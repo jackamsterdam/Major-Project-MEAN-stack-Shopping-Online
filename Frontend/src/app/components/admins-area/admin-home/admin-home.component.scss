@@ -32,7 +32,18 @@ app-update-product {
     border-radius: 0px 8px 8px 0px;
     z-index: 10000000;
     background-color: rgba(255,165,0, 0.5);
-    
+    // @mixin colorful-box($color1: red, $color2: yellow, $color3: blue) {
+//     border: 2px solid black;
+//     background-image: linear-gradient(45deg, $color1, $color2, $color3);
+
+// }
+
+// .free-ad {
+//     @include ad-box();
+//     @include colorful-box(black, gray, white);
+// }
+    top: 266px;
+    position: fixed;
 }
 
 .action-button:hover {

@@ -12,13 +12,13 @@
                 chars</mat-hint>
             <mat-hint align="end" *ngIf="nameInput.touched && nameInput.errors?.['maxlength']">Length must be maximum
                 100 chars</mat-hint>
-            <mat-hint align="end"
-                *ngIf="!nameInput.errors?.['required'] && !nameInput.errors?.['minlength'] && nameInput.errors?.['maxlength'] && nameInput.errors?.['uniqeName']">
-                Name is taken by a diiret product</mat-hint>
-
-                <!-- <mat-hint align="end"
-                *ngIf="nameInput.errors?.['uniqueName']">
+            <!-- <mat-hint align="end"
+                *ngIf="!nameInput.errors?.['required'] && !nameInput.errors?.['minlength'] && nameInput.errors?.['maxlength'] && nameInput.errors?.['uniqueName']">
                 Name is taken by a diiret product</mat-hint> -->
+
+                <mat-hint align="end"
+                *ngIf="nameInput.invalid && !nameInput.errors?.['uniqueName']">
+                Name is taken by a different product</mat-hint>
         </mat-form-field>
 
         <mat-form-field floatLabel="always" appearance="fill">
@@ -49,10 +49,8 @@
         <input accept="image/*" #imageBox [formControl]="imageInput" hidden (change)="onFileSelected($event)" (click)="dispalyError=true" #fileInput
             type="file">
         <mat-hint align="end" class="file-name" [ngClass]="dynamicClass">{{selectedFile?.name}}</mat-hint>
-        <mat-hint align="end" *ngIf="dispalyError && imageInput.errors?.['required']">Missing
+        <mat-hint align="end" *ngIf="!imageInput.errors?.['required'] && !imageInput.errors?.['minlength'] && !imageInput.errors?.['maxlength'] && dispalyError && imageInput.errors?.['required']">Missing
             Image</mat-hint>
-
-
         <button mat-raised-button class="edit-order-btn" [disabled]="productForm.invalid">Update</button>
     </form>
 </div>

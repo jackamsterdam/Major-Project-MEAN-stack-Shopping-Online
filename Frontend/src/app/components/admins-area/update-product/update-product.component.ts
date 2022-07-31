@@ -2,7 +2,7 @@ import { Component, ElementRef, Input, OnChanges, OnInit, SimpleChanges, ViewChi
 import { ProductModel } from 'src/app/models/product.model';
 import store from 'src/app/redux/store';
 import { CategoryModel } from 'src/app/models/category.model';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormControl, FormGroup, ValidatorFn, Validators } from '@angular/forms';
 import { ProductsService } from 'src/app/services/products.service';
 import { NotifyService } from 'src/app/services/notify.service';
 //!doesnt populate on start!! 
@@ -37,7 +37,6 @@ onFileSelected(event: Event): void {
   productToEdit: ProductModel;
 
   @Input('editProduct') set editProduct(product: ProductModel) {
-     debugger
     if (product) {
       this.productToEdit = product;
       this.populateProductDetails();
@@ -71,7 +70,7 @@ onFileSelected(event: Event): void {
 
       // console.log(" this.categories",  this.categories);
       
-      this.nameInput = new FormControl('', [Validators.required, Validators.minLength(2),Validators.maxLength(100)])
+      this.nameInput = new FormControl('', [Validators.required, Validators.minLength(2),Validators.maxLength(100), this.isUnique()])
 
       
       this.priceInput = new FormControl('', [Validators.required, Validators.min(0), Validators.max(1000)])
@@ -85,8 +84,7 @@ onFileSelected(event: Event): void {
         imageBox: this.imageInput
       })
       this.categories = await this.productsService.getAllCategories()
-      this.products = store.getState().productsState.products;
-
+      this.products = await this.productsService.getAllProducts();
     } catch (err: any) {
       console.log('here?')
       this.notify.error(err)
@@ -105,13 +103,6 @@ onFileSelected(event: Event): void {
 
     console.log('after',this.productToEdit)
 
-
-    //TODO put in new function validation
-   const nameTaken = this.products.filter(p => (p.name === this.nameInput.value && p._id != this.productToEdit._id))
-   if (nameTaken.length > 0) 
-    {
-      this.nameInput.setErrors({ uniqueName: false });  
-    }
 
     await this.productsService.updateProduct(this.productToEdit)
     this.notify.success('Product has been updated')
@@ -135,6 +126,38 @@ populateProductDetails() {
     categoryIdBox:this.productToEdit.categoryId,
     imageBox: null
   })
+}
+
+
+isUnique(): ValidatorFn {  
+  return (control: AbstractControl): { [key: string]: any } => {  
+    if (!this.products ||this.products.length ===0) {
+      return null;
+    }
+    const nameTaken = this.products.filter(p => (p.name.toLowerCase() === this.nameInput.value.toLowerCase() && p._id != this.productToEdit._id))
+    if (nameTaken.length > 0) 
+    {
+      return { uniqueName: false }
+    } else {
+      return null
+    }
+};  
+
+  // return (control: AbstractControl): { [key: string]: any } => {  
+  //   if (!control.value) {  
+  //     return null;  
+  //   }  
+  //   // const regex = new RegExp('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$');  
+  //   // const regex = new RegExp("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$");  
+  //   const regex = new RegExp(regexInput); 
+  //   console.log('typeof', typeof regexInput) 
+  //   console.log(regexInput)
+  //   const valid = regex.test(control.value);  
+  //   console.log("control.value", control.value);
+  //   console.log("valid", valid);
+  //   this.errorNotifiction = '';
+  //   return valid ? null : { invalidRegex: true };  
+  // };  
 }
 
 

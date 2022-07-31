@@ -8,7 +8,7 @@
                 No Items
             </div>
             <div class="shopping-cart-header">
-                <h2 class="cart-header">Shopping Cart ({{allItemsByCart.length}})</h2> 
+                <h2 class="cart-header">Shopping Cart ({{allItemsByCart?.length}})</h2> 
                 <div *ngIf="allItemsByCart?.length !== 0" mat-raised-button class="delete-all empty-cart" (click)="deleteAllItems()">Empty Cart</div>
             </div>
             <div class="shopping-cart-content">

@@ -48,6 +48,14 @@ public maxDate: Object =  new Date(this.currentYear, this.currentMonth+1, this.c
 allOrders: OrderModel[]
 // this prevents saturdays and sundays but we want to prevent days with more than 3 ! 
 dateFilter(date: any) {  //any????
+
+  // this.allOrders.forEach(order => {
+  //   if (order.shipDate === order.shipDate)
+  // })
+
+
+
+
   console.log("date", date);
   console.log('typeof', typeof date)
   const day = date?.getDay()
@@ -74,6 +82,8 @@ dateFilter(date: any) {  //any????
       this.order.cartId = this.cartId
       this.order.userId = this.user._id
       console.log('this.order afterrrrr', this.order)
+
+
       const addedOrder = await this.ordersService.addOrder(this.order)
       this.notify.success("Order has been added")
     
@@ -81,7 +91,7 @@ dateFilter(date: any) {  //any????
       let dialogRef = this.dialog.open(OrderSuccessDialogComponent)
       dialogRef.afterClosed().subscribe((result) => {
        if (result === undefined) {
-        this.router.navigateByUrl('/shopping')
+        this.router.navigateByUrl('/home')
        }
       })
     } catch (err: any) {

@@ -35,8 +35,10 @@ export class LoginComponent implements OnInit, OnDestroy {
   // this.unsubscribe = storeAuth.subscribe(() => {
     
     this.user = store.getState().authState.user
-    this.currentCart = store.getState().cartsState.currentCart;
-    this.lastOrder = this.ordersService.getMostRecentOrder();
+    if (this.user !== null) {
+      this.currentCart = store.getState().cartsState.currentCart;
+      this.lastOrder = this.ordersService.getMostRecentOrder();
+    }
   })
 
 }

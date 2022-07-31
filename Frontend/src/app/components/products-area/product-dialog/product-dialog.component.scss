@@ -1,0 +1,12 @@
+@import '../../../styles/variables/variables.scss';
+.add-quantity {
+    color: $shopping-dark-blue;
+    position: relative;
+    background-color: $shopping-dark-blue;
+    color: $shopping-white;
+}
+
+.add-quantity:hover {
+    background-color: rgba(17, 45, 77, 0.6);
+    cursor: pointer;
+}

@@ -173,6 +173,8 @@ export class PdfReceiptComponent implements OnInit {
 // generatePDF(action = 'open') {
 async generatePDF() {
 let theLastOrder: OrderModel = store.getState().ordersState.theLastOrder
+console.log("theLastOrder", theLastOrder);
+console.log("theLastOrder", theLastOrder.creditCard);
 
     const user = store.getState().authState.user;
     // const cart = await this.cartsService.getCartByUser(user._id)
@@ -218,12 +220,20 @@ if (!theLastOrder) return;
             { text: user.city}
           ],
           [
+            // {
+            //   text: `Date: ${new Date().toLocaleDateString()}`,
+            //   alignment: 'right'
+            // },
             {
-              text: `Date: ${new Date().toLocaleDateString()}`,
+              text: `Order Date: ${new Date(theLastOrder.createdAt).toLocaleDateString()}`,
               alignment: 'right'
             },
             {
-              text: `Order Date: ${new Date(theLastOrder.createdAt).toLocaleDateString()}`,
+              text: `Shipping Date: ${new Date(theLastOrder.shipDate).toLocaleDateString()}`,
+              alignment: 'right'
+            },
+            {
+              text: `Credit Card: ${theLastOrder.creditCard.toString().slice(-4).padStart(theLastOrder.creditCard.toString().length, '*')}`,
               alignment: 'right'
             },
             { 
@@ -235,6 +245,32 @@ if (!theLastOrder) return;
           ]
         ]
       },
+      {
+        text: 'Shipping Details',
+        style: 'sectionHeader'
+      },
+      {
+        columns: [
+          [
+            {
+              text: user.firstName + ' ' + user.lastName,
+              // text: this.invoice.customerName,
+              bold:true
+            },
+            // { text: theLastOrder.shipDate},
+            { text: theLastOrder.shipStreet},
+            { text: theLastOrder.shipCity},
+          ],
+          
+        ]
+      },
+
+
+
+
+
+
+      
       {
         text: 'Order Details',
         style: 'sectionHeader'

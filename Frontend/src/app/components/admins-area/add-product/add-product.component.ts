@@ -86,8 +86,12 @@ export class AddProductComponent implements OnInit {
     this.dynamicClass ='hide-hint'
 
 
-      //we need to clear form:
+      //We need to clear form:
        this.productForm.reset()
+      //  Reset validation error
+     Object.keys(this.productForm.controls).forEach(key => {
+    this.productForm.get(key).setErrors(null) ;
+});
 
     } catch (err: any) {
       this.notify.error(err)
