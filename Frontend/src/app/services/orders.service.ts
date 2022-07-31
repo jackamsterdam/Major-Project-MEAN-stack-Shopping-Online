@@ -32,11 +32,11 @@ export class OrdersService {
     return addedOrder
   }
 
-  // for receipt 
-  async getReceiptById(_id: string): Promise<OrderModel> {
-    const receipt = await firstValueFrom(this.http.get<OrderModel>(environment.receiptUrl + _id))
-    return receipt
-  }
+  // for receipt  -- didnt use had all info in client
+  // async getReceiptById(_id: string): Promise<OrderModel> {
+  //   const receipt = await firstValueFrom(this.http.get<OrderModel>(environment.receiptUrl + _id))
+  //   return receipt
+  // }
 
   //  count orders:
   async countOrders(): Promise<number> {

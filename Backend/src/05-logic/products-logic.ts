@@ -196,16 +196,16 @@ async function updateProduct(product: IProductModel): Promise<IProductModel> {
     return updatedProduct
 }
 
-//Delete product
-async function deleteProduct(_id: string): Promise<void> {
+//!Delete product - admin doesnt have capability in this project
+// async function deleteProduct(_id: string): Promise<void> {
 
-    //image handling - we need to delete image from disk as well: 
-    const product = await getOneProduct(_id)
-    safeDelete(path.join(__dirname, '..', 'upload', 'images', product.imageName))
+//     //image handling - we need to delete image from disk as well: 
+//     const product = await getOneProduct(_id)
+//     safeDelete(path.join(__dirname, '..', 'upload', 'images', product.imageName))
 
-    const deletedProduct = await ProductModel.findByIdAndDelete(_id).exec()
-    if (!deletedProduct) throw new ErrorModel(404, `Resource with _id ${_id} not found`)
-}
+//     const deletedProduct = await ProductModel.findByIdAndDelete(_id).exec()
+//     if (!deletedProduct) throw new ErrorModel(404, `Resource with _id ${_id} not found`)
+// }
 
 
 
@@ -218,5 +218,5 @@ export default {
     getProductsByCategory,
     addProduct,
     updateProduct,
-    deleteProduct
+    // deleteProduct
 }

@@ -49,7 +49,7 @@ async function addItem(item: ICartItemModel, userId: string): Promise<ICartItemM
             return item.save()
             // found =  await getOneItemFromACart(item.productId.toString())
 
-            return found;
+            // return found;
         } else {
             console.log('item exists already just updating it ')
            return found;

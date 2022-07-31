@@ -91,7 +91,7 @@ dateFilter(date: any) {  //any????
       let dialogRef = this.dialog.open(OrderSuccessDialogComponent)
       dialogRef.afterClosed().subscribe((result) => {
        if (result === undefined) {
-        this.router.navigateByUrl('/home')
+        this.router.navigateByUrl('/shopping')
        }
       })
     } catch (err: any) {
