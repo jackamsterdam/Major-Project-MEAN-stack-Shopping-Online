@@ -24,8 +24,7 @@ import { ShoppingInfoComponent } from './components/home-area/shopping-info/shop
 import { ValidateEqualModule } from 'ng-validate-equal';
 import { ShoppingComponent } from './components/shopping-area/shopping/shopping.component';
 import { CartListComponent } from './components/shared-area/cart-list/cart-list.component';
-// import { ProductCardComponent } from './components/products-area/product-card/product-card.component';
-// import { ProductListComponent } from './components/products-area/product-list/product-list.component';
+
 import { CategoryListComponent } from './components/products-area/category-list/category-list.component';
 import { SidenavDetailsComponent } from './components/shared-area/sidenav-details/sidenav-details.component';
 import { OrderComponent } from './components/orders-area/order/order.component';
@@ -83,7 +82,6 @@ import { PdfReceiptComponent } from './components/orders-area/pdf-receipt/pdf-re
     RegisterBothStepsComponent,
     PdfReceiptComponent,
   ],
-  // entryComponents: [ProductDialogComponent]
   imports: [
     BrowserModule,
     AppRoutingModule,

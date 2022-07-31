@@ -63,7 +63,7 @@ export class RegisterStepOneComponent implements OnInit {
     this.errorNotifiction = '';
     //  return null   //All paths dont return a value either do this or do ternary. 
    } else  {
-    this.errorNotifiction = 'Either ssn or the email is incorrect';
+    this.errorNotifiction = 'Either ssn or email is already taken';
     // this.notify.error('Either ssn or the email is incorrect')
     // return { userNameNotAvailable: true }
     // return { ssnInvalidorEmailInvalid: true }  //!this code is not working in my html !! 

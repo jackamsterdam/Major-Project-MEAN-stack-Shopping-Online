@@ -1,10 +1,8 @@
-
-<!--! works without prdocuttoedit ngif btw  -->
 <div class="edit-product-container" *ngIf="productToEdit">
     <h2>Edit Product</h2>
-        <form (ngSubmit)="update()" [formGroup]="productForm">
+    <form (ngSubmit)="update()" [formGroup]="productForm">
 
-            <mat-form-field floatLabel="always" appearance="fill">
+        <mat-form-field floatLabel="always" appearance="fill">
             <mat-label>Name: </mat-label>
             <input autofocus matInput type="text" [formControl]="nameInput">
             <mat-hint align="end" *ngIf="nameInput.touched && nameInput.errors?.['required']">Missing name</mat-hint>
@@ -12,12 +10,7 @@
                 chars</mat-hint>
             <mat-hint align="end" *ngIf="nameInput.touched && nameInput.errors?.['maxlength']">Length must be maximum
                 100 chars</mat-hint>
-            <!-- <mat-hint align="end"
-                *ngIf="!nameInput.errors?.['required'] && !nameInput.errors?.['minlength'] && nameInput.errors?.['maxlength'] && nameInput.errors?.['uniqueName']">
-                Name is taken by a diiret product</mat-hint> -->
-
-                <mat-hint align="end"
-                *ngIf="nameInput.invalid && !nameInput.errors?.['uniqueName']">
+            <mat-hint align="end" *ngIf="nameInput.invalid && !nameInput.errors?.['uniqueName']">
                 Name is taken by a different product</mat-hint>
         </mat-form-field>
 
@@ -34,23 +27,19 @@
         <mat-form-field floatLabel="always" appearance="fill">
             <mat-label>Category: </mat-label>
             <mat-select name="categoryId" [formControl]="categoryIdInput" placeholder="Select category...">
-                <!-- <mat-option disabled selected>Select category...</mat-option> -->
                 <mat-option *ngFor="let c of categories" [value]="c._id">{{c.name}}</mat-option>
             </mat-select>
             <mat-hint align="end" *ngIf="categoryIdInput.errors?.['required'] && categoryIdInput.touched">Missing
                 category</mat-hint>
         </mat-form-field>
 
-        <!-- <label>Image: </label>
-        <input type="file" accept="image/*" #imageBox [formControl]="imageInput"> -->
-
-        <!-- stack overflow display nicer file input:  -->
         <button class="choose-file-btn" type="button" mat-raised-button (click)="fileInput.click()">Choose File</button>
-        <input accept="image/*" #imageBox [formControl]="imageInput" hidden (change)="onFileSelected($event)" (click)="dispalyError=true" #fileInput
-            type="file">
+        <input accept="image/*" #imageBox [formControl]="imageInput" hidden (change)="onFileSelected($event)"
+            (click)="dispalyError=true" #fileInput type="file">
         <mat-hint align="end" class="file-name" [ngClass]="dynamicClass">{{selectedFile?.name}}</mat-hint>
-        <mat-hint align="end" *ngIf="!imageInput.errors?.['required'] && !imageInput.errors?.['minlength'] && !imageInput.errors?.['maxlength'] && dispalyError && imageInput.errors?.['required']">Missing
-            Image</mat-hint>
+        <mat-hint align="end"
+            *ngIf="!imageInput.errors?.['required'] && !imageInput.errors?.['minlength'] && !imageInput.errors?.['maxlength'] && dispalyError && imageInput.errors?.['required']">
+            Missing Image</mat-hint>
         <button mat-raised-button class="edit-order-btn" [disabled]="productForm.invalid">Update</button>
     </form>
 </div>

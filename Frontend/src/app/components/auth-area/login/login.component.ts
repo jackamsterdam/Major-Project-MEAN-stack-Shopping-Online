@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   
     this.user = store.getState().authState.user
 
-  this.unsubscribe = storeAuth.subscribe(() => {
+  this.unsubscribe = store.subscribe(() => {
     
    //Subscribe only to changes in auth store not other stores.
     this.user = store.getState().authState.user

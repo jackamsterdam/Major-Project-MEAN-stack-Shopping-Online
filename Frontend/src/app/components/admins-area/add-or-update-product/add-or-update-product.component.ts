@@ -8,35 +8,21 @@ import { ProductsService } from 'src/app/services/products.service';
   styleUrls: ['./add-or-update-product.component.scss']
 })
 export class AddOrUpdateProductComponent implements OnInit {
-  // public isButtonVisible = true;
-    product: ProductModel;
-  // public isPanelOpned = false;
+  product: ProductModel;
   isAddAction = true;
   editWasClicked = false
-  // hideEditPanel = true
 
-  // displayEditAgain: string
 
   @Input('productToBeEdited') set productToBeEdited(product: ProductModel) {
     if (product) {
-      // this.hideEditPanel = false
       this.product = product;
-      //  this.isPanelOpned = true;
-       this.isAddAction = false;   //now im using this to hide or show add.
-
-       this.editWasClicked = true
-      //  this.displayEditAgain = 'hideEditPanel'
+      this.isAddAction = false;
+      this.editWasClicked = true
     }
   }
 
-  @Input('isAddActionInput') set isAddActionInput(isAdd: boolean) {
-    // if (isAdd) {
-    //    this.isAddAction = isAdd;  
-    // }
-   
-  }
-
-
+  //We need this so edit button can be clicked more than once - (see productsService line 16 for reference)
+  @Input('isAddActionInput') set isAddActionInput(isAdd: boolean) { }
 
   constructor(private productsService: ProductsService) { }
 
@@ -44,12 +30,11 @@ export class AddOrUpdateProductComponent implements OnInit {
 
     this.productsService.isAddAction.subscribe((isOpen => {
       this.isAddAction = isOpen;
-   }));
-    //here
+    }));
   }
 
   addProduct() {
-    this.isAddAction = true; 
+    this.isAddAction = true;
     this.product = null;
     this.productsService.isAddAction.emit(true);
   }

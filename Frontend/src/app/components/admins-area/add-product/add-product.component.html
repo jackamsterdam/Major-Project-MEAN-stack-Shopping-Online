@@ -1,47 +1,47 @@
 <div class="add-product-container" *ngIf="addButtonClicked">
     <h2>Add Product</h2>
     <form (ngSubmit)="add()" [formGroup]="productForm">
-<!-- autofocus doesnt work here and in update admin  -->
 
+        <mat-form-field floatLabel="always" appearance="fill">
 
-<mat-form-field floatLabel="always" appearance="fill">
+            <mat-label>Name: </mat-label>
+            <input matInput autofocus type="text" [formControl]="nameInput">
+            <mat-hint align="end" *ngIf="nameInput.touched && nameInput.errors?.['required']">Missing name</mat-hint>
+            <mat-hint align="end" *ngIf="nameInput.touched && nameInput.errors?.['minlength']">Length must be minimum 2
+                chars</mat-hint>
+            <mat-hint align="end" *ngIf="nameInput.touched && nameInput.errors?.['maxlength']">Length must be maximum
+                100 chars</mat-hint>
+        </mat-form-field>
 
-        <mat-label>Name: </mat-label>
-        <input matInput autofocus type="text" [formControl]="nameInput" >
-        <mat-hint align="end" *ngIf="nameInput.touched && nameInput.errors?.['required']">Missing name</mat-hint>
-        <mat-hint align="end" *ngIf="nameInput.touched && nameInput.errors?.['minlength']">Length must be minimum 2 chars</mat-hint>
-        <mat-hint align="end" *ngIf="nameInput.touched && nameInput.errors?.['maxlength']">Length must be maximum 100 chars</mat-hint>
-    </mat-form-field>
+        <mat-form-field floatLabel="always" appearance="fill">
 
-    <mat-form-field floatLabel="always" appearance="fill">
+            <mat-label>Price: </mat-label>
+            <input matInput type="number" step="0.01" [formControl]="priceInput">
+            <mat-hint align="end" *ngIf="priceInput.touched && priceInput.errors?.['required']">Missing price</mat-hint>
+            <mat-hint align="end" *ngIf="priceInput.touched && priceInput.errors?.['min']">Price can't be negative
+            </mat-hint>
+            <mat-hint align="end" *ngIf="priceInput.touched && priceInput.errors?.['max']">Price can't exceed 10000
+            </mat-hint>
+        </mat-form-field>
 
-        <mat-label>Price: </mat-label>
-        <input matInput type="number" step="0.01"[formControl]="priceInput">
-        <mat-hint align="end" *ngIf="priceInput.touched && priceInput.errors?.['required']">Missing price</mat-hint>
-        <mat-hint align="end" *ngIf="priceInput.touched && priceInput.errors?.['min']">Price can't be negative</mat-hint>
-        <mat-hint align="end" *ngIf="priceInput.touched && priceInput.errors?.['max']">Price can't exceed 10000</mat-hint>
-    </mat-form-field>
+        <mat-form-field floatLabel="always" appearance="fill">
 
-    <mat-form-field floatLabel="always" appearance="fill">
+            <mat-label>Category: </mat-label>
+            <mat-select name="categoryId" [formControl]="categoryIdInput" placeholder="Select category...">
+                <mat-option *ngFor="let c of categories" [value]="c._id">{{c.name}}</mat-option>
+            </mat-select>
+            <mat-hint align="end" *ngIf="categoryIdInput.errors?.['required'] && categoryIdInput.touched">Missing
+                category</mat-hint>
+        </mat-form-field>
 
-        <mat-label>Category: </mat-label>
-        <mat-select name="categoryId" [formControl]="categoryIdInput"  placeholder="Select category...">
-            <!-- <mat-option disabled selected>Select category...</mat-option> -->
-            <mat-option *ngFor="let c of categories" [value]="c._id">{{c.name}}</mat-option>
-        </mat-select>
-        <mat-hint align="end" *ngIf="categoryIdInput.errors?.['required'] && categoryIdInput.touched">Missing category</mat-hint>
-    </mat-form-field>
-
-        <button class="choose-file-btn" type="button" mat-raised-button (click)="fileInput.click()">Choose Image</button>
-        <input accept="image/*" #imageBox [formControl]="imageInput" hidden (change)="onFileSelected($event)" (click)="dispalyError=true" #fileInput
-            type="file">
+        <button class="choose-file-btn" type="button" mat-raised-button (click)="fileInput.click()">Choose
+            Image</button>
+        <input accept="image/*" #imageBox [formControl]="imageInput" hidden (change)="onFileSelected($event)"
+            (click)="dispalyError=true" #fileInput type="file">
         <mat-hint align="end" class="file-name" [ngClass]="dynamicClass">{{selectedFile?.name}}</mat-hint>
-        <!--! not good cause dont have touched property:  -->
         <mat-hint align="end" *ngIf="dispalyError && imageInput.errors?.['required']">Missing
             Image</mat-hint>
-
 
         <button mat-raised-button class="add-order-btn" [disabled]="productForm.invalid">Add</button>
     </form>
 </div>
-

@@ -20,44 +20,6 @@ app-update-product {
     @extend %display-box;
 }
 
-.product-and-category {
-    display: flex;
-    flex-direction: column;
-}
-
-.action-button {
-    height: 51px;
-    width: 55px;
-    border: 1px solid lightgray;
-    border-radius: 0px 8px 8px 0px;
-    z-index: 10000000;
-    background-color: rgba(255,165,0, 0.5);
-    // @mixin colorful-box($color1: red, $color2: yellow, $color3: blue) {
-//     border: 2px solid black;
-//     background-image: linear-gradient(45deg, $color1, $color2, $color3);
-
-// }
-
-// .free-ad {
-//     @include ad-box();
-//     @include colorful-box(black, gray, white);
-// }
-    top: 266px;
-    position: fixed;
-}
-
-.action-button:hover {
-    cursor: pointer;
-}
-
-.tab-icon {
-    top: 15px;
-    position: relative;
-    left: 14px;
-}
-
-// move this to top: (((((((((((((((((
-
 mat-sidenav-container {
     height: 100%;
     position: relative;
@@ -72,4 +34,30 @@ mat-sidenav {
 
 .mat-drawer-container {
     background-color: transparent;
+}
+
+.product-and-category {
+    display: flex;
+    flex-direction: column;
+}
+
+.action-button {
+    height: 51px;
+    width: 55px;
+    border: 1px solid lightgray;
+    border-radius: 0px 8px 8px 0px;
+    z-index: 10000000;
+    background-color: rgba(255,165,0, 0.5);
+    top: 266px;
+    position: fixed;
+}
+
+.action-button:hover {
+    cursor: pointer;
+}
+
+.tab-icon {
+    top: 15px;
+    position: relative;
+    left: 14px;
 }

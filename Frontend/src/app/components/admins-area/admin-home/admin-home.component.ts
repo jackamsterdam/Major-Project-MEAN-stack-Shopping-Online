@@ -1,4 +1,4 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Unsubscribe } from 'redux';
 import { CategoryModel } from 'src/app/models/category.model';
 import { ProductModel } from 'src/app/models/product.model';
@@ -12,36 +12,27 @@ import { ProductsService } from 'src/app/services/products.service';
   styleUrls: ['./admin-home.component.scss']
 })
 export class AdminHomeComponent implements OnInit, OnDestroy {
-//!Regina =  this is משוכפל from regular home component do i need to get all products again here ??
+
   user: UserModel
   unsubscribe: Unsubscribe
-  opened = false; 
+  opened = false;
 
   products: ProductModel[]
   categories: CategoryModel[]
   editedProduct: ProductModel;
   isAddAction: boolean;
+
   constructor(private productsService: ProductsService, private notify: NotifyService) { }
 
   async ngOnInit() {
     try {
-      // this.unsubscribe = store.subscribe(async () => {
-   
-          // this.user = store.getState().authState.user
+      //now i have all the program filled with all that I need for the rest of the child components - if we have the products already will get from store instead of backend:
+      this.products = await this.productsService.getAllProducts()
+      this.categories = await this.productsService.getAllCategories()
 
-          //   if (this.user) {
-              //now i have all th maarechet fulled with all that i need for the rest of the baby components
-             this.products = await this.productsService.getAllProducts()
-             this.categories =  await this.productsService.getAllCategories()  
-          
-            // }
-          
-        // })
     } catch (err: any) {
       this.notify.error(err)
     }
-   
-
   }
 
   ngOnDestroy(): void {
@@ -56,6 +47,5 @@ export class AdminHomeComponent implements OnInit, OnDestroy {
     this.editedProduct = product;
     this.opened = true
   }
-
 
 }
