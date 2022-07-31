@@ -86,7 +86,7 @@ async selectCategoryByIndex(index: number) {
    if (index === 0) {
     this.productsService.setSelectedCategory('all') 
    } else {
-    
+    //Instead of going to the backend I am more efficient displaying products based on category ID saved to redux and subscribed in the component
     this.productsService.setSelectedCategory(this.categories[index - 1]._id) 
   }
   } catch (err: any) {

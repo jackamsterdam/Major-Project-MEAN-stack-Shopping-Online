@@ -7,7 +7,7 @@ export class CategoriesState {
 }
 
 //Categories Action Type -any action which can be done on the above categories state
-export enum CategoriesActionType { 
+export enum CategoriesActionType {
     FetchCategories = 'FetchCategories',
     SelectedCateogory = "SelectedCategory"
 }
@@ -15,34 +15,32 @@ export enum CategoriesActionType {
 //Categories Action - any single object sent to the store during 'dispatch':
 export interface CategoriesAction {
     type: CategoriesActionType
-    payload: any //!maybe cahnge from any to something else 
+    payload: any
 }
 
 
 //Categories Action Creators - function for creating CategoriesAction objects. Each function creates an Action object:  
 //Admin and user both fetch all categories
-export function fetchCategoriesAction(categories: CategoryModel[]):CategoriesAction {
-    return {type: CategoriesActionType.FetchCategories, payload: categories}
+export function fetchCategoriesAction(categories: CategoryModel[]): CategoriesAction {
+    return { type: CategoriesActionType.FetchCategories, payload: categories }
 }
-export function selectedCategoryAction(categoryId: string):CategoriesAction {
-    return {type: CategoriesActionType.SelectedCateogory, payload: categoryId}
+export function selectedCategoryAction(categoryId: string): CategoriesAction {
+    return { type: CategoriesActionType.SelectedCateogory, payload: categoryId }
 }
 
 // Categories Reducer - the main function performing any action on categories state:
 // the new CategoriesState() is a default value for the first time only 
-export function categoriesReducer(currentState = new CategoriesState(), action: CategoriesAction):CategoriesState {
+export function categoriesReducer(currentState = new CategoriesState(), action: CategoriesAction): CategoriesState {
     // Must duplicate the current state and not touch the given current state: 
-    const newState = {...currentState}
+    const newState = { ...currentState }
 
-    switch(action.type) {
+    switch (action.type) {
         case CategoriesActionType.FetchCategories:
             newState.categories = action.payload
-        break;
+            break;
         case CategoriesActionType.SelectedCateogory:
             newState.selectedCategory = action.payload
             break;
-       
     }
-
     return newState
 }

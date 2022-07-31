@@ -23,9 +23,8 @@ export class HomeComponent implements OnDestroy, OnInit {
   async ngOnInit() {
     try {
 
-   
-      this.unsubscribe = store.subscribe(async () => {
-      // this.unsubscribe = storeAuth.subscribe(async () => {
+   //Subscribe only to changes in auth store not other stores.
+      this.unsubscribe = storeAuth.subscribe(async () => {
         if (store.getState().authState.user !== this.user) {
           this.user = store.getState().authState.user
 

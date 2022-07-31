@@ -6,6 +6,7 @@
         <p *ngIf="data.action === 'removeAll'">Are you sure you want to delete all items? This cannot be undone!</p>
 </mat-dialog-content>
 <mat-dialog-actions>
-    <button mat-raised-button color="primary" mat-dialog-close [mat-dialog-close]="true">Confirm delete</button>
-    <button  mat-raised-button color="primary" mat-dialog-close [mat-dialog-close]="false">Cancel</button>
+    <button class="delete-btn" mat-raised-button color="primary" mat-dialog-close [mat-dialog-close]="true">Confirm delete</button>
+    <button class="delete-btn"  mat-raised-button color="primary" mat-dialog-close [mat-dialog-close]="false">Cancel</button>
 </mat-dialog-actions>
+

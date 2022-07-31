@@ -1,15 +1,13 @@
 import { CategoryModel } from "./category.model"
 
 export class ProductModel {
-    _id: string 
-
+    _id: string
     name: string
-    price: number 
- 
-    imageName: string 
+    price: number
+    imageName: string
     image: File
 
-    categoryId: string 
+    categoryId: string
     category: CategoryModel
 }
 

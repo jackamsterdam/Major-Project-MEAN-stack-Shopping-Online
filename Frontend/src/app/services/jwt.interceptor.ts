@@ -9,7 +9,7 @@ export class JwtInterceptor implements HttpInterceptor {
     intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
 
         // If we have a token: 
-        if(store.getState().authState.token) {
+        if (store.getState().authState.token) {
 
             // Duplicate request object:
             request = request.clone({

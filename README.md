@@ -33,3 +33,5 @@ use of custom directives custom pipes
 added focus on register and login page on first input box
 
 object oriented thinking - using objects made out of classes instead of literal objects
+
+Used examples of both Forms Module as well as Reactive Forms in Angular

@@ -1,12 +1,11 @@
 import { UserModel } from "./user.model"
 
 export class CartModel {
-    _id: string 
+    _id: string
+    isClosed: boolean
+    createdAt: Date
     
-    isClosed: boolean  //! should i default to false??
-    createdAt: Date ///! נכון צריך להוסיף????
-
-    userId: string 
+    userId: string
     user: UserModel
 }
 

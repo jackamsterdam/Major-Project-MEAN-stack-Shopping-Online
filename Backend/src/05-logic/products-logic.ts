@@ -28,11 +28,6 @@ async function getAllCategories(): Promise<ICategoryModel[]> {
     return CategoryModel.find().exec()
 }
 
-//Get all products by Category
-async function getProductsByCategory(categoryId: string): Promise<IProductModel[]> {
-    return ProductModel.find({ categoryId }).populate('category').exec()
-}
-
 // Add product 
 async function addProduct(product: IProductModel): Promise<IProductModel> {
     const errors = product.validateSync()
@@ -81,7 +76,6 @@ export default {
     countProducts,
     getOneProduct,
     getAllCategories,
-    getProductsByCategory,
     addProduct,
     updateProduct
 }

@@ -11,7 +11,7 @@ export const environment = {
 
     // products: 
     productsUrl: 'http://localhost:3001/api/products/',
-    productsByCategoryUrl: 'http://localhost:3001/api/products-by-category/',
+    // productsByCategoryUrl: 'http://localhost:3001/api/products-by-category/',
     productsImageUrl: 'http://localhost:3001/shopping/images/',
     productsCountUrl: 'http://localhost:3001/api/products-count/',
   

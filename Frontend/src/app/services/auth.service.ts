@@ -14,7 +14,7 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
-  async checkValidEmailAndSSN(user: UserModel):Promise<boolean> {
+  async checkValidEmailAndSSN(user: UserModel): Promise<boolean> {
     const areUnique = await firstValueFrom(this.http.post<boolean>(environment.emailAndSSNUniqueUrl, user))
     return areUnique
   }
@@ -29,7 +29,7 @@ export class AuthService {
     store.dispatch(loginAuthAction(token))
   }
 
-  logout():void {
+  logout(): void {
     store.dispatch(logoutAuthAction())
   }
 }

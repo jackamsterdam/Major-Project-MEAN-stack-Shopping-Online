@@ -7,7 +7,6 @@ import { cartsReducer } from './carts-state';
 
 import { composeWithDevTools } from "redux-devtools-extension";
 
-
 const reducers = combineReducers({
     productsState: productsReducer,
     categoriesState: categoriesReducer,

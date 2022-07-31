@@ -49,18 +49,6 @@ router.get("/products/:_id", verifyLoggedIn, async (request: Request, response: 
     }
 });
 
-//http://localhost:3001/api/products-by-category/62969ee1c05d55310aba99b2
-router.get('/products-by-category/:categoryId', verifyLoggedIn, async (request: Request, response: Response, next: NextFunction) => {
-    try {
-        const categoryId = request.params.categoryId
-        const products = await productsLogic.getProductsByCategory(categoryId)
-        response.json(products)
-
-    } catch (err: any) {
-        next(err)
-    }
-})
-
 //http://localhost:3001/api/products/
 router.post('/products', verifyAdmin, async (request: Request, response: Response, next: NextFunction) => {
     try {

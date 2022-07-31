@@ -283,7 +283,7 @@ if (!theLastOrder) return;
             [{ text: 'Product', bold: true, fillColor: 'beige'}, { text: 'Price', bold: true, fillColor: 'beige'}, { text: 'Quantity', bold: true, fillColor: 'beige'}, { text: 'Amount', bold: true, fillColor: 'beige'}],
             ...cartItems.map(c => ([c.product.name, '$' + c.product.price,c.quantity, '$' + (c.product.price*c.quantity).toFixed(2)])),
             // [{text: 'Total Amount', colSpan: 3}, {}, {}, this.cartItems.reduce((sum, p)=> sum + (p.quantity * p.quantity), 0).toFixed(2)]
-            [{ text: 'Total Amount', bold: true, fillColor: 'pink' },{text: '', fillColor: 'pink'},{text: '', fillColor: 'pink'}, {text: '$' + totalAmount, bold: true, fillColor: 'pink'}],  //!how to show this??
+            [{ text: 'Total Amount', bold: true, fillColor: 'pink' },{text: '', fillColor: 'pink'},{text: '', fillColor: 'pink'}, {text: '$' + totalAmount.toFixed(2), bold: true, fillColor: 'pink'}],  //!how to show this??
             // [this.totalAmount,this.totalAmount,this.totalAmount,this.totalAmount ],  //!how to show this??
           ]
         }
