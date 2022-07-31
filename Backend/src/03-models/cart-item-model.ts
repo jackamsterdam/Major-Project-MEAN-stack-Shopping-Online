@@ -5,7 +5,7 @@ import { ProductModel } from "./product-model";
 //1. Model interface describing the data in the model:
 export interface ICartItemModel extends Document {
     quantity: number
-    total: number  //! do i need total here ?////???????? I dont need price right?? cause price i get form product   and i dont need name cause name i get from proeduct 
+    total: number
     productId: Schema.Types.ObjectId
     cartId: Schema.Types.ObjectId
 }
@@ -21,7 +21,6 @@ const CartItemSchema = new Schema<ICartItemModel>({
     },
     total: {
         type: Number,
-        // required: [true, "Missing total"],   //!yes this line or no ?? I dont have this when i submit in dialog
         min: [0, "Total can't be negative"],
 
     },
@@ -52,5 +51,5 @@ CartItemSchema.virtual('cart', {
 })
 
 //3. Model Class - this is the final model class:
-export const CartItemModel = model<ICartItemModel>('CartItemModel',CartItemSchema, 'items')
+export const CartItemModel = model<ICartItemModel>('CartItemModel', CartItemSchema, 'items')
 

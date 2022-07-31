@@ -12,8 +12,8 @@ function errorsHandler(err: any, request: Request, response: Response, next: Nex
     }
 
     if (err instanceof ErrorModel) {
-        logger.info(err.message)
-        response.status(err.status).send(err.message)
+        logger.info(err.message) 
+        response.status(err.status).send(err.message)  //(lax policy) to return 400 errors to front end
         return
     }
 }

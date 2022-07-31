@@ -2,7 +2,7 @@ import express, { NextFunction, Request, Response } from 'express'
 import { CredentialsModel } from '../03-models/credentials-model'
 import { UserModel } from '../03-models/user-model'
 import authLogic from '../05-logic/auth-logic'
-//!Add verify logged in and verify admin
+
 const router = express.Router()
 
 //Route that checks if SSN and email are unique

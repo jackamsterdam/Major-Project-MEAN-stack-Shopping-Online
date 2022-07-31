@@ -42,15 +42,15 @@ function verifyToken(authorizationHeader: string): Promise<boolean> {
     })
 }
 
-function getUserFromToken(authorizationHeader: string):IUserModel {
+function getUserFromToken(authorizationHeader: string): IUserModel {
 
     const token = authorizationHeader.split(' ')[1]
 
     //Extract payload from the token
     const payload: any = jwt.decode(token)
-//Extract user
+    //Extract user
     const user = payload.user
-    return user 
+    return user
 }
 
 

@@ -11,7 +11,7 @@ export interface IUserModel extends Document {
     socialSecurityNumber: string
     street: string
     city: CityEnum  // City Enum 10 most popular cities
-    role: RoleEnum  // 1 = User , 2 = Admin  Admin does not have street and city btw but uses same model.
+    role: RoleEnum  // 1 = User , 2 = Admin  Admin does not have street and city, but uses same model.
 }
 
 //2. Model Schema describing validation, constraints and more:
@@ -31,33 +31,31 @@ const UserSchema = new Schema<IUserModel>({
         maxlength: [100, "Last name too long"],
         trim: true,
 
-    }, 
+    },
     username: {
+        //uniqueness is checked in auth logic
         type: String,
-        // unique:  true,  //!gives ugly message so I made a funciotn in auth logic instead cause this is ugly message:  E11000 duplicate key error collection: ShoppingOnlineDB.users index: username_1 dup key: { username: "kermit@gmail.com"
         required: [true, "Missing username"],
         minlength: [2, "Username too short"],
         maxlength: [100, "Username too long"],
         trim: true,
-        match: [ /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/, "You have entered an invalid email address"],  //Btw frontend should prevent this message and have its own invalid email message. But if use enters email that already exists I handled that with a mice message in auth logic instaed of using unique here 
-        // match: [ /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, "You have entered an invalid email address"],  //Btw frontend should prevent this message and have its own invalid email message. But if use enters email that already exists I handled that with a mice message in auth logic instaed of using unique here 
+        match: [/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/, "You have entered an invalid email address"]
     },
     password: {
         type: String,
         required: [true, "Missing password"],
         minlength: [2, "Password too short"],
-        maxlength: [128, "Password too long"], //! //מיותר בגלל שהססמא תמיד תהיה האשד ???
-        trim: true,
+        maxlength: [128, "Password too long"],
+        trim: true
     },
     socialSecurityNumber: {
+        //uniqueness is checked in auth logic
         type: String,
         required: [true, "Missing SSN"],
         minlength: [11, "SSN too short"],
-        maxlength: [128, "SSN too long"],  //because SSN is hashed -but frontend should enter a 9 digit number
-        //   match: [/^\d{3}-\d{2}-\d{4}$/, "SSN must be in the following number format: xxx-xx-xxxx"],    //!There is no way for me to validate the id is a number casue i hash it !! 
-        // i wanted to check this: UserModel validation failed: socialSecurityNumber: SSN must be in the following number format: xxx-xx-xxxx  BUT I cant cause it hashed!! 
-          trim: true,
-          unique: true
+        maxlength: [128, "SSN too long"],  //SSN is hashed -but frontend should enter a 9 digit number with dashes
+        trim: true,
+        unique: true
     },
     street: {
         type: String,
@@ -75,7 +73,7 @@ const UserSchema = new Schema<IUserModel>({
     },
     role: {
         type: Number,
-        required: [true, "Missing role"],   //!wait this should be not required maybe ???
+        required: [true, "Missing role"],
         enum: RoleEnum,
         default: RoleEnum.User,
         min: [0, "Role can't be negative"],

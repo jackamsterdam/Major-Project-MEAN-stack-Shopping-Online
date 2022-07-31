@@ -3,7 +3,7 @@ class Config {
 }
 
 class DevelopmentConfig extends Config {
-    isDevelopment = true  
+    isDevelopment = true
     logFile = 'logger.log'
     connectionString = 'mongodb://localhost:27017/ShoppingOnlineDB'
 }

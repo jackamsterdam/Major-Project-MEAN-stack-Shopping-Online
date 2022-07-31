@@ -5,7 +5,6 @@ import { ProductModel } from '../03-models/product-model'
 import productsLogic from '../05-logic/products-logic'
 
 const router = express.Router()
-//!Add verify logged in and verify admin
 
 //http://localhost:3001/api/categories/
 router.get('/categories', verifyLoggedIn, async (request: Request, response: Response, next: NextFunction) => {
@@ -61,7 +60,7 @@ router.get('/products-by-category/:categoryId', verifyLoggedIn, async (request: 
         next(err)
     }
 })
-//!add verifyAdmin here !!
+
 //http://localhost:3001/api/products/
 router.post('/products', verifyAdmin, async (request: Request, response: Response, next: NextFunction) => {
     try {
@@ -74,7 +73,6 @@ router.post('/products', verifyAdmin, async (request: Request, response: Respons
         next(err)
     }
 })
-//add verifyAdmin here !!
 
 //http://localhost:3001/api/products/62969ee1c05d55310aba99b2
 router.put('/products/:_id', verifyAdmin, async (request: Request, response: Response, next: NextFunction) => {
@@ -90,18 +88,5 @@ router.put('/products/:_id', verifyAdmin, async (request: Request, response: Res
         next(err)
     }
 })
-//add verifyAdmin here !! - no delete capiabilities for admin
-
-//http://localhost:3001/api/products/:_id
-// router.delete('/products/:_id', async (request: Request, response: Response, next: NextFunction) => {
-//     try {
-//         const _id = request.params._id
-//         await productsLogic.deleteProduct(_id)
-//         response.sendStatus(204)
-
-//     } catch (err: any) {
-//         next(err)
-//     }
-// })
 
 export default router 

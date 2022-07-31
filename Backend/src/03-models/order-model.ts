@@ -9,18 +9,15 @@ export interface IOrderModel extends Document {
     shipCity: CityEnum
     shipStreet: string
     shipDate: Date
-    //orderDate is the createdAt field I did with timestamp below
     creditCard: number
-    //! I only have function add order why i need this i dont use populate  - i populate in receipt
-    userId: Schema.Types.ObjectId  //! what is this for if i dont use it?? or do i in the receopt???
-    cartId: Schema.Types.ObjectId  //! what is this for if i dont use it??  and cart has the user anyways so why need both car and user ?????????
+    userId: Schema.Types.ObjectId
+    cartId: Schema.Types.ObjectId
 }
 
 //2. Model Schema describing validation, constraints and more:
 const OrderSchema = new Schema<IOrderModel>({
     finalPrice: {
         type: Number,
-        // required: [true, "Missing final price"], User doesnt enter finalPrice when making an order
         min: [0, "Final price can't be negative"],
         max: [100000, "Final price can't exceed 100,000"]
 
@@ -39,19 +36,16 @@ const OrderSchema = new Schema<IOrderModel>({
         minlength: [2, "Ship street too short"],
         maxlength: [100, "Ship street too long"],
         trim: true,
-        
+
     },
-    shipDate: { 
-            type: Date,
-            required: [true, "Missing shipping date"],
-            //!condition if there is already 3 there ?????
+    shipDate: {
+        type: Date,
+        required: [true, "Missing shipping date"],
     },
 
     creditCard: {
         type: Number,
-        required: [true, "Missing credit card"], 
-        // min: [14, "Credit card can't be less than 14 digits"],
-        // max: [16, "Credit card can't be negative"],
+        required: [true, "Missing credit card"],
         match: [/^[0-9]{14,16}$/, "Credit card must be a minimum of 14 numbers and max 16 numbers"],
         trim: true
 
@@ -81,7 +75,6 @@ OrderSchema.virtual('cart', {
     foreignField: '_id',
     justOne: true
 })
-
 
 
 //3. Model Class - this is the final model class:

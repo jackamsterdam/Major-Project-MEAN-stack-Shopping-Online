@@ -6,7 +6,7 @@ import { CategoryModel } from "./category-model";
 export interface IProductModel extends Document {
     name: string
     price: number
-    imageName: string 
+    imageName: string
     image: UploadedFile
     categoryId: Schema.Types.ObjectId
 }
@@ -31,7 +31,6 @@ const ProductSchema = new Schema<IProductModel>({
     },
     imageName: {
         type: String,
-        // required: [true, "Missing image"]
     },
     image: {
         type: Object,

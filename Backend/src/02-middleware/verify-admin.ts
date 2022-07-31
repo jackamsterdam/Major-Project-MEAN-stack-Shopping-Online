@@ -3,14 +3,14 @@ import ErrorModel from "../03-models/error-model";
 import RoleEnum from "../03-models/role-enum";
 import cyber from "./cyber";
 
-async function verifyAdmin(request: Request, response: Response, next: NextFunction):Promise<void> {
-    const authorizationHeader = request.header('authorization')
+async function verifyAdmin(request: Request, response: Response, next: NextFunction): Promise<void> {
+  const authorizationHeader = request.header('authorization')
 
-    const isValid = await cyber.verifyToken(authorizationHeader)
-    if (!isValid) {
-        next(new ErrorModel(401, 'You are not logged in'))
-        return 
-    }
+  const isValid = await cyber.verifyToken(authorizationHeader)
+  if (!isValid) {
+    next(new ErrorModel(401, 'You are not logged in'))
+    return
+  }
 
 
   const user = cyber.getUserFromToken(authorizationHeader)
@@ -19,8 +19,7 @@ async function verifyAdmin(request: Request, response: Response, next: NextFunct
     return
   }
 
-
-    next()
+  next()
 }
 
 export default verifyAdmin
