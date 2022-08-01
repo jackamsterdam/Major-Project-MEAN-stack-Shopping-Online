@@ -92,11 +92,11 @@ async addProduct(product: ProductModel) {
 
     if (!quantity) return
     try {
-      const total = quantity * product.price
+      const total = (quantity) * product.price
       //object oriented thinking: 
       const itemToBeAddedToCart = new CartItemModel(quantity, product._id, store.getState().cartsState.currentCart?._id, total)
       await this.cartsService.addItem(itemToBeAddedToCart, store.getState().authState.user._id)
-      this.notify.success('Item has been added to cart')
+      this.notify.success("Item's in cart have been updated")
 
       //this updates the store (through backend) after you add with the new updated item 
       const cart = await this.cartsService.getCartByUser(store.getState().authState.user._id)

@@ -1,7 +1,7 @@
 <form #formBox="ngForm">
-    <h2 mat-dialog-title>Choose quantity</h2>
+    <h2 mat-dialog-title>Choose total quantity</h2>
     <mat-dialog-content>
-        <label>Quantity</label>
+        <label>Total Quantity:</label>
         <input #quantityBox="ngModel" [(ngModel)]="quantity" name="quantity" type="number" step="1.00" min="1"
             max="100">
         <span *ngIf="quantityBox.touched && quantityBox.errors?.['min']">Quantity cannot be 0 or negative </span>

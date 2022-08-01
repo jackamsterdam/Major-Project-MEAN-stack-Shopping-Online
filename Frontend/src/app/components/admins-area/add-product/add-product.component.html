@@ -7,11 +7,11 @@
             <mat-label>Name: </mat-label>
             <input matInput type="text" [formControl]="nameInput">
             <mat-hint align="end" *ngIf="nameInput.touched && nameInput.errors?.['required']">Missing name</mat-hint>
-            <mat-hint align="end" *ngIf="nameInput.touched && nameInput.errors?.['minlength']">Length must be minimum 2
-                chars</mat-hint>
-            <mat-hint align="end" *ngIf="nameInput.touched && nameInput.errors?.['maxlength']">Length must be maximum
-                100 chars</mat-hint>
-             <mat-hint align="end" *ngIf="!nameInput.errors?.['required'] && !nameInput.errors?.['minlength'] && !nameInput.errors?.['maxlength'] && nameInput.invalid && !nameInput.errors?.['uniqueName']"> Name is taken by a different product</mat-hint>
+            <mat-hint align="end" *ngIf="nameInput.touched && nameInput.errors?.['minlength']">Length must be minimum 2 chars</mat-hint>
+            <mat-hint align="end" *ngIf="nameInput.touched && nameInput.errors?.['maxlength']">Length must be maximum 100 chars</mat-hint>
+            <mat-hint align="end"
+                *ngIf="!nameInput.errors?.['required'] && !nameInput.errors?.['minlength'] && !nameInput.errors?.['maxlength'] && nameInput.invalid && !nameInput.errors?.['uniqueName']">
+                Name is taken by a different product</mat-hint>
         </mat-form-field>
 
         <mat-form-field floatLabel="always" appearance="fill">
@@ -31,18 +31,15 @@
             <mat-select name="categoryId" [formControl]="categoryIdInput" placeholder="Select category...">
                 <mat-option *ngFor="let c of categories" [value]="c._id">{{c.name}}</mat-option>
             </mat-select>
-            <mat-hint align="end" *ngIf="categoryIdInput.errors?.['required'] && categoryIdInput.touched">Missing
-                category</mat-hint>
+            <mat-hint align="end" *ngIf="categoryIdInput.errors?.['required'] && categoryIdInput.touched">Missing category</mat-hint>
         </mat-form-field>
 
-        <button class="choose-file-btn" type="button" mat-raised-button (click)="fileInput.click()">Choose
-            Image</button>
+        <button class="choose-file-btn" type="button" mat-raised-button (click)="fileInput.click()">Choose Image</button>
         <input accept="image/*" #imageBox [formControl]="imageInput" hidden (change)="onFileSelected($event)"
-            (click)="dispalyError=true" #fileInput type="file">
+            (click)="displayError=true" #fileInput type="file">
         <mat-hint align="end" class="file-name" [ngClass]="dynamicClass">{{selectedFile?.name}}</mat-hint>
-        <mat-hint align="end" *ngIf="dispalyError && imageInput.errors?.['required']">Missing Image</mat-hint>
+        <mat-hint align="end" *ngIf="displayError && imageInput.errors?.['required']">Missing Image</mat-hint>
 
-        <!-- <button #buttonBox mat-raised-button class="add-order-btn" [disabled]="productForm.invalid || isDisabled">Add</button> -->
         <button mat-raised-button class="add-order-btn" [disabled]="productForm.invalid">Add</button>
     </form>
 </div>

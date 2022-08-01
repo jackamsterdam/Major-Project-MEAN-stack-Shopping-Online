@@ -9,11 +9,11 @@
         </ng-container>
         <!-- option B : past orders -->
         <ng-container *ngIf="!currentCart && lastOrder">
-            <p class="">Your last purchase was on {{lastOrder.createdAt | date}}</p>
+            <p class="yellow-font">Your last purchase was on {{lastOrder.createdAt | date}}</p>
         </ng-container>
         <!-- option C: first purchase -->
         <ng-container *ngIf="!currentCart && !lastOrder">
-            <p class="">Welcome to your first purchase {{user.firstName | titlecase}}</p>
+            <p class="yellow-font">Welcome to your first purchase {{user.firstName | titlecase}}</p>
         </ng-container>
     </ng-container>
 

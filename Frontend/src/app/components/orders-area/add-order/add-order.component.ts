@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CityEnum } from 'src/app/models/city.enum';
 import { OrderModel } from 'src/app/models/order.model';
@@ -30,26 +30,14 @@ export class AddOrderComponent implements OnInit {
 
   constructor(private ordersService: OrdersService, private router: Router, private notify: NotifyService, public dialog: MatDialog) { }
 
-
-
-
-  allOrders: OrderModel[]
-  // this prevents saturdays and sundays but we want to prevent days with more than 3 ! 
+  // this prevents saturdays and sundays
   dateFilter(date: any) {
-
     const day = date?.getDay()
-    return day !== 0 && day !== 6;  //change to saturday only 
+    return day !== 0 && day !== 6;
   }
+
   async ngOnInit() {
-    // try catch 
     this.user = store.getState().authState.user
-    // this.user.city = ''
-
-    // optional: get all dates to see which shipping dates you cannot choose: 
-    this.allOrders = await this.ordersService.getAllOrders()
-    console.log("this.allOrders", this.allOrders);
-
-    //! how to loop over all ship dates?????? to see if התנגשויות
   }
 
   async addOrder() {
@@ -74,10 +62,8 @@ export class AddOrderComponent implements OnInit {
   }
 
   doubleClickToPopulate() {
- 
     this.order.shipCity = this.user.city
     this.order.shipStreet = this.user.street
-
   }
 
 }

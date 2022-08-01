@@ -16,13 +16,9 @@ export class AddProductComponent implements OnInit {
   dynamicClass: string = ''
   products: ProductModel[] //In order to check unique name only
 
-
-  formDirective: FormGroupDirective
-
   @Input()
   addButtonClicked: boolean
-  dispalyError = false;
-
+  displayError = false;
 
   product = new ProductModel()
   categories: CategoryModel[]
@@ -44,7 +40,6 @@ export class AddProductComponent implements OnInit {
   onFileSelected(event: Event): void {
     const inputElement = (event.target as HTMLInputElement);
     this.selectedFile = inputElement.files[0] ?? null;
-
   }
 
   async ngOnInit() {
@@ -100,7 +95,8 @@ export class AddProductComponent implements OnInit {
       await this.productsService.addProduct(this.product)
       this.notify.success('Product has been added')
 
-      this.dynamicClass = 'hide-hint'
+      //reset selected file message
+      this.selectedFile = null
 
       this.productForm.reset()
 
@@ -121,7 +117,6 @@ export class AddProductComponent implements OnInit {
         return null;
       }
       const nameTaken = this.products.filter(p => (p.name?.toLowerCase() === this.nameInput.value?.toLowerCase() && p._id != this.product._id))
-      console.log("nameTaken", nameTaken);
       if (nameTaken.length > 0) {
         return { uniqueName: false }
       } else {
@@ -129,5 +124,4 @@ export class AddProductComponent implements OnInit {
       }
     };
   }
-
 }
