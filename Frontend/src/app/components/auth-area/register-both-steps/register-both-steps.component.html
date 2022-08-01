@@ -1,22 +1,17 @@
 <div>
-    <mat-horizontal-stepper linear #stepper >
-        <!-- <mat-step label="Register" [completed]="isCompleted"> -->
+    <mat-horizontal-stepper linear #stepper>
         <mat-step label="Register">
-            <app-register-step-one (userStepOneDetails)="userInfoFromStepOne($event)" ></app-register-step-one>
+            <app-register-step-one (userStepOneDetails)="userInfoFromStepOne($event)"></app-register-step-one>
         </mat-step>
         <mat-step label="Contact Information" completed="false">
             <app-register-step-two (userStepTwoDetails)="userInfoFromStepTwo($event)"></app-register-step-two>
         </mat-step>
     </mat-horizontal-stepper>
 
-
-<div class='return-to-login-btn'>
-    <a class="go-to-login-link" routerLink="/home/">
-        <mat-icon>arrow_back</mat-icon>&nbsp;
-        <div class="go-to-login-text">Go to login</div>
-    </a>
-</div>
-    <!-- <button class='return-to-login-btn' mat-raised-button routerLink="/home/">
-        <mat-icon>arrow_back</mat-icon>&nbsp;Return to login
-    </button> -->
+    <div class='return-to-login-btn'>
+        <a class="go-to-login-link" routerLink="/home/">
+            <mat-icon>arrow_back</mat-icon>&nbsp;
+            <div class="go-to-login-text">Go to login</div>
+        </a>
+    </div>
 </div>

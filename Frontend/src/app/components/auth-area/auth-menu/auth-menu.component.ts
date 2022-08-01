@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Unsubscribe } from 'redux';
 import { UserModel } from 'src/app/models/user.model';
-import store, { storeAuth } from 'src/app/redux/store';
+import store from 'src/app/redux/store';
 
 @Component({
   selector: 'app-auth-menu',
@@ -12,13 +12,10 @@ export class AuthMenuComponent implements OnInit, OnDestroy {
 
   user: UserModel
   unsubscribe: Unsubscribe
-  constructor() { }
 
-
-  ngOnInit(): void {
+  ngOnInit() {
     this.user = store.getState().authState.user
     this.unsubscribe = store.subscribe(() => {
-    // this.unsubscribe = storeAuth.subscribe(() => {
       this.user = store.getState().authState.user
     })
   }

@@ -14,7 +14,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LogoComponent } from './components/layout-area/logo/logo.component';
 import { JwtInterceptor } from './services/jwt.interceptor';
-import { RegisterComponent } from './components/auth-area/register/register.component';
 import { LoginComponent } from './components/auth-area/login/login.component';
 import { LogoutComponent } from './components/auth-area/logout/logout.component';
 import { AuthMenuComponent } from './components/auth-area/auth-menu/auth-menu.component';
@@ -54,7 +53,6 @@ import { PdfReceiptComponent } from './components/orders-area/pdf-receipt/pdf-re
     HomeComponent,
     PageNotFoundComponent,
     LogoComponent,
-    RegisterComponent,
     LoginComponent,
     LogoutComponent,
     AuthMenuComponent,

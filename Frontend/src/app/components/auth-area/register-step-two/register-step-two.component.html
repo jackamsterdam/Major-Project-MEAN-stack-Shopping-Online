@@ -1,49 +1,41 @@
 <form (ngSubmit)="submitStep2()" [formGroup]="authForm">
-<mat-form-field floatLabel="always" appearance="fill">
-    <mat-label>First Name: </mat-label>
-    <input matInput type="text" placeholder="first name" [formControl]="firstNameInput">
-    <mat-hint align="end" *ngIf="firstNameInput.touched && firstNameInput.errors?.['required']">Missing first name</mat-hint>
-    <mat-hint align="end" *ngIf="firstNameInput.touched && firstNameInput.errors?.['minlength']">First name is too
-        short</mat-hint>
-    <mat-hint align="end" *ngIf="firstNameInput.touched && firstNameInput.errors?.['maxlength']">First name is too
-        long</mat-hint>
-    </mat-form-field>
-
     <mat-form-field floatLabel="always" appearance="fill">
-    <mat-label>Last Name: </mat-label>
-    <input matInput type="text" placeholder="last name" [formControl]="lastNameInput">
-    <mat-hint align="end" *ngIf="lastNameInput.touched && lastNameInput.errors?.['required']">Missing last name</mat-hint>
-    <mat-hint align="end" *ngIf="lastNameInput.touched && lastNameInput.errors?.['minlength']">Last name is too short</mat-hint>
-    <mat-hint align="end" *ngIf="lastNameInput.touched && lastNameInput.errors?.['maxlength']">Last name is too long</mat-hint>
-</mat-form-field>
+        <mat-label>First Name: </mat-label>
+        <input matInput type="text" placeholder="first name" [formControl]="firstNameInput">
+        <mat-hint align="end" *ngIf="firstNameInput.touched && firstNameInput.errors?.['required']">Missing first name</mat-hint>
+        <mat-hint align="end" *ngIf="firstNameInput.touched && firstNameInput.errors?.['minlength']">First name is too short</mat-hint>
+        <mat-hint align="end" *ngIf="firstNameInput.touched && firstNameInput.errors?.['maxlength']">First name is too long</mat-hint>
+        </mat-form-field>
 
+        <mat-form-field floatLabel="always" appearance="fill">
+        <mat-label>Last Name: </mat-label>
+        <input matInput type="text" placeholder="last name" [formControl]="lastNameInput">
+        <mat-hint align="end" *ngIf="lastNameInput.touched && lastNameInput.errors?.['required']">Missing last name</mat-hint>
+        <mat-hint align="end" *ngIf="lastNameInput.touched && lastNameInput.errors?.['minlength']">Last name is too short</mat-hint>
+        <mat-hint align="end" *ngIf="lastNameInput.touched && lastNameInput.errors?.['maxlength']">Last name is too long</mat-hint>
+    </mat-form-field>
 
     <mat-form-field floatLabel="always" appearance="fill">
         <mat-label>City</mat-label>
         <mat-select [formControl]="cityInput"  placeholder="Select city...">
-            <!--! works without :  [value]="enum.value" cauae value is the Los Angeles seperetaed dont unserstand the enum properties are LosAngeles not Los angeles so how does it work??? -->
             <mat-option *ngFor="let enum of CityEnum | keyvalue" [value]="enum.value">{{enum.value}}
             </mat-option>
         </mat-select>
         <mat-hint align="end" *ngIf="cityInput.errors?.['required'] && cityInput.touched">Missing city</mat-hint>
     </mat-form-field>
 
-
-
-<mat-form-field floatLabel="always" appearance="fill">
-    <mat-label>Street: </mat-label>
-    <input matInput type="text" placeholder="street" [formControl]="streetInput">
-    <mat-hint align="end" *ngIf="streetInput.touched && streetInput.errors?.['required']">Missing street</mat-hint>
-    <mat-hint align="end" *ngIf="streetInput.touched && streetInput.errors?.['minlength']">Street is too short</mat-hint>
-    <mat-hint align="end" *ngIf="streetInput.touched && streetInput.errors?.['maxlength']">Street is too long</mat-hint>
-</mat-form-field>
+    <mat-form-field floatLabel="always" appearance="fill">
+        <mat-label>Street: </mat-label>
+        <input matInput type="text" placeholder="street" [formControl]="streetInput">
+        <mat-hint align="end" *ngIf="streetInput.touched && streetInput.errors?.['required']">Missing street</mat-hint>
+        <mat-hint align="end" *ngIf="streetInput.touched && streetInput.errors?.['minlength']">Street is too short</mat-hint>
+        <mat-hint align="end" *ngIf="streetInput.touched && streetInput.errors?.['maxlength']">Street is too long</mat-hint>
+    </mat-form-field>
 
     <button class="submit-btn" [disabled]="authForm.invalid" mat-raised-button color="primary" matStepperNext>
         <mat-icon>send</mat-icon>&nbsp;Submit
     </button>
-    <button class="go-back-btn" (click)="cancelAreUnique()" color="warn" mat-raised-button matStepperPrevious>
+    <button class="go-back-btn" (click)="changeTouched()" color="warn" mat-raised-button matStepperPrevious>
         <mat-icon>arrow_back</mat-icon>&nbsp;Back
     </button>
-
-
 </form>

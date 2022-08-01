@@ -1,9 +1,7 @@
 <div>
-
     <ng-container *ngIf="!user">
         <span>  Hello Guest <mat-icon>waving_hand</mat-icon></span>
     </ng-container>
-
 
     <ng-container *ngIf="user">
         <span>Hello {{user.firstName | titlecase}} {{user.lastName | titlecase}}</span>
@@ -12,5 +10,4 @@
             logout
             </mat-icon></a>
     </ng-container>
-
 </div>

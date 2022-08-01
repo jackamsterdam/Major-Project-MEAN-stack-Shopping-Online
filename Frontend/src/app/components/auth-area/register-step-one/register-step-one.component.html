@@ -1,46 +1,30 @@
- <!-- <mat-step label="Register" [completed]="isCompleted"> -->
     <form [formGroup]="initialInfo">
-        <!-- <form (ngSubmit)="submitStep1()" #formInfo="ngForm"> -->
         <mat-form-field floatLabel="always" appearance="fill">
             <mat-label>SSN: </mat-label>
-    
             <input matInput (keydown)="makeDashes($event)" autofocus type="text" placeholder="###-##-####"
                 [formControl]="ssnInput" minlength="11" maxlength="11">
-            <mat-hint align="end" *ngIf="ssnInput.touched && ssnInput.errors?.['required']">Missing SSN
-            </mat-hint>
-            <mat-hint align="end" *ngIf="ssnInput.touched && ssnInput.errors?.['minlength']">SSN is too short
-            </mat-hint>
-            <mat-hint align="end" *ngIf="ssnInput.touched && ssnInput.errors?.['maxlength']">SSN is too long
-            </mat-hint>
+            <mat-hint align="end" *ngIf="ssnInput.touched && ssnInput.errors?.['required']">Missing SSN</mat-hint>
+            <mat-hint align="end" *ngIf="ssnInput.touched && ssnInput.errors?.['minlength']">SSN is too short</mat-hint>
+            <mat-hint align="end" *ngIf="ssnInput.touched && ssnInput.errors?.['maxlength']">SSN is too long </mat-hint>
             <mat-hint align="end"
-                *ngIf="!ssnInput.errors?.['required'] && !ssnInput.errors?.['minlength'] && !ssnInput.errors?.['maxlength'] && ssnInput.invalid && ssnInput.errors?.['invalidRegex']">
-                Social
-                Security number must be in the format of xxx-xx-xxxx</mat-hint>
+                *ngIf="!ssnInput.errors?.['required'] && !ssnInput.errors?.['minlength'] && !ssnInput.errors?.['maxlength'] && ssnInput.invalid && ssnInput.errors?.['invalidRegex']">Social Security number must be in the format of xxx-xx-xxxx</mat-hint>
         </mat-form-field>
 
         <mat-form-field floatLabel="always" appearance="fill">
             <mat-label>Email: </mat-label>
             <input matInput type="email" placeholder="email" [formControl]="usernameInput">
-            <mat-hint align="end" *ngIf="usernameInput.touched && usernameInput.errors?.['required']">Missing
-                email</mat-hint>
-            <mat-hint align="end" *ngIf="usernameInput.touched && usernameInput.errors?.['minlength']">Email is
-                too short</mat-hint>
-            <mat-hint align="end" *ngIf="usernameInput.touched && usernameInput.errors?.['maxlength']">Email is
-                too long</mat-hint>
-            <mat-hint align="end" *ngIf="!usernameInput.errors?.['required'] && !usernameInput.errors?.['minlength'] && !usernameInput.errors?.['maxlength'] && usernameInput.invalid && usernameInput.errors?.['invalidRegex']"> Email is invalid </mat-hint>
+            <mat-hint align="end" *ngIf="usernameInput.touched && usernameInput.errors?.['required']">Missing email</mat-hint>
+            <mat-hint align="end" *ngIf="usernameInput.touched && usernameInput.errors?.['minlength']">Email is too short</mat-hint>
+            <mat-hint align="end" *ngIf="usernameInput.touched && usernameInput.errors?.['maxlength']">Email is too long</mat-hint>
+            <mat-hint align="end" *ngIf="!usernameInput.errors?.['required'] && !usernameInput.errors?.['minlength'] && !usernameInput.errors?.['maxlength'] && usernameInput.invalid && usernameInput.touched && usernameInput.errors?.['invalidRegex']"> Email is invalid </mat-hint>
         </mat-form-field>
 
         <mat-form-field floatLabel="always" appearance="fill">
             <mat-label>Password: </mat-label>
             <input matInput type="password" placeholder="password" [formControl]="passwordInput">
-            <mat-hint align="end" *ngIf="passwordInput.touched && passwordInput.errors?.['required']">Missing
-                password</mat-hint>
-            <mat-hint align="end" *ngIf="passwordInput.touched && passwordInput.errors?.['minlength']">Password
-                is too
-                short</mat-hint>
-            <mat-hint align="end" *ngIf="passwordInput.touched && passwordInput.errors?.['maxlength']">Password
-                is too
-                long</mat-hint>
+            <mat-hint align="end" *ngIf="passwordInput.touched && passwordInput.errors?.['required']">Missing password</mat-hint>
+            <mat-hint align="end" *ngIf="passwordInput.touched && passwordInput.errors?.['minlength']">Password is too short</mat-hint>
+            <mat-hint align="end" *ngIf="passwordInput.touched && passwordInput.errors?.['maxlength']">Password is too long</mat-hint>
         </mat-form-field>
 
         <mat-form-field floatLabel="always" appearance="fill">
@@ -48,35 +32,19 @@
              <input matInput type="password" placeholder="confirm password"
                 [formControl]="passwordConfirmInput">
             <mat-hint align="end"
-                *ngIf="passwordConfirmInput.touched && passwordConfirmInput.errors?.['required']">Missing
-                password</mat-hint>
+                *ngIf="passwordConfirmInput.touched && passwordConfirmInput.errors?.['required']">Missing password</mat-hint>
             <mat-hint align="end"
-                *ngIf="passwordConfirmInput.touched && passwordConfirmInput.errors?.['minlength']">Password is
-                too
-                short</mat-hint>
+                *ngIf="passwordConfirmInput.touched && passwordConfirmInput.errors?.['minlength']">Password is too short</mat-hint>
             <mat-hint align="end"
-                *ngIf="passwordConfirmInput.touched && passwordConfirmInput.errors?.['maxlength']">Password is
-                too
-                long</mat-hint>
+                *ngIf="passwordConfirmInput.touched && passwordConfirmInput.errors?.['maxlength']">Password is too long</mat-hint>
             <mat-hint align="end"
-                *ngIf="!passwordConfirmInput.errors?.['required'] && !passwordConfirmInput.errors?.['minlength'] && !passwordConfirmInput.errors?.['maxlength'] && passwordConfirmInput.invalid && passwordConfirmInput.errors?.['passwordMismatch']">
-                Password's
-                don't match </mat-hint>
+                *ngIf="!passwordConfirmInput.errors?.['required'] && !passwordConfirmInput.errors?.['minlength'] && !passwordConfirmInput.errors?.['maxlength'] && passwordConfirmInput.invalid && passwordConfirmInput.errors?.['passwordMismatch'] && passwordInput.touched && passwordConfirmInput.touched">Password's don't match </mat-hint>
         </mat-form-field>
 
-        <!--! <button [disabled]="initialInfo.invalid" mat-raised-button color="primary" (click)="goForward(stepper)"> -->
         <button [disabled]="isFormValid()" mat-raised-button class="go-forward-btn" (click)="goForward()">
             <mat-icon>send</mat-icon>&nbsp;Next Step
         </button>
 
-        <!-- !HOw to do this???????????????????????? -->
         <span *ngIf="errorNotifiction!=''">{{errorNotifiction}}</span>
-        <!-- <span
-            *ngIf="usernameInput.touched && usernameInput.errors?.['ssnInvalidorEmailInvalid'] && passwordInput.touched && passwordInput.errors?.['ssnInvalidorEmailInvalid']">SSN
-            or Email is already taken</span>
-        <span *ngIf="passwordInput.errors?.['ssnInvalidorEmailInvalid']"></span> -->
-
     </form>
-    <!-- <pre>
-        {{test2()}}
-    </pre> -->
+  

@@ -23,17 +23,6 @@ button {
     margin: 10px 0 20px 0;
 }
 
-// span {
-//     color: red;
-//     margin: 0 60px;  //!60px
-//     position: absolute;
-// }
-
-// .ng-touched.ng-invalid:not(form) {
-//     border: 2px solid red;
-//     background-color: pink;
-// }
-
 mat-hint {
     color: red;
 }
@@ -42,7 +31,6 @@ mat-hint {
         display: inline-block;
         margin: 10px;
         padding: 0 10px;
-        /* border: 1px solid black; */
         border-radius: 8px;
         box-shadow: 5px 5px 10px;
         text-align: left;

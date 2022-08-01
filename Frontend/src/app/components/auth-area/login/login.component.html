@@ -25,17 +25,11 @@
         <button class="sign-up-btn" mat-raised-button [routerLink]="'/register'">
             <mat-icon>app_registration</mat-icon>&nbsp;Sign up
         </button></p>
-
 </div>
-
 
 <div *ngIf="user">
     <button mat-raised-button routerLink="/shopping" class="start-btn">
         <img class="start-shopping-image" src="/assets/images/start.svg"/>
         <div class="start-shopping-header"> {{getLoggedInState()}}</div>
     </button>
-    <!-- <img class="start-shopping-image" src="/assets/images/start.svg"/>{{getLoggedInState()}} -->
-    <!-- 
-    <button>Start Shopping</button>
-    <button>Resume Shopping</button> -->
 </div>

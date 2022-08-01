@@ -1,13 +1,5 @@
 @import '../../../styles/variables/variables.scss';
 
-
-// form {
-// 	width: 250px;  //!450px
-//     margin: 20px;
-//     padding: 20px;
-//     margin: auto;
-// }
-
 form {
     width: 295px;
     margin: 3px;
@@ -21,9 +13,12 @@ h2 {
 input, select {
     width: 100%;
     box-sizing: border-box;
-  //  margin: 0 0 20px 0; 
     font-size: $input-font-size;
 
+}
+
+span {
+    color: red;
 }
 
 button {

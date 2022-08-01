@@ -1,6 +1,5 @@
 @import '../../../styles/variables/variables.scss';
 
-
 form {
     width: 300px;
     margin: 3px;
@@ -14,7 +13,6 @@ h2 {
 input, select {
     width: 100%;
     box-sizing: border-box;
-  //  margin: 0 0 20px 0; 
     font-size: $input-font-size;
 
 }
@@ -23,17 +21,6 @@ button {
     width: 100%;
     margin: 10px 0 20px 0;
 }
-
-// span {
-//     color: red;
-//     margin: 0 60px;  //!60px
-//     position: absolute;
-// }
-
-// .ng-touched.ng-invalid:not(form) {
-//     border: 2px solid red;
-//     background-color: pink;
-// }
 
 mat-hint {
     color: red;
@@ -45,7 +32,6 @@ mat-hint {
     text-align: left;
     width: 357px;
 }
-
 
 .submit-btn {
     background-color: $shopping-dark-blue;
