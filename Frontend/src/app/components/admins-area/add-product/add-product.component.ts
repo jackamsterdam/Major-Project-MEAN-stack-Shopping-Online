@@ -71,67 +71,48 @@ export class AddProductComponent implements OnInit {
   }
 
   async add() {
-    debugger
     
-    // if (!this.productForm.invalid) {
+    const errorMsg = 'Please fill out all fields properly'
     try {
       //These 4 if's is for second time you try to add a product - it won't let you without filling out all fields:
-      if (this.nameInput.value === null) return 
-      if (this.priceInput.value === null) return 
-      if (this.categoryIdInput.value === null) return 
-      if (this.imageBoxRef.nativeElement.files[0] === undefined) return 
+      if (this.nameInput.value === null) {
+        this.notify.error(errorMsg)
+        return
+      }  
+      if (this.priceInput.value === null) {
+        this.notify.error(errorMsg)
+        return
+      }  
+      if (this.categoryIdInput.value === null) {
+        this.notify.error(errorMsg)
+        return
+      }  
+      if (this.imageBoxRef.nativeElement.files[0] === undefined) {
+        this.notify.error(errorMsg)
+        return
+      }  
 
       this.product.name = this.nameInput.value
       this.product.price = this.priceInput.value
       this.product.categoryId = this.categoryIdInput.value
       this.product.image = this.imageBoxRef.nativeElement.files[0]
 
-
-
-
       await this.productsService.addProduct(this.product)
       this.notify.success('Product has been added')
 
       this.dynamicClass = 'hide-hint'
 
-
-
- 
-        //We need to clear form:
-                                               // this.productForm.reset()
-      // this.formDirective.resetForm()
       this.productForm.reset()
-  // this.productForm.invalid
 
       //  Reset validation error
       Object.keys(this.productForm.controls).forEach(key => {
         this.productForm.get(key).setErrors(null);
       });
   
-
-
-
-
-      // this.isAddAction = true;
-
-      // this.product = null
-      // this.productsService.isAddAction.emit(true);
-
-      // this.isDisabled = true   //not in use
-// debugger
-// console.log("this.button.nativeElement", this.button.nativeElement);
-//       this.button.nativeElement.disabled = true
-      
-
-      // this.productForm.disabled
-      // this.productForm.controls['nameInput'].disable()
-      // (e.target as HTMLButtonElement).disabled = true;
-
     } catch (err: any) {
       this.notify.error(err)
 
     }
-  // }
   }
 
   isUnique(): ValidatorFn {

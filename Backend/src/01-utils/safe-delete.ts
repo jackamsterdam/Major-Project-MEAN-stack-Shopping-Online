@@ -1,7 +1,6 @@
 import fs from 'fs'
 
 function safeDelete(fullPath: string) {
-    console.log("fullPath", fullPath);
     try {
         if (!fullPath || !fs.existsSync(fullPath)) return
         fs.unlinkSync(fullPath)

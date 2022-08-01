@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Unsubscribe } from 'redux';
 import { UserModel } from 'src/app/models/user.model';
-import store, { storeAuth } from 'src/app/redux/store';
+import store  from 'src/app/redux/store';
 import { CartsService } from 'src/app/services/carts.service';
 import { NotifyService } from 'src/app/services/notify.service';
 import { OrdersService } from 'src/app/services/orders.service';
@@ -23,8 +23,7 @@ export class HomeComponent implements OnDestroy, OnInit {
   async ngOnInit() {
     try {
 
-      //Subscribe only to changes in auth store not other stores.
-      this.unsubscribe = storeAuth.subscribe(async () => {
+      this.unsubscribe = store.subscribe(async () => {
         if (store.getState().authState.user !== this.user) {
           this.user = store.getState().authState.user
 

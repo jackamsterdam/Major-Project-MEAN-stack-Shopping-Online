@@ -5,8 +5,6 @@ import { productsReducer } from "./products-state";
 import { ordersReducer } from './orders-state';
 import { cartsReducer } from './carts-state';
 
-import { composeWithDevTools } from "redux-devtools-extension";
-
 const reducers = combineReducers({
     productsState: productsReducer,
     categoriesState: categoriesReducer,
@@ -15,11 +13,7 @@ const reducers = combineReducers({
     cartsState: cartsReducer
 })
 
-const reducer = combineReducers({
-    authState: authReducer,
-})
 
-// const store = createStore(reducers)
-const store = createStore(reducers, composeWithDevTools())
-export const storeAuth = createStore(reducer)
+const store = createStore(reducers)
 export default store 
+
