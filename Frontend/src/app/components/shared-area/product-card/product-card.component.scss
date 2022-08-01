@@ -21,3 +21,10 @@
    background-color: $shopping-dark-blue;
    color: $shopping-white;
 }
+
+.overflow {
+      width: 169px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+}

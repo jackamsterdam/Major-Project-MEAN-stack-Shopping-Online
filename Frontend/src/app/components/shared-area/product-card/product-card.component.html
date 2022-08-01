@@ -1,7 +1,7 @@
 <div class="box">
   <mat-card class="item-card">
     <mat-card-header>
-      <mat-card-title>{{product.name}}</mat-card-title>
+      <mat-card-title class="overflow" title={{product.name}}>{{product.name}}</mat-card-title>
     </mat-card-header>
     <img class="image-size" mat-card-image [src]="productsImageUrl + product.imageName" alt="item-image">
     <mat-card-content>
