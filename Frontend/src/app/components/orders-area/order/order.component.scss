@@ -5,15 +5,11 @@
 
 .side-nav-wrapper {
     @extend %display-box;
-
     position: relative;
-
-//!how to make it not look so ugly it doesnt work!!! 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 }
 
 .back-to-shopping-button {
@@ -35,11 +31,11 @@
     height: 100%;
     display: grid;
     height: 100%;
-   grid-template-columns: 40% 60%;
+    grid-template-columns: 40% 60%;
     padding: 2px 12px 4px 12px;
     box-sizing: border-box;
-   background-color: rgba(219, 226, 239, 0.3);
-   padding-top: 16px;
+    background-color: rgba(219, 226, 239, 0.3);
+    padding-top: 16px;
 }
 
 .left-side-order {
@@ -89,4 +85,3 @@
 .order-cart-header {
     display: inline-block;
 }
-

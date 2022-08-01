@@ -3,7 +3,6 @@
 
 div {
     height: 100%;
-    // @extend %center-flex;
     position: relative;
     color: $shopping-white;
 }
@@ -31,10 +30,3 @@ app-search {
 ::ng-deep .header-container .mat-input-element::placeholder{
     color: $shopping-white;
 }
-  
-//   ::ng-deep .mat-focused .mat-form-field-placeholder{
-  
-//     color:red;
-//   }
-
-//! question the div above doesnt effect teh div with classes as well??? 

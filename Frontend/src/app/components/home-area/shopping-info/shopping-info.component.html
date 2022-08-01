@@ -1,28 +1,20 @@
 <div class="shopping-info">
     <p class="">We have {{numberOfProducts}} available products in our store!</p>
-    <!-- <p class="mat-display-1" *ngIf="numberOfOrders > 1">So far our store has had a total of {{numberOfOrders}} orders!
-    </p>
-    <p *ngIf="numberOfOrders === 1">Our store currently has one order.</p>
-    <p *ngIf="numberOfOrders === 0">Our store currently has no orders!</p> -->
-
     <p class="">{{getOrderText()}}</p>
-<ng-container *ngIf="user">
-       <!-- option A :  -->
-    <!-- Add cart to this option  -->
-    <ng-container *ngIf="currentCart && currentCart._id && !currentCart.isClosed">      
-            <p class="yellow-font">You have an open cart from {{currentCart.createdAt | date}} in our store with a total amount of {{totalAmount | currency: "USD"}}</p>
+    <ng-container *ngIf="user">
+        <!-- option A : open cart -->
+        <ng-container *ngIf="currentCart && currentCart._id && !currentCart.isClosed">
+            <p class="yellow-font">You have an open cart from {{currentCart.createdAt | date}} in our store with a total
+                amount of {{totalAmount | currency: "USD"}}</p>
         </ng-container>
-    
-        <!-- option B :  -->
-        <!-- Add user only to this option  -->
+        <!-- option B : past orders -->
         <ng-container *ngIf="!currentCart && lastOrder">
             <p class="">Your last purchase was on {{lastOrder.createdAt | date}}</p>
         </ng-container>
-    
-        <!-- option C:  -->
+        <!-- option C: first purchase -->
         <ng-container *ngIf="!currentCart && !lastOrder">
             <p class="">Welcome to your first purchase {{user.firstName | titlecase}}</p>
         </ng-container>
-</ng-container>
+    </ng-container>
 
 </div>

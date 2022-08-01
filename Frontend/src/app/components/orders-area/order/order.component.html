@@ -1,18 +1,16 @@
-
 <div class="order-cart-container">
     <div class="left-side-order">
         <div class="order-cart-header">
-                <h2 class="order-cart-header">Order Details</h2> 
-                <!-- <button class="back-to-shopping-button" mat-raised-button color="primary" routerLink="/shopping">Back to shop</button> -->
-                <div mat-raised-button class="back-to-shopping-button"  routerLink="/shopping">Back to shop</div>
-            </div>
-            <div class="order-cart-content">
-                <app-sidenav-details *ngFor="let i of allItemsByCart" [item]="i"> </app-sidenav-details>
-            </div>
-            <div class="order-cart-footer">
-                <div class="total-header">Total</div>
-                <div class="total-amount">{{totalAmount | currency: "USD"}}</div>
-            </div>
+            <h2 class="order-cart-header">Order Details</h2>
+            <div mat-raised-button class="back-to-shopping-button" routerLink="/shopping">Back to shop</div>
+        </div>
+        <div class="order-cart-content">
+            <app-sidenav-details *ngFor="let i of allItemsByCart" [item]="i"> </app-sidenav-details>
+        </div>
+        <div class="order-cart-footer">
+            <div class="total-header">Total</div>
+            <div class="total-amount">{{totalAmount | currency: "USD"}}</div>
+        </div>
     </div>
     <div class="right-side-order">
         <app-add-order></app-add-order>

@@ -2,10 +2,10 @@
     <h2>Place Your Order</h2>
     <form (ngSubmit)="addOrder()" #formInfo="ngForm">
         <mat-hint class="populate-info">*Double Click if shipping info is same as user info</mat-hint>
-        <mat-form-field floatLabel="always" appearance="fill"  (dblclick)="doubleClickToPopulate()">
+        <mat-form-field floatLabel="always" appearance="fill" (dblclick)="doubleClickToPopulate()">
             <mat-label>Shipping City: </mat-label>
-            <mat-select name="city" [(ngModel)]="order.shipCity"
-                required #cityBox="ngModel"  placeholder="Select city...">
+            <mat-select name="city" [(ngModel)]="order.shipCity" required #cityBox="ngModel"
+                placeholder="Select city...">
                 <mat-option *ngFor="let enum of CityEnum | keyvalue" [value]="enum.value">{{enum.value}}</mat-option>
             </mat-select>
             <mat-hint align="end" *ngIf="cityBox.errors?.['required'] && cityBox.touched">Missing city</mat-hint>
@@ -13,17 +13,13 @@
         <mat-form-field floatLabel="always" appearance="fill">
             <mat-label>Shipping Street: </mat-label>
             <input matInput (dblclick)="doubleClickToPopulate()" type="text" name="street"
-                [(ngModel)]="order.shipStreet" #streetBox="ngModel" required minlength="2"
-                maxlength="100">
+                [(ngModel)]="order.shipStreet" #streetBox="ngModel" required minlength="2" maxlength="100">
             <mat-hint align="end" *ngIf="streetBox.touched && streetBox.errors?.['required']">Missing street</mat-hint>
             <mat-hint align="end" *ngIf="streetBox.touched && streetBox.errors?.['minlength']">Street is too short
             </mat-hint>
             <mat-hint align="end" *ngIf="streetBox.touched && streetBox.errors?.['maxlength']">Street is too long
             </mat-hint>
         </mat-form-field>
-
-        <!--!***************************************************************************  -->
-
         <mat-form-field floatLabel="always" appearance="fill">
             <mat-label>Shipping Date: </mat-label>
             <!--! type="datetime-local" doesnt work!!!  -->
@@ -34,10 +30,6 @@
             <mat-hint align="end" *ngIf="dateBox.errors?.['required'] && dateBox.touched">Missing shipping date
             </mat-hint>
         </mat-form-field>
-
-        <!--!***************************************************************************  -->
-
-        <!-- i made it type string so wont have number up and down sign -->
         <mat-form-field floatLabel="always" appearance="fill">
             <mat-label>Credit card: </mat-label>
             <input matInput type="text" name="creditCard" [(ngModel)]="order.creditCard" required
@@ -57,6 +49,5 @@
         <button [disabled]="formInfo.invalid" mat-raised-button class="add-order-btn">
             <mat-icon>send</mat-icon>&nbsp;Pay Now
         </button>
-
     </form>
 </div>

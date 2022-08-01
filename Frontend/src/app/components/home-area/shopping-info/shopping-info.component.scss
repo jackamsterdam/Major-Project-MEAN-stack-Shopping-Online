@@ -1,18 +1,9 @@
 @import '../../../styles/variables/variables.scss';
-// @use '@angular/material' as mat;
-
-// $my-custom-level: mat.define-typography-level(
-//   $font-family: Roboto,
-//   $font-weight: 400,
-//   $font-size: 4rem,
-//   $line-height: 1,
-//   $letter-spacing: normal,
-// );
 
 .shopping-info {
     font-size: 18px;
 }
 
-.yellow-font{
+.yellow-font {
     color: $shopping-orange;
-} 
+}
