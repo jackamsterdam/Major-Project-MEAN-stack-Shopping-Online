@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { CartListComponent } from '../cart-list/cart-list.component';
 
@@ -11,11 +11,8 @@ export interface DialogData {
   templateUrl: './confirm-delete-dialog.component.html',
   styleUrls: ['./confirm-delete-dialog.component.scss']
 })
-export class ConfirmDeleteDialogComponent implements OnInit {
+export class ConfirmDeleteDialogComponent {
 
   constructor(public dialogRef: MatDialogRef<CartListComponent>, @Inject(MAT_DIALOG_DATA) public data: DialogData) { }
-
-  ngOnInit(): void {
-  }
 
 }

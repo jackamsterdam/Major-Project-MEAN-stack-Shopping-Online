@@ -5,27 +5,13 @@ mat-sidenav-container {
     background-color: transparent;
 }
 
-// mat-sidenav, mat-sidenav-content {
-//     padding: 1rem;
-// }
-
 mat-sidenav {
     width: 400px;
-    // position: relative;
-
-    // optional: 
     height: 400px;
     margin: auto;
     border-radius: 0px 3px 3px 0;
-        overflow: hidden;
+     overflow: hidden;
 }
-
-// app-sidenav-details {
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // justify-content: center;
-// }
 
 ::ng-deep .mat-drawer-inner-container {
     overflow: hidden!important;
@@ -35,41 +21,19 @@ mat-sidenav {
     position: relative;
     bottom: 0;
     right: 0;
-    // font-size: small;
     margin: 5px;
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
 
-// .toggle-button {
-//     // position: absolute;
-//     // right: 0;
-//     // transform: translate(3rem, 3rem);
-
-// }
-// $position: 'fixed';
 .checkout-button {
     height: 44px;
     width: 53px;
     border: 1px solid lightgray;
     border-radius: 0px 8px 8px 0px;
-    // top: 261px;
-    // position: absolute;
     z-index: 10000000;
-    background-color: white;
-    // left: 0px;
-// jack 
-// @if($position =='fixed') {
-//   top: 440px;
-//     left: 400px;
-//     background-color: pink;
-
-// } else {
-//     top: 100px;
-//     background-color: blue;
-// }
-  
+    background-color: white; 
 }
 
 .checkout-button:hover {
@@ -81,7 +45,6 @@ mat-sidenav {
     top: 9px;
     position: relative;
 }
-
 
 .cateogory-style {
     display: flex;

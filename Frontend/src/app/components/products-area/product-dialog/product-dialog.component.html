@@ -1,24 +1,19 @@
-
-  <form  #formBox="ngForm">
-    <!-- //!had to do form for validation with negative ...but cant add required casue if you click out it  will give error / -->
-<h2 mat-dialog-title>Choose quantity</h2>
-<mat-dialog-content>
+<form #formBox="ngForm">
+    <h2 mat-dialog-title>Choose quantity</h2>
+    <mat-dialog-content>
         <label>Quantity</label>
-        <!-- [(ngModel)]="credentials.username" -->
-        <input #quantityBox="ngModel" [(ngModel)]="quantity" name="quantity" type="number" step="1.00" min="1" max="100">
-        <!-- <span *ngIf="quantityBox.touched && quantityBox.errors?.['required']">Missing quantity </span> -->
+        <input #quantityBox="ngModel" [(ngModel)]="quantity" name="quantity" type="number" step="1.00" min="1"
+            max="100">
         <span *ngIf="quantityBox.touched && quantityBox.errors?.['min']">Quantity cannot be 0 or negative </span>
         <span *ngIf="quantityBox.touched && quantityBox.errors?.['max']">Quantity cannot exceed 100 </span>
-   
-</mat-dialog-content>
-<mat-dialog-actions>
-    <!-- <button  [disabled]="formBox.invalid" mat-raised-button color="primary" mat-dialog-close [mat-dialog-close]="quantityBox.value">Add</button> -->
-    <button  mat-dialog-close [mat-dialog-close]="quantityBox.value"  [disabled]="formBox.invalid" mat-raised-button class="add-quantity">
-        &nbsp;Add</button>
-        <button mat-raised-button  mat-dialog-close [mat-dialog-close]="false" class="add-quantity">
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <button mat-dialog-close [mat-dialog-close]="quantityBox.value" [disabled]="formBox.invalid" mat-raised-button
+            class="add-quantity">
+            &nbsp;Add</button>
+        <button mat-raised-button mat-dialog-close [mat-dialog-close]="false" class="add-quantity">
             &nbsp;Close</button>
-    <!-- <button  mat-raised-button color="primary" mat-dialog-close [mat-dialog-close]="false">Close</button> -->
-</mat-dialog-actions>
+    </mat-dialog-actions>
 </form>
 
 

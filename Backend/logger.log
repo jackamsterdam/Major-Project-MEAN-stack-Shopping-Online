@@ -12266,3 +12266,984 @@ info	2022:08:01 02:13:18	GET Request to /api/products-count/
 info	2022:08:01 02:13:19	GET Request to /api/orders-count/
 info	2022:08:01 02:14:25	GET Request to /api/products-count/
 info	2022:08:01 02:14:26	GET Request to /api/orders-count/
+info	2022:08:01 02:49:27	GET Request to /api/products-count/
+info	2022:08:01 02:49:27	GET Request to /api/orders-count/
+info	2022:08:01 02:50:28	GET Request to /api/products-count/
+info	2022:08:01 02:50:29	GET Request to /api/orders-count/
+info	2022:08:01 02:51:10	GET Request to /api/products-count/
+info	2022:08:01 02:51:10	GET Request to /api/orders-count/
+info	2022:08:01 02:51:51	GET Request to /api/products-count/
+info	2022:08:01 02:51:52	GET Request to /api/orders-count/
+info	2022:08:01 02:52:15	GET Request to /api/products-count/
+info	2022:08:01 02:52:15	GET Request to /api/orders-count/
+info	2022:08:01 02:52:30	GET Request to /api/products-count/
+info	2022:08:01 02:52:31	GET Request to /api/orders-count/
+info	2022:08:01 02:53:23	GET Request to /api/products-count/
+info	2022:08:01 02:53:23	GET Request to /api/orders-count/
+info	2022:08:01 02:54:12	GET Request to /api/products-count/
+info	2022:08:01 02:54:12	GET Request to /api/orders-count/
+info	2022:08:01 02:54:30	GET Request to /api/products-count/
+info	2022:08:01 02:54:30	GET Request to /api/orders-count/
+info	2022:08:01 02:54:40	POST Request to /api/auth/login/
+info	2022:08:01 02:54:52	GET Request to /api/cart-by-user/62b4bc0453a94730e6939d36
+info	2022:08:01 02:54:52	GET Request to /api/categories/
+info	2022:08:01 02:54:52	GET Request to /api/products/
+info	2022:08:01 02:54:52	GET Request to /api/items-by-cart/62e6b4c86a4752364944749d
+info	2022:08:01 02:54:53	GET Request to /shopping/images/d741f3a3-4078-45de-8519-5a4404b6ebac.jpg
+info	2022:08:01 02:54:57	GET Request to /api/products/
+info	2022:08:01 02:54:59	GET Request to /shopping/images/c02e16bb-f8af-48e8-bc54-31acd91c8930.jpg
+info	2022:08:01 02:54:59	GET Request to /shopping/images/24684495-1e8b-47fc-906c-b4bd483d1f66.jpg
+info	2022:08:01 02:54:59	GET Request to /shopping/images/8a9c87cd-bf7f-40c7-af7a-7bd57a785ea3.jpg
+info	2022:08:01 02:54:59	GET Request to /shopping/images/d7525a9a-01bd-4a53-ab2f-8f447c37e782.jpg
+info	2022:08:01 02:54:59	GET Request to /shopping/images/64406618-b6dc-4ffd-a1ec-da12cd19fec2.jpg
+info	2022:08:01 02:55:02	GET Request to /api/products/
+info	2022:08:01 02:55:02	GET Request to /shopping/images/824a417f-cab1-4d0c-95da-93cf5089ff1d.jpg
+info	2022:08:01 02:55:08	GET Request to /shopping/images/9df10f36-2aaf-4331-acf9-60b02345473c.jpg
+error	2022:08:01 02:55:08	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\9df10f36-2aaf-4331-acf9-60b02345473c.jpg'
+info	2022:08:01 02:55:08	GET Request to /shopping/images/00baf983-90c1-47ba-bdde-285e84b140b8.jpg
+error	2022:08:01 02:55:08	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\00baf983-90c1-47ba-bdde-285e84b140b8.jpg'
+info	2022:08:01 02:55:08	GET Request to /shopping/images/6f147318-ac90-4596-854c-e3bd9c71a6e1.jpg
+error	2022:08:01 02:55:08	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\6f147318-ac90-4596-854c-e3bd9c71a6e1.jpg'
+info	2022:08:01 02:55:08	GET Request to /shopping/images/c0982207-512d-4c9f-a5fe-213bfff7be03.jpg
+error	2022:08:01 02:55:08	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\c0982207-512d-4c9f-a5fe-213bfff7be03.jpg'
+info	2022:08:01 02:55:08	GET Request to /shopping/images/a8e14607-06b1-4897-adee-1cc69046fa7b.jpg
+error	2022:08:01 02:55:08	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\a8e14607-06b1-4897-adee-1cc69046fa7b.jpg'
+info	2022:08:01 02:55:08	GET Request to /shopping/images/d85058c3-f68a-4443-9763-bb1c313fd653.jpg
+error	2022:08:01 02:55:08	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\d85058c3-f68a-4443-9763-bb1c313fd653.jpg'
+info	2022:08:01 02:55:08	GET Request to /shopping/images/42491fb0-ae10-4f10-8e0c-cb96cf987128.jpg
+info	2022:08:01 02:55:08	GET Request to /shopping/images/47972f21-3939-403b-ae73-3367673bec28.jpg
+info	2022:08:01 02:55:08	GET Request to /shopping/images/a28e44a7-3b67-48de-acd1-f982a623a0d8.jpg
+info	2022:08:01 02:55:08	GET Request to /shopping/images/460b3292-789c-4220-82d4-4877e2a97e91.jpg
+info	2022:08:01 02:55:08	GET Request to /shopping/images/84e89a97-cd40-4cd7-9b7c-fd5e578f6d89.jpg
+info	2022:08:01 02:55:08	GET Request to /shopping/images/965a7f21-2ba0-4cd1-b7b9-5cba45f0961a.jpg
+info	2022:08:01 02:55:08	GET Request to /shopping/images/a9043f4d-6362-4d1c-bde8-aa858e15f6e1.jpg
+info	2022:08:01 02:55:08	GET Request to /shopping/images/203fd535-9484-4cc6-8065-b4a0fc16d1aa.jpg
+info	2022:08:01 02:55:08	GET Request to /shopping/images/29f54c52-cd4d-4bf6-a7f8-18e5504e3348.jpg
+info	2022:08:01 02:55:08	GET Request to /shopping/images/80f5ad28-ed58-4f06-b340-b0d570198300.jpg
+info	2022:08:01 02:55:08	GET Request to /shopping/images/8e731f20-0c1a-4f82-b6df-3990713abd61.jpg
+info	2022:08:01 02:55:08	GET Request to /shopping/images/b1bc176b-e627-4ae8-afb7-7871719ccb0d.jpg
+info	2022:08:01 02:55:08	GET Request to /shopping/images/b562708c-b070-4943-8cad-d40e0bd99ba9.jpg
+info	2022:08:01 02:55:08	GET Request to /shopping/images/7da7703e-9d85-400a-87f4-0bffd8d2a76b.jpg
+info	2022:08:01 02:55:08	GET Request to /shopping/images/ad94aeb7-727c-48ef-9d2f-09b42f9fac67.jpg
+info	2022:08:01 02:55:08	GET Request to /shopping/images/1347c8c3-c051-43fd-b83b-9a90a95cea62.jpg
+info	2022:08:01 02:55:08	GET Request to /shopping/images/e70cfe22-69cb-49b1-b475-131029891865.jpg
+info	2022:08:01 02:55:08	GET Request to /shopping/images/5da04a74-8424-4955-b700-7cf581545c63.jpg
+info	2022:08:01 02:55:08	GET Request to /shopping/images/9d0686f4-27da-466c-8f79-6ea5330c86f9.jpg
+info	2022:08:01 02:55:08	GET Request to /shopping/images/e905dc2a-960f-4811-a95a-48afe31a0265.jpg
+error	2022:08:01 02:55:08	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\e905dc2a-960f-4811-a95a-48afe31a0265.jpg'
+info	2022:08:01 02:55:08	GET Request to /shopping/images/0a9b0ffb-4d15-4238-9052-7dcf83ab3ca7.jpg
+error	2022:08:01 02:55:08	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\0a9b0ffb-4d15-4238-9052-7dcf83ab3ca7.jpg'
+info	2022:08:01 02:55:08	GET Request to /shopping/images/4845f2b7-86c3-4598-9a9e-5e62e745f65d.jpg
+error	2022:08:01 02:55:08	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\4845f2b7-86c3-4598-9a9e-5e62e745f65d.jpg'
+info	2022:08:01 02:55:08	GET Request to /shopping/images/f4228718-561a-4a41-9ae0-8fb0ebee339c.jpg
+info	2022:08:01 02:55:08	GET Request to /shopping/images/fb34e5e8-7c5f-4e5d-aa40-1f0ca620aac6.jpg
+error	2022:08:01 02:55:08	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\f4228718-561a-4a41-9ae0-8fb0ebee339c.jpg'
+error	2022:08:01 02:55:08	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\fb34e5e8-7c5f-4e5d-aa40-1f0ca620aac6.jpg'
+info	2022:08:01 02:55:08	GET Request to /shopping/images/a7c82318-74a8-440a-b41d-8907526353cc.jpg
+error	2022:08:01 02:55:08	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\a7c82318-74a8-440a-b41d-8907526353cc.jpg'
+info	2022:08:01 02:55:08	GET Request to /shopping/images/f30a2546-49bf-4499-8252-7fd73d607c6e.jpg
+info	2022:08:01 02:55:08	GET Request to /shopping/images/2d52cc78-c547-49d3-8219-9aff12ac309a.jpg
+info	2022:08:01 02:55:08	GET Request to /shopping/images/e2c3bf3f-b3aa-41b1-aa50-1ac59b0728ea.jpg
+info	2022:08:01 02:55:08	GET Request to /shopping/images/fa7530d6-7c55-4de8-bc07-de0859a53d2e.jpg
+error	2022:08:01 02:55:08	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\f30a2546-49bf-4499-8252-7fd73d607c6e.jpg'
+error	2022:08:01 02:55:08	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\2d52cc78-c547-49d3-8219-9aff12ac309a.jpg'
+error	2022:08:01 02:55:08	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\e2c3bf3f-b3aa-41b1-aa50-1ac59b0728ea.jpg'
+error	2022:08:01 02:55:08	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\fa7530d6-7c55-4de8-bc07-de0859a53d2e.jpg'
+info	2022:08:01 02:55:08	GET Request to /shopping/images/454abf52-ddd4-4095-9489-76877cdcd28a.jpg
+info	2022:08:01 02:55:08	GET Request to /shopping/images/3afe1417-79ea-4b39-9161-e2c138e3b593.jpg
+info	2022:08:01 02:55:08	GET Request to /shopping/images/22b7a2f2-1027-4534-a527-86ededc1838e.jpg
+error	2022:08:01 02:55:08	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\454abf52-ddd4-4095-9489-76877cdcd28a.jpg'
+error	2022:08:01 02:55:08	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\3afe1417-79ea-4b39-9161-e2c138e3b593.jpg'
+error	2022:08:01 02:55:08	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\22b7a2f2-1027-4534-a527-86ededc1838e.jpg'
+info	2022:08:01 02:55:08	GET Request to /shopping/images/9e07c712-2993-4a03-a8fa-4a91ff43d085.jpg
+error	2022:08:01 02:55:08	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\9e07c712-2993-4a03-a8fa-4a91ff43d085.jpg'
+info	2022:08:01 02:55:10	GET Request to /shopping/images/c0982207-512d-4c9f-a5fe-213bfff7be03.jpg
+info	2022:08:01 02:55:10	GET Request to /shopping/images/9df10f36-2aaf-4331-acf9-60b02345473c.jpg
+info	2022:08:01 02:55:10	GET Request to /shopping/images/a8e14607-06b1-4897-adee-1cc69046fa7b.jpg
+error	2022:08:01 02:55:10	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\c0982207-512d-4c9f-a5fe-213bfff7be03.jpg'
+info	2022:08:01 02:55:10	GET Request to /shopping/images/00baf983-90c1-47ba-bdde-285e84b140b8.jpg
+error	2022:08:01 02:55:10	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\9df10f36-2aaf-4331-acf9-60b02345473c.jpg'
+error	2022:08:01 02:55:10	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\a8e14607-06b1-4897-adee-1cc69046fa7b.jpg'
+info	2022:08:01 02:55:10	GET Request to /shopping/images/6f147318-ac90-4596-854c-e3bd9c71a6e1.jpg
+error	2022:08:01 02:55:10	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\00baf983-90c1-47ba-bdde-285e84b140b8.jpg'
+error	2022:08:01 02:55:10	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\6f147318-ac90-4596-854c-e3bd9c71a6e1.jpg'
+info	2022:08:01 02:55:10	GET Request to /shopping/images/d85058c3-f68a-4443-9763-bb1c313fd653.jpg
+error	2022:08:01 02:55:10	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\d85058c3-f68a-4443-9763-bb1c313fd653.jpg'
+info	2022:08:01 02:55:10	GET Request to /shopping/images/0a9b0ffb-4d15-4238-9052-7dcf83ab3ca7.jpg
+error	2022:08:01 02:55:10	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\0a9b0ffb-4d15-4238-9052-7dcf83ab3ca7.jpg'
+info	2022:08:01 02:55:10	GET Request to /shopping/images/4845f2b7-86c3-4598-9a9e-5e62e745f65d.jpg
+error	2022:08:01 02:55:10	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\4845f2b7-86c3-4598-9a9e-5e62e745f65d.jpg'
+info	2022:08:01 02:55:10	GET Request to /shopping/images/f4228718-561a-4a41-9ae0-8fb0ebee339c.jpg
+error	2022:08:01 02:55:10	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\f4228718-561a-4a41-9ae0-8fb0ebee339c.jpg'
+info	2022:08:01 02:55:10	GET Request to /shopping/images/fb34e5e8-7c5f-4e5d-aa40-1f0ca620aac6.jpg
+error	2022:08:01 02:55:10	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\fb34e5e8-7c5f-4e5d-aa40-1f0ca620aac6.jpg'
+info	2022:08:01 02:55:10	GET Request to /shopping/images/a7c82318-74a8-440a-b41d-8907526353cc.jpg
+error	2022:08:01 02:55:10	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\a7c82318-74a8-440a-b41d-8907526353cc.jpg'
+info	2022:08:01 02:55:10	GET Request to /shopping/images/f30a2546-49bf-4499-8252-7fd73d607c6e.jpg
+error	2022:08:01 02:55:10	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\f30a2546-49bf-4499-8252-7fd73d607c6e.jpg'
+info	2022:08:01 02:55:10	GET Request to /shopping/images/2d52cc78-c547-49d3-8219-9aff12ac309a.jpg
+error	2022:08:01 02:55:10	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\2d52cc78-c547-49d3-8219-9aff12ac309a.jpg'
+info	2022:08:01 02:55:10	GET Request to /shopping/images/e2c3bf3f-b3aa-41b1-aa50-1ac59b0728ea.jpg
+info	2022:08:01 02:55:10	GET Request to /shopping/images/fa7530d6-7c55-4de8-bc07-de0859a53d2e.jpg
+error	2022:08:01 02:55:10	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\e2c3bf3f-b3aa-41b1-aa50-1ac59b0728ea.jpg'
+info	2022:08:01 02:55:10	GET Request to /shopping/images/454abf52-ddd4-4095-9489-76877cdcd28a.jpg
+info	2022:08:01 02:55:10	GET Request to /shopping/images/3afe1417-79ea-4b39-9161-e2c138e3b593.jpg
+error	2022:08:01 02:55:10	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\fa7530d6-7c55-4de8-bc07-de0859a53d2e.jpg'
+info	2022:08:01 02:55:10	GET Request to /shopping/images/22b7a2f2-1027-4534-a527-86ededc1838e.jpg
+error	2022:08:01 02:55:10	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\454abf52-ddd4-4095-9489-76877cdcd28a.jpg'
+error	2022:08:01 02:55:10	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\3afe1417-79ea-4b39-9161-e2c138e3b593.jpg'
+error	2022:08:01 02:55:10	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\22b7a2f2-1027-4534-a527-86ededc1838e.jpg'
+info	2022:08:01 02:55:10	GET Request to /shopping/images/9e07c712-2993-4a03-a8fa-4a91ff43d085.jpg
+error	2022:08:01 02:55:10	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\9e07c712-2993-4a03-a8fa-4a91ff43d085.jpg'
+info	2022:08:01 02:55:18	GET Request to /shopping/images/824a417f-cab1-4d0c-95da-93cf5089ff1d.jpg
+info	2022:08:01 02:55:18	GET Request to /shopping/images/42491fb0-ae10-4f10-8e0c-cb96cf987128.jpg
+info	2022:08:01 02:55:18	GET Request to /shopping/images/47972f21-3939-403b-ae73-3367673bec28.jpg
+info	2022:08:01 02:55:18	GET Request to /shopping/images/a28e44a7-3b67-48de-acd1-f982a623a0d8.jpg
+info	2022:08:01 02:55:18	GET Request to /shopping/images/460b3292-789c-4220-82d4-4877e2a97e91.jpg
+info	2022:08:01 02:55:18	GET Request to /shopping/images/84e89a97-cd40-4cd7-9b7c-fd5e578f6d89.jpg
+info	2022:08:01 02:55:18	GET Request to /shopping/images/965a7f21-2ba0-4cd1-b7b9-5cba45f0961a.jpg
+info	2022:08:01 02:55:18	GET Request to /shopping/images/a9043f4d-6362-4d1c-bde8-aa858e15f6e1.jpg
+info	2022:08:01 02:55:18	GET Request to /shopping/images/203fd535-9484-4cc6-8065-b4a0fc16d1aa.jpg
+info	2022:08:01 02:55:18	GET Request to /shopping/images/29f54c52-cd4d-4bf6-a7f8-18e5504e3348.jpg
+info	2022:08:01 02:55:18	GET Request to /shopping/images/80f5ad28-ed58-4f06-b340-b0d570198300.jpg
+info	2022:08:01 02:55:18	GET Request to /shopping/images/8e731f20-0c1a-4f82-b6df-3990713abd61.jpg
+info	2022:08:01 02:55:18	GET Request to /shopping/images/b1bc176b-e627-4ae8-afb7-7871719ccb0d.jpg
+info	2022:08:01 02:55:18	GET Request to /shopping/images/b562708c-b070-4943-8cad-d40e0bd99ba9.jpg
+info	2022:08:01 02:55:18	GET Request to /shopping/images/7da7703e-9d85-400a-87f4-0bffd8d2a76b.jpg
+info	2022:08:01 02:55:18	GET Request to /shopping/images/ad94aeb7-727c-48ef-9d2f-09b42f9fac67.jpg
+info	2022:08:01 02:55:18	GET Request to /shopping/images/1347c8c3-c051-43fd-b83b-9a90a95cea62.jpg
+info	2022:08:01 02:55:18	GET Request to /shopping/images/e70cfe22-69cb-49b1-b475-131029891865.jpg
+info	2022:08:01 02:55:18	GET Request to /shopping/images/5da04a74-8424-4955-b700-7cf581545c63.jpg
+info	2022:08:01 02:55:18	GET Request to /shopping/images/9d0686f4-27da-466c-8f79-6ea5330c86f9.jpg
+info	2022:08:01 02:55:18	GET Request to /shopping/images/e905dc2a-960f-4811-a95a-48afe31a0265.jpg
+error	2022:08:01 02:55:18	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\e905dc2a-960f-4811-a95a-48afe31a0265.jpg'
+info	2022:08:01 02:55:25	POST Request to /api/items/62b4bc0453a94730e6939d36
+info	2022:08:01 02:55:25	GET Request to /api/cart-by-user/62b4bc0453a94730e6939d36
+info	2022:08:01 02:55:26	GET Request to /api/items-by-cart/62e6b4c86a4752364944749d
+info	2022:08:01 02:55:27	GET Request to /api/cart-by-user/62b4bc0453a94730e6939d36
+info	2022:08:01 02:55:27	GET Request to /api/orders/
+info	2022:08:01 02:55:28	GET Request to /api/items-by-cart/62e6b4c86a4752364944749d
+info	2022:08:01 02:55:37	POST Request to /api/orders/
+info	2022:08:01 02:55:41	GET Request to /api/items-by-cart/62e6b4c86a4752364944749d
+info	2022:08:01 02:56:18	GET Request to /api/cart-by-user/62b4bc0453a94730e6939d36
+info	2022:08:01 02:56:18	GET Request to /shopping/images/c02e16bb-f8af-48e8-bc54-31acd91c8930.jpg
+info	2022:08:01 02:56:18	GET Request to /shopping/images/24684495-1e8b-47fc-906c-b4bd483d1f66.jpg
+info	2022:08:01 02:56:18	GET Request to /shopping/images/8a9c87cd-bf7f-40c7-af7a-7bd57a785ea3.jpg
+info	2022:08:01 02:56:18	GET Request to /shopping/images/d7525a9a-01bd-4a53-ab2f-8f447c37e782.jpg
+info	2022:08:01 02:56:18	GET Request to /shopping/images/64406618-b6dc-4ffd-a1ec-da12cd19fec2.jpg
+info	2022:08:01 02:56:18	GET Request to /shopping/images/c0982207-512d-4c9f-a5fe-213bfff7be03.jpg
+error	2022:08:01 02:56:18	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\c0982207-512d-4c9f-a5fe-213bfff7be03.jpg'
+info	2022:08:01 02:56:19	GET Request to /shopping/images/9df10f36-2aaf-4331-acf9-60b02345473c.jpg
+error	2022:08:01 02:56:19	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\9df10f36-2aaf-4331-acf9-60b02345473c.jpg'
+info	2022:08:01 02:56:19	GET Request to /shopping/images/a8e14607-06b1-4897-adee-1cc69046fa7b.jpg
+error	2022:08:01 02:56:19	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\a8e14607-06b1-4897-adee-1cc69046fa7b.jpg'
+info	2022:08:01 02:56:19	GET Request to /shopping/images/00baf983-90c1-47ba-bdde-285e84b140b8.jpg
+error	2022:08:01 02:56:19	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\00baf983-90c1-47ba-bdde-285e84b140b8.jpg'
+info	2022:08:01 02:56:19	GET Request to /shopping/images/6f147318-ac90-4596-854c-e3bd9c71a6e1.jpg
+error	2022:08:01 02:56:19	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\6f147318-ac90-4596-854c-e3bd9c71a6e1.jpg'
+info	2022:08:01 02:56:19	GET Request to /shopping/images/e905dc2a-960f-4811-a95a-48afe31a0265.jpg
+error	2022:08:01 02:56:19	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\e905dc2a-960f-4811-a95a-48afe31a0265.jpg'
+info	2022:08:01 02:56:19	GET Request to /shopping/images/d85058c3-f68a-4443-9763-bb1c313fd653.jpg
+error	2022:08:01 02:56:19	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\d85058c3-f68a-4443-9763-bb1c313fd653.jpg'
+info	2022:08:01 02:56:19	GET Request to /shopping/images/0a9b0ffb-4d15-4238-9052-7dcf83ab3ca7.jpg
+error	2022:08:01 02:56:19	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\0a9b0ffb-4d15-4238-9052-7dcf83ab3ca7.jpg'
+info	2022:08:01 02:56:19	GET Request to /shopping/images/4845f2b7-86c3-4598-9a9e-5e62e745f65d.jpg
+error	2022:08:01 02:56:19	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\4845f2b7-86c3-4598-9a9e-5e62e745f65d.jpg'
+info	2022:08:01 02:56:19	GET Request to /shopping/images/f4228718-561a-4a41-9ae0-8fb0ebee339c.jpg
+error	2022:08:01 02:56:19	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\f4228718-561a-4a41-9ae0-8fb0ebee339c.jpg'
+info	2022:08:01 02:56:19	GET Request to /shopping/images/fb34e5e8-7c5f-4e5d-aa40-1f0ca620aac6.jpg
+error	2022:08:01 02:56:19	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\fb34e5e8-7c5f-4e5d-aa40-1f0ca620aac6.jpg'
+info	2022:08:01 02:56:19	GET Request to /shopping/images/a7c82318-74a8-440a-b41d-8907526353cc.jpg
+error	2022:08:01 02:56:19	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\a7c82318-74a8-440a-b41d-8907526353cc.jpg'
+info	2022:08:01 02:56:19	GET Request to /shopping/images/f30a2546-49bf-4499-8252-7fd73d607c6e.jpg
+error	2022:08:01 02:56:19	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\f30a2546-49bf-4499-8252-7fd73d607c6e.jpg'
+info	2022:08:01 02:56:19	GET Request to /shopping/images/2d52cc78-c547-49d3-8219-9aff12ac309a.jpg
+info	2022:08:01 02:56:19	GET Request to /shopping/images/e2c3bf3f-b3aa-41b1-aa50-1ac59b0728ea.jpg
+error	2022:08:01 02:56:19	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\2d52cc78-c547-49d3-8219-9aff12ac309a.jpg'
+error	2022:08:01 02:56:19	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\e2c3bf3f-b3aa-41b1-aa50-1ac59b0728ea.jpg'
+info	2022:08:01 02:56:19	GET Request to /shopping/images/fa7530d6-7c55-4de8-bc07-de0859a53d2e.jpg
+error	2022:08:01 02:56:19	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\fa7530d6-7c55-4de8-bc07-de0859a53d2e.jpg'
+info	2022:08:01 02:56:19	GET Request to /shopping/images/454abf52-ddd4-4095-9489-76877cdcd28a.jpg
+error	2022:08:01 02:56:19	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\454abf52-ddd4-4095-9489-76877cdcd28a.jpg'
+info	2022:08:01 02:56:19	GET Request to /shopping/images/3afe1417-79ea-4b39-9161-e2c138e3b593.jpg
+error	2022:08:01 02:56:19	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\3afe1417-79ea-4b39-9161-e2c138e3b593.jpg'
+info	2022:08:01 02:56:19	GET Request to /shopping/images/22b7a2f2-1027-4534-a527-86ededc1838e.jpg
+error	2022:08:01 02:56:19	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\22b7a2f2-1027-4534-a527-86ededc1838e.jpg'
+info	2022:08:01 02:56:19	GET Request to /shopping/images/9e07c712-2993-4a03-a8fa-4a91ff43d085.jpg
+error	2022:08:01 02:56:19	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\9e07c712-2993-4a03-a8fa-4a91ff43d085.jpg'
+info	2022:08:01 02:56:42	GET Request to /api/products-count/
+info	2022:08:01 02:56:42	GET Request to /api/orders-count/
+info	2022:08:01 02:57:02	GET Request to /api/products-count/
+info	2022:08:01 02:57:03	GET Request to /api/orders-count/
+info	2022:08:01 02:57:40	GET Request to /api/products-count/
+info	2022:08:01 02:57:41	GET Request to /api/orders-count/
+info	2022:08:01 02:57:55	GET Request to /api/products-count/
+info	2022:08:01 02:57:56	GET Request to /api/orders-count/
+info	2022:08:01 02:58:23	GET Request to /api/products-count/
+info	2022:08:01 02:58:24	GET Request to /api/orders-count/
+info	2022:08:01 02:58:46	GET Request to /api/products-count/
+info	2022:08:01 02:58:47	GET Request to /api/orders-count/
+info	2022:08:01 02:58:55	GET Request to /api/products-count/
+info	2022:08:01 02:58:56	GET Request to /api/orders-count/
+info	2022:08:01 02:59:21	GET Request to /api/products-count/
+info	2022:08:01 02:59:21	GET Request to /api/orders-count/
+info	2022:08:01 02:59:31	GET Request to /api/products-count/
+info	2022:08:01 02:59:32	GET Request to /api/orders-count/
+info	2022:08:01 02:59:38	GET Request to /api/products-count/
+info	2022:08:01 02:59:39	GET Request to /api/orders-count/
+info	2022:08:01 02:59:53	GET Request to /api/products-count/
+info	2022:08:01 02:59:53	GET Request to /api/orders-count/
+info	2022:08:01 02:59:56	GET Request to /api/products-count/
+info	2022:08:01 02:59:57	GET Request to /api/orders-count/
+info	2022:08:01 03:00:06	GET Request to /api/products-count/
+info	2022:08:01 03:00:06	GET Request to /api/orders-count/
+info	2022:08:01 03:00:12	GET Request to /api/products-count/
+info	2022:08:01 03:00:12	GET Request to /api/orders-count/
+info	2022:08:01 03:00:15	GET Request to /api/products-count/
+info	2022:08:01 03:00:16	GET Request to /api/orders-count/
+info	2022:08:01 03:00:57	GET Request to /api/products-count/
+info	2022:08:01 03:00:58	GET Request to /api/orders-count/
+info	2022:08:01 03:01:27	GET Request to /api/products-count/
+info	2022:08:01 03:01:27	GET Request to /api/orders-count/
+info	2022:08:01 03:01:43	GET Request to /api/products-count/
+info	2022:08:01 03:01:44	GET Request to /api/orders-count/
+info	2022:08:01 03:01:53	GET Request to /api/products-count/
+info	2022:08:01 03:01:53	GET Request to /api/orders-count/
+info	2022:08:01 03:02:04	GET Request to /api/products-count/
+info	2022:08:01 03:02:04	GET Request to /api/orders-count/
+info	2022:08:01 03:02:46	GET Request to /api/products-count/
+info	2022:08:01 03:02:46	GET Request to /api/orders-count/
+info	2022:08:01 03:02:57	GET Request to /api/products-count/
+info	2022:08:01 03:02:58	GET Request to /api/orders-count/
+info	2022:08:01 03:03:02	GET Request to /api/products-count/
+info	2022:08:01 03:03:03	GET Request to /api/orders-count/
+info	2022:08:01 03:03:45	GET Request to /api/products-count/
+info	2022:08:01 03:03:46	GET Request to /api/orders-count/
+info	2022:08:01 03:04:01	GET Request to /api/products-count/
+info	2022:08:01 03:04:02	GET Request to /api/orders-count/
+info	2022:08:01 03:04:08	GET Request to /api/products-count/
+info	2022:08:01 03:04:09	GET Request to /api/orders-count/
+info	2022:08:01 03:04:19	GET Request to /api/products-count/
+info	2022:08:01 03:04:19	GET Request to /api/orders-count/
+info	2022:08:01 03:04:28	GET Request to /api/products-count/
+info	2022:08:01 03:04:28	GET Request to /api/orders-count/
+info	2022:08:01 03:04:31	GET Request to /api/products-count/
+info	2022:08:01 03:04:32	GET Request to /api/orders-count/
+info	2022:08:01 03:06:00	GET Request to /api/products-count/
+info	2022:08:01 03:06:01	GET Request to /api/orders-count/
+info	2022:08:01 03:06:15	GET Request to /api/products-count/
+info	2022:08:01 03:06:15	GET Request to /api/orders-count/
+info	2022:08:01 03:06:20	GET Request to /api/products-count/
+info	2022:08:01 03:06:20	GET Request to /api/orders-count/
+info	2022:08:01 03:06:27	GET Request to /api/products-count/
+info	2022:08:01 03:06:28	GET Request to /api/orders-count/
+info	2022:08:01 03:06:43	GET Request to /api/products-count/
+info	2022:08:01 03:06:43	GET Request to /api/orders-count/
+info	2022:08:01 03:06:53	GET Request to /api/products-count/
+info	2022:08:01 03:06:54	GET Request to /api/orders-count/
+info	2022:08:01 03:07:48	GET Request to /api/products-count/
+info	2022:08:01 03:07:49	GET Request to /api/orders-count/
+info	2022:08:01 03:07:58	GET Request to /api/products-count/
+info	2022:08:01 03:07:58	GET Request to /api/orders-count/
+info	2022:08:01 03:08:12	GET Request to /api/products-count/
+info	2022:08:01 03:08:12	GET Request to /api/orders-count/
+info	2022:08:01 03:08:28	GET Request to /api/products-count/
+info	2022:08:01 03:08:29	GET Request to /api/orders-count/
+info	2022:08:01 03:08:36	GET Request to /api/products-count/
+info	2022:08:01 03:08:36	GET Request to /api/orders-count/
+info	2022:08:01 03:08:40	GET Request to /api/products-count/
+info	2022:08:01 03:08:40	GET Request to /api/orders-count/
+info	2022:08:01 03:08:48	GET Request to /api/products-count/
+info	2022:08:01 03:08:48	GET Request to /api/orders-count/
+info	2022:08:01 03:10:09	GET Request to /api/products-count/
+info	2022:08:01 03:10:09	GET Request to /api/orders-count/
+info	2022:08:01 03:10:38	GET Request to /api/products-count/
+info	2022:08:01 03:10:38	GET Request to /api/orders-count/
+info	2022:08:01 03:10:47	GET Request to /api/products-count/
+info	2022:08:01 03:10:47	GET Request to /api/orders-count/
+info	2022:08:01 03:11:19	GET Request to /api/products-count/
+info	2022:08:01 03:11:19	GET Request to /api/orders-count/
+info	2022:08:01 03:11:38	GET Request to /api/products-count/
+info	2022:08:01 03:11:39	GET Request to /api/orders-count/
+info	2022:08:01 03:12:04	GET Request to /api/products-count/
+info	2022:08:01 03:12:05	GET Request to /api/orders-count/
+info	2022:08:01 03:12:22	GET Request to /api/products-count/
+info	2022:08:01 03:12:23	GET Request to /api/orders-count/
+info	2022:08:01 03:12:30	GET Request to /api/products-count/
+info	2022:08:01 03:12:31	GET Request to /api/orders-count/
+info	2022:08:01 03:13:11	GET Request to /api/products-count/
+info	2022:08:01 03:13:11	GET Request to /api/orders-count/
+info	2022:08:01 03:13:28	GET Request to /api/products-count/
+info	2022:08:01 03:13:28	GET Request to /api/orders-count/
+info	2022:08:01 03:13:39	GET Request to /api/products-count/
+info	2022:08:01 03:13:39	GET Request to /api/orders-count/
+info	2022:08:01 03:14:43	GET Request to /api/products-count/
+info	2022:08:01 03:14:43	GET Request to /api/orders-count/
+info	2022:08:01 03:14:58	GET Request to /api/products-count/
+info	2022:08:01 03:14:58	GET Request to /api/orders-count/
+info	2022:08:01 03:15:41	GET Request to /api/products-count/
+info	2022:08:01 03:15:42	GET Request to /api/orders-count/
+info	2022:08:01 03:15:52	GET Request to /api/products-count/
+info	2022:08:01 03:15:53	GET Request to /api/orders-count/
+info	2022:08:01 03:15:58	GET Request to /api/products-count/
+info	2022:08:01 03:15:58	GET Request to /api/orders-count/
+info	2022:08:01 03:16:22	GET Request to /api/products-count/
+info	2022:08:01 03:16:23	GET Request to /api/orders-count/
+info	2022:08:01 03:16:29	GET Request to /api/products-count/
+info	2022:08:01 03:16:30	GET Request to /api/orders-count/
+info	2022:08:01 03:16:32	GET Request to /api/products/
+info	2022:08:01 03:16:32	GET Request to /api/cart-by-user/62b4bc0453a94730e6939d36
+info	2022:08:01 03:16:32	GET Request to /api/categories/
+info	2022:08:01 03:16:36	GET Request to /api/products/
+info	2022:08:01 03:16:37	GET Request to /shopping/images/d741f3a3-4078-45de-8519-5a4404b6ebac.jpg
+info	2022:08:01 03:16:37	GET Request to /shopping/images/c02e16bb-f8af-48e8-bc54-31acd91c8930.jpg
+info	2022:08:01 03:16:37	GET Request to /shopping/images/24684495-1e8b-47fc-906c-b4bd483d1f66.jpg
+info	2022:08:01 03:16:37	GET Request to /shopping/images/8a9c87cd-bf7f-40c7-af7a-7bd57a785ea3.jpg
+info	2022:08:01 03:16:37	GET Request to /shopping/images/d7525a9a-01bd-4a53-ab2f-8f447c37e782.jpg
+info	2022:08:01 03:16:38	GET Request to /shopping/images/64406618-b6dc-4ffd-a1ec-da12cd19fec2.jpg
+info	2022:08:01 03:16:38	GET Request to /api/products/
+info	2022:08:01 03:16:38	GET Request to /shopping/images/824a417f-cab1-4d0c-95da-93cf5089ff1d.jpg
+info	2022:08:01 03:16:38	GET Request to /shopping/images/42491fb0-ae10-4f10-8e0c-cb96cf987128.jpg
+info	2022:08:01 03:16:38	GET Request to /shopping/images/47972f21-3939-403b-ae73-3367673bec28.jpg
+info	2022:08:01 03:16:39	GET Request to /shopping/images/a28e44a7-3b67-48de-acd1-f982a623a0d8.jpg
+info	2022:08:01 03:16:39	GET Request to /shopping/images/460b3292-789c-4220-82d4-4877e2a97e91.jpg
+info	2022:08:01 03:16:39	GET Request to /shopping/images/84e89a97-cd40-4cd7-9b7c-fd5e578f6d89.jpg
+info	2022:08:01 03:16:39	GET Request to /shopping/images/965a7f21-2ba0-4cd1-b7b9-5cba45f0961a.jpg
+info	2022:08:01 03:16:39	GET Request to /shopping/images/a9043f4d-6362-4d1c-bde8-aa858e15f6e1.jpg
+info	2022:08:01 03:16:39	GET Request to /shopping/images/203fd535-9484-4cc6-8065-b4a0fc16d1aa.jpg
+info	2022:08:01 03:16:39	GET Request to /shopping/images/29f54c52-cd4d-4bf6-a7f8-18e5504e3348.jpg
+info	2022:08:01 03:16:39	GET Request to /shopping/images/80f5ad28-ed58-4f06-b340-b0d570198300.jpg
+info	2022:08:01 03:16:39	GET Request to /shopping/images/8e731f20-0c1a-4f82-b6df-3990713abd61.jpg
+info	2022:08:01 03:16:39	GET Request to /shopping/images/b1bc176b-e627-4ae8-afb7-7871719ccb0d.jpg
+info	2022:08:01 03:16:39	GET Request to /shopping/images/b562708c-b070-4943-8cad-d40e0bd99ba9.jpg
+info	2022:08:01 03:16:39	GET Request to /shopping/images/7da7703e-9d85-400a-87f4-0bffd8d2a76b.jpg
+info	2022:08:01 03:16:39	GET Request to /shopping/images/ad94aeb7-727c-48ef-9d2f-09b42f9fac67.jpg
+info	2022:08:01 03:16:39	GET Request to /shopping/images/1347c8c3-c051-43fd-b83b-9a90a95cea62.jpg
+info	2022:08:01 03:16:39	GET Request to /shopping/images/e70cfe22-69cb-49b1-b475-131029891865.jpg
+info	2022:08:01 03:16:39	GET Request to /shopping/images/5da04a74-8424-4955-b700-7cf581545c63.jpg
+info	2022:08:01 03:16:39	GET Request to /shopping/images/9d0686f4-27da-466c-8f79-6ea5330c86f9.jpg
+info	2022:08:01 03:16:39	GET Request to /shopping/images/c0982207-512d-4c9f-a5fe-213bfff7be03.jpg
+info	2022:08:01 03:16:39	GET Request to /shopping/images/9df10f36-2aaf-4331-acf9-60b02345473c.jpg
+info	2022:08:01 03:16:39	GET Request to /shopping/images/a8e14607-06b1-4897-adee-1cc69046fa7b.jpg
+info	2022:08:01 03:16:39	GET Request to /shopping/images/00baf983-90c1-47ba-bdde-285e84b140b8.jpg
+error	2022:08:01 03:16:39	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\c0982207-512d-4c9f-a5fe-213bfff7be03.jpg'
+error	2022:08:01 03:16:39	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\9df10f36-2aaf-4331-acf9-60b02345473c.jpg'
+error	2022:08:01 03:16:39	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\a8e14607-06b1-4897-adee-1cc69046fa7b.jpg'
+error	2022:08:01 03:16:39	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\00baf983-90c1-47ba-bdde-285e84b140b8.jpg'
+info	2022:08:01 03:16:39	GET Request to /shopping/images/6f147318-ac90-4596-854c-e3bd9c71a6e1.jpg
+info	2022:08:01 03:16:39	GET Request to /shopping/images/e905dc2a-960f-4811-a95a-48afe31a0265.jpg
+info	2022:08:01 03:16:39	GET Request to /shopping/images/d85058c3-f68a-4443-9763-bb1c313fd653.jpg
+info	2022:08:01 03:16:39	GET Request to /shopping/images/0a9b0ffb-4d15-4238-9052-7dcf83ab3ca7.jpg
+error	2022:08:01 03:16:39	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\6f147318-ac90-4596-854c-e3bd9c71a6e1.jpg'
+error	2022:08:01 03:16:39	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\e905dc2a-960f-4811-a95a-48afe31a0265.jpg'
+error	2022:08:01 03:16:39	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\d85058c3-f68a-4443-9763-bb1c313fd653.jpg'
+error	2022:08:01 03:16:39	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\0a9b0ffb-4d15-4238-9052-7dcf83ab3ca7.jpg'
+info	2022:08:01 03:16:39	GET Request to /shopping/images/4845f2b7-86c3-4598-9a9e-5e62e745f65d.jpg
+info	2022:08:01 03:16:39	GET Request to /shopping/images/f4228718-561a-4a41-9ae0-8fb0ebee339c.jpg
+info	2022:08:01 03:16:39	GET Request to /shopping/images/fb34e5e8-7c5f-4e5d-aa40-1f0ca620aac6.jpg
+info	2022:08:01 03:16:39	GET Request to /shopping/images/a7c82318-74a8-440a-b41d-8907526353cc.jpg
+error	2022:08:01 03:16:39	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\4845f2b7-86c3-4598-9a9e-5e62e745f65d.jpg'
+error	2022:08:01 03:16:39	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\f4228718-561a-4a41-9ae0-8fb0ebee339c.jpg'
+error	2022:08:01 03:16:39	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\fb34e5e8-7c5f-4e5d-aa40-1f0ca620aac6.jpg'
+info	2022:08:01 03:16:39	GET Request to /shopping/images/f30a2546-49bf-4499-8252-7fd73d607c6e.jpg
+info	2022:08:01 03:16:39	GET Request to /shopping/images/2d52cc78-c547-49d3-8219-9aff12ac309a.jpg
+info	2022:08:01 03:16:39	GET Request to /shopping/images/e2c3bf3f-b3aa-41b1-aa50-1ac59b0728ea.jpg
+error	2022:08:01 03:16:39	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\a7c82318-74a8-440a-b41d-8907526353cc.jpg'
+error	2022:08:01 03:16:39	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\f30a2546-49bf-4499-8252-7fd73d607c6e.jpg'
+info	2022:08:01 03:16:39	GET Request to /shopping/images/fa7530d6-7c55-4de8-bc07-de0859a53d2e.jpg
+info	2022:08:01 03:16:39	GET Request to /shopping/images/454abf52-ddd4-4095-9489-76877cdcd28a.jpg
+error	2022:08:01 03:16:39	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\2d52cc78-c547-49d3-8219-9aff12ac309a.jpg'
+error	2022:08:01 03:16:39	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\e2c3bf3f-b3aa-41b1-aa50-1ac59b0728ea.jpg'
+error	2022:08:01 03:16:40	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\fa7530d6-7c55-4de8-bc07-de0859a53d2e.jpg'
+error	2022:08:01 03:16:40	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\454abf52-ddd4-4095-9489-76877cdcd28a.jpg'
+info	2022:08:01 03:16:40	GET Request to /shopping/images/3afe1417-79ea-4b39-9161-e2c138e3b593.jpg
+info	2022:08:01 03:16:40	GET Request to /shopping/images/22b7a2f2-1027-4534-a527-86ededc1838e.jpg
+error	2022:08:01 03:16:40	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\3afe1417-79ea-4b39-9161-e2c138e3b593.jpg'
+info	2022:08:01 03:16:40	GET Request to /shopping/images/9e07c712-2993-4a03-a8fa-4a91ff43d085.jpg
+error	2022:08:01 03:16:40	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\22b7a2f2-1027-4534-a527-86ededc1838e.jpg'
+error	2022:08:01 03:16:40	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\9e07c712-2993-4a03-a8fa-4a91ff43d085.jpg'
+info	2022:08:01 03:16:47	GET Request to /shopping/images/c0982207-512d-4c9f-a5fe-213bfff7be03.jpg
+error	2022:08:01 03:16:47	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\c0982207-512d-4c9f-a5fe-213bfff7be03.jpg'
+info	2022:08:01 03:16:47	GET Request to /shopping/images/9df10f36-2aaf-4331-acf9-60b02345473c.jpg
+info	2022:08:01 03:16:47	GET Request to /shopping/images/a8e14607-06b1-4897-adee-1cc69046fa7b.jpg
+error	2022:08:01 03:16:47	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\9df10f36-2aaf-4331-acf9-60b02345473c.jpg'
+error	2022:08:01 03:16:47	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\a8e14607-06b1-4897-adee-1cc69046fa7b.jpg'
+info	2022:08:01 03:16:47	GET Request to /shopping/images/00baf983-90c1-47ba-bdde-285e84b140b8.jpg
+error	2022:08:01 03:16:47	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\00baf983-90c1-47ba-bdde-285e84b140b8.jpg'
+info	2022:08:01 03:16:47	GET Request to /shopping/images/6f147318-ac90-4596-854c-e3bd9c71a6e1.jpg
+error	2022:08:01 03:16:47	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\6f147318-ac90-4596-854c-e3bd9c71a6e1.jpg'
+info	2022:08:01 03:16:47	GET Request to /shopping/images/e905dc2a-960f-4811-a95a-48afe31a0265.jpg
+error	2022:08:01 03:16:47	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\e905dc2a-960f-4811-a95a-48afe31a0265.jpg'
+info	2022:08:01 03:16:47	GET Request to /shopping/images/d85058c3-f68a-4443-9763-bb1c313fd653.jpg
+error	2022:08:01 03:16:47	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\d85058c3-f68a-4443-9763-bb1c313fd653.jpg'
+info	2022:08:01 03:16:47	GET Request to /shopping/images/0a9b0ffb-4d15-4238-9052-7dcf83ab3ca7.jpg
+info	2022:08:01 03:16:47	GET Request to /shopping/images/4845f2b7-86c3-4598-9a9e-5e62e745f65d.jpg
+info	2022:08:01 03:16:47	GET Request to /shopping/images/f4228718-561a-4a41-9ae0-8fb0ebee339c.jpg
+error	2022:08:01 03:16:47	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\0a9b0ffb-4d15-4238-9052-7dcf83ab3ca7.jpg'
+error	2022:08:01 03:16:47	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\4845f2b7-86c3-4598-9a9e-5e62e745f65d.jpg'
+error	2022:08:01 03:16:47	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\f4228718-561a-4a41-9ae0-8fb0ebee339c.jpg'
+info	2022:08:01 03:16:47	GET Request to /shopping/images/fb34e5e8-7c5f-4e5d-aa40-1f0ca620aac6.jpg
+info	2022:08:01 03:16:47	GET Request to /shopping/images/a7c82318-74a8-440a-b41d-8907526353cc.jpg
+error	2022:08:01 03:16:47	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\fb34e5e8-7c5f-4e5d-aa40-1f0ca620aac6.jpg'
+error	2022:08:01 03:16:47	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\a7c82318-74a8-440a-b41d-8907526353cc.jpg'
+info	2022:08:01 03:16:47	GET Request to /shopping/images/f30a2546-49bf-4499-8252-7fd73d607c6e.jpg
+error	2022:08:01 03:16:47	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\f30a2546-49bf-4499-8252-7fd73d607c6e.jpg'
+info	2022:08:01 03:16:47	GET Request to /shopping/images/2d52cc78-c547-49d3-8219-9aff12ac309a.jpg
+info	2022:08:01 03:16:47	GET Request to /shopping/images/e2c3bf3f-b3aa-41b1-aa50-1ac59b0728ea.jpg
+info	2022:08:01 03:16:47	GET Request to /shopping/images/fa7530d6-7c55-4de8-bc07-de0859a53d2e.jpg
+error	2022:08:01 03:16:47	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\2d52cc78-c547-49d3-8219-9aff12ac309a.jpg'
+error	2022:08:01 03:16:47	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\e2c3bf3f-b3aa-41b1-aa50-1ac59b0728ea.jpg'
+error	2022:08:01 03:16:47	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\fa7530d6-7c55-4de8-bc07-de0859a53d2e.jpg'
+info	2022:08:01 03:16:47	GET Request to /shopping/images/454abf52-ddd4-4095-9489-76877cdcd28a.jpg
+info	2022:08:01 03:16:47	GET Request to /shopping/images/3afe1417-79ea-4b39-9161-e2c138e3b593.jpg
+error	2022:08:01 03:16:47	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\454abf52-ddd4-4095-9489-76877cdcd28a.jpg'
+info	2022:08:01 03:16:47	GET Request to /shopping/images/22b7a2f2-1027-4534-a527-86ededc1838e.jpg
+error	2022:08:01 03:16:47	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\3afe1417-79ea-4b39-9161-e2c138e3b593.jpg'
+info	2022:08:01 03:16:47	GET Request to /shopping/images/9e07c712-2993-4a03-a8fa-4a91ff43d085.jpg
+error	2022:08:01 03:16:47	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\22b7a2f2-1027-4534-a527-86ededc1838e.jpg'
+error	2022:08:01 03:16:47	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\9e07c712-2993-4a03-a8fa-4a91ff43d085.jpg'
+info	2022:08:01 03:16:47	POST Request to /api/items/62b4bc0453a94730e6939d36
+info	2022:08:01 03:16:47	GET Request to /api/cart-by-user/62b4bc0453a94730e6939d36
+info	2022:08:01 03:16:47	GET Request to /api/items-by-cart/62e7c42fd6d19e78300cc97a
+info	2022:08:01 03:16:50	GET Request to /api/orders/
+info	2022:08:01 03:16:50	GET Request to /api/cart-by-user/62b4bc0453a94730e6939d36
+info	2022:08:01 03:16:50	GET Request to /api/items-by-cart/62e7c42fd6d19e78300cc97a
+info	2022:08:01 03:16:52	GET Request to /api/cart-by-user/62b4bc0453a94730e6939d36
+info	2022:08:01 03:16:53	GET Request to /shopping/images/c0982207-512d-4c9f-a5fe-213bfff7be03.jpg
+error	2022:08:01 03:16:53	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\c0982207-512d-4c9f-a5fe-213bfff7be03.jpg'
+info	2022:08:01 03:16:53	GET Request to /shopping/images/9df10f36-2aaf-4331-acf9-60b02345473c.jpg
+info	2022:08:01 03:16:53	GET Request to /shopping/images/a8e14607-06b1-4897-adee-1cc69046fa7b.jpg
+error	2022:08:01 03:16:53	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\9df10f36-2aaf-4331-acf9-60b02345473c.jpg'
+error	2022:08:01 03:16:53	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\a8e14607-06b1-4897-adee-1cc69046fa7b.jpg'
+info	2022:08:01 03:16:53	GET Request to /shopping/images/00baf983-90c1-47ba-bdde-285e84b140b8.jpg
+info	2022:08:01 03:16:53	GET Request to /shopping/images/6f147318-ac90-4596-854c-e3bd9c71a6e1.jpg
+info	2022:08:01 03:16:53	GET Request to /shopping/images/e905dc2a-960f-4811-a95a-48afe31a0265.jpg
+error	2022:08:01 03:16:53	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\00baf983-90c1-47ba-bdde-285e84b140b8.jpg'
+error	2022:08:01 03:16:53	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\6f147318-ac90-4596-854c-e3bd9c71a6e1.jpg'
+error	2022:08:01 03:16:53	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\e905dc2a-960f-4811-a95a-48afe31a0265.jpg'
+info	2022:08:01 03:16:53	GET Request to /shopping/images/d85058c3-f68a-4443-9763-bb1c313fd653.jpg
+info	2022:08:01 03:16:53	GET Request to /shopping/images/0a9b0ffb-4d15-4238-9052-7dcf83ab3ca7.jpg
+error	2022:08:01 03:16:53	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\d85058c3-f68a-4443-9763-bb1c313fd653.jpg'
+info	2022:08:01 03:16:53	GET Request to /shopping/images/4845f2b7-86c3-4598-9a9e-5e62e745f65d.jpg
+error	2022:08:01 03:16:53	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\0a9b0ffb-4d15-4238-9052-7dcf83ab3ca7.jpg'
+info	2022:08:01 03:16:53	GET Request to /shopping/images/f4228718-561a-4a41-9ae0-8fb0ebee339c.jpg
+error	2022:08:01 03:16:53	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\4845f2b7-86c3-4598-9a9e-5e62e745f65d.jpg'
+info	2022:08:01 03:16:53	GET Request to /shopping/images/fb34e5e8-7c5f-4e5d-aa40-1f0ca620aac6.jpg
+info	2022:08:01 03:16:53	GET Request to /shopping/images/a7c82318-74a8-440a-b41d-8907526353cc.jpg
+error	2022:08:01 03:16:53	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\f4228718-561a-4a41-9ae0-8fb0ebee339c.jpg'
+error	2022:08:01 03:16:53	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\fb34e5e8-7c5f-4e5d-aa40-1f0ca620aac6.jpg'
+error	2022:08:01 03:16:53	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\a7c82318-74a8-440a-b41d-8907526353cc.jpg'
+info	2022:08:01 03:16:53	GET Request to /shopping/images/f30a2546-49bf-4499-8252-7fd73d607c6e.jpg
+info	2022:08:01 03:16:53	GET Request to /shopping/images/2d52cc78-c547-49d3-8219-9aff12ac309a.jpg
+error	2022:08:01 03:16:53	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\f30a2546-49bf-4499-8252-7fd73d607c6e.jpg'
+error	2022:08:01 03:16:53	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\2d52cc78-c547-49d3-8219-9aff12ac309a.jpg'
+info	2022:08:01 03:16:53	GET Request to /shopping/images/e2c3bf3f-b3aa-41b1-aa50-1ac59b0728ea.jpg
+error	2022:08:01 03:16:53	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\e2c3bf3f-b3aa-41b1-aa50-1ac59b0728ea.jpg'
+info	2022:08:01 03:16:53	GET Request to /shopping/images/fa7530d6-7c55-4de8-bc07-de0859a53d2e.jpg
+error	2022:08:01 03:16:53	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\fa7530d6-7c55-4de8-bc07-de0859a53d2e.jpg'
+info	2022:08:01 03:16:53	GET Request to /shopping/images/454abf52-ddd4-4095-9489-76877cdcd28a.jpg
+error	2022:08:01 03:16:53	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\454abf52-ddd4-4095-9489-76877cdcd28a.jpg'
+info	2022:08:01 03:16:53	GET Request to /shopping/images/3afe1417-79ea-4b39-9161-e2c138e3b593.jpg
+error	2022:08:01 03:16:53	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\3afe1417-79ea-4b39-9161-e2c138e3b593.jpg'
+info	2022:08:01 03:16:53	GET Request to /shopping/images/22b7a2f2-1027-4534-a527-86ededc1838e.jpg
+info	2022:08:01 03:16:53	GET Request to /shopping/images/9e07c712-2993-4a03-a8fa-4a91ff43d085.jpg
+error	2022:08:01 03:16:53	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\22b7a2f2-1027-4534-a527-86ededc1838e.jpg'
+error	2022:08:01 03:16:53	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\07. July-John Bryce\..MEAN Shopping Online by Jack Amsterdam\Backend\src\upload\images\9e07c712-2993-4a03-a8fa-4a91ff43d085.jpg'
+info	2022:08:01 03:16:53	GET Request to /api/items-by-cart/62e7c42fd6d19e78300cc97a
+info	2022:08:01 03:16:55	DELETE Request to /api/items/62cb0b51140d657b91bfdff5/62e7c42fd6d19e78300cc97a
+info	2022:08:01 03:16:57	POST Request to /api/items/62b4bc0453a94730e6939d36
+info	2022:08:01 03:16:57	GET Request to /api/cart-by-user/62b4bc0453a94730e6939d36
+info	2022:08:01 03:16:57	GET Request to /api/items-by-cart/62e7c42fd6d19e78300cc97a
+info	2022:08:01 03:16:59	DELETE Request to /api/items/62e7c42fd6d19e78300cc97a
+info	2022:08:01 03:43:52	GET Request to /api/cart-by-user/62b4bc0453a94730e6939d36
+info	2022:08:01 03:43:52	GET Request to /api/products/
+info	2022:08:01 03:43:52	GET Request to /api/categories/
+info	2022:08:01 03:43:56	GET Request to /api/items-by-cart/62e7c42fd6d19e78300cc97a
+info	2022:08:01 03:43:56	GET Request to /api/products/
+info	2022:08:01 03:44:02	GET Request to /api/cart-by-user/62b4bc0453a94730e6939d36
+info	2022:08:01 03:44:02	GET Request to /api/products/
+info	2022:08:01 03:44:02	GET Request to /api/categories/
+info	2022:08:01 03:44:04	GET Request to /api/items-by-cart/62e7c42fd6d19e78300cc97a
+info	2022:08:01 03:44:04	GET Request to /api/products/
+info	2022:08:01 03:44:08	GET Request to /api/products/
+info	2022:08:01 03:44:10	GET Request to /shopping/images/d741f3a3-4078-45de-8519-5a4404b6ebac.jpg
+info	2022:08:01 03:44:10	GET Request to /shopping/images/c02e16bb-f8af-48e8-bc54-31acd91c8930.jpg
+info	2022:08:01 03:44:10	GET Request to /shopping/images/24684495-1e8b-47fc-906c-b4bd483d1f66.jpg
+info	2022:08:01 03:44:10	GET Request to /shopping/images/8a9c87cd-bf7f-40c7-af7a-7bd57a785ea3.jpg
+info	2022:08:01 03:44:10	GET Request to /shopping/images/d7525a9a-01bd-4a53-ab2f-8f447c37e782.jpg
+info	2022:08:01 03:44:12	GET Request to /api/products/
+info	2022:08:01 03:44:12	GET Request to /api/cart-by-user/62b4bc0453a94730e6939d36
+info	2022:08:01 03:44:12	GET Request to /api/categories/
+info	2022:08:01 03:44:15	GET Request to /api/items-by-cart/62e7c42fd6d19e78300cc97a
+info	2022:08:01 03:44:15	GET Request to /api/products/
+info	2022:08:01 03:44:18	GET Request to /api/products/
+info	2022:08:01 03:44:18	GET Request to /shopping/images/d741f3a3-4078-45de-8519-5a4404b6ebac.jpg
+info	2022:08:01 03:44:18	GET Request to /shopping/images/c02e16bb-f8af-48e8-bc54-31acd91c8930.jpg
+info	2022:08:01 03:44:18	GET Request to /shopping/images/24684495-1e8b-47fc-906c-b4bd483d1f66.jpg
+info	2022:08:01 03:44:18	GET Request to /shopping/images/8a9c87cd-bf7f-40c7-af7a-7bd57a785ea3.jpg
+info	2022:08:01 03:44:18	GET Request to /shopping/images/d7525a9a-01bd-4a53-ab2f-8f447c37e782.jpg
+info	2022:08:01 03:44:20	GET Request to /shopping/images/64406618-b6dc-4ffd-a1ec-da12cd19fec2.jpg
+info	2022:08:01 03:44:20	GET Request to /shopping/images/824a417f-cab1-4d0c-95da-93cf5089ff1d.jpg
+info	2022:08:01 03:44:20	GET Request to /shopping/images/42491fb0-ae10-4f10-8e0c-cb96cf987128.jpg
+info	2022:08:01 03:44:20	GET Request to /shopping/images/47972f21-3939-403b-ae73-3367673bec28.jpg
+info	2022:08:01 03:44:20	GET Request to /shopping/images/a28e44a7-3b67-48de-acd1-f982a623a0d8.jpg
+info	2022:08:01 03:44:20	GET Request to /shopping/images/460b3292-789c-4220-82d4-4877e2a97e91.jpg
+info	2022:08:01 03:44:20	GET Request to /shopping/images/84e89a97-cd40-4cd7-9b7c-fd5e578f6d89.jpg
+info	2022:08:01 03:44:20	GET Request to /shopping/images/965a7f21-2ba0-4cd1-b7b9-5cba45f0961a.jpg
+info	2022:08:01 03:44:20	GET Request to /shopping/images/a9043f4d-6362-4d1c-bde8-aa858e15f6e1.jpg
+info	2022:08:01 03:44:20	GET Request to /shopping/images/203fd535-9484-4cc6-8065-b4a0fc16d1aa.jpg
+info	2022:08:01 03:44:20	GET Request to /shopping/images/29f54c52-cd4d-4bf6-a7f8-18e5504e3348.jpg
+info	2022:08:01 03:44:20	GET Request to /shopping/images/80f5ad28-ed58-4f06-b340-b0d570198300.jpg
+info	2022:08:01 03:44:20	GET Request to /shopping/images/8e731f20-0c1a-4f82-b6df-3990713abd61.jpg
+info	2022:08:01 03:44:20	GET Request to /shopping/images/b1bc176b-e627-4ae8-afb7-7871719ccb0d.jpg
+info	2022:08:01 03:44:20	GET Request to /shopping/images/b562708c-b070-4943-8cad-d40e0bd99ba9.jpg
+info	2022:08:01 03:44:20	GET Request to /shopping/images/7da7703e-9d85-400a-87f4-0bffd8d2a76b.jpg
+info	2022:08:01 03:44:20	GET Request to /shopping/images/ad94aeb7-727c-48ef-9d2f-09b42f9fac67.jpg
+info	2022:08:01 03:44:24	GET Request to /api/cart-by-user/62b4bc0453a94730e6939d36
+info	2022:08:01 03:44:24	GET Request to /api/products/
+info	2022:08:01 03:44:24	GET Request to /api/categories/
+info	2022:08:01 03:44:25	GET Request to /api/items-by-cart/62e7c42fd6d19e78300cc97a
+info	2022:08:01 03:44:27	GET Request to /api/products/
+info	2022:08:01 03:44:28	GET Request to /shopping/images/c02e16bb-f8af-48e8-bc54-31acd91c8930.jpg
+info	2022:08:01 03:44:28	GET Request to /shopping/images/d741f3a3-4078-45de-8519-5a4404b6ebac.jpg
+info	2022:08:01 03:44:28	GET Request to /shopping/images/24684495-1e8b-47fc-906c-b4bd483d1f66.jpg
+info	2022:08:01 03:44:28	GET Request to /shopping/images/8a9c87cd-bf7f-40c7-af7a-7bd57a785ea3.jpg
+info	2022:08:01 03:44:28	GET Request to /shopping/images/d7525a9a-01bd-4a53-ab2f-8f447c37e782.jpg
+info	2022:08:01 03:44:28	GET Request to /api/products/
+info	2022:08:01 03:44:29	GET Request to /shopping/images/64406618-b6dc-4ffd-a1ec-da12cd19fec2.jpg
+info	2022:08:01 03:44:29	GET Request to /shopping/images/824a417f-cab1-4d0c-95da-93cf5089ff1d.jpg
+info	2022:08:01 03:44:29	GET Request to /shopping/images/42491fb0-ae10-4f10-8e0c-cb96cf987128.jpg
+info	2022:08:01 03:44:29	GET Request to /shopping/images/47972f21-3939-403b-ae73-3367673bec28.jpg
+info	2022:08:01 03:44:29	GET Request to /shopping/images/c02e16bb-f8af-48e8-bc54-31acd91c8930.jpg
+info	2022:08:01 03:44:29	GET Request to /shopping/images/a28e44a7-3b67-48de-acd1-f982a623a0d8.jpg
+info	2022:08:01 03:44:29	GET Request to /shopping/images/460b3292-789c-4220-82d4-4877e2a97e91.jpg
+info	2022:08:01 03:44:29	GET Request to /shopping/images/84e89a97-cd40-4cd7-9b7c-fd5e578f6d89.jpg
+info	2022:08:01 03:44:29	GET Request to /shopping/images/965a7f21-2ba0-4cd1-b7b9-5cba45f0961a.jpg
+info	2022:08:01 03:44:29	GET Request to /shopping/images/a9043f4d-6362-4d1c-bde8-aa858e15f6e1.jpg
+info	2022:08:01 03:44:30	GET Request to /shopping/images/24684495-1e8b-47fc-906c-b4bd483d1f66.jpg
+info	2022:08:01 03:44:30	GET Request to /shopping/images/203fd535-9484-4cc6-8065-b4a0fc16d1aa.jpg
+info	2022:08:01 03:44:30	GET Request to /shopping/images/29f54c52-cd4d-4bf6-a7f8-18e5504e3348.jpg
+info	2022:08:01 03:44:30	GET Request to /shopping/images/80f5ad28-ed58-4f06-b340-b0d570198300.jpg
+info	2022:08:01 03:44:30	GET Request to /shopping/images/8e731f20-0c1a-4f82-b6df-3990713abd61.jpg
+info	2022:08:01 03:44:30	GET Request to /shopping/images/b1bc176b-e627-4ae8-afb7-7871719ccb0d.jpg
+info	2022:08:01 03:44:30	GET Request to /shopping/images/b562708c-b070-4943-8cad-d40e0bd99ba9.jpg
+info	2022:08:01 03:44:30	GET Request to /shopping/images/7da7703e-9d85-400a-87f4-0bffd8d2a76b.jpg
+info	2022:08:01 03:44:30	GET Request to /shopping/images/ad94aeb7-727c-48ef-9d2f-09b42f9fac67.jpg
+info	2022:08:01 03:44:32	GET Request to /shopping/images/1347c8c3-c051-43fd-b83b-9a90a95cea62.jpg
+info	2022:08:01 03:44:32	GET Request to /shopping/images/e70cfe22-69cb-49b1-b475-131029891865.jpg
+info	2022:08:01 03:44:32	GET Request to /shopping/images/5da04a74-8424-4955-b700-7cf581545c63.jpg
+info	2022:08:01 03:44:32	GET Request to /shopping/images/9d0686f4-27da-466c-8f79-6ea5330c86f9.jpg
+info	2022:08:01 03:44:40	GET Request to /api/cart-by-user/62b4bc0453a94730e6939d36
+info	2022:08:01 03:44:40	GET Request to /api/categories/
+info	2022:08:01 03:44:40	GET Request to /api/products/
+info	2022:08:01 03:44:41	GET Request to /api/items-by-cart/62e7c42fd6d19e78300cc97a
+info	2022:08:01 03:44:43	GET Request to /api/products/
+info	2022:08:01 03:44:45	GET Request to /api/products/
+info	2022:08:01 03:44:45	GET Request to /shopping/images/d741f3a3-4078-45de-8519-5a4404b6ebac.jpg
+info	2022:08:01 03:44:46	GET Request to /shopping/images/c02e16bb-f8af-48e8-bc54-31acd91c8930.jpg
+info	2022:08:01 03:44:46	GET Request to /shopping/images/d7525a9a-01bd-4a53-ab2f-8f447c37e782.jpg
+info	2022:08:01 03:44:46	GET Request to /shopping/images/8a9c87cd-bf7f-40c7-af7a-7bd57a785ea3.jpg
+info	2022:08:01 03:44:46	GET Request to /shopping/images/24684495-1e8b-47fc-906c-b4bd483d1f66.jpg
+info	2022:08:01 03:44:46	GET Request to /shopping/images/64406618-b6dc-4ffd-a1ec-da12cd19fec2.jpg
+info	2022:08:01 03:44:46	GET Request to /shopping/images/824a417f-cab1-4d0c-95da-93cf5089ff1d.jpg
+info	2022:08:01 03:44:47	GET Request to /shopping/images/42491fb0-ae10-4f10-8e0c-cb96cf987128.jpg
+info	2022:08:01 03:44:47	GET Request to /shopping/images/47972f21-3939-403b-ae73-3367673bec28.jpg
+info	2022:08:01 03:44:47	GET Request to /shopping/images/a28e44a7-3b67-48de-acd1-f982a623a0d8.jpg
+info	2022:08:01 03:44:47	GET Request to /shopping/images/460b3292-789c-4220-82d4-4877e2a97e91.jpg
+info	2022:08:01 03:44:47	GET Request to /shopping/images/84e89a97-cd40-4cd7-9b7c-fd5e578f6d89.jpg
+info	2022:08:01 03:44:47	GET Request to /shopping/images/965a7f21-2ba0-4cd1-b7b9-5cba45f0961a.jpg
+info	2022:08:01 03:44:47	GET Request to /shopping/images/a9043f4d-6362-4d1c-bde8-aa858e15f6e1.jpg
+info	2022:08:01 03:44:47	GET Request to /shopping/images/203fd535-9484-4cc6-8065-b4a0fc16d1aa.jpg
+info	2022:08:01 03:44:47	GET Request to /shopping/images/29f54c52-cd4d-4bf6-a7f8-18e5504e3348.jpg
+info	2022:08:01 03:44:47	GET Request to /shopping/images/80f5ad28-ed58-4f06-b340-b0d570198300.jpg
+info	2022:08:01 03:44:47	GET Request to /shopping/images/8e731f20-0c1a-4f82-b6df-3990713abd61.jpg
+info	2022:08:01 03:44:47	GET Request to /shopping/images/b1bc176b-e627-4ae8-afb7-7871719ccb0d.jpg
+info	2022:08:01 03:44:47	GET Request to /shopping/images/b562708c-b070-4943-8cad-d40e0bd99ba9.jpg
+info	2022:08:01 03:44:47	GET Request to /shopping/images/7da7703e-9d85-400a-87f4-0bffd8d2a76b.jpg
+info	2022:08:01 03:44:47	GET Request to /shopping/images/ad94aeb7-727c-48ef-9d2f-09b42f9fac67.jpg
+info	2022:08:01 03:44:47	GET Request to /shopping/images/1347c8c3-c051-43fd-b83b-9a90a95cea62.jpg
+info	2022:08:01 03:44:47	GET Request to /shopping/images/e70cfe22-69cb-49b1-b475-131029891865.jpg
+info	2022:08:01 03:44:47	GET Request to /shopping/images/5da04a74-8424-4955-b700-7cf581545c63.jpg
+info	2022:08:01 03:44:48	GET Request to /shopping/images/9d0686f4-27da-466c-8f79-6ea5330c86f9.jpg
+info	2022:08:01 03:44:55	GET Request to /api/cart-by-user/62b4bc0453a94730e6939d36
+info	2022:08:01 03:44:55	GET Request to /api/categories/
+info	2022:08:01 03:44:55	GET Request to /api/products/
+info	2022:08:01 03:44:56	GET Request to /api/items-by-cart/62e7c42fd6d19e78300cc97a
+info	2022:08:01 03:44:58	GET Request to /api/products/
+info	2022:08:01 03:45:00	GET Request to /shopping/images/d741f3a3-4078-45de-8519-5a4404b6ebac.jpg
+info	2022:08:01 03:45:00	GET Request to /shopping/images/c02e16bb-f8af-48e8-bc54-31acd91c8930.jpg
+info	2022:08:01 03:45:00	GET Request to /shopping/images/24684495-1e8b-47fc-906c-b4bd483d1f66.jpg
+info	2022:08:01 03:45:00	GET Request to /shopping/images/8a9c87cd-bf7f-40c7-af7a-7bd57a785ea3.jpg
+info	2022:08:01 03:45:00	GET Request to /shopping/images/d7525a9a-01bd-4a53-ab2f-8f447c37e782.jpg
+info	2022:08:01 03:45:00	GET Request to /api/products/
+info	2022:08:01 03:45:00	GET Request to /shopping/images/64406618-b6dc-4ffd-a1ec-da12cd19fec2.jpg
+info	2022:08:01 03:45:00	GET Request to /shopping/images/824a417f-cab1-4d0c-95da-93cf5089ff1d.jpg
+info	2022:08:01 03:45:00	GET Request to /shopping/images/42491fb0-ae10-4f10-8e0c-cb96cf987128.jpg
+info	2022:08:01 03:45:00	GET Request to /shopping/images/47972f21-3939-403b-ae73-3367673bec28.jpg
+info	2022:08:01 03:45:00	GET Request to /shopping/images/a28e44a7-3b67-48de-acd1-f982a623a0d8.jpg
+info	2022:08:01 03:45:00	GET Request to /shopping/images/460b3292-789c-4220-82d4-4877e2a97e91.jpg
+info	2022:08:01 03:45:00	GET Request to /shopping/images/84e89a97-cd40-4cd7-9b7c-fd5e578f6d89.jpg
+info	2022:08:01 03:45:00	GET Request to /shopping/images/965a7f21-2ba0-4cd1-b7b9-5cba45f0961a.jpg
+info	2022:08:01 03:45:02	GET Request to /shopping/images/a9043f4d-6362-4d1c-bde8-aa858e15f6e1.jpg
+info	2022:08:01 03:45:02	GET Request to /shopping/images/203fd535-9484-4cc6-8065-b4a0fc16d1aa.jpg
+info	2022:08:01 03:45:02	GET Request to /shopping/images/29f54c52-cd4d-4bf6-a7f8-18e5504e3348.jpg
+info	2022:08:01 03:45:02	GET Request to /shopping/images/80f5ad28-ed58-4f06-b340-b0d570198300.jpg
+info	2022:08:01 03:45:06	GET Request to /shopping/images/8e731f20-0c1a-4f82-b6df-3990713abd61.jpg
+info	2022:08:01 03:45:06	GET Request to /shopping/images/b1bc176b-e627-4ae8-afb7-7871719ccb0d.jpg
+info	2022:08:01 03:45:06	GET Request to /shopping/images/b562708c-b070-4943-8cad-d40e0bd99ba9.jpg
+info	2022:08:01 03:45:06	GET Request to /shopping/images/7da7703e-9d85-400a-87f4-0bffd8d2a76b.jpg
+info	2022:08:01 03:45:06	GET Request to /shopping/images/ad94aeb7-727c-48ef-9d2f-09b42f9fac67.jpg
+info	2022:08:01 03:45:06	GET Request to /shopping/images/1347c8c3-c051-43fd-b83b-9a90a95cea62.jpg
+info	2022:08:01 03:45:06	GET Request to /shopping/images/e70cfe22-69cb-49b1-b475-131029891865.jpg
+info	2022:08:01 03:45:06	GET Request to /shopping/images/5da04a74-8424-4955-b700-7cf581545c63.jpg
+info	2022:08:01 03:45:06	GET Request to /shopping/images/9d0686f4-27da-466c-8f79-6ea5330c86f9.jpg
+info	2022:08:01 03:45:10	GET Request to /api/cart-by-user/62b4bc0453a94730e6939d36
+info	2022:08:01 03:45:10	GET Request to /api/products/
+info	2022:08:01 03:45:10	GET Request to /api/categories/
+info	2022:08:01 03:45:11	GET Request to /api/items-by-cart/62e7c42fd6d19e78300cc97a
+info	2022:08:01 03:45:13	GET Request to /api/products/
+info	2022:08:01 03:45:15	GET Request to /shopping/images/d741f3a3-4078-45de-8519-5a4404b6ebac.jpg
+info	2022:08:01 03:45:15	GET Request to /shopping/images/c02e16bb-f8af-48e8-bc54-31acd91c8930.jpg
+info	2022:08:01 03:45:15	GET Request to /shopping/images/24684495-1e8b-47fc-906c-b4bd483d1f66.jpg
+info	2022:08:01 03:45:15	GET Request to /shopping/images/8a9c87cd-bf7f-40c7-af7a-7bd57a785ea3.jpg
+info	2022:08:01 03:45:15	GET Request to /shopping/images/d7525a9a-01bd-4a53-ab2f-8f447c37e782.jpg
+info	2022:08:01 03:45:15	GET Request to /api/products/
+info	2022:08:01 03:45:15	GET Request to /shopping/images/64406618-b6dc-4ffd-a1ec-da12cd19fec2.jpg
+info	2022:08:01 03:45:15	GET Request to /shopping/images/824a417f-cab1-4d0c-95da-93cf5089ff1d.jpg
+info	2022:08:01 03:45:20	GET Request to /shopping/images/42491fb0-ae10-4f10-8e0c-cb96cf987128.jpg
+info	2022:08:01 03:45:20	GET Request to /shopping/images/47972f21-3939-403b-ae73-3367673bec28.jpg
+info	2022:08:01 03:45:20	GET Request to /shopping/images/a28e44a7-3b67-48de-acd1-f982a623a0d8.jpg
+info	2022:08:01 03:45:20	GET Request to /shopping/images/460b3292-789c-4220-82d4-4877e2a97e91.jpg
+info	2022:08:01 03:45:20	GET Request to /shopping/images/84e89a97-cd40-4cd7-9b7c-fd5e578f6d89.jpg
+info	2022:08:01 03:45:20	GET Request to /shopping/images/965a7f21-2ba0-4cd1-b7b9-5cba45f0961a.jpg
+info	2022:08:01 03:45:20	GET Request to /shopping/images/a9043f4d-6362-4d1c-bde8-aa858e15f6e1.jpg
+info	2022:08:01 03:45:20	GET Request to /shopping/images/203fd535-9484-4cc6-8065-b4a0fc16d1aa.jpg
+info	2022:08:01 03:45:20	GET Request to /shopping/images/29f54c52-cd4d-4bf6-a7f8-18e5504e3348.jpg
+info	2022:08:01 03:45:20	GET Request to /shopping/images/80f5ad28-ed58-4f06-b340-b0d570198300.jpg
+info	2022:08:01 03:45:20	GET Request to /shopping/images/8e731f20-0c1a-4f82-b6df-3990713abd61.jpg
+info	2022:08:01 03:45:20	GET Request to /shopping/images/b1bc176b-e627-4ae8-afb7-7871719ccb0d.jpg
+info	2022:08:01 03:45:20	GET Request to /shopping/images/b562708c-b070-4943-8cad-d40e0bd99ba9.jpg
+info	2022:08:01 03:45:20	GET Request to /shopping/images/7da7703e-9d85-400a-87f4-0bffd8d2a76b.jpg
+info	2022:08:01 03:45:20	GET Request to /shopping/images/ad94aeb7-727c-48ef-9d2f-09b42f9fac67.jpg
+info	2022:08:01 03:45:20	GET Request to /shopping/images/1347c8c3-c051-43fd-b83b-9a90a95cea62.jpg
+info	2022:08:01 03:45:20	GET Request to /shopping/images/e70cfe22-69cb-49b1-b475-131029891865.jpg
+info	2022:08:01 03:45:20	GET Request to /shopping/images/5da04a74-8424-4955-b700-7cf581545c63.jpg
+info	2022:08:01 03:45:20	GET Request to /shopping/images/9d0686f4-27da-466c-8f79-6ea5330c86f9.jpg
+info	2022:08:01 03:45:31	GET Request to /api/cart-by-user/62b4bc0453a94730e6939d36
+info	2022:08:01 03:45:31	GET Request to /api/categories/
+info	2022:08:01 03:45:31	GET Request to /api/products/
+info	2022:08:01 03:45:32	GET Request to /api/items-by-cart/62e7c42fd6d19e78300cc97a
+info	2022:08:01 03:45:35	GET Request to /api/products/
+info	2022:08:01 03:45:40	GET Request to /api/products/
+info	2022:08:01 03:45:43	GET Request to /shopping/images/d741f3a3-4078-45de-8519-5a4404b6ebac.jpg
+info	2022:08:01 03:45:43	GET Request to /shopping/images/c02e16bb-f8af-48e8-bc54-31acd91c8930.jpg
+info	2022:08:01 03:45:43	GET Request to /shopping/images/24684495-1e8b-47fc-906c-b4bd483d1f66.jpg
+info	2022:08:01 03:45:43	GET Request to /shopping/images/d7525a9a-01bd-4a53-ab2f-8f447c37e782.jpg
+info	2022:08:01 03:45:43	GET Request to /shopping/images/8a9c87cd-bf7f-40c7-af7a-7bd57a785ea3.jpg
+info	2022:08:01 03:45:43	GET Request to /shopping/images/64406618-b6dc-4ffd-a1ec-da12cd19fec2.jpg
+info	2022:08:01 03:45:43	GET Request to /shopping/images/824a417f-cab1-4d0c-95da-93cf5089ff1d.jpg
+info	2022:08:01 03:45:43	GET Request to /shopping/images/42491fb0-ae10-4f10-8e0c-cb96cf987128.jpg
+info	2022:08:01 03:45:44	GET Request to /shopping/images/47972f21-3939-403b-ae73-3367673bec28.jpg
+info	2022:08:01 03:45:44	GET Request to /shopping/images/a28e44a7-3b67-48de-acd1-f982a623a0d8.jpg
+info	2022:08:01 03:45:44	GET Request to /shopping/images/460b3292-789c-4220-82d4-4877e2a97e91.jpg
+info	2022:08:01 03:45:44	GET Request to /shopping/images/84e89a97-cd40-4cd7-9b7c-fd5e578f6d89.jpg
+info	2022:08:01 03:45:44	GET Request to /shopping/images/965a7f21-2ba0-4cd1-b7b9-5cba45f0961a.jpg
+info	2022:08:01 03:45:44	GET Request to /shopping/images/a9043f4d-6362-4d1c-bde8-aa858e15f6e1.jpg
+info	2022:08:01 03:45:44	GET Request to /shopping/images/203fd535-9484-4cc6-8065-b4a0fc16d1aa.jpg
+info	2022:08:01 03:45:44	GET Request to /shopping/images/29f54c52-cd4d-4bf6-a7f8-18e5504e3348.jpg
+info	2022:08:01 03:45:44	GET Request to /shopping/images/80f5ad28-ed58-4f06-b340-b0d570198300.jpg
+info	2022:08:01 03:45:44	GET Request to /shopping/images/8e731f20-0c1a-4f82-b6df-3990713abd61.jpg
+info	2022:08:01 03:45:44	GET Request to /shopping/images/b1bc176b-e627-4ae8-afb7-7871719ccb0d.jpg
+info	2022:08:01 03:45:44	GET Request to /shopping/images/b562708c-b070-4943-8cad-d40e0bd99ba9.jpg
+info	2022:08:01 03:45:44	GET Request to /shopping/images/7da7703e-9d85-400a-87f4-0bffd8d2a76b.jpg
+info	2022:08:01 03:45:44	GET Request to /shopping/images/ad94aeb7-727c-48ef-9d2f-09b42f9fac67.jpg
+info	2022:08:01 03:45:44	GET Request to /shopping/images/1347c8c3-c051-43fd-b83b-9a90a95cea62.jpg
+info	2022:08:01 03:45:44	GET Request to /shopping/images/e70cfe22-69cb-49b1-b475-131029891865.jpg
+info	2022:08:01 03:45:44	GET Request to /shopping/images/5da04a74-8424-4955-b700-7cf581545c63.jpg
+info	2022:08:01 03:45:44	GET Request to /shopping/images/9d0686f4-27da-466c-8f79-6ea5330c86f9.jpg
+info	2022:08:01 03:45:59	GET Request to /api/cart-by-user/62b4bc0453a94730e6939d36
+info	2022:08:01 03:45:59	GET Request to /api/categories/
+info	2022:08:01 03:45:59	GET Request to /api/products/
+info	2022:08:01 03:45:59	GET Request to /api/items-by-cart/62e7c42fd6d19e78300cc97a
+info	2022:08:01 03:46:01	GET Request to /api/products/
+info	2022:08:01 03:46:04	GET Request to /shopping/images/d741f3a3-4078-45de-8519-5a4404b6ebac.jpg
+info	2022:08:01 03:46:04	GET Request to /shopping/images/c02e16bb-f8af-48e8-bc54-31acd91c8930.jpg
+info	2022:08:01 03:46:04	GET Request to /shopping/images/d7525a9a-01bd-4a53-ab2f-8f447c37e782.jpg
+info	2022:08:01 03:46:04	GET Request to /shopping/images/8a9c87cd-bf7f-40c7-af7a-7bd57a785ea3.jpg
+info	2022:08:01 03:46:04	GET Request to /shopping/images/24684495-1e8b-47fc-906c-b4bd483d1f66.jpg
+info	2022:08:01 03:46:04	GET Request to /api/products/
+info	2022:08:01 03:46:04	GET Request to /shopping/images/64406618-b6dc-4ffd-a1ec-da12cd19fec2.jpg
+info	2022:08:01 03:46:04	GET Request to /shopping/images/824a417f-cab1-4d0c-95da-93cf5089ff1d.jpg
+info	2022:08:01 03:46:04	GET Request to /shopping/images/42491fb0-ae10-4f10-8e0c-cb96cf987128.jpg
+info	2022:08:01 03:46:04	GET Request to /shopping/images/47972f21-3939-403b-ae73-3367673bec28.jpg
+info	2022:08:01 03:46:04	GET Request to /shopping/images/a28e44a7-3b67-48de-acd1-f982a623a0d8.jpg
+info	2022:08:01 03:46:05	GET Request to /shopping/images/460b3292-789c-4220-82d4-4877e2a97e91.jpg
+info	2022:08:01 03:46:05	GET Request to /shopping/images/84e89a97-cd40-4cd7-9b7c-fd5e578f6d89.jpg
+info	2022:08:01 03:46:05	GET Request to /shopping/images/965a7f21-2ba0-4cd1-b7b9-5cba45f0961a.jpg
+info	2022:08:01 03:46:05	GET Request to /shopping/images/a9043f4d-6362-4d1c-bde8-aa858e15f6e1.jpg
+info	2022:08:01 03:46:05	GET Request to /shopping/images/203fd535-9484-4cc6-8065-b4a0fc16d1aa.jpg
+info	2022:08:01 03:46:07	GET Request to /shopping/images/29f54c52-cd4d-4bf6-a7f8-18e5504e3348.jpg
+info	2022:08:01 03:46:07	GET Request to /shopping/images/80f5ad28-ed58-4f06-b340-b0d570198300.jpg
+info	2022:08:01 03:46:07	GET Request to /shopping/images/8e731f20-0c1a-4f82-b6df-3990713abd61.jpg
+info	2022:08:01 03:46:07	GET Request to /shopping/images/b1bc176b-e627-4ae8-afb7-7871719ccb0d.jpg
+info	2022:08:01 03:46:07	GET Request to /shopping/images/b562708c-b070-4943-8cad-d40e0bd99ba9.jpg
+info	2022:08:01 03:46:07	GET Request to /shopping/images/7da7703e-9d85-400a-87f4-0bffd8d2a76b.jpg
+info	2022:08:01 03:46:07	GET Request to /shopping/images/ad94aeb7-727c-48ef-9d2f-09b42f9fac67.jpg
+info	2022:08:01 03:46:07	GET Request to /shopping/images/1347c8c3-c051-43fd-b83b-9a90a95cea62.jpg
+info	2022:08:01 03:46:07	GET Request to /shopping/images/e70cfe22-69cb-49b1-b475-131029891865.jpg
+info	2022:08:01 03:46:07	GET Request to /shopping/images/5da04a74-8424-4955-b700-7cf581545c63.jpg
+info	2022:08:01 03:46:07	GET Request to /shopping/images/9d0686f4-27da-466c-8f79-6ea5330c86f9.jpg
+info	2022:08:01 03:46:17	GET Request to /api/cart-by-user/62b4bc0453a94730e6939d36
+info	2022:08:01 03:46:17	GET Request to /api/categories/
+info	2022:08:01 03:46:17	GET Request to /api/products/
+info	2022:08:01 03:46:18	GET Request to /api/items-by-cart/62e7c42fd6d19e78300cc97a
+info	2022:08:01 03:46:21	GET Request to /api/products/
+info	2022:08:01 03:46:21	GET Request to /api/cart-by-user/62b4bc0453a94730e6939d36
+info	2022:08:01 03:46:21	GET Request to /api/categories/
+info	2022:08:01 03:46:23	GET Request to /api/items-by-cart/62e7c42fd6d19e78300cc97a
+info	2022:08:01 03:46:23	GET Request to /api/products/
+info	2022:08:01 03:46:25	GET Request to /shopping/images/d741f3a3-4078-45de-8519-5a4404b6ebac.jpg
+info	2022:08:01 03:46:25	GET Request to /shopping/images/c02e16bb-f8af-48e8-bc54-31acd91c8930.jpg
+info	2022:08:01 03:46:25	GET Request to /shopping/images/24684495-1e8b-47fc-906c-b4bd483d1f66.jpg
+info	2022:08:01 03:46:25	GET Request to /shopping/images/8a9c87cd-bf7f-40c7-af7a-7bd57a785ea3.jpg
+info	2022:08:01 03:46:25	GET Request to /shopping/images/d7525a9a-01bd-4a53-ab2f-8f447c37e782.jpg
+info	2022:08:01 03:46:25	GET Request to /api/products/
+info	2022:08:01 03:46:25	GET Request to /shopping/images/64406618-b6dc-4ffd-a1ec-da12cd19fec2.jpg
+info	2022:08:01 03:46:25	GET Request to /shopping/images/824a417f-cab1-4d0c-95da-93cf5089ff1d.jpg
+info	2022:08:01 03:46:25	GET Request to /shopping/images/42491fb0-ae10-4f10-8e0c-cb96cf987128.jpg
+info	2022:08:01 03:46:25	GET Request to /shopping/images/47972f21-3939-403b-ae73-3367673bec28.jpg
+info	2022:08:01 03:46:25	GET Request to /shopping/images/a28e44a7-3b67-48de-acd1-f982a623a0d8.jpg
+info	2022:08:01 03:46:25	GET Request to /shopping/images/460b3292-789c-4220-82d4-4877e2a97e91.jpg
+info	2022:08:01 03:46:25	GET Request to /shopping/images/84e89a97-cd40-4cd7-9b7c-fd5e578f6d89.jpg
+info	2022:08:01 03:46:25	GET Request to /shopping/images/965a7f21-2ba0-4cd1-b7b9-5cba45f0961a.jpg
+info	2022:08:01 03:46:25	GET Request to /shopping/images/a9043f4d-6362-4d1c-bde8-aa858e15f6e1.jpg
+info	2022:08:01 03:46:26	GET Request to /shopping/images/203fd535-9484-4cc6-8065-b4a0fc16d1aa.jpg
+info	2022:08:01 03:46:26	GET Request to /shopping/images/29f54c52-cd4d-4bf6-a7f8-18e5504e3348.jpg
+info	2022:08:01 03:46:27	GET Request to /shopping/images/80f5ad28-ed58-4f06-b340-b0d570198300.jpg
+info	2022:08:01 03:46:27	GET Request to /shopping/images/8e731f20-0c1a-4f82-b6df-3990713abd61.jpg
+info	2022:08:01 03:46:27	GET Request to /shopping/images/b1bc176b-e627-4ae8-afb7-7871719ccb0d.jpg
+info	2022:08:01 03:46:27	GET Request to /shopping/images/b562708c-b070-4943-8cad-d40e0bd99ba9.jpg
+info	2022:08:01 03:46:27	GET Request to /shopping/images/7da7703e-9d85-400a-87f4-0bffd8d2a76b.jpg
+info	2022:08:01 03:46:27	GET Request to /shopping/images/ad94aeb7-727c-48ef-9d2f-09b42f9fac67.jpg
+info	2022:08:01 03:46:27	GET Request to /shopping/images/1347c8c3-c051-43fd-b83b-9a90a95cea62.jpg
+info	2022:08:01 03:46:27	GET Request to /shopping/images/e70cfe22-69cb-49b1-b475-131029891865.jpg
+info	2022:08:01 03:46:27	GET Request to /shopping/images/5da04a74-8424-4955-b700-7cf581545c63.jpg
+info	2022:08:01 03:46:27	GET Request to /shopping/images/9d0686f4-27da-466c-8f79-6ea5330c86f9.jpg
+info	2022:08:01 03:46:55	GET Request to /api/products/
+info	2022:08:01 03:46:55	GET Request to /api/cart-by-user/62b4bc0453a94730e6939d36
+info	2022:08:01 03:46:55	GET Request to /api/categories/
+info	2022:08:01 03:46:56	GET Request to /api/items-by-cart/62e7c42fd6d19e78300cc97a
+info	2022:08:01 03:46:58	GET Request to /api/products/
+info	2022:08:01 03:47:01	GET Request to /api/products/
+info	2022:08:01 03:47:01	GET Request to /shopping/images/d741f3a3-4078-45de-8519-5a4404b6ebac.jpg
+info	2022:08:01 03:47:01	GET Request to /shopping/images/c02e16bb-f8af-48e8-bc54-31acd91c8930.jpg
+info	2022:08:01 03:47:01	GET Request to /shopping/images/24684495-1e8b-47fc-906c-b4bd483d1f66.jpg
+info	2022:08:01 03:47:03	GET Request to /shopping/images/8a9c87cd-bf7f-40c7-af7a-7bd57a785ea3.jpg
+info	2022:08:01 03:47:03	GET Request to /shopping/images/d7525a9a-01bd-4a53-ab2f-8f447c37e782.jpg
+info	2022:08:01 03:47:03	GET Request to /shopping/images/64406618-b6dc-4ffd-a1ec-da12cd19fec2.jpg
+info	2022:08:01 03:47:03	GET Request to /shopping/images/824a417f-cab1-4d0c-95da-93cf5089ff1d.jpg
+info	2022:08:01 03:47:03	GET Request to /shopping/images/42491fb0-ae10-4f10-8e0c-cb96cf987128.jpg
+info	2022:08:01 03:47:03	GET Request to /shopping/images/47972f21-3939-403b-ae73-3367673bec28.jpg
+info	2022:08:01 03:47:03	GET Request to /shopping/images/a28e44a7-3b67-48de-acd1-f982a623a0d8.jpg
+info	2022:08:01 03:47:03	GET Request to /shopping/images/460b3292-789c-4220-82d4-4877e2a97e91.jpg
+info	2022:08:01 03:47:03	GET Request to /shopping/images/84e89a97-cd40-4cd7-9b7c-fd5e578f6d89.jpg
+info	2022:08:01 03:47:03	GET Request to /shopping/images/965a7f21-2ba0-4cd1-b7b9-5cba45f0961a.jpg
+info	2022:08:01 03:47:03	GET Request to /shopping/images/a9043f4d-6362-4d1c-bde8-aa858e15f6e1.jpg
+info	2022:08:01 03:47:03	GET Request to /shopping/images/203fd535-9484-4cc6-8065-b4a0fc16d1aa.jpg
+info	2022:08:01 03:47:03	GET Request to /shopping/images/29f54c52-cd4d-4bf6-a7f8-18e5504e3348.jpg
+info	2022:08:01 03:47:03	GET Request to /shopping/images/80f5ad28-ed58-4f06-b340-b0d570198300.jpg
+info	2022:08:01 03:47:03	GET Request to /shopping/images/8e731f20-0c1a-4f82-b6df-3990713abd61.jpg
+info	2022:08:01 03:47:03	GET Request to /shopping/images/b1bc176b-e627-4ae8-afb7-7871719ccb0d.jpg
+info	2022:08:01 03:47:03	GET Request to /shopping/images/b562708c-b070-4943-8cad-d40e0bd99ba9.jpg
+info	2022:08:01 03:47:03	GET Request to /shopping/images/7da7703e-9d85-400a-87f4-0bffd8d2a76b.jpg
+info	2022:08:01 03:47:03	GET Request to /shopping/images/ad94aeb7-727c-48ef-9d2f-09b42f9fac67.jpg
+info	2022:08:01 03:47:03	GET Request to /shopping/images/1347c8c3-c051-43fd-b83b-9a90a95cea62.jpg
+info	2022:08:01 03:47:03	GET Request to /shopping/images/e70cfe22-69cb-49b1-b475-131029891865.jpg
+info	2022:08:01 03:47:03	GET Request to /shopping/images/5da04a74-8424-4955-b700-7cf581545c63.jpg
+info	2022:08:01 03:47:03	GET Request to /shopping/images/9d0686f4-27da-466c-8f79-6ea5330c86f9.jpg
+info	2022:08:01 03:47:10	GET Request to /api/products/
+info	2022:08:01 03:47:10	GET Request to /api/cart-by-user/62b4bc0453a94730e6939d36
+info	2022:08:01 03:47:10	GET Request to /api/categories/
+info	2022:08:01 03:47:14	GET Request to /api/items-by-cart/62e7c42fd6d19e78300cc97a
+info	2022:08:01 03:47:14	GET Request to /api/products/
+info	2022:08:01 03:47:17	GET Request to /api/products/
+info	2022:08:01 03:47:17	GET Request to /shopping/images/d741f3a3-4078-45de-8519-5a4404b6ebac.jpg
+info	2022:08:01 03:47:17	GET Request to /shopping/images/c02e16bb-f8af-48e8-bc54-31acd91c8930.jpg
+info	2022:08:01 03:47:17	GET Request to /shopping/images/24684495-1e8b-47fc-906c-b4bd483d1f66.jpg
+info	2022:08:01 03:47:17	GET Request to /shopping/images/8a9c87cd-bf7f-40c7-af7a-7bd57a785ea3.jpg
+info	2022:08:01 03:47:17	GET Request to /shopping/images/d7525a9a-01bd-4a53-ab2f-8f447c37e782.jpg
+info	2022:08:01 03:47:17	GET Request to /shopping/images/64406618-b6dc-4ffd-a1ec-da12cd19fec2.jpg
+info	2022:08:01 03:47:20	GET Request to /shopping/images/824a417f-cab1-4d0c-95da-93cf5089ff1d.jpg
+info	2022:08:01 03:47:20	GET Request to /shopping/images/42491fb0-ae10-4f10-8e0c-cb96cf987128.jpg
+info	2022:08:01 03:47:20	GET Request to /shopping/images/47972f21-3939-403b-ae73-3367673bec28.jpg
+info	2022:08:01 03:47:20	GET Request to /shopping/images/a28e44a7-3b67-48de-acd1-f982a623a0d8.jpg
+info	2022:08:01 03:47:20	GET Request to /shopping/images/460b3292-789c-4220-82d4-4877e2a97e91.jpg
+info	2022:08:01 03:47:20	GET Request to /shopping/images/84e89a97-cd40-4cd7-9b7c-fd5e578f6d89.jpg
+info	2022:08:01 03:47:20	GET Request to /shopping/images/965a7f21-2ba0-4cd1-b7b9-5cba45f0961a.jpg
+info	2022:08:01 03:47:20	GET Request to /shopping/images/a9043f4d-6362-4d1c-bde8-aa858e15f6e1.jpg
+info	2022:08:01 03:47:20	GET Request to /shopping/images/203fd535-9484-4cc6-8065-b4a0fc16d1aa.jpg
+info	2022:08:01 03:47:20	GET Request to /shopping/images/29f54c52-cd4d-4bf6-a7f8-18e5504e3348.jpg
+info	2022:08:01 03:47:20	GET Request to /shopping/images/80f5ad28-ed58-4f06-b340-b0d570198300.jpg
+info	2022:08:01 03:47:20	GET Request to /shopping/images/8e731f20-0c1a-4f82-b6df-3990713abd61.jpg
+info	2022:08:01 03:47:20	GET Request to /shopping/images/b1bc176b-e627-4ae8-afb7-7871719ccb0d.jpg
+info	2022:08:01 03:47:20	GET Request to /shopping/images/b562708c-b070-4943-8cad-d40e0bd99ba9.jpg
+info	2022:08:01 03:47:20	GET Request to /shopping/images/7da7703e-9d85-400a-87f4-0bffd8d2a76b.jpg
+info	2022:08:01 03:47:20	GET Request to /shopping/images/ad94aeb7-727c-48ef-9d2f-09b42f9fac67.jpg
+info	2022:08:01 03:47:20	GET Request to /shopping/images/1347c8c3-c051-43fd-b83b-9a90a95cea62.jpg
+info	2022:08:01 03:47:20	GET Request to /shopping/images/e70cfe22-69cb-49b1-b475-131029891865.jpg
+info	2022:08:01 03:47:20	GET Request to /shopping/images/5da04a74-8424-4955-b700-7cf581545c63.jpg
+info	2022:08:01 03:47:20	GET Request to /shopping/images/9d0686f4-27da-466c-8f79-6ea5330c86f9.jpg
+info	2022:08:01 03:47:24	GET Request to /api/cart-by-user/62b4bc0453a94730e6939d36
+info	2022:08:01 03:47:24	GET Request to /api/categories/
+info	2022:08:01 03:47:24	GET Request to /api/products/
+info	2022:08:01 03:47:26	GET Request to /api/products/
+info	2022:08:01 03:47:26	GET Request to /api/items-by-cart/62e7c42fd6d19e78300cc97a
+info	2022:08:01 03:47:27	GET Request to /shopping/images/d741f3a3-4078-45de-8519-5a4404b6ebac.jpg
+info	2022:08:01 03:47:27	GET Request to /shopping/images/c02e16bb-f8af-48e8-bc54-31acd91c8930.jpg
+info	2022:08:01 03:47:27	GET Request to /shopping/images/24684495-1e8b-47fc-906c-b4bd483d1f66.jpg
+info	2022:08:01 03:47:27	GET Request to /shopping/images/8a9c87cd-bf7f-40c7-af7a-7bd57a785ea3.jpg
+info	2022:08:01 03:47:27	GET Request to /shopping/images/d7525a9a-01bd-4a53-ab2f-8f447c37e782.jpg
+info	2022:08:01 03:47:27	GET Request to /api/products/
+info	2022:08:01 03:47:27	GET Request to /shopping/images/64406618-b6dc-4ffd-a1ec-da12cd19fec2.jpg
+info	2022:08:01 03:47:28	GET Request to /shopping/images/824a417f-cab1-4d0c-95da-93cf5089ff1d.jpg
+info	2022:08:01 03:47:29	GET Request to /shopping/images/42491fb0-ae10-4f10-8e0c-cb96cf987128.jpg
+info	2022:08:01 03:47:29	GET Request to /shopping/images/47972f21-3939-403b-ae73-3367673bec28.jpg
+info	2022:08:01 03:47:29	GET Request to /shopping/images/a28e44a7-3b67-48de-acd1-f982a623a0d8.jpg
+info	2022:08:01 03:47:29	GET Request to /shopping/images/460b3292-789c-4220-82d4-4877e2a97e91.jpg
+info	2022:08:01 03:47:29	GET Request to /shopping/images/84e89a97-cd40-4cd7-9b7c-fd5e578f6d89.jpg
+info	2022:08:01 03:47:29	GET Request to /shopping/images/965a7f21-2ba0-4cd1-b7b9-5cba45f0961a.jpg
+info	2022:08:01 03:47:29	GET Request to /shopping/images/a9043f4d-6362-4d1c-bde8-aa858e15f6e1.jpg
+info	2022:08:01 03:47:29	GET Request to /shopping/images/203fd535-9484-4cc6-8065-b4a0fc16d1aa.jpg
+info	2022:08:01 03:47:29	GET Request to /shopping/images/29f54c52-cd4d-4bf6-a7f8-18e5504e3348.jpg
+info	2022:08:01 03:47:29	GET Request to /shopping/images/80f5ad28-ed58-4f06-b340-b0d570198300.jpg
+info	2022:08:01 03:47:29	GET Request to /shopping/images/8e731f20-0c1a-4f82-b6df-3990713abd61.jpg
+info	2022:08:01 03:47:29	GET Request to /shopping/images/b1bc176b-e627-4ae8-afb7-7871719ccb0d.jpg
+info	2022:08:01 03:47:29	GET Request to /shopping/images/b562708c-b070-4943-8cad-d40e0bd99ba9.jpg
+info	2022:08:01 03:47:29	GET Request to /shopping/images/7da7703e-9d85-400a-87f4-0bffd8d2a76b.jpg
+info	2022:08:01 03:47:29	GET Request to /shopping/images/ad94aeb7-727c-48ef-9d2f-09b42f9fac67.jpg
+info	2022:08:01 03:47:29	GET Request to /shopping/images/1347c8c3-c051-43fd-b83b-9a90a95cea62.jpg
+info	2022:08:01 03:47:29	GET Request to /shopping/images/e70cfe22-69cb-49b1-b475-131029891865.jpg
+info	2022:08:01 03:47:29	GET Request to /shopping/images/5da04a74-8424-4955-b700-7cf581545c63.jpg
+info	2022:08:01 03:47:29	GET Request to /shopping/images/9d0686f4-27da-466c-8f79-6ea5330c86f9.jpg
+info	2022:08:01 03:48:07	GET Request to /api/products/
+info	2022:08:01 03:48:07	GET Request to /api/cart-by-user/62b4bc0453a94730e6939d36
+info	2022:08:01 03:48:07	GET Request to /api/categories/
+info	2022:08:01 03:48:08	GET Request to /api/items-by-cart/62e7c42fd6d19e78300cc97a
+info	2022:08:01 03:48:10	GET Request to /api/products/
+info	2022:08:01 03:48:13	GET Request to /api/products/
+info	2022:08:01 03:48:13	GET Request to /shopping/images/d741f3a3-4078-45de-8519-5a4404b6ebac.jpg
+info	2022:08:01 03:48:13	GET Request to /shopping/images/8a9c87cd-bf7f-40c7-af7a-7bd57a785ea3.jpg
+info	2022:08:01 03:48:13	GET Request to /shopping/images/d7525a9a-01bd-4a53-ab2f-8f447c37e782.jpg
+info	2022:08:01 03:48:13	GET Request to /shopping/images/c02e16bb-f8af-48e8-bc54-31acd91c8930.jpg
+info	2022:08:01 03:48:13	GET Request to /shopping/images/24684495-1e8b-47fc-906c-b4bd483d1f66.jpg
+info	2022:08:01 03:48:13	GET Request to /shopping/images/64406618-b6dc-4ffd-a1ec-da12cd19fec2.jpg
+info	2022:08:01 03:48:13	GET Request to /shopping/images/824a417f-cab1-4d0c-95da-93cf5089ff1d.jpg
+info	2022:08:01 03:48:13	GET Request to /shopping/images/42491fb0-ae10-4f10-8e0c-cb96cf987128.jpg
+info	2022:08:01 03:48:13	GET Request to /shopping/images/47972f21-3939-403b-ae73-3367673bec28.jpg
+info	2022:08:01 03:48:14	GET Request to /shopping/images/a28e44a7-3b67-48de-acd1-f982a623a0d8.jpg
+info	2022:08:01 03:48:14	GET Request to /shopping/images/460b3292-789c-4220-82d4-4877e2a97e91.jpg
+info	2022:08:01 03:48:14	GET Request to /shopping/images/84e89a97-cd40-4cd7-9b7c-fd5e578f6d89.jpg
+info	2022:08:01 03:48:14	GET Request to /shopping/images/965a7f21-2ba0-4cd1-b7b9-5cba45f0961a.jpg
+info	2022:08:01 03:48:14	GET Request to /shopping/images/a9043f4d-6362-4d1c-bde8-aa858e15f6e1.jpg
+info	2022:08:01 03:48:15	GET Request to /shopping/images/203fd535-9484-4cc6-8065-b4a0fc16d1aa.jpg
+info	2022:08:01 03:48:15	GET Request to /shopping/images/29f54c52-cd4d-4bf6-a7f8-18e5504e3348.jpg
+info	2022:08:01 03:48:15	GET Request to /shopping/images/80f5ad28-ed58-4f06-b340-b0d570198300.jpg
+info	2022:08:01 03:48:15	GET Request to /shopping/images/8e731f20-0c1a-4f82-b6df-3990713abd61.jpg
+info	2022:08:01 03:48:15	GET Request to /shopping/images/b1bc176b-e627-4ae8-afb7-7871719ccb0d.jpg
+info	2022:08:01 03:48:15	GET Request to /shopping/images/b562708c-b070-4943-8cad-d40e0bd99ba9.jpg
+info	2022:08:01 03:48:15	GET Request to /shopping/images/7da7703e-9d85-400a-87f4-0bffd8d2a76b.jpg
+info	2022:08:01 03:48:15	GET Request to /shopping/images/ad94aeb7-727c-48ef-9d2f-09b42f9fac67.jpg
+info	2022:08:01 03:48:15	GET Request to /shopping/images/1347c8c3-c051-43fd-b83b-9a90a95cea62.jpg
+info	2022:08:01 03:48:16	GET Request to /shopping/images/e70cfe22-69cb-49b1-b475-131029891865.jpg
+info	2022:08:01 03:48:16	GET Request to /shopping/images/5da04a74-8424-4955-b700-7cf581545c63.jpg
+info	2022:08:01 03:48:16	GET Request to /shopping/images/9d0686f4-27da-466c-8f79-6ea5330c86f9.jpg
+info	2022:08:01 03:48:32	GET Request to /api/cart-by-user/62b4bc0453a94730e6939d36
+info	2022:08:01 03:48:32	GET Request to /api/products/
+info	2022:08:01 03:48:32	GET Request to /api/categories/
+info	2022:08:01 03:48:33	GET Request to /api/items-by-cart/62e7c42fd6d19e78300cc97a
+info	2022:08:01 03:48:35	GET Request to /api/products/
+info	2022:08:01 03:48:40	GET Request to /api/products/
+info	2022:08:01 03:48:42	GET Request to /shopping/images/d741f3a3-4078-45de-8519-5a4404b6ebac.jpg
+info	2022:08:01 03:48:42	GET Request to /shopping/images/d7525a9a-01bd-4a53-ab2f-8f447c37e782.jpg
+info	2022:08:01 03:48:42	GET Request to /shopping/images/8a9c87cd-bf7f-40c7-af7a-7bd57a785ea3.jpg
+info	2022:08:01 03:48:42	GET Request to /shopping/images/24684495-1e8b-47fc-906c-b4bd483d1f66.jpg
+info	2022:08:01 03:48:42	GET Request to /shopping/images/c02e16bb-f8af-48e8-bc54-31acd91c8930.jpg
+info	2022:08:01 03:48:45	GET Request to /api/products/
+info	2022:08:01 03:48:45	GET Request to /api/categories/
+info	2022:08:01 03:48:45	GET Request to /api/cart-by-user/62b4bc0453a94730e6939d36
+info	2022:08:01 03:48:50	GET Request to /api/items-by-cart/62e7c42fd6d19e78300cc97a
+info	2022:08:01 03:48:50	GET Request to /api/products/
+info	2022:08:01 03:48:53	GET Request to /shopping/images/d741f3a3-4078-45de-8519-5a4404b6ebac.jpg
+info	2022:08:01 03:48:53	GET Request to /shopping/images/c02e16bb-f8af-48e8-bc54-31acd91c8930.jpg
+info	2022:08:01 03:48:53	GET Request to /shopping/images/24684495-1e8b-47fc-906c-b4bd483d1f66.jpg
+info	2022:08:01 03:48:53	GET Request to /shopping/images/8a9c87cd-bf7f-40c7-af7a-7bd57a785ea3.jpg
+info	2022:08:01 03:48:53	GET Request to /shopping/images/d7525a9a-01bd-4a53-ab2f-8f447c37e782.jpg
+info	2022:08:01 03:48:53	GET Request to /api/products/
+info	2022:08:01 03:48:56	GET Request to /shopping/images/64406618-b6dc-4ffd-a1ec-da12cd19fec2.jpg
+info	2022:08:01 03:48:56	GET Request to /shopping/images/824a417f-cab1-4d0c-95da-93cf5089ff1d.jpg
+info	2022:08:01 03:48:56	GET Request to /shopping/images/42491fb0-ae10-4f10-8e0c-cb96cf987128.jpg
+info	2022:08:01 03:48:56	GET Request to /shopping/images/47972f21-3939-403b-ae73-3367673bec28.jpg
+info	2022:08:01 03:48:56	GET Request to /shopping/images/a28e44a7-3b67-48de-acd1-f982a623a0d8.jpg
+info	2022:08:01 03:48:56	GET Request to /shopping/images/460b3292-789c-4220-82d4-4877e2a97e91.jpg
+info	2022:08:01 03:48:56	GET Request to /shopping/images/84e89a97-cd40-4cd7-9b7c-fd5e578f6d89.jpg
+info	2022:08:01 03:48:56	GET Request to /shopping/images/965a7f21-2ba0-4cd1-b7b9-5cba45f0961a.jpg
+info	2022:08:01 03:48:56	GET Request to /shopping/images/a9043f4d-6362-4d1c-bde8-aa858e15f6e1.jpg
+info	2022:08:01 03:48:56	GET Request to /shopping/images/203fd535-9484-4cc6-8065-b4a0fc16d1aa.jpg
+info	2022:08:01 03:48:56	GET Request to /shopping/images/29f54c52-cd4d-4bf6-a7f8-18e5504e3348.jpg
+info	2022:08:01 03:48:56	GET Request to /shopping/images/80f5ad28-ed58-4f06-b340-b0d570198300.jpg
+info	2022:08:01 03:48:56	GET Request to /shopping/images/8e731f20-0c1a-4f82-b6df-3990713abd61.jpg
+info	2022:08:01 03:48:56	GET Request to /shopping/images/b1bc176b-e627-4ae8-afb7-7871719ccb0d.jpg
+info	2022:08:01 03:48:56	GET Request to /shopping/images/b562708c-b070-4943-8cad-d40e0bd99ba9.jpg
+info	2022:08:01 03:48:56	GET Request to /shopping/images/7da7703e-9d85-400a-87f4-0bffd8d2a76b.jpg
+info	2022:08:01 03:48:56	GET Request to /shopping/images/ad94aeb7-727c-48ef-9d2f-09b42f9fac67.jpg
+info	2022:08:01 03:48:56	GET Request to /shopping/images/1347c8c3-c051-43fd-b83b-9a90a95cea62.jpg
+info	2022:08:01 03:48:56	GET Request to /shopping/images/e70cfe22-69cb-49b1-b475-131029891865.jpg
+info	2022:08:01 03:48:57	GET Request to /shopping/images/5da04a74-8424-4955-b700-7cf581545c63.jpg
+info	2022:08:01 03:48:57	GET Request to /shopping/images/9d0686f4-27da-466c-8f79-6ea5330c86f9.jpg
+info	2022:08:01 03:49:06	GET Request to /api/cart-by-user/62b4bc0453a94730e6939d36
+info	2022:08:01 03:49:06	GET Request to /api/categories/
+info	2022:08:01 03:49:06	GET Request to /api/products/
+info	2022:08:01 03:49:06	GET Request to /api/items-by-cart/62e7c42fd6d19e78300cc97a
+info	2022:08:01 03:49:09	GET Request to /api/products/
+info	2022:08:01 03:49:12	GET Request to /api/products/
+info	2022:08:01 03:49:14	GET Request to /shopping/images/d741f3a3-4078-45de-8519-5a4404b6ebac.jpg
+info	2022:08:01 03:49:14	GET Request to /shopping/images/c02e16bb-f8af-48e8-bc54-31acd91c8930.jpg
+info	2022:08:01 03:49:14	GET Request to /shopping/images/24684495-1e8b-47fc-906c-b4bd483d1f66.jpg
+info	2022:08:01 03:49:14	GET Request to /shopping/images/8a9c87cd-bf7f-40c7-af7a-7bd57a785ea3.jpg
+info	2022:08:01 03:49:14	GET Request to /shopping/images/d7525a9a-01bd-4a53-ab2f-8f447c37e782.jpg
+info	2022:08:01 03:49:14	GET Request to /shopping/images/64406618-b6dc-4ffd-a1ec-da12cd19fec2.jpg
+info	2022:08:01 03:49:14	GET Request to /shopping/images/824a417f-cab1-4d0c-95da-93cf5089ff1d.jpg
+info	2022:08:01 03:49:14	GET Request to /shopping/images/42491fb0-ae10-4f10-8e0c-cb96cf987128.jpg
+info	2022:08:01 03:49:14	GET Request to /shopping/images/47972f21-3939-403b-ae73-3367673bec28.jpg
+info	2022:08:01 03:49:14	GET Request to /shopping/images/a28e44a7-3b67-48de-acd1-f982a623a0d8.jpg
+info	2022:08:01 03:49:15	GET Request to /shopping/images/460b3292-789c-4220-82d4-4877e2a97e91.jpg
+info	2022:08:01 03:49:15	GET Request to /shopping/images/84e89a97-cd40-4cd7-9b7c-fd5e578f6d89.jpg
+info	2022:08:01 03:49:15	GET Request to /shopping/images/965a7f21-2ba0-4cd1-b7b9-5cba45f0961a.jpg
+info	2022:08:01 03:49:15	GET Request to /shopping/images/a9043f4d-6362-4d1c-bde8-aa858e15f6e1.jpg
+info	2022:08:01 03:49:15	GET Request to /shopping/images/203fd535-9484-4cc6-8065-b4a0fc16d1aa.jpg
+info	2022:08:01 03:49:15	GET Request to /shopping/images/29f54c52-cd4d-4bf6-a7f8-18e5504e3348.jpg
+info	2022:08:01 03:49:15	GET Request to /shopping/images/80f5ad28-ed58-4f06-b340-b0d570198300.jpg
+info	2022:08:01 03:49:15	GET Request to /shopping/images/8e731f20-0c1a-4f82-b6df-3990713abd61.jpg
+info	2022:08:01 03:49:15	GET Request to /shopping/images/b1bc176b-e627-4ae8-afb7-7871719ccb0d.jpg
+info	2022:08:01 03:49:15	GET Request to /shopping/images/b562708c-b070-4943-8cad-d40e0bd99ba9.jpg
+info	2022:08:01 03:49:15	GET Request to /shopping/images/7da7703e-9d85-400a-87f4-0bffd8d2a76b.jpg
+info	2022:08:01 03:49:15	GET Request to /shopping/images/ad94aeb7-727c-48ef-9d2f-09b42f9fac67.jpg
+info	2022:08:01 03:49:15	GET Request to /shopping/images/1347c8c3-c051-43fd-b83b-9a90a95cea62.jpg
+info	2022:08:01 03:49:15	GET Request to /shopping/images/e70cfe22-69cb-49b1-b475-131029891865.jpg
+info	2022:08:01 03:49:15	GET Request to /shopping/images/5da04a74-8424-4955-b700-7cf581545c63.jpg
+info	2022:08:01 03:49:15	GET Request to /shopping/images/9d0686f4-27da-466c-8f79-6ea5330c86f9.jpg
+info	2022:08:01 03:49:37	GET Request to /api/cart-by-user/62b4bc0453a94730e6939d36
+info	2022:08:01 03:49:37	GET Request to /api/products/
+info	2022:08:01 03:49:37	GET Request to /api/categories/
+info	2022:08:01 03:49:37	GET Request to /api/items-by-cart/62e7c42fd6d19e78300cc97a
+info	2022:08:01 03:49:39	GET Request to /api/products/
+info	2022:08:01 03:49:42	GET Request to /api/products/
+info	2022:08:01 03:49:45	GET Request to /shopping/images/d741f3a3-4078-45de-8519-5a4404b6ebac.jpg
+info	2022:08:01 03:49:45	GET Request to /shopping/images/c02e16bb-f8af-48e8-bc54-31acd91c8930.jpg
+info	2022:08:01 03:49:45	GET Request to /shopping/images/24684495-1e8b-47fc-906c-b4bd483d1f66.jpg
+info	2022:08:01 03:49:45	GET Request to /shopping/images/8a9c87cd-bf7f-40c7-af7a-7bd57a785ea3.jpg
+info	2022:08:01 03:49:45	GET Request to /shopping/images/d7525a9a-01bd-4a53-ab2f-8f447c37e782.jpg
+info	2022:08:01 03:49:47	GET Request to /api/cart-by-user/62b4bc0453a94730e6939d36
+info	2022:08:01 03:49:47	GET Request to /api/categories/
+info	2022:08:01 03:49:48	GET Request to /api/products/
+info	2022:08:01 03:49:49	GET Request to /api/items-by-cart/62e7c42fd6d19e78300cc97a

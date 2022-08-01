@@ -1,8 +1,3 @@
-<!-- <app-product-card *ngFor="let p of products" [product]="p" [role]="'user'"></app-product-card> -->
-
-
-<!-- <app-product-card *ngFor="let p of products" [product]="p" [role]="userRole"></app-product-card>
-<app-product-card *ngFor="let p of products" [product]="p" [role]="adminRole"></app-product-card> -->
 <div class="product-list-container">
     <img *ngIf="!products" class="loading" src="/assets/images/shopping-loader.gif">
 
@@ -12,6 +7,3 @@
                     (edit)="editProduct($event)"
                     (add)="addProduct($event)"></app-product-card>
 </div>
-
-<!-- <p>{{role}}</p> -->
-<!-- <app-product-card *ngFor="let p of products" [product]="p" [role]="role"></app-product-card> -->

@@ -1,11 +1,10 @@
-
 img {
     width: 112px;
     height: 81px;
     border-radius: 3px;
 }
 
-div > div:last-child {
+div>div:last-child {
     margin-left: auto;
 }
 
@@ -17,7 +16,6 @@ div > div:last-child {
 
 .item-cart {
     width: 100%;
-    box-sizing: border-box;
     border-bottom: 1px solid rgb(230, 221, 221);
     width: 100%;
     box-sizing: border-box;
@@ -40,5 +38,4 @@ div > div:last-child {
 
 .item-name {
     font-size: 20px;
-    // font-weight: 600;
 }

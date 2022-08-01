@@ -1,13 +1,10 @@
-import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Unsubscribe } from 'redux';
 import { CartItemModel } from 'src/app/models/cart-item.model';
 import { CartModel } from 'src/app/models/cart.model';
 import { ProductModel } from 'src/app/models/product.model';
-import { UserModel } from 'src/app/models/user.model';
-import store, { storeAuth } from 'src/app/redux/store';
-
-
+import store from 'src/app/redux/store';
 import { CartsService } from 'src/app/services/carts.service';
 import { NotifyService } from 'src/app/services/notify.service';
 import { ProductDialogComponent } from '../../products-area/product-dialog/product-dialog.component';
@@ -22,107 +19,46 @@ import { ConfirmDeleteDialogComponent } from '../confirm-delete-dialog/confirm-d
 
 export class CartListComponent implements OnInit, OnDestroy {
   
-  opened = true;  //!regina wanted todo this with redux???
-
-  //! when open changes to false it doesnt take the second value !!! : after but directly in html works!! 
-// styleObject = {
-//   // position: this.opened ? 'fixed' : 'relative',
-//   position: this.opened ? 'fixed' : 'fixed',
-
-//   left: this.opened ? '400px': '0px',
-//   top: this.opened ? '440px' : '440px',
-//   backgroundColor: this.opened ? 'green' : 'yellow'
-// }
-
-
+  opened = true; 
   isShoppingPage = true
-
   allItemsByCart: CartItemModel[]
-
-  //! all this just becuase I need the cart id of the user so dumb I need to get first the cart by user and then i can get the cart 
   cartByUser: CartModel
   totalAmount:number;
-
   unsubscribe: Unsubscribe
 
   constructor(private notify: NotifyService, private cartsService: CartsService, public dialog: MatDialog) { }
 
   async ngOnInit() {
     try {
-
-
-
-      //!kores if user has no cart ( i thorwed an eror in backend  ( so only works if user has no cart !!!!!)!************************************************************************************************************************************************************************************************************************* */
-
-
-        //! all this just becuase I need the cart id of the user so dumb I need to get first the cart by user and then i can get the cart  (btw gives me isClosed false only so I know its the right cart )
-      // this.cartByUser = await this.cartsService.getCartByUser(store.getState().authState.user._id)
-  
-      // console.log("store.getState().authState.user._id", store.getState().authState.user._id);
-      // console.log("this.cartByUser", this.cartByUser);
-      //                                                                                       //!for this:
-      //  this.allItemsByCart = await this.cartsService.getAllItemsByCart(this.cartByUser._id) 
-      //  console.log(" this.allItemsByCart",  this.allItemsByCart);
       const cart = await this.cartsService.getCartByUser(store.getState().authState.user._id)
       this.allItemsByCart =  await this.cartsService.getAllItemsByCart(cart?._id)
       this.totalAmount = this.cartsService.getTotalCartAmount();
 
       if (store.getState().cartsState.cartItems.length === 0) {
-        // debugger
         this.opened = false;
-      }
-    //!to fix total displaying after making order: my logic is good? it works though
-    //! נראה לי מיותר:כי צריך על ההתחלה שיופי טוטאל 
+      } 
      if (cart?.isClosed){
-      console.log("cart?.isClosed****************************************", cart?.isClosed);
       this.totalAmount = this.cartsService.getTotalCartAmount();
      }
 
       this.unsubscribe = store.subscribe(() => {
-      // this.unsubscribe = storeAuth.subscribe(() => {
         this.allItemsByCart = store.getState().cartsState.cartItems;
-        console.log("allItemsByCart", this.allItemsByCart);
         this.totalAmount = this.cartsService.getTotalCartAmount();
-
-        //!this wont work cause our update add item to store in redux doesnt really work cause im doing backend only. 
-        // if (store.getState().cartsState.cartItems.length === 0) {
-        //   // debugger
-        //   this.opened = false;
-        // } else {
-        //   this.opened = true 
-        // }
        })
     } catch (err: any) {
       this.notify.error(err)
     }
-
   }
-
-
-  log(state: string) {
-    console.log(state)
-  }
-
 
  async  deleteThisCard(arr: string[]) {
-    console.log(arr)
     try {
-      //! how to pass props in ts to ConfirmDelteDalgoCOponent cause i want diffeerent messages 
       let dialogRef = this.dialog.open(ConfirmDeleteDialogComponent, {
         data: { action: 'remove'}
       })
-      console.log("dialogRef", dialogRef);
      dialogRef.afterClosed().subscribe(async (result) => {
-      console.log(`Dialog result: ${result}`)
          if (result === false || result === undefined) return  
-
-
-          //!But the redux store should delete this ??? we are subscribed!!!  so why do i need these two lines:
-      // const index = this.allItemsByCart.findIndex(i => i._id === arr[0]);
-      // this.allItemsByCart.splice(index, 1);
          await this.cartsService.deleteProduct(arr[0], arr[1])
          this.notify.success('Item has been deleted')
-
      })
     } catch (err: any) {
       this.notify.error(err)
@@ -137,90 +73,45 @@ export class CartListComponent implements OnInit, OnDestroy {
       data: { action: 'removeAll'}
     })
   
-
     dialogRef.afterClosed().subscribe(async (result) => {
-         if (result === false || result === undefined) return  
+      if (result === false || result === undefined) return  
 
-       //!I am accessing the first item in the cart and accessing the cartId instead of getting cartId straight from cart is that ok ??? or should i get the cartID from the cart ????
-    await this.cartsService.deleteAllItemsByCart(this.allItemsByCart[0].cartId)
-    this.notify.success('All items in your cart have been deleted!')
-
+      await this.cartsService.deleteAllItemsByCart(this.allItemsByCart[0].cartId)
+      this.notify.success('All items in your cart have been deleted!')
     })
-
   } catch (err: any) {
     this.notify.error(err)
   }
  }
 
-//!How to calcualtae total???
-calculateTotal() {
-  //! this.allItemsByCart is not iterable
-  // for (const item of this.allItemsByCart) {    why cant i do this ??? can i do this in angular??? 
-  //   console.log(item)
-  // }
-  
-}
-
-
-
-
-  
-ngOnDestroy(): void {
-  if (this.unsubscribe) {
-    this.unsubscribe()
-  }
-}
-
 async addProduct(product: ProductModel) {
   let dialogRef = this.dialog.open(ProductDialogComponent)
 
-
-  //An action to do when closing dialog (like updating the cart!)
-  //!are we allowed to put try catch and async in a observable???
+  //An action to do when closing dialog (updating the cart)
   dialogRef.afterClosed().subscribe(async (quantity) => {
 
     if (!quantity) return
     try {
-
-      console.log('this.product', product)
-      console.log('this.product.id which is productID going to be ', product._id)
-      // console.log('cartid from store', store.getState().cartsState.cartId)
-
-      //!problem if i dont add total then total will disapear
-
-      // const itemToBeAddedToCart = new CartItemModel({quantity: result, productId: this.product._id, cartId:  store.getState().cartsState.cartId })
-      //  console.log(result * this.product.price) 
       const total = quantity * product.price
-
-
-      //! is this ok to do cause i needed all these details but jus tthe qunatity fromt he dialog 
       //object oriented thinking: 
       const itemToBeAddedToCart = new CartItemModel(quantity, product._id, store.getState().cartsState.currentCart?._id, total)
-      const addedCartItem = await this.cartsService.addItem(itemToBeAddedToCart, store.getState().authState.user._id)
-      //!if you ahve time check for case where user adds same item with same quantity you dont want to display this message: 
+      await this.cartsService.addItem(itemToBeAddedToCart, store.getState().authState.user._id)
       this.notify.success('Item has been added to cart')
 
+      //this updates the store (through backend) after you add with the new updated item 
       const cart = await this.cartsService.getCartByUser(store.getState().authState.user._id)
-      //this updates the store fter you add with the new updated item 
       await this.cartsService.getAllItemsByCart(cart?._id)
-      // and have the dialog box close after ! 
+
     } catch (err: any) {
       this.notify.error(err)
     }
-
-
-
-
-
-
-
-    // console.log(`Dialog result: ${result}`)
-    // //!put here הוספה to cart!!
-
-    // if (result === 'true') {
-    //   console.log('yes yes correct!! log out if true or do wsomething ! only when you close the dialog  ')
-    // }  
   })
+}
+
+ngOnDestroy(): void {
+  if (this.unsubscribe) {
+    this.unsubscribe()
+  }
 }
 
 }

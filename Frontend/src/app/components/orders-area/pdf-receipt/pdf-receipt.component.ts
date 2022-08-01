@@ -2,9 +2,11 @@ import { CartsService } from 'src/app/services/carts.service';
 import { Component } from '@angular/core';
 const pdfMake = require('pdfmake/build/pdfmake.js');
 import * as pdfFonts from 'pdfmake/build/vfs_fonts';
+import { Alignment } from 'pdfmake/interfaces'; //this line has to be here
 import { OrderModel } from 'src/app/models/order.model';
 import store from 'src/app/redux/store';
 (<any>pdfMake).vfs = pdfFonts.pdfMake.vfs;
+
 
 @Component({
   selector: 'app-pdf-receipt',

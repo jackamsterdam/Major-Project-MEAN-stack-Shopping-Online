@@ -1,11 +1,9 @@
 import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { NavigationEnd, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { Unsubscribe } from 'redux';
-import { filter } from 'rxjs';
 import { CartItemModel } from 'src/app/models/cart-item.model';
-import store, { storeAuth } from 'src/app/redux/store';
-
+import store from 'src/app/redux/store';
 import { CartsService } from 'src/app/services/carts.service';
 import { NotifyService } from 'src/app/services/notify.service';
 import { environment } from 'src/environments/environment';
@@ -18,42 +16,30 @@ import { environment } from 'src/environments/environment';
 export class SidenavDetailsComponent implements OnInit, OnDestroy {
 
   unsubscribe: Unsubscribe
- 
   public search: string = null;
-
-  // public OnSearched(searchTerm: string) {
-  //   this.Search = store.getState().productsState.searchText;
-  // }
 
   @Input()
   fromShopPage: boolean
-  
+
   @Input()
   item: CartItemModel
-  
-  productsImageUrl = environment.productsImageUrl
-  
-  constructor(public dialog: MatDialog, private cartsService: CartsService, private notify: NotifyService, public router: Router) {
-    // router.events.subscribe((val) => console.log(val))
-   }
 
-  //!I cant do this!!!  total = this.item.quantity * this.item.product.price   for individual items but i can ישירות in the html
+  @Output()
+  deleteItem = new EventEmitter<string[]>()
+
+  productsImageUrl = environment.productsImageUrl
+
+  constructor(public dialog: MatDialog, private cartsService: CartsService, private notify: NotifyService, public router: Router) { }
+
   ngOnInit(): void {
-    // this.unsubscribe = storeAuth.subscribe(() => {
     this.unsubscribe = store.subscribe(() => {
       this.search = store.getState().productsState.searchText
     })
-
   }
-
-  @Output() 
-  deleteItem = new EventEmitter<string[]>()
 
   deleteThisItem(_id: string, cartId: string) {
-
     this.deleteItem.emit([_id, cartId])
   }
-
 
   ngOnDestroy(): void {
     if (this.unsubscribe) {
@@ -90,10 +76,9 @@ export class SidenavDetailsComponent implements OnInit, OnDestroy {
 
 
 
-   
+
 
     // this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((event: NavigationEnd) => {
     //   //Do something with the NavigationEnd event object.
     // });
- 
-  
+

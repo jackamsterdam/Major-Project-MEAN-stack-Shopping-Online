@@ -37,7 +37,6 @@ export class AddProductComponent implements OnInit {
   @ViewChild('imageBox')
   imageBoxRef: ElementRef<HTMLInputElement>
 
-  // @ViewChild('buttonBox') button: any
   isDisabled: boolean = false
 
   constructor(private productsService: ProductsService, private notify: NotifyService) { }
