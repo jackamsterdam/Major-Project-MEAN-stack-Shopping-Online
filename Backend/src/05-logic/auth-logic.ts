@@ -10,7 +10,7 @@ async function checkValidEmailAndSSN(user: IUserModel): Promise<boolean> {
 
     if (existsUsername) return false
 
-    // Hash and salt social security nubmer before comparing in query 
+    // Hash and salt social security number before comparing in query 
     const hashedSocialtoCheck = cyber.hash(user.socialSecurityNumber)
 
     //Prevent duplicate social security number (American tehudat-zehut) instead of using unique in mongoose
@@ -27,10 +27,13 @@ async function register(user: IUserModel): Promise<string> {
     const errors = user.validateSync()
     if (errors) throw new ErrorModel(400, errors.message)
 
-    // Checking uniqueness and sending back specific messages:
+    // Checking uniqueness and sending back specific message:
     const existsUsername = await UserModel.findOne({ username: user.username }).exec()
     if (existsUsername) throw new ErrorModel(400, `Username ${user.username} is already taken. Please make sure that you are not registered already or please choose a different username`)
+
+    // Hash and salt social security number
     const hashedSocialtoCheck = cyber.hash(user.socialSecurityNumber)
+    // Checking uniqueness and sending back specific message:
     const existsSocialSecurityNumber = await UserModel.findOne({ socialSecurityNumber: hashedSocialtoCheck }).exec()
     if (existsSocialSecurityNumber) throw new ErrorModel(400, `Social Security Number you have entered already exists. Please make sure that you are not registered already or please try again`)
 

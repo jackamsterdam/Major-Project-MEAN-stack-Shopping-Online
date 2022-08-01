@@ -11,7 +11,7 @@ export class AuthGuard implements CanActivate {
 
     public constructor(private notify: NotifyService, private router: Router) { }
 
-    // This function invoked whenever user tries to enter a route required to be logged-in
+    // This function is invoked whenever user tries to enter a route required to be logged-in
     // This function should return true if the user is actually logged in, or false if he isn't logged in:
     canActivate(): boolean {
 

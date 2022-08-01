@@ -55,21 +55,13 @@ export function productsReducer(currentState = new ProductsState(), action: Prod
 
             break;
         case ProductsActionType.UpdateProduct:
-            const indexToUpdate = newState.products.findIndex(p => p._id === action.payload._id)   //!_id
+            const indexToUpdate = newState.products.findIndex(p => p._id === action.payload._id) 
             if (indexToUpdate >= 0) {
                 newState.products[indexToUpdate] = action.payload
             }
             break;
         case ProductsActionType.SearchText:
-            // if (action.payload.length === 0) {
             newState.searchText = action.payload
-            // } else {
-            //     newState.searchText = newState.products.filter(p => p.name.toLowerCase().startsWith(action.payload.toLowerCase())) 
-            // }
-
-
-            //  const filteredResult = store.getState().productsState.products.filter(p => p.name.toLowerCase().startsWith(inputElement.toLowerCase()))
-            //  this.products = filteredResult
             break;
     }
 

@@ -47,20 +47,4 @@ export class RegisterStepTwoComponent implements OnInit {
 
     this.userStepTwoDetails.emit(this.user);
   }
-
-  changeTouched() {
-    // debugger
-    // this.authForm.touched === true
-    // this.authForm.markAsUntouched();
-    // this.authForm.markAsPristine();
-    // this.authForm.markAsPending();
-    // this.authForm.markAllAsUntouched();
-    // this.firstNameInput.clearValidators()
-    // this.lastNameInput.valid
-    // this.authForm.untouched =
-  //   Object.keys(this.authForm.controls).forEach(key =>{
-  //     this.authForm.controls[key].setErrors(null)
-  //  });
-    
-  }
 }

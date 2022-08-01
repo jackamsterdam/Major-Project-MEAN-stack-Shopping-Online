@@ -22,7 +22,6 @@
         </mat-form-field>
         <mat-form-field floatLabel="always" appearance="fill">
             <mat-label>Shipping Date: </mat-label>
-            <!--! type="datetime-local" doesnt work!!!  -->
             <input matInput [matDatepickerFilter]="dateFilter" [matDatepicker]="myDatePicker" [min]="minDate"
                 [max]="maxDate" name="date" [(ngModel)]="order.shipDate" required #dateBox="ngModel" />
             <mat-datepicker-toggle [for]="myDatePicker" matSuffix></mat-datepicker-toggle>

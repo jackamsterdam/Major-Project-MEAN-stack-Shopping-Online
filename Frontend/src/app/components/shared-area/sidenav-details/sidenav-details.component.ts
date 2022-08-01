@@ -4,8 +4,6 @@ import { Router } from '@angular/router';
 import { Unsubscribe } from 'redux';
 import { CartItemModel } from 'src/app/models/cart-item.model';
 import store from 'src/app/redux/store';
-import { CartsService } from 'src/app/services/carts.service';
-import { NotifyService } from 'src/app/services/notify.service';
 import { environment } from 'src/environments/environment';
 
 @Component({
