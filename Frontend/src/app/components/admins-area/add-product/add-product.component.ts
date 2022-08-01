@@ -98,7 +98,7 @@ export class AddProductComponent implements OnInit {
       //reset selected file message
       this.selectedFile = null
 
-      this.productForm.reset()
+      // this.productForm.reset()
 
       //  Reset validation error
       Object.keys(this.productForm.controls).forEach(key => {

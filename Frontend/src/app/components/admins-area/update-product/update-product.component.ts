@@ -18,7 +18,7 @@ export class UpdateProductComponent implements OnInit {
   selectedImageName: string;
   dynamicClass: string = ''
   products: ProductModel[]
-  dispalyError = false;
+  displayError = false;
 
   productForm: FormGroup
 
