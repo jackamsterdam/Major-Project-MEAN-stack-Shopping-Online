@@ -11,7 +11,7 @@
             </div>
             <div class="shopping-cart-content">
                 <app-sidenav-details [fromShopPage]="isShoppingPage" *ngFor="let i of allItemsByCart" [item]="i"
-                    (deleteItem)="deleteThisCard($event)"> </app-sidenav-details>
+                    (deleteItem)="deleteThisCard($event)"></app-sidenav-details>
             </div>
             <div class="shopping-cart-footer">
                 <div *ngIf="totalAmount && allItemsByCart?.length !== 0">
@@ -28,7 +28,7 @@
         <div class="side-bar-action-button" (click)="opened = !opened">
             <div class="toggle-button">
                 <div class="cart-items-amount" *ngIf="allItemsByCart">{{allItemsByCart.length}}</div>
-                <img class="cart-side-image" src="/assets/images/logo2.png">
+                <img class="cart-side-image" src="/assets/images/logo.png">
             </div>
         </div>
         <div class="category-style">

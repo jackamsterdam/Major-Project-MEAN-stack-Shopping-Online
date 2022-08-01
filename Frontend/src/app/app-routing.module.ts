@@ -14,36 +14,20 @@ import { HomeGuard } from './services/home.guard';
 
 const routes: Routes = [
 
-  // {path: 'register', component: RegisterComponent},
-  //! use this when you fix tghe user issue: 
-  {path: 'register', component: RegisterBothStepsComponent},
 
+  { path: 'register', component: RegisterBothStepsComponent },
+  { path: 'logout', component: LogoutComponent },
 
+  { path: 'home', component: HomeComponent, canActivate: [HomeGuard] },
+  { path: 'shopping', component: ShoppingComponent, canActivate: [AuthGuard] },
 
-  // {path: 'login', component: LoginComponent}, //We dont need this casue its our home page
-  {path: 'logout', component: LogoutComponent},
+  { path: 'admin-home', component: AdminHomeComponent, canActivate: [AdminGuard] },
+  { path: 'admin/edit/:id', component: UpdateProductComponent, canActivate: [AdminGuard] },
 
-  //! add admin adn auth guards to the routes!!!!!!!!!
-  //! { path: "products/new", component: AddProductComponent, canActivate: [AuthGuard, AdminGuard] },
+  { path: 'order', component: OrderComponent, canActivate: [AuthGuard] },
 
-
-  {path: 'home', component: HomeComponent, canActivate: [HomeGuard]},
-
-  {path: 'shopping', component: ShoppingComponent, canActivate: [AuthGuard]},
-
-  {path: 'admin-home', component: AdminHomeComponent, canActivate: [AdminGuard]},
-  {path: 'admin/edit/:id', component: UpdateProductComponent, canActivate: [AdminGuard]},
-  //! if you are not admin and go back to home you wont see the right hand side notification !! 
-
-  {path: 'order', component: OrderComponent, canActivate: [AuthGuard]},
-
-
-
-  // {path: 'product-list', component: ProductListComponent},
-  // {path: 'add-product', component: AddProductComponent},
-  
-  {path: '', redirectTo: '/home', pathMatch: 'full'},
-  {path: '**', component: PageNotFoundComponent}
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({

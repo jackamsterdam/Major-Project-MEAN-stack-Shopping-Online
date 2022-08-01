@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductModel } from 'src/app/models/product.model';
-import store from 'src/app/redux/store';
 import { NotifyService } from 'src/app/services/notify.service';
 import { ProductsService } from 'src/app/services/products.service';
 
@@ -32,8 +31,6 @@ export class SearchComponent implements OnInit {
 
 
   searchProduct(event: Event) {
-
-    const keyBoardEvent = (event as KeyboardEvent);
 
     const inputElement = (event.target as HTMLInputElement).value;
 

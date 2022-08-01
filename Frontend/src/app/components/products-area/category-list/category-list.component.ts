@@ -6,6 +6,8 @@ import { NotifyService } from 'src/app/services/notify.service';
 import { ProductsService } from 'src/app/services/products.service';
 import store from 'src/app/redux/store';
 import { MatTabGroup } from '@angular/material/tabs';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-category-list',
@@ -18,7 +20,7 @@ export class CategoryListComponent implements OnInit, OnDestroy {
   unsubscribe: Unsubscribe
   searchText = ''
 
-  constructor(private productsService: ProductsService, private notify: NotifyService) { }
+  constructor(private productsService: ProductsService, private notify: NotifyService, private router: Router, private authService: AuthService) { }
 
   @ViewChild(MatTabGroup) tabGroup: MatTabGroup;
 
@@ -37,9 +39,19 @@ export class CategoryListComponent implements OnInit, OnDestroy {
         }
       })
 
-    } catch (err: any) {
-      this.notify.error(err)
-    }
+    // } catch (err: any) {
+    //   this.notify.error(err)
+      
+    // }
+     } catch (err: any) {
+
+                if (err.status === 401) {
+                    this.authService.logout()
+                    this.router.navigateByUrl('/home') 
+                } else {
+                    this.notify.error(err)
+                }
+            }
   }
 
   async selectCategoryByIndex(index: number) {

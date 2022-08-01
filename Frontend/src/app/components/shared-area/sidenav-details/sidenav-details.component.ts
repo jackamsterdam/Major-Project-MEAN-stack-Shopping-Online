@@ -29,7 +29,7 @@ export class SidenavDetailsComponent implements OnInit, OnDestroy {
 
   productsImageUrl = environment.productsImageUrl
 
-  constructor(public dialog: MatDialog, private cartsService: CartsService, private notify: NotifyService, public router: Router) { }
+  constructor(public dialog: MatDialog, public router: Router) { }
 
   ngOnInit(): void {
     this.unsubscribe = store.subscribe(() => {

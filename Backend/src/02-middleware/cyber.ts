@@ -13,7 +13,7 @@ function hash(plainText: string): string {
 
 function getNewToken(user: IUserModel): string {
     const payload = { user }
-    const token = jwt.sign(payload, secretKey, { expiresIn: '7d' })
+    const token = jwt.sign(payload, secretKey, { expiresIn: '10s' })
     return token
 }
 

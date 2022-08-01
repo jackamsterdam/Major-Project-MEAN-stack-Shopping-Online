@@ -18,18 +18,16 @@ import { LogoutComponent } from './components/auth-area/logout/logout.component'
 import { AuthMenuComponent } from './components/auth-area/auth-menu/auth-menu.component';
 import { AboutComponent } from './components/home-area/about/about.component';
 import { ShoppingInfoComponent } from './components/home-area/shopping-info/shopping-info.component';
-
 import { ValidateEqualModule } from 'ng-validate-equal';
 import { ShoppingComponent } from './components/shopping-area/shopping/shopping.component';
-import { CartListComponent } from './components/shared-area/cart-list/cart-list.component';
-
+import { CartListComponent } from './components/shopping-area/cart-list/cart-list.component';
 import { CategoryListComponent } from './components/products-area/category-list/category-list.component';
 import { SidenavDetailsComponent } from './components/shared-area/sidenav-details/sidenav-details.component';
 import { OrderComponent } from './components/orders-area/order/order.component';
 import { AddOrderComponent } from './components/orders-area/add-order/add-order.component';
 import { ProductDialogComponent } from './components/products-area/product-dialog/product-dialog.component';
 import { OrderSuccessDialogComponent } from './components/orders-area/order-success-dialog/order-success-dialog.component';
-import { ConfirmDeleteDialogComponent } from './components/shared-area/confirm-delete-dialog/confirm-delete-dialog.component';
+import { ConfirmDeleteDialogComponent } from './components/shopping-area/confirm-delete-dialog/confirm-delete-dialog.component';
 import { AddProductComponent } from './components/admins-area/add-product/add-product.component';
 import { UpdateProductComponent } from './components/admins-area/update-product/update-product.component';
 import { AdminHomeComponent } from './components/admins-area/admin-home/admin-home.component';
