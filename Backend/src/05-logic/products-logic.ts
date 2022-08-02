@@ -67,7 +67,6 @@ async function updateProduct(product: IProductModel): Promise<IProductModel> {
     }
 
     const updatedProduct = await ProductModel.findByIdAndUpdate(product._id, product, { returnOriginal: false }).exec()
-    // console.log("updatedProduct", updatedProduct); goes crazy with binary if you print this
     if (!updatedProduct) throw new ErrorModel(404, `Resource with _id ${product._id} not found.`)
     return updatedProduct
 }
