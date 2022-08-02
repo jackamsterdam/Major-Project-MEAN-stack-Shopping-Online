@@ -34,7 +34,6 @@ const ProductSchema = new Schema<IProductModel>({
     },
     image: {
         type: Object,
-        required: [true, "Missing image"]
     },
     categoryId: Schema.Types.ObjectId
 

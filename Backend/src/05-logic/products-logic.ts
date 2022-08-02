@@ -38,7 +38,8 @@ async function addProduct(product: IProductModel): Promise<IProductModel> {
         const extension = product.image.name.substring(product.image.name.lastIndexOf('.'))
         product.imageName = uuid() + extension
         await product.image.mv(path.join(__dirname, '..', 'upload', 'images', product.imageName))
-        delete product.image
+         //Do not save image in Mongo:
+         product.image = undefined
     }
     return product.save()
 }
@@ -61,8 +62,8 @@ async function updateProduct(product: IProductModel): Promise<IProductModel> {
         const extension = product.image.name.substring(product.image.name.lastIndexOf('.'))
         product.imageName = uuid() + extension
         await product.image.mv(path.join(__dirname, '..', 'upload', 'images', product.imageName))
-        delete product.image
-
+        //Do not save image in Mongo:
+        product.image = undefined
     }
 
     const updatedProduct = await ProductModel.findByIdAndUpdate(product._id, product, { returnOriginal: false }).exec()
