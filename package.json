@@ -6,7 +6,7 @@
   "scripts": {
     "install-client": "cd Frontend && npm install --legacy-peer-deps",
     "build": "cd Frontend && npm run build",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run install-client && npm run build --prefix frontend",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run install-client && npm run build --prefix Frontend",
     "start": "ts-node Backend/src/app.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
