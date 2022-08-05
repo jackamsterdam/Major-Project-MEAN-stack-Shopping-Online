@@ -5,11 +5,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
-var config_1 = __importDefault(require("./01-utils/config"));
 var express_1 = __importDefault(require("express"));
 var dal_1 = __importDefault(require("./04-dal/dal"));
 dal_1.default.connect();
-var cors_1 = __importDefault(require("cors"));
 var express_rate_limit_1 = __importDefault(require("express-rate-limit"));
 var express_fileupload_1 = __importDefault(require("express-fileupload"));
 var errors_handler_1 = __importDefault(require("./02-middleware/errors-handler"));
@@ -27,9 +25,6 @@ server.use(express_1.default.static('public'));
 server.get('*', function (req, res) {
     res.sendFile(path_1.default.join(__dirname, '../public/index.html'));
 });
-if (config_1.default.isDevelopment) {
-    server.use((0, cors_1.default)({ origin: ['http://localhost:3001', 'http://localhost:4200'] }));
-}
 server.use('/api', (0, express_rate_limit_1.default)({ windowMs: 1000, max: 10, message: "Rate exceeded. Please try again soon" }));
 server.use(express_1.default.json());
 server.use((0, express_fileupload_1.default)());
