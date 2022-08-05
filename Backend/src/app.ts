@@ -46,10 +46,6 @@ server.use('/api', ordersController)
 server.use('/api/auth', authController)
 
 
-server.use('*', (request: Request, response: Response, next: NextFunction) => {
-    next(new ErrorModel(404, `Route not found`))
-})
-
 server.use(errorsHandler)
 const port = process.env.PORT || 8080
 server.listen(port, () => console.log(`Listening on PORT ${port}...`))

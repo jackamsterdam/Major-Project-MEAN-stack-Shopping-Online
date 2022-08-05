@@ -1,0 +1,37 @@
+{
+  "name": "shoping-site",
+  "version": "1.0.0",
+  "description": "shoping site",
+  "main": "index.js",
+  "scripts": {
+    "install-client": "cd Frontend && npm install --legacy-peer-deps",
+    "build": "cd Frontend && npm run build",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run install-client && npm run build --prefix frontend",
+    "start": "ts-node Backend/src/app.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackamsterdam/Major-Project-MEAN-stack-Shopping-Online.git"
+  },
+  "author": "James Amsterdam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jackamsterdam/Major-Project-MEAN-stack-Shopping-Online/issues"
+  },
+  "homepage": "https://github.com/jackamsterdam/Major-Project-MEAN-stack-Shopping-Online#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "concurrently": "^7.2.2",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.4.4",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^2.0.19",
+    "ts-node": "^10.9.1"
+  }
+}
