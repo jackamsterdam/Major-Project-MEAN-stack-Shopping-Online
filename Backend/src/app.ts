@@ -20,9 +20,13 @@ import cartsController from './06-controllers/carts-controller'
 import cartItemsController from './06-controllers/cart-items-controller'
 import ordersController from './06-controllers/orders-controller'
 import authController from './06-controllers/auth-controller'
-
+import path from 'path'
 const server = express()
 
+server.use(express.static('public'));
+server.get('*',(req,res)=>{
+    res.sendFile(path.join(__dirname,'../public/index.html'));
+})
 if (config.isDevelopment) {
     server.use(cors({ origin: ['http://localhost:3001', 'http://localhost:4200'] }))
 }
@@ -47,5 +51,5 @@ server.use('*', (request: Request, response: Response, next: NextFunction) => {
 })
 
 server.use(errorsHandler)
-
-server.listen(process.env.PORT, () => console.log(`Listening on PORT ${process.env.PORT}...`))
+const port = process.env.PORT || 8080
+server.listen(port, () => console.log(`Listening on PORT ${port}...`))
