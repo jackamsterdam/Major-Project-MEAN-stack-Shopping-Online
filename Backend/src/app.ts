@@ -22,10 +22,17 @@ import authController from './06-controllers/auth-controller'
 import path from 'path'
 const server = express()
 
-server.use(express.static('public'));
-server.get('*',(req,res)=>{
-    res.sendFile(path.join(__dirname,'../public/index.html'));
-})
+
+if(process.env.NODE_ENV === "production"){
+    server.use(express.static(path.join(__dirname, "../public/")))
+
+    server.get("*", (req,res) => res.sendFile(path.resolve(__dirname, "../public", "index.html")))
+}else{
+    server.get("/", (req,res)=>{
+        res.send("API is running...")
+    })
+}
+
 
 
 server.use('/api', expressRateLimit({ windowMs: 1000, max: 10, message: "Rate exceeded. Please try again soon" }))
