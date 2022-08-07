@@ -26,7 +26,7 @@ var DevelopmentConfig = /** @class */ (function (_super) {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.isDevelopment = true;
         _this.logFile = 'logger.log';
-        _this.connectionString = 'mongodb://localhost:27017/ShoppingOnlineDB';
+        _this.connectionString = "mongodb+srv://shopinig:shopingcluster@shopingcluster.ux98rij.mongodb.net/?retryWrites=true";
         return _this;
     }
     return DevelopmentConfig;
@@ -37,7 +37,7 @@ var ProductionConfig = /** @class */ (function (_super) {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.isDevelopment = false;
         _this.logFile = 'logger.log';
-        _this.connectionString = 'mongodb://localhost:27017/ShoppingOnlineDB';
+        _this.connectionString = "mongodb+srv://shopinig:shopingcluster@shopingcluster.ux98rij.mongodb.net/?retryWrites=true";
         return _this;
     }
     return ProductionConfig;
