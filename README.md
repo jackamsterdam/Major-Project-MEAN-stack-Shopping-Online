@@ -4,7 +4,7 @@
 
 ADMIN
 
-username: jackamsterdam@gmail.com
+username: jack@gmail.com
 
 password: 1234
 
