@@ -1,0 +1,20 @@
+@media only screen and (max-width:1100px) {
+    .move-search {
+        position: relative;
+        z-index: 2;
+        right: 537px;
+        top: 65px;
+        font-size: 10px;
+    }
+
+    .smaller-search {
+        @extend .move-search;
+        font-size: 8px;
+    }
+}
+
+@media only screen and (max-width:800px) {
+    .smaller-search {
+        display: none
+    }
+}

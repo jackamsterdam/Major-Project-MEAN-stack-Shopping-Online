@@ -6,14 +6,15 @@ import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
   selector: 'app-search',
-  templateUrl: './search.component.html'
+  templateUrl: './search.component.html',
+  styleUrls: ['./search.component.scss']
 })
 
 export class SearchComponent implements OnInit {
   search: string = ''
   products: ProductModel[]
 
-  constructor(private productsService: ProductsService, private notify: NotifyService, private router: Router) {
+  constructor(private productsService: ProductsService, private notify: NotifyService, public router: Router) {
     //if navigating to different page then empty search box:
     router.events.subscribe(() => this.search = '')
     router.events.subscribe(() => this.productsService.setSearchText(''))

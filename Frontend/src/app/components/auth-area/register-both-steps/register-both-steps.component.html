@@ -1,6 +1,7 @@
 <div>
     <mat-horizontal-stepper linear #stepper>
         <mat-step label="Register">
+        <!-- <mat-step label="Register"  [completed]="completed" [state]="state"> -->
             <app-register-step-one (userStepOneDetails)="userInfoFromStepOne($event)"></app-register-step-one>
         </mat-step>
         <mat-step label="Contact Information" completed="false">

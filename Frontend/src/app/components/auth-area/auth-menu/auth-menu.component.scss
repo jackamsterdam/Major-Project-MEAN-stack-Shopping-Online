@@ -13,3 +13,15 @@ div {
     top: 8px;
     position: relative;
 }
+
+
+@media only screen and (max-width:700px) {
+  div {
+    font-size: smaller;
+    right: 14px;
+  }
+
+  span mat-icon {
+    display: none;
+  }
+}

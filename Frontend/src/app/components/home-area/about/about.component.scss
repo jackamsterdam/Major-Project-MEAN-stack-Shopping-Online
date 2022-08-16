@@ -11,3 +11,9 @@ img {
     font-size: 19px;
 }
 
+@media only screen and (max-width:800px) {
+    .welcome-header {
+        font-weight: 700;
+        font-size: 25px;
+    }
+}

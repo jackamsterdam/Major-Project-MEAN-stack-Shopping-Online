@@ -1,4 +1,4 @@
-<form class="example-form">
+<form class="example-form" [ngClass]="(router.url === '/shopping' ? 'move-search' : 'smaller-search')">
   <mat-form-field floatLabel="always" appearance="outline">
     <input (keyup)="searchProduct($event)" type="text" matInput placeholder="Search" name="search" [(ngModel)]="search">
     <mat-icon matPrefix>search</mat-icon>

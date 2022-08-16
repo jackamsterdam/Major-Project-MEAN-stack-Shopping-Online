@@ -16,7 +16,8 @@ app-login {
 .cater-movingBG {
     height: 100%;
     background-image: url(/assets/images/shopping-bags.jpg);
-    background-size: 125%;
+    // background-size: 125%;
+    background-size: cover;
     background-repeat: repeat-x;
     animation: animatedBackground 10s linear alternate infinite;
     display: flex;
@@ -47,7 +48,8 @@ app-login {
     color: #fff;
     position: relative;
     text-shadow: 2px 2px 40px rgba(0, 0, 0, 0.7);
-    width: 708px;
+    // width: 708px;
+    width: 408px;
     background: rgba(0, 0, 0, 0.6);
     padding-left: 19px;
     padding-top: 19px;
@@ -105,5 +107,51 @@ app-login {
 
     100% {
         transform: translateX(0%);
+    }
+}
+
+
+
+@media only screen and (max-width:800px) {
+    .cater-movingBG {
+        flex-direction: column;
+        // width: 359px;
+        // width: 638px;
+        // width: fit-content;
+        // width: max-content;
+        width: auto;
+
+
+
+
+
+        // height: 100%;
+        height: 150%;
+    
+    }
+    .flyIn {
+        // color: #fff;
+        // position: relative;
+        // text-shadow: 2px 2px 40px rgba(0, 0, 0, 0.7);
+        width: 320px;
+        // background: rgba(0, 0, 0, 0.6);
+        // padding-left: 19px;
+        padding-top: 0px;
+        // border-radius: 3px;
+    }
+}
+
+
+@media only screen and (min-width:1100px) {
+
+    .flyIn {
+        // color: #fff;
+        // position: relative;
+        // text-shadow: 2px 2px 40px rgba(0, 0, 0, 0.7);
+        width: 708px;
+        // background: rgba(0, 0, 0, 0.6);
+        // padding-left: 19px;
+        // padding-top: 0px;
+        // border-radius: 3px;
     }
 }

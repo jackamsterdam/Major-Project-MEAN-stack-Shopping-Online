@@ -21,6 +21,7 @@ div {
     position: absolute;
 }
 
+
 app-search {
     position: absolute;
     left: 544px;
@@ -29,4 +30,18 @@ app-search {
 
 ::ng-deep .header-container .mat-input-element::placeholder{
     color: $shopping-white;
+}
+
+@media only screen and (max-width:700px) {
+    .shopping-header-1 {
+        font-size: 25px;
+        padding-top: 48px;
+        left: 85px;
+    }
+
+    .shopping-header-2 {
+        left: 276px;
+        position: absolute;
+        bottom: 8px;
+    }
 }

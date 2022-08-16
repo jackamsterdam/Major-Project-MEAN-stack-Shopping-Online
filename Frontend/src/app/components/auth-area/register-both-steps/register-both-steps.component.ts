@@ -12,6 +12,8 @@ import { NotifyService } from 'src/app/services/notify.service';
 })
 export class RegisterBothStepsComponent {
   user = new UserModel()
+  // completed: boolean = false
+  // state: string;
 
   constructor(private notify: NotifyService, private authService: AuthService, private router: Router) { }
 
@@ -22,7 +24,8 @@ export class RegisterBothStepsComponent {
     this.user.socialSecurityNumber = userStepOne.socialSecurityNumber
     this.user.username = userStepOne.username
     this.user.password = userStepOne.password
-
+    // this.state = 'done';
+    // this.completed = true
     this.myStepper.next();
 
   }

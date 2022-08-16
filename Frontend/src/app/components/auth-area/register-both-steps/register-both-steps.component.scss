@@ -34,3 +34,6 @@ mat-horizontal-stepper {
     bottom: 6px;
 }
 
+::ng-deep .mat-horizontal-stepper-header{
+    pointer-events: none !important;
+}

@@ -27,8 +27,6 @@
 .order-cart-container {
     display: grid;
     height: 100%;
-    display: grid;
-    height: 100%;
     grid-template-columns: 40% 60%;
     padding: 2px 12px 4px 12px;
     box-sizing: border-box;
@@ -37,7 +35,6 @@
 }
 
 .left-side-order {
-    display: grid;
     display: grid;
     height: 100%;
     grid-template-rows: 10% 80% 10%;
@@ -82,4 +79,27 @@
 
 .order-cart-header {
     display: inline-block;
+}
+
+@media only screen and (max-width:950px) {
+    .left-side-order {
+        width: 300px;
+    }
+
+    .order-cart-container {
+        width: fit-content;
+    }
+
+    .right-side-order {
+        margin-left: 10px;
+    }
+
+}
+
+
+@media only screen and (max-width:615px) {
+    .order-cart-container {
+        display: flex;
+        flex-direction: column;
+    }
 }

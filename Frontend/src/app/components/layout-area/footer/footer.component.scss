@@ -15,3 +15,24 @@ a {
     position: relative;
     bottom: 5px;
 }
+
+@media only screen and (max-width:700px) {
+    .smaller-text {
+        font-size: 10px;
+        box-sizing: border-box;
+        margin-left: 10px;
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+
+    .stack {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    br {
+      display: none; /* hide the BR tag for wider screens (i.e. disable the line break) */
+    }
+  }

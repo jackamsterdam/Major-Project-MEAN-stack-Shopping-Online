@@ -28,3 +28,19 @@ mat-hint:not(.old-color):not(.populate-info) {
 .mat-form-field {
     display: block!important;
 }
+
+
+@media only screen and (max-width:950px) {
+
+    mat-form-field,
+    .add-order-btn {
+        width: 256px;
+    }
+}
+
+@media only screen and (max-width:615px) {
+    .add-order-btn {
+        margin-bottom: 18px;
+    }
+
+}
