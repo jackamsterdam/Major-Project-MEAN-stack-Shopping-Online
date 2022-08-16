@@ -1,1 +1,0 @@
-web: node Backend/build/app.js && cd ../Frontend && npm run build
