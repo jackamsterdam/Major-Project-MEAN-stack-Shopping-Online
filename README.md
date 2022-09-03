@@ -1,11 +1,24 @@
 # Summary of Shopping Online MEAN project by Jack Amsterdam
+# If you want to run this code on your local machine follow these instructions:
+## If you had issues running the program or you enjoyed my project please contact me on Linkedin: https://www.linkedin.com/in/jack-amsterdam/
+
+(First of all the site is deployed on Heroku - https://supermarketbyjack.herokuapp.com/)
+
+1. git clone the respository.
+2. In the folder Database -import the bson files into your local MongoDB compass.
+2. Open 2 terminals - Open Backend folder in the terminal and type: npm i && npm start. Open Frontend folder in the terminal and type: npm i && npm start
+3.Project will open for you on http://localhost:4200
 
 # Admin login credentials:
 
 ADMIN
 
 username: jack@gmail.com
+password: 1234
 
+USER  ( You can register as a new user)
+
+username: kermit@gmail.com
 password: 1234
 
 ## Jack's info:
