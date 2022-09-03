@@ -36,7 +36,7 @@ https://wakatime.com/@jackamsterdam
 
 https://www.npmjs.com/~jackamsterdam
 
-###Bonus- take notice of the following features:
+**Bonus- take notice of the following features:**
 
 Correct use of Enums to populate select option fields instead of hard coding strings
 
