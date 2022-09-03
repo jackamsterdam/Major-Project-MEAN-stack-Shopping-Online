@@ -7,8 +7,8 @@ First of all the site is deployed on Heroku - https://supermarketbyjack.herokuap
 
 1. Git clone the respository.
 2. In the folder Database -import the bson files into your local MongoDB compass.
-2. Open 2 terminals - Open Backend folder in the terminal and type: npm i && npm start. Open Frontend folder in the terminal and type: npm i && npm start
-3.Project will open for you on http://localhost:4200
+2. Open 2 terminals - Open Backend folder in the terminal and type: npm i && npm start. Open Frontend folder in the terminal and type: npm i && npm start.
+3. Project will open for you on http://localhost:4200 
 
 # Admin login credentials:
 
