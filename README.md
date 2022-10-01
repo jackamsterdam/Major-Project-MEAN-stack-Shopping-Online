@@ -26,7 +26,7 @@ helllllllllllllllllllllll
 ![github pictures for supermarket 16](https://user-images.githubusercontent.com/64046793/193429615-23334e29-beb1-4e85-b4ff-16ffe779059a.JPG)
 
 ![github pictures for supermarket 18](https://user-images.githubusercontent.com/64046793/193429618-e4f7ec17-5e87-45d6-886e-84de97eccea3.JPG)
-![github pictures for supermarket 19](https://user-images.githubusercontent.com/64046793/193429620-199db103-61e9-4d59-a669-1afb22dda23c.JPG)
+
 goooooooooooo
 ![github pictures for supermarket 4](https://user-images.githubusercontent.com/64046793/193429627-a0723bf1-650b-4bba-95e0-e76d602c4938.JPG)
 ![github pictures for supermarket 5](https://user-images.githubusercontent.com/64046793/193429628-bdc2415b-bd00-4cb1-81de-3b2590d318ad.JPG)
