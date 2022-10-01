@@ -16,6 +16,7 @@ First of all the site is deployed on Heroku - **https://supermarketbyjack.heroku
 ```
 
 
+
 ![second screenshot for linkedin](https://user-images.githubusercontent.com/64046793/193428364-b46471c5-83a1-4126-95f9-9b8d4aad56fd.JPG)
 
 ![screnshot for linkedin](https://user-images.githubusercontent.com/64046793/193428357-e92c8b82-05e0-4fc3-96b8-5aea2434401e.JPG)
@@ -44,7 +45,7 @@ ffoooooooooooooooooooo
 ![github pictures for supermarket 12](https://user-images.githubusercontent.com/64046793/193429636-27fa7305-a4ac-45e6-bf72-053b56d46cb2.JPG)
 ![github pictures for supermarket 13](https://user-images.githubusercontent.com/64046793/193429637-3926df10-0433-4aeb-a457-2dc6b02c6336.JPG)
 
-
+![github pictures for supermarket 20](https://user-images.githubusercontent.com/64046793/193429938-a8feaf0c-b68e-46ed-8b0e-c5f6042a3552.JPG)
 
 
 
