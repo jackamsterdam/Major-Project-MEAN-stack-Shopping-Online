@@ -22,17 +22,13 @@ First of all the site is deployed on Heroku - **https://supermarketbyjack.heroku
 ![screnshot for linkedin](https://user-images.githubusercontent.com/64046793/193428357-e92c8b82-05e0-4fc3-96b8-5aea2434401e.JPG)
 
 
-helllllllllllllllllllllll
+
 ![github pictures for supermarket 16](https://user-images.githubusercontent.com/64046793/193429615-23334e29-beb1-4e85-b4ff-16ffe779059a.JPG)
 
 ![github pictures for supermarket 18](https://user-images.githubusercontent.com/64046793/193429618-e4f7ec17-5e87-45d6-886e-84de97eccea3.JPG)
 
-goooooooooooo
-![github pictures for supermarket 4](https://user-images.githubusercontent.com/64046793/193429627-a0723bf1-650b-4bba-95e0-e76d602c4938.JPG)
-![github pictures for supermarket 5](https://user-images.githubusercontent.com/64046793/193429628-bdc2415b-bd00-4cb1-81de-3b2590d318ad.JPG)
-![github pictures for supermarket 6](https://user-images.githubusercontent.com/64046793/193429629-37cd2b8c-61b8-4318-bbbf-b9d34b839d6c.JPG)
 
-hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhoooooooooooooooo
+
 ![github pictures for supermarket 7](https://user-images.githubusercontent.com/64046793/193429630-d22d38e6-020a-45ce-8d6d-e8fd41485c96.JPG)
 ![github pictures for supermarket 8](https://user-images.githubusercontent.com/64046793/193429632-dd05f1e6-5d3a-4aa3-8661-0f896ec8cac6.JPG)
 ![github pictures for supermarket 9](https://user-images.githubusercontent.com/64046793/193429633-393b309e-4cfc-4506-b7c6-ba534dcab5f3.JPG)
