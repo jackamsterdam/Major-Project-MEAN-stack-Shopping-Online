@@ -39,7 +39,7 @@ First of all the site is deployed on Heroku - **https://supermarketbyjack.heroku
 ffoooooooooooooooooooo
 <!-- ![github pictures for supermarket 11](https://user-images.githubusercontent.com/64046793/193429635-b1394135-c919-4a43-80bd-42da4571ac86.JPG) -->
 ![github pictures for supermarket 12](https://user-images.githubusercontent.com/64046793/193429636-27fa7305-a4ac-45e6-bf72-053b56d46cb2.JPG)
-![github pictures for supermarket 13](https://user-images.githubusercontent.com/64046793/193429637-3926df10-0433-4aeb-a457-2dc6b02c6336.JPG)
+<!-- ![github pictures for supermarket 13](https://user-images.githubusercontent.com/64046793/193429637-3926df10-0433-4aeb-a457-2dc6b02c6336.JPG) -->
 
 ![github pictures for supermarket 20](https://user-images.githubusercontent.com/64046793/193429938-a8feaf0c-b68e-46ed-8b0e-c5f6042a3552.JPG)
 
@@ -99,4 +99,4 @@ Used examples of both Forms Module as well as Reactive Forms in Angular
 
 
 
-![github pictures for supermarket 2](https://user-images.githubusercontent.com/64046793/193429623-76b54979-25e5-4fdb-918d-02528e784ddf.JPG)
+<!-- ![github pictures for supermarket 2](https://user-images.githubusercontent.com/64046793/193429623-76b54979-25e5-4fdb-918d-02528e784ddf.JPG) -->
