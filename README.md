@@ -13,6 +13,7 @@ First of all the site is deployed on Heroku - **https://supermarketbyjack.heroku
 4. Open a second seperate terminal by clicking on the Frontend folder and type: npm i && npm start.
 5. Backend Server will run on http://localhost:3001
 6. Frontend Server will run on http://localhost:4200
+**Since the code is running TypeScript make sure to install these global packages: npm i -g typescript && npm i -g ts-node
 ```
 
 
